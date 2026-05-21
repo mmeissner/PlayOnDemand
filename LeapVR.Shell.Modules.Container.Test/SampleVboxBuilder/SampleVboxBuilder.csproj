@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    One-shot console app that builds a sample .vbox at a given path so the
+    Content Creator's edit wizard can be exercised end-to-end manually
+    (or driven via WpfBuddy MCP).
+    Usage:
+      dotnet run -p SampleVboxBuilder.csproj output.vbox "displayName"
+  -->
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net471</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>SampleVboxBuilder</RootNamespace>
+    <AssemblyName>SampleVboxBuilder</AssemblyName>
+    <Configurations>Debug;Release;Release_ShellClient</Configurations>
+    <Platforms>AnyCPU;x64</Platforms>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetZip" Version="1.10.1" />
+    <PackageReference Include="protobuf-net" Version="2.4.0" />
+    <PackageReference Include="NLog" Version="4.5.11" />
+    <PackageReference Include="System.Reactive" Version="4.1.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="LeapVR.Shell.Modules">
+      <HintPath>..\..\LeapVR.Shell.Modules\bin\x64\Release_ShellClient\LeapVR.Shell.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="LeapVR.Shell.Domain.Models">
+      <HintPath>..\..\LeapVR.Shell.Domain.Models\bin\x64\Release_ShellClient\LeapVR.Shell.Domain.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="LeapVR.Content.Shared">
+      <HintPath>..\..\LeapVR.Content.Shared\bin\x64\Release_ShellClient\LeapVR.Content.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="LeapVR.Shared.Lib">
+      <HintPath>..\..\LeapVR.Shared.Lib\bin\x64\Release_ShellClient\netstandard2.0\LeapVR.Shared.Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="LeapVR.Shared.Lib.Win">
+      <HintPath>..\..\LeapVR.Shared.Lib.Win\bin\x64\Release_ShellClient\LeapVR.Shared.Lib.Win.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

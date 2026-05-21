@@ -1,0 +1,1 @@
+Some default dirs/files for LeapVR to run. Copy them to PersistantDirectory (default `C:\LeapVR.Persistant\`, can be adjusted in LeapVR.Shell app.config file).

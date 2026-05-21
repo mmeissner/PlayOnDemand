@@ -1,0 +1,132 @@
+<root>
+	<styles>		
+		<include src="file://{resources}/styles/vrsteamstyles.css" />
+		<include src="file://{resources}/styles/dashboard.css" />
+	</styles>
+	
+	<VRPanoramaDashboard defaultfocus="HeaderRowContainer" childfocusonhover="true" selectionpos="auto" tabindex="auto">
+		
+		<Panel id="HeaderRowContainer" selectionpos="auto" hittest="false">
+			<Panel id="Tip">
+				<Panel id="TipBackground">
+					<Panel class="TipIcon" />		
+					<Label id="GamepadTip" text="#Gamepad_Tip" />
+				</Panel>
+			</Panel>		
+			<Panel id="MaskedContainer">
+				<Panel id="HeaderRow" selectionpos="auto" hittest="false">
+				</Panel>
+			</Panel>
+			<Panel id="TipSpacer">
+			</Panel>	
+		</Panel>
+			
+		<Panel id="TopRow" hittest="false">
+			
+			<Panel id="SystemBG" />		
+			
+
+			<Panel id="SystemButtonArea" childfocusonhover="true" hittest="false">   
+
+				<!--<Button id="PowerMenu" hittest="true" selectionpos="auto" onactivate="DashboardTabActivated(system.powermenu);">
+					<Image src="file://{images}/icons/icon_power.png" />
+					<Label text="#DashboardPower_Header"/>
+				</Button>
+
+				<Button id="CameraButton" hittest="true" onactivate="ToggleCameraReprojection();DismissDashboard();">
+					<Image src="file://{images}/icons/icon_camera.png" />
+					<Label text="#Camera_Header"/>
+				</Button>
+
+				<Button id="GoHome" hittest="true" selectionpos="auto" onactivate="StartHomeApp()">
+					<Image src="file://{images}/icons/icon_home.png" />
+					<Label text="#GoHome"/>
+				</Button>
+
+				<Button id="QuitApp" hittest="true" selectionpos="auto" onactivate="QuitSceneApp()">
+					<Image src="file://{images}/icons/icon_quit.png" />
+					<Label text="#QuitApp"/>
+				</Button>-->
+
+			</Panel>
+
+			<NowPlaying id="NowPlayingParent">
+
+				<Panel id="TitleArea" hittest="true" onactivate="QuitSceneApp(); DismissDashboard()" selectionpos="auto">
+					<Panel id="NowPlayingImage">
+						<Image id="StartingAppHeader" scaling="stretch-to-fit-y-preserve-aspect"/>
+						<Image id="CurrentAppHeader" scaling="stretch-to-fit-y-preserve-aspect" />
+						<Image id="MissingAppHeader" scaling="stretch-to-fit-y-preserve-aspect" src="file://{images}/appimage_default.tga"/>
+					</Panel> 
+					<!--<Panel id="TitleAreaText">
+						<Panel id="AppStatus">
+							<Label class="NowPlaying" text="{s:now_playing_string}"/>
+							<Label class="NowQuitting" text="#Now_Quitting"/>
+							<Label class="NowStarting" text="{s:starting_app_string}"/>
+			                <Label class="NowWaiting" text="#Now_Waiting"/>
+			                <Panel class="Center Quit">
+								<Label class="BackToApp" text="#QuitApp" />
+							</Panel>
+						</Panel>
+						<Label id="AppTitle" text="#App_Title"/>
+						<Label id="NextAppName" text="#Next_App_Name"/>
+					</Panel>-->
+					
+					<Panel id="TitleAreaText">
+						<Panel id="AppStatus">
+							<Label class="NowPlaying" text="退出游戏"/>
+							<Label class="NowQuitting" text="退出游戏"/>
+							<Label class="NowStarting" text="退出游戏"/>
+			                <Label class="NowWaiting" text="退出游戏"/>
+			                <Panel class="Center Quit">
+								<Label class="BackToApp" text="退出游戏" />
+							</Panel>
+						</Panel>
+						<Label id="AppTitle" text="#App_Title"/>
+						<Label id="NextAppName" text="#Next_App_Name"/>
+					</Panel>
+					<Panel id="CloseIcon" />
+					<LoadingThrobber class="Center SmallThrobber" />
+				</Panel>
+
+				<Panel class="SavePromptArea" selectionpos="auto">
+					<Label class="PromptQuestion" text="#PromptCancelQuestion"/>
+					<Label class="PromptInfo" text="#PromptCancelInfo"/>
+					<Panel id="SaveButtons">
+						<Button id="PromptCancel" hittest="true" class="PromptButton" selectionpos="auto" onactivate="UserPromptCancelAndSave();">
+							<Label class="PromptButtonLabel" text="#PromptCancelTransition"/>
+						</Button>
+						<Button id="PromptQuitAnyway" hittest="true" class="PromptButton" selectionpos="auto" onactivate="UserPromptQuitAnyway();">
+							<Label class="PromptButtonLabel" text="#PromptQuitAnyway"/>
+						</Button>
+					</Panel>
+				</Panel>
+
+				<Panel id="ClockArea" hittest="true">
+						<Label id="Time" text="#Time" />
+						<Label id="TimeSuffix" text="#Time_Suffix" />		
+				</Panel>
+
+
+			</NowPlaying>
+			
+			<Panel id="Volume" hittest="true" selectionpos="auto">
+				<Button class="VolumeToggleButton" id="VolumeMute" onactivate="ToggleVolumeMute();">
+					<Image class="VolumeIcon" id="VolumeIconUnmuted" src="file://{images}/icons/icon_volume.png" />
+					<Image class="VolumeIcon" id="VolumeIconMuted" src="file://{images}/icons/icon_volume_mute.png" />
+				</Button>	
+<!--				<Image class="VolumeIcon" src="file://{images}/icons/icon_volume_mute.png" onactivate="ToggleVolumeMute();" />	
+				<Button id="VolumeMuteOld" hittest="true" selectionpos="auto" onactivate="ToggleVolumeMute();" > </Button>	-->
+				<Slider id="VolumeMeter" 
+					tabindex="auto" selectionpos="auto" 
+					direction="horizontal" 	/>
+				<Label class="MutedLabel" text="#MutedLabel" />
+			</Panel>			
+
+			
+		</Panel>
+		
+		
+		
+	</VRPanoramaDashboard>
+</root>

@@ -1,0 +1,711 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFC1726D-8012-4251-80AD-E8802A7FD1DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Steam.Models</RootNamespace>
+    <AssemblyName>Steam.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\net451\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Steam.Models\AvailableGameStatsModel.cs">
+      <Link>AvailableGameStatsModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\CSGO\ServerStatusAppModel.cs">
+      <Link>CSGO\ServerStatusAppModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\CSGO\ServerStatusDatacenterModel.cs">
+      <Link>CSGO\ServerStatusDatacenterModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\CSGO\ServerStatusMatchmakingModel.cs">
+      <Link>CSGO\ServerStatusMatchmakingModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\CSGO\ServerStatusModel.cs">
+      <Link>CSGO\ServerStatusModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\CSGO\ServerStatusServicesModel.cs">
+      <Link>CSGO\ServerStatusServicesModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\AbilitySchemaItemModel.cs">
+      <Link>DOTA2\AbilitySchemaItemModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\AbilitySpecialSchemaItemModel.cs">
+      <Link>DOTA2\AbilitySpecialSchemaItemModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\BarracksStateModel.cs">
+      <Link>DOTA2\BarracksStateModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\DotaAttackType.cs">
+      <Link>DOTA2\DotaAttackType.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\DotaBlogFeedItem.cs">
+      <Link>DOTA2\DotaBlogFeedItem.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\DotaDamageType.cs">
+      <Link>DOTA2\DotaDamageType.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\DotaEnumType.cs">
+      <Link>DOTA2\DotaEnumType.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\DotaHeroAbilityBehaviorType.cs">
+      <Link>DOTA2\DotaHeroAbilityBehaviorType.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\DotaHeroAbilityType.cs">
+      <Link>DOTA2\DotaHeroAbilityType.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\DotaHeroPrimaryAttributeType.cs">
+      <Link>DOTA2\DotaHeroPrimaryAttributeType.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\DotaItemDeclarationType.cs">
+      <Link>DOTA2\DotaItemDeclarationType.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\DotaItemDisassembleType.cs">
+      <Link>DOTA2\DotaItemDisassembleType.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\DotaItemShareabilityType.cs">
+      <Link>DOTA2\DotaItemShareabilityType.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\DotaLeagueTier.cs">
+      <Link>DOTA2\DotaLeagueTier.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\DotaSpellImmunityType.cs">
+      <Link>DOTA2\DotaSpellImmunityType.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\DotaTeamType.cs">
+      <Link>DOTA2\DotaTeamType.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\DotaUnitTargetFlag.cs">
+      <Link>DOTA2\DotaUnitTargetFlag.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\DotaUnitTargetTeamType.cs">
+      <Link>DOTA2\DotaUnitTargetTeamType.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\DotaUnitTargetType.cs">
+      <Link>DOTA2\DotaUnitTargetType.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\GameFile.cs">
+      <Link>DOTA2\GameFile.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\GameItemModel.cs">
+      <Link>DOTA2\GameItemModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\HeroAbilityDetailModel.cs">
+      <Link>DOTA2\HeroAbilityDetailModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\HeroAbilitySpecialDetailModel.cs">
+      <Link>DOTA2\HeroAbilitySpecialDetailModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\HeroDetailModel.cs">
+      <Link>DOTA2\HeroDetailModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\HeroModel.cs">
+      <Link>DOTA2\HeroModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\HeroRoleModel.cs">
+      <Link>DOTA2\HeroRoleModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\HeroSchemaModel.cs">
+      <Link>DOTA2\HeroSchemaModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\ItemAbilitySchemaItemModel.cs">
+      <Link>DOTA2\ItemAbilitySchemaItemModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\ItemBuildGroupSchemaItemModel.cs">
+      <Link>DOTA2\ItemBuildGroupSchemaItemModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\ItemBuildSchemaItemModel.cs">
+      <Link>DOTA2\ItemBuildSchemaItemModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\LeagueModel.cs">
+      <Link>DOTA2\LeagueModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\LiveLeagueGameAbilityModel.cs">
+      <Link>DOTA2\LiveLeagueGameAbilityModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\LiveLeagueGameBanModel.cs">
+      <Link>DOTA2\LiveLeagueGameBanModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\LiveLeagueGameFlattenedModel.cs">
+      <Link>DOTA2\LiveLeagueGameFlattenedModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\LiveLeagueGameHeroModel.cs">
+      <Link>DOTA2\LiveLeagueGameHeroModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\LiveLeagueGameItemModel.cs">
+      <Link>DOTA2\LiveLeagueGameItemModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\LiveLeagueGameModel.cs">
+      <Link>DOTA2\LiveLeagueGameModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\LiveLeagueGamePickModel.cs">
+      <Link>DOTA2\LiveLeagueGamePickModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\LiveLeagueGamePlayerDetailModel.cs">
+      <Link>DOTA2\LiveLeagueGamePlayerDetailModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\LiveLeagueGamePlayerInfoModel.cs">
+      <Link>DOTA2\LiveLeagueGamePlayerInfoModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\LiveLeagueGamePlayerModel.cs">
+      <Link>DOTA2\LiveLeagueGamePlayerModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\LiveLeagueGameScoreboardModel.cs">
+      <Link>DOTA2\LiveLeagueGameScoreboardModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\LiveLeagueGameTeamDireDetailModel.cs">
+      <Link>DOTA2\LiveLeagueGameTeamDireDetailModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\LiveLeagueGameTeamDireInfoModel.cs">
+      <Link>DOTA2\LiveLeagueGameTeamDireInfoModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\LiveLeagueGameTeamRadiantDetailModel.cs">
+      <Link>DOTA2\LiveLeagueGameTeamRadiantDetailModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\LiveLeagueGameTeamRadiantInfoModel.cs">
+      <Link>DOTA2\LiveLeagueGameTeamRadiantInfoModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\MatchDetailModel.cs">
+      <Link>DOTA2\MatchDetailModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\MatchHistoryBySequenceNumberMatchModel.cs">
+      <Link>DOTA2\MatchHistoryBySequenceNumberMatchModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\MatchHistoryBySequenceNumberMatchPlayerAbilityUpgradeModel.cs">
+      <Link>DOTA2\MatchHistoryBySequenceNumberMatchPlayerAbilityUpgradeModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\MatchHistoryBySequenceNumberMatchPlayerModel.cs">
+      <Link>DOTA2\MatchHistoryBySequenceNumberMatchPlayerModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\MatchHistoryMatchModel.cs">
+      <Link>DOTA2\MatchHistoryMatchModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\MatchHistoryModel.cs">
+      <Link>DOTA2\MatchHistoryModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\MatchHistoryPlayerModel.cs">
+      <Link>DOTA2\MatchHistoryPlayerModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\MatchPickBanModel.cs">
+      <Link>DOTA2\MatchPickBanModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\MatchPlayerAbilityUpgradeModel.cs">
+      <Link>DOTA2\MatchPlayerAbilityUpgradeModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\MatchPlayerModel.cs">
+      <Link>DOTA2\MatchPlayerModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\PlayerCountModel.cs">
+      <Link>DOTA2\PlayerCountModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\PlayerOfficialInfoModel.cs">
+      <Link>DOTA2\PlayerOfficialInfoModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\ProPlayerDetailModel.cs">
+      <Link>DOTA2\ProPlayerDetailModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\ProPlayerInfoModel.cs">
+      <Link>DOTA2\ProPlayerInfoModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\ProPlayerLeaderboardModel.cs">
+      <Link>DOTA2\ProPlayerLeaderboardModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\RarityModel.cs">
+      <Link>DOTA2\RarityModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\SchemaColorModel.cs">
+      <Link>DOTA2\SchemaColorModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\SchemaGameInfoModel.cs">
+      <Link>DOTA2\SchemaGameInfoModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\SchemaItemAutographModel.cs">
+      <Link>DOTA2\SchemaItemAutographModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\SchemaItemModel.cs">
+      <Link>DOTA2\SchemaItemModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\SchemaItemPriceInfoModel.cs">
+      <Link>DOTA2\SchemaItemPriceInfoModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\SchemaItemSetModel.cs">
+      <Link>DOTA2\SchemaItemSetModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\SchemaItemToolModel.cs">
+      <Link>DOTA2\SchemaItemToolModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\SchemaItemToolUsageModel.cs">
+      <Link>DOTA2\SchemaItemToolUsageModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\SchemaModel.cs">
+      <Link>DOTA2\SchemaModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\SchemaPrefabCapabilityModel.cs">
+      <Link>DOTA2\SchemaPrefabCapabilityModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\SchemaPrefabModel.cs">
+      <Link>DOTA2\SchemaPrefabModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\SchemaQualityModel.cs">
+      <Link>DOTA2\SchemaQualityModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\SchemaRarityModel.cs">
+      <Link>DOTA2\SchemaRarityModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\SourceFileModel.cs">
+      <Link>DOTA2\SourceFileModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\TeamInfoModel.cs">
+      <Link>DOTA2\TeamInfoModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\DOTA2\TowerStateModel.cs">
+      <Link>DOTA2\TowerStateModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameClientResultModel.cs">
+      <Link>GameClientResultModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\EconItemAttributeAccountInfoModel.cs">
+      <Link>GameEconomy\EconItemAttributeAccountInfoModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\EconItemAttributeModel.cs">
+      <Link>GameEconomy\EconItemAttributeModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\EconItemEquippedModel.cs">
+      <Link>GameEconomy\EconItemEquippedModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\EconItemModel.cs">
+      <Link>GameEconomy\EconItemModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\EconItemResultModel.cs">
+      <Link>GameEconomy\EconItemResultModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\StoreBannerModel.cs">
+      <Link>GameEconomy\StoreBannerModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\StoreCarouselDataModel.cs">
+      <Link>GameEconomy\StoreCarouselDataModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\StoreConfigModel.cs">
+      <Link>GameEconomy\StoreConfigModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\StoreDropdownDataModel.cs">
+      <Link>GameEconomy\StoreDropdownDataModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\StoreDropdownModel.cs">
+      <Link>GameEconomy\StoreDropdownModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\StoreFilterAllElementModel.cs">
+      <Link>GameEconomy\StoreFilterAllElementModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\StoreFilterElementModel.cs">
+      <Link>GameEconomy\StoreFilterElementModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\StoreFilterModel.cs">
+      <Link>GameEconomy\StoreFilterModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\StoreHomePageDataModel.cs">
+      <Link>GameEconomy\StoreHomePageDataModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\StoreMetaDataModel.cs">
+      <Link>GameEconomy\StoreMetaDataModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\StorePlayerClassDataModel.cs">
+      <Link>GameEconomy\StorePlayerClassDataModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\StorePopularItemModel.cs">
+      <Link>GameEconomy\StorePopularItemModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\StorePrefabModel.cs">
+      <Link>GameEconomy\StorePrefabModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\StoreSorterIdModel.cs">
+      <Link>GameEconomy\StoreSorterIdModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\StoreSorterModel.cs">
+      <Link>GameEconomy\StoreSorterModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\StoreSortingModel.cs">
+      <Link>GameEconomy\StoreSortingModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\StoreSortingPrefabModel.cs">
+      <Link>GameEconomy\StoreSortingPrefabModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\StoreTabChildModel.cs">
+      <Link>GameEconomy\StoreTabChildModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\GameEconomy\StoreTabModel.cs">
+      <Link>GameEconomy\StoreTabModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\NewsItemModel.cs">
+      <Link>NewsItemModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SchemaForGameResultModel.cs">
+      <Link>SchemaForGameResultModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SchemaGameAchievementModel.cs">
+      <Link>SchemaGameAchievementModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SchemaGameStatModel.cs">
+      <Link>SchemaGameStatModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamAppModel.cs">
+      <Link>SteamAppModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamAppUpToDateCheckModel.cs">
+      <Link>SteamAppUpToDateCheckModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamCommunity\BadgeModel.cs">
+      <Link>SteamCommunity\BadgeModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamCommunity\BadgeQuestModel.cs">
+      <Link>SteamCommunity\BadgeQuestModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamCommunity\BadgesResultModel.cs">
+      <Link>SteamCommunity\BadgesResultModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamCommunity\CommentPermission.cs">
+      <Link>SteamCommunity\CommentPermission.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamCommunity\FriendModel.cs">
+      <Link>SteamCommunity\FriendModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamCommunity\GlobalAchievementPercentageModel.cs">
+      <Link>SteamCommunity\GlobalAchievementPercentageModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamCommunity\GlobalStatModel.cs">
+      <Link>SteamCommunity\GlobalStatModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamCommunity\OwnedGameModel.cs">
+      <Link>SteamCommunity\OwnedGameModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamCommunity\OwnedGamesResultModel.cs">
+      <Link>SteamCommunity\OwnedGamesResultModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamCommunity\PlayerBansModel.cs">
+      <Link>SteamCommunity\PlayerBansModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamCommunity\PlayerSummaryModel.cs">
+      <Link>SteamCommunity\PlayerSummaryModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamCommunity\ProfileVisibility.cs">
+      <Link>SteamCommunity\ProfileVisibility.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamCommunity\RecentlyPlayedGameModel.cs">
+      <Link>SteamCommunity\RecentlyPlayedGameModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamCommunity\RecentlyPlayedGamesResultModel.cs">
+      <Link>SteamCommunity\RecentlyPlayedGamesResultModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamCommunity\SteamCommunityProfileModel.cs">
+      <Link>SteamCommunity\SteamCommunityProfileModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamCommunity\UserStatus.cs">
+      <Link>SteamCommunity\UserStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\AssetClassActionModel.cs">
+      <Link>SteamEconomy\AssetClassActionModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\AssetClassAppDataFilterModel.cs">
+      <Link>SteamEconomy\AssetClassAppDataFilterModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\AssetClassAppDataModel.cs">
+      <Link>SteamEconomy\AssetClassAppDataModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\AssetClassDescriptionModel.cs">
+      <Link>SteamEconomy\AssetClassDescriptionModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\AssetClassInfoModel.cs">
+      <Link>SteamEconomy\AssetClassInfoModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\AssetClassInfoResultModel.cs">
+      <Link>SteamEconomy\AssetClassInfoResultModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\AssetClassMarketActionModel.cs">
+      <Link>SteamEconomy\AssetClassMarketActionModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\AssetClassModel.cs">
+      <Link>SteamEconomy\AssetClassModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\AssetClassTagModel.cs">
+      <Link>SteamEconomy\AssetClassTagModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\AssetModel.cs">
+      <Link>SteamEconomy\AssetModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\AssetPriceResultModel.cs">
+      <Link>SteamEconomy\AssetPriceResultModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\AssetPricesModel.cs">
+      <Link>SteamEconomy\AssetPricesModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\AssetTagIdsModel.cs">
+      <Link>SteamEconomy\AssetTagIdsModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\AssetTagsModel.cs">
+      <Link>SteamEconomy\AssetTagsModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\TradeAssetModel.cs">
+      <Link>SteamEconomy\TradeAssetModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\TradedAssetModel.cs">
+      <Link>SteamEconomy\TradedAssetModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\TradedCurrencyModel.cs">
+      <Link>SteamEconomy\TradedCurrencyModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\TradeHistoryModel.cs">
+      <Link>SteamEconomy\TradeHistoryModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\TradeModel.cs">
+      <Link>SteamEconomy\TradeModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\TradeOfferConfirmationMethod.cs">
+      <Link>SteamEconomy\TradeOfferConfirmationMethod.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\TradeOfferModel.cs">
+      <Link>SteamEconomy\TradeOfferModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\TradeOfferResultModel.cs">
+      <Link>SteamEconomy\TradeOfferResultModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\TradeOffersResultModel.cs">
+      <Link>SteamEconomy\TradeOffersResultModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\TradeOfferState.cs">
+      <Link>SteamEconomy\TradeOfferState.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamEconomy\TradeStatus.cs">
+      <Link>SteamEconomy\TradeStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamInterfaceModel.cs">
+      <Link>SteamInterfaceModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamMethodModel.cs">
+      <Link>SteamMethodModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamNewsResultModel.cs">
+      <Link>SteamNewsResultModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamParameterModel.cs">
+      <Link>SteamParameterModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamPlayer\PlayerAchievementModel.cs">
+      <Link>SteamPlayer\PlayerAchievementModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamPlayer\PlayerAchievementResultModel.cs">
+      <Link>SteamPlayer\PlayerAchievementResultModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamPlayer\UserStatAchievementModel.cs">
+      <Link>SteamPlayer\UserStatAchievementModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamPlayer\UserStatModel.cs">
+      <Link>SteamPlayer\UserStatModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamPlayer\UserStatsForGameResultModel.cs">
+      <Link>SteamPlayer\UserStatsForGameResultModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamServerInfo.cs">
+      <Link>SteamServerInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamServerInfoModel.cs">
+      <Link>SteamServerInfoModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreAppDetailsDataModel.cs">
+      <Link>SteamStore\StoreAppDetailsDataModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreCategoryModel.cs">
+      <Link>SteamStore\StoreCategoryModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreComingSoonModel.cs">
+      <Link>SteamStore\StoreComingSoonModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreFeaturedCategoriesModel.cs">
+      <Link>SteamStore\StoreFeaturedCategoriesModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreFeaturedCategoryGenreModel.cs">
+      <Link>SteamStore\StoreFeaturedCategoryGenreModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreFeaturedLinuxModel.cs">
+      <Link>SteamStore\StoreFeaturedLinuxModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreFeaturedMacModel.cs">
+      <Link>SteamStore\StoreFeaturedMacModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreFeaturedProductsModel.cs">
+      <Link>SteamStore\StoreFeaturedProductsModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreFeaturedWinModel.cs">
+      <Link>SteamStore\StoreFeaturedWinModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreGenreModel.cs">
+      <Link>SteamStore\StoreGenreModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreItemModel.cs">
+      <Link>SteamStore\StoreItemModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreLargeCapsuleModel.cs">
+      <Link>SteamStore\StoreLargeCapsuleModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreLinuxRequirementsModel.cs">
+      <Link>SteamStore\StoreLinuxRequirementsModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreMacRequirementsModel.cs">
+      <Link>SteamStore\StoreMacRequirementsModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreMetacriticModel.cs">
+      <Link>SteamStore\StoreMetacriticModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreMovieModel.cs">
+      <Link>SteamStore\StoreMovieModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreNewReleasesModel.cs">
+      <Link>SteamStore\StoreNewReleasesModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StorePackageGroupModel.cs">
+      <Link>SteamStore\StorePackageGroupModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StorePcRequirementsModel.cs">
+      <Link>SteamStore\StorePcRequirementsModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StorePlatformsModel.cs">
+      <Link>SteamStore\StorePlatformsModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreRecommendationsModel.cs">
+      <Link>SteamStore\StoreRecommendationsModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreReleaseDateModel.cs">
+      <Link>SteamStore\StoreReleaseDateModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreScreenshotModel.cs">
+      <Link>SteamStore\StoreScreenshotModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreSpecialsModel.cs">
+      <Link>SteamStore\StoreSpecialsModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreSubModel.cs">
+      <Link>SteamStore\StoreSubModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreSupportInfoModel.cs">
+      <Link>SteamStore\StoreSupportInfoModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreTopSellersModel.cs">
+      <Link>SteamStore\StoreTopSellersModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreTrailerSlideshowModel.cs">
+      <Link>SteamStore\StoreTrailerSlideshowModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\SteamStore\StoreWebmModel.cs">
+      <Link>SteamStore\StoreWebmModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\GoldenWrenchModel.cs">
+      <Link>TF2\GoldenWrenchModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\SchemaAdditionalHiddenBodygroupsModel.cs">
+      <Link>TF2\SchemaAdditionalHiddenBodygroupsModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\SchemaAttributeControlledAttachedParticleModel.cs">
+      <Link>TF2\SchemaAttributeControlledAttachedParticleModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\SchemaAttributeModel.cs">
+      <Link>TF2\SchemaAttributeModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\SchemaCapabilitiesModel.cs">
+      <Link>TF2\SchemaCapabilitiesModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\SchemaItemAttributeModel.cs">
+      <Link>TF2\SchemaItemAttributeModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\SchemaItemLevelModel.cs">
+      <Link>TF2\SchemaItemLevelModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\SchemaItemModel.cs">
+      <Link>TF2\SchemaItemModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\SchemaItemSetAttributeModel.cs">
+      <Link>TF2\SchemaItemSetAttributeModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\SchemaItemSetModel.cs">
+      <Link>TF2\SchemaItemSetModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\SchemaKillEaterScoreTypeModel.cs">
+      <Link>TF2\SchemaKillEaterScoreTypeModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\SchemaLevelModel.cs">
+      <Link>TF2\SchemaLevelModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\SchemaModel.cs">
+      <Link>TF2\SchemaModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\SchemaOriginNameModel.cs">
+      <Link>TF2\SchemaOriginNameModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\SchemaPerClassLoadoutSlotsModel.cs">
+      <Link>TF2\SchemaPerClassLoadoutSlotsModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\SchemaQualitiesModel.cs">
+      <Link>TF2\SchemaQualitiesModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\SchemaStringLookupModel.cs">
+      <Link>TF2\SchemaStringLookupModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\SchemaStringModel.cs">
+      <Link>TF2\SchemaStringModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\SchemaStyleModel.cs">
+      <Link>TF2\SchemaStyleModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\SchemaToolModel.cs">
+      <Link>TF2\SchemaToolModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\TF2\SchemaUsageCapabilitiesModel.cs">
+      <Link>TF2\SchemaUsageCapabilitiesModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\UGCFileDetailsModel.cs">
+      <Link>UGCFileDetailsModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Steam.Models\Utilities\DateTimeExtensions.cs">
+      <Link>Utilities\DateTimeExtensions.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,72 @@
+﻿#region Licence
+/****************************************************************
+ *  Filename: ViewController.cs
+ *  ----------------------------------------------------------
+ *  Author        Martin Meissner
+ *  Date          2026-05-19
+ *  Copyright (c) 2026 Martin Meissner.
+ *                Released under the Apache License 2.0 as part of
+ *                the open-source PlayOnDemand release.
+ *
+ *  SPDX-License-Identifier: Apache-2.0
+ ****************************************************************/
+#endregion
+namespace Unosquare.FFME.MacOS.Sample
+{
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using AppKit;
+    using FFmpeg.AutoGen;
+    using Foundation;
+
+    public partial class ViewController : NSViewController
+    {
+        private NSImageView imageView;
+
+        public ViewController(IntPtr handle) : base(handle)
+        {
+
+        }
+
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
+
+            // Do any additional setup after loading the view.
+
+            // First initialize FFmpeg dependencies
+
+            MediaElement.FFmpegDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "ffmpeg");
+
+            // Create image view that will show each frame
+
+            imageView = new NSImageView(new CoreGraphics.CGRect(
+                (View.Bounds.Width - 640) / 2,
+                (View.Bounds.Height - 480) / 2,
+                640, 480))
+            {
+                Image = new NSImage(new NSUrl("https://github.com/unosquare/ffmediaelement/raw/master/Support/ffme.png"))
+            };
+            View.AddSubview(imageView);
+
+            imageView.AutoresizingMask = NSViewResizingMask.WidthSizable | NSViewResizingMask.HeightSizable;
+
+            // Create a player and start playing sample video
+
+            var mediaElement = new MediaElement(imageView);
+            var uri = @"http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4";
+            var openTask = mediaElement.Open(new Uri(uri));
+        }
+
+        public override NSObject RepresentedObject
+        {
+            get => base.RepresentedObject;
+            set
+            {
+                base.RepresentedObject = value;
+                // Update the view, if already loaded.
+            }
+        }
+    }
+}

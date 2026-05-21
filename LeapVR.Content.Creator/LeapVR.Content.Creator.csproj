@@ -1,0 +1,120 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <!--
+    SDK-style migration of the legacy LeapVR.Content.Creator.csproj. Same
+    motivation as LeapVR.Shell: the WPF target chain (MarkupCompilePass1,
+    PresentationBuildTasks) doesn't load for legacy csprojs under dotnet's
+    MSBuild 18 + .NET 10 SDK, but Build_Free.bat now drives this project
+    through `dotnet build` (because its transitive deps include SDK-style
+    LeapVR.Shared.Lib), so it has to be SDK-style itself.
+
+    Backup at LeapVR.Content.Creator.csproj.bak.
+
+    Convention-based file inclusion: all *.cs auto-Compile, all *.xaml
+    auto-Page (App.xaml stays as the ApplicationDefinition because this
+    project IS the exe entry point — there is no Program.cs).
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net471</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <UseWpf>true</UseWpf>
+    <RootNamespace>LeapVR.Content.Creator</RootNamespace>
+    <AssemblyName>LeapPlay.Content.Creator</AssemblyName>
+    <ProjectGuid>{F7B660AA-DD99-420A-91FC-65057F5E2921}</ProjectGuid>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Configurations>Debug;Release;Release_ShellClient</Configurations>
+    <Platforms>AnyCPU;x64</Platforms>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <!-- Properties\AssemblyInfo.cs has [AssemblyVersion("2018.4.*")] which the
+         deterministic-build C# compiler rejects (CS8357). Allow wildcards. -->
+    <Deterministic>false</Deterministic>
+    <!-- Build_Free.bat anchors CONTENT_BIN at bin\x64\Release_ShellClient\
+         (no TFM subfolder). -->
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <!-- Don't let SDK auto-glob pick up the .bak file or the [Obsolete] dead-code
+       StepScreen.cs that references a no-longer-shipping namespace. -->
+  <ItemGroup>
+    <Compile Remove="LeapVR.Content.Creator.csproj.bak" />
+    <None Remove="LeapVR.Content.Creator.csproj.bak" />
+    <Compile Remove="UI\ViewModels\StepScreen.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Caliburn.Micro" Version="3.2.0" />
+    <PackageReference Include="Caliburn.Micro.Core" Version="3.2.0" />
+    <PackageReference Include="Caliburn.Micro.Start" Version="3.2.0" />
+    <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
+    <PackageReference Include="Humanizer.Core" Version="2.2.0" />
+    <PackageReference Include="ini-parser" Version="2.4.0" />
+    <PackageReference Include="NLog" Version="4.5.11" />
+    <PackageReference Include="SharpVectors" Version="1.0.0" />
+    <PackageReference Include="SimpleInjector" Version="4.2.2" />
+    <PackageReference Include="System.Reactive" Version="4.1.5" />
+    <PackageReference Include="System.Windows.Interactivity.WPF" Version="2.0.20525" />
+    <PackageReference Include="Windows7APICodePack-Core" Version="1.1.0.0" />
+    <PackageReference Include="Windows7APICodePack-Shell" Version="1.1.0.0" />
+    <PackageReference Include="WPFLocalizeExtension" Version="3.1.2" />
+    <PackageReference Include="XAMLMarkupExtensions" Version="1.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LeapVR.Content.Creator.Language\LeapVR.Content.Creator.Language.csproj" />
+    <ProjectReference Include="..\LeapVR.Content.Creator.Logic\LeapVR.Content.Creator.Logic.csproj" />
+    <ProjectReference Include="..\LeapVR.Content.Shared\LeapVR.Content.Shared.csproj" />
+    <ProjectReference Include="..\LeapVR.Content.Util\LeapVR.Content.Util.csproj" />
+    <ProjectReference Include="..\LeapVR.Shared.Lib.Wpf\LeapVR.Shared.Lib.Wpf.csproj" />
+    <ProjectReference Include="..\LeapVR.Shared.Lib\LeapVR.Shared.Lib.csproj" />
+    <ProjectReference Include="..\LeapVR.Shell.3rdParty\Steam.Models\Steam.Models.Net452\Steam.Models.Net452.csproj" />
+    <ProjectReference Include="..\LeapVR.Shell.3rdParty\SteamWebAPI2\SteamWebAPI2.Net452\SteamWebAPI2.Net452.csproj" />
+    <ProjectReference Include="..\LeapVR.Shell.Categories\LeapVR.Shell.Categories.csproj" />
+    <ProjectReference Include="..\LeapVR.Shell.Domain.Models\LeapVR.Shell.Domain.Models.csproj" />
+    <ProjectReference Include="..\LeapVR.Shell.Managers\LeapVR.Shell.Managers.csproj" />
+    <ProjectReference Include="..\LeapVR.Shell.Modules.Interfaces\LeapVR.Shell.Modules.Interfaces.csproj" />
+    <ProjectReference Include="..\LeapVR.Shell.Modules\LeapVR.Shell.Modules.csproj" />
+    <ProjectReference Include="..\LeapVR.Shell.OpenVR.Wrapper\LeapVR.Shell.OpenVR.Wrapper.csproj" />
+    <ProjectReference Include="..\LeapVR.Shell.Repository\LeapVR.Shell.Repository.csproj" />
+    <ProjectReference Include="..\LeapVR.Utilities.Steam\LeapVR.Utilities.Steam.csproj" />
+    <ProjectReference Include="..\LeapVR.Utilities.Windows\LeapVR.Utilities.Windows.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="app.config" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="Debug_NLog.config" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="Release_Nlog.config" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <!-- WPF Resources that are referenced from XAML via pack:// URIs. SDK-style
+       WPF does NOT auto-promote .png/.svg under Resources\ to <Resource>;
+       missing entries here cause "Cannot locate resource ..." IOExceptions
+       at first Window.UpdateIcon(). -->
+  <ItemGroup>
+    <Resource Include="Resources\Vectors\svg-attention.svg" />
+    <Resource Include="Resources\Vectors\svg-help.svg" />
+    <Resource Include="Resources\Images\banner-leapvr.png" />
+    <Resource Include="Resources\Images\icon-flag-cn.png" />
+    <Resource Include="Resources\Images\icon-flag-us.png" />
+    <Resource Include="Resources\Images\icon-logo-green.png" />
+    <Resource Include="Resources\Images\image-error.png" />
+    <Resource Include="Resources\Images\image-ok.png" />
+  </ItemGroup>
+
+  <!-- PostBuildEvent rewritten as a Target with MSBuild Copy tasks. The legacy
+       <PostBuildEvent> used $(ConfigurationName) which only expands under VS-
+       driven builds and spawned a CMD shell with copy/goto syntax that fails
+       when `dotnet build` runs under bash. -->
+  <Target Name="PodCopyNlogConfig" AfterTargets="Build">
+    <Copy SourceFiles="$(ProjectDir)Release_Nlog.config"
+          DestinationFiles="$(TargetDir)$(TargetName).exe.nlog"
+          Condition="'$(Configuration)' == 'Release_ShellClient' AND Exists('$(ProjectDir)Release_Nlog.config')" />
+    <Copy SourceFiles="$(ProjectDir)Debug_NLog.config"
+          DestinationFiles="$(TargetDir)$(TargetName).exe.nlog"
+          Condition="('$(Configuration)' == 'Debug' OR '$(Configuration)' == 'Offline_Debug' OR '$(Configuration)' == 'Home_Debug') AND Exists('$(ProjectDir)Debug_NLog.config')" />
+  </Target>
+
+</Project>

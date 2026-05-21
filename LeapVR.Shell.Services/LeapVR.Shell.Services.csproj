@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0A29D3B-E064-4765-A78D-988B8E041E8A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LeapVR.Shell.Services</RootNamespace>
+    <AssemblyName>LeapVR.Shell.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_ShellClient|AnyCPU'">
+    <OutputPath>bin\Release_ShellClient\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_ShellClient|x64'">
+    <OutputPath>bin\x64\Release_ShellClient\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.Protobuf">
+      <HintPath>..\packages\Google.Protobuf.3.27.3\lib\net45\Google.Protobuf.dll</HintPath>
+      <HintPath Condition="!Exists('..\packages\Google.Protobuf.3.27.3\lib\net45\Google.Protobuf.dll')">$(NuGetPackageRoot)google.protobuf\3.27.3\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core">
+      <HintPath>..\packages\Grpc.Core.2.46.6\lib\net45\Grpc.Core.dll</HintPath>
+      <HintPath Condition="!Exists('..\packages\Grpc.Core.2.46.6\lib\net45\Grpc.Core.dll')">$(NuGetPackageRoot)grpc.core\2.46.6\lib\net45\Grpc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core.Api">
+      <HintPath>..\packages\Grpc.Core.Api.2.46.6\lib\net45\Grpc.Core.Api.dll</HintPath>
+      <HintPath Condition="!Exists('..\packages\Grpc.Core.Api.2.46.6\lib\net45\Grpc.Core.Api.dll')">$(NuGetPackageRoot)grpc.core.api\2.46.6\lib\net45\Grpc.Core.Api.dll</HintPath>
+    </Reference>
+    <!-- Grpc.Core.Api 2.x surface uses IBufferWriter<>/ReadOnlySpan<>/etc from
+         System.Memory; .NET-Framework 4.7.1 needs an explicit reference for them.
+         $(NuGetPackageRoot) is empty under legacy packages.config csprojs - fall
+         back to $(UserProfile)\.nuget\packages\. -->
+    <Reference Include="System.Memory">
+      <HintPath>$(UserProfile)\.nuget\packages\system.memory\4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>$(UserProfile)\.nuget\packages\system.buffers\4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="netstandard" />
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.5.11\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Interactive.Async, Version=3.2.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Interactive.Async.3.2.0\lib\net46\System.Interactive.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Reactive, Version=4.1.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.4.1.5\lib\net46\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Core, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Core.4.1.5\lib\net46\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Interfaces.4.1.5\lib\net46\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Linq.4.1.5\lib\net46\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.PlatformServices.4.1.5\lib\net46\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Windows.Threading, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Windows.Threading.4.1.5\lib\net46\System.Reactive.Windows.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Interop.NETWORKLIST">
+      <HintPath>..\LeapVR.Shell.3rdParty\bin\Interop.NETWORKLIST.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Pod.Grpc.Base\Export\ServiceConnectHost.cs">
+      <Link>RpcServices\ServiceConnectHost.cs</Link>
+    </Compile>
+    <Compile Include="..\Pod.Grpc.Base\Export\ServiceConnectHostGrpc.cs">
+      <Link>RpcServices\ServiceConnectHostGrpc.cs</Link>
+    </Compile>
+    <Compile Include="..\Pod.Grpc.Base\Export\ServiceShellApplications.cs">
+      <Link>RpcServices\ServiceShellApplications.cs</Link>
+    </Compile>
+    <Compile Include="..\Pod.Grpc.Base\Export\ServiceShellApplicationsGrpc.cs">
+      <Link>RpcServices\ServiceShellApplicationsGrpc.cs</Link>
+    </Compile>
+    <Compile Include="..\Pod.Grpc.Base\Export\ServiceShellHost.cs">
+      <Link>RpcServices\ServiceShellHost.cs</Link>
+    </Compile>
+    <Compile Include="..\Pod.Grpc.Base\Export\ServiceShellHostGrpc.cs">
+      <Link>RpcServices\ServiceShellHostGrpc.cs</Link>
+    </Compile>
+    <Compile Include="Session\BaseSessionRate.cs" />
+    <Compile Include="Session\ISessionService.cs" />
+    <Compile Include="Session\NoBillingSessionRate.cs" />
+    <Compile Include="Session\PrepaidSessionRate.cs" />
+    <Compile Include="RpcServices\ApplicationService.cs" />
+    <Compile Include="Data\Entities.cs" />
+    <Compile Include="Factory\RemoteServiceFactory.cs" />
+    <Compile Include="RemoteServicesSet.cs" />
+    <Compile Include="RpcClient\GrpcSslCredentials.cs" />
+    <Compile Include="RpcServices\BaseService.cs" />
+    <Compile Include="RpcServices\ConnectService.cs" />
+    <Compile Include="Session\RemoteSession.cs" />
+    <Compile Include="RpcServices\RpcConnection.cs" />
+    <Compile Include="RpcServices\ShellService.cs" />
+    <Compile Include="Factory\RpcClientConfig.cs" />
+    <Compile Include="Data\GeneralErrorNotification.cs" />
+    <Compile Include="Data\ShellClientInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Session\UISessionData.cs" />
+    <Compile Include="SubscribedSession.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LeapVR.Shared.Lib.Win\LeapVR.Shared.Lib.Win.csproj">
+      <Project>{AB764488-13AA-4D82-8BF8-97E0F5C00820}</Project>
+      <Name>LeapVR.Shared.Lib.Win</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Shared.Lib\LeapVR.Shared.Lib.csproj">
+      <Project>{75c41668-428c-46be-8bb9-6aa9fb447c73}</Project>
+      <Name>LeapVR.Shared.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Shell.Controllers\LeapVR.Shell.Controllers.csproj">
+      <Project>{b79eea0d-acd9-4f7a-a07f-83f6e20c242d}</Project>
+      <Name>LeapVR.Shell.Controllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Shell.Domain.Models\LeapVR.Shell.Domain.Models.csproj">
+      <Project>{aee42744-9545-463a-b67e-e21346f364e1}</Project>
+      <Name>LeapVR.Shell.Domain.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Shell.Modules.Interfaces\LeapVR.Shell.Modules.Interfaces.csproj">
+      <Project>{80D1A44D-0CD7-488F-B13F-4320B2723FAD}</Project>
+      <Name>LeapVR.Shell.Modules.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pod.Data.Infrastructure\Pod.Data.Infrastructure.csproj">
+      <Project>{C485E8C0-FAB2-4FA4-827D-4C44F5E0B8EB}</Project>
+      <Name>Pod.Data.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pod.Enums\Pod.Enums.csproj">
+      <Project>{E0575928-CFA5-4278-9013-B6565EF06970}</Project>
+      <Name>Pod.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pod.Grpc.Base.Client\Pod.Grpc.Base.Client.csproj">
+      <Project>{63f82756-478b-4ae2-b25f-e2af8d709ac9}</Project>
+      <Name>Pod.Grpc.Base.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pod.Grpc.Messages\Pod.Grpc.Messages.csproj">
+      <Project>{00b180e4-2765-4172-8caf-2c1e9d570908}</Project>
+      <Name>Pod.Grpc.Messages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pod.Grpc.Utilities\Pod.Grpc.Utilities.csproj">
+      <Project>{9b898f59-0bd1-4e15-94f1-ed4dfbda50a1}</Project>
+      <Name>Pod.Grpc.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="LeapVR.Shell.Services.licenseheader" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Grpc.Core.2.46.6\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.2.46.6\build\net45\Grpc.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Run `nuget restore` against this repo's packages.config files. Missing file: {0}.</ErrorText>
+    </PropertyGroup>
+    <!-- The Grpc.Core.targets import is best-effort - the targets file copies the native
+         Grpc.Core C-bindings DLL into the kiosk output, which the kiosk needs at runtime.
+         Build_Free.bat runs `nuget restore` first so the packages\ dir is populated. -->
+    <Warning Condition="!Exists('..\packages\Grpc.Core.2.46.6\build\net45\Grpc.Core.targets')" Text="Grpc.Core.targets not found at ..\packages\Grpc.Core.2.46.6\build\net45\Grpc.Core.targets - run `nuget restore` before MSBuild." />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

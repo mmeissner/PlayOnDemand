@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Configurations>Debug;Release</Configurations>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--
+      The two service base classes are generated in Pod.Grpc.Base/Export/
+      and linked here. Under net10.0 those base classes resolve against
+      Grpc.Core.Api shipped via Grpc.AspNetCore (transitively through the
+      Pod.Grpc.Base.Server reference below).
+    -->
+    <Compile Include="..\Pod.Grpc.Base\Export\ServiceConnectHost.cs" Link="Services\ServiceConnectHost.cs" />
+    <Compile Include="..\Pod.Grpc.Base\Export\ServiceConnectHostGrpc.cs" Link="Services\ServiceConnectHostGrpc.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- ASP.NET Core authn types ([Authorize] etc.) + DI extensions. -->
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pod.Data.Infrastructure\Pod.Data.Infrastructure.csproj" />
+    <ProjectReference Include="..\Pod.Data\Pod.Data.csproj" />
+    <ProjectReference Include="..\Pod.Grpc.Base.Server\Pod.Grpc.Base.Server.csproj" />
+    <ProjectReference Include="..\Pod.Grpc.Messages\Pod.Grpc.Messages.csproj" />
+    <ProjectReference Include="..\Pod.Services\Pod.Services.csproj" />
+  </ItemGroup>
+
+</Project>

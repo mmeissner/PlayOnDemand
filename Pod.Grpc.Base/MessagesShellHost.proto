@@ -1,0 +1,127 @@
+﻿syntax = "proto3";
+package Pod.Grpc.Messages.ShellHost;
+
+import "MessagesShared.proto";
+
+
+message ConnectRequest
+{	
+	Pod.Grpc.Messages.Shared.GuidAsBytes ConnectionId = 1; //The ConnectionId provided by the Connect Service identifying a unquiqe Connection
+}
+
+message ConnectResponse
+{
+}
+
+message NotificationRequest
+{
+	Pod.Grpc.Messages.Shared.GuidAsBytes ConnectionId = 1;
+}
+
+message ClientNotification
+{
+	Pod.Grpc.Messages.Shared.ClientNotificationEvent Event = 1;
+}
+
+message ServerSettingsRequest{}
+
+message ServerSettingsResponse
+{
+	Pod.Grpc.Messages.Shared.DateTimeUtcAsLong ServerTimeUtcNow = 1; //The current DateTimeUtc at the server 
+    Pod.Grpc.Messages.Shared.TimeSpanAsLong HeartbeatInterval = 2; // The interval in that the client should send a Heartbeat
+	Pod.Grpc.Messages.Shared.TimeSpanAsLong HeartbeatTimeout = 3; // The interval after that the client should reconnect if a Heartbeat could not have been send
+}
+
+message ClientSettingsRequest{}
+
+message ClientSettingsResponse
+{
+	string DisplayName = 1;
+    string QrCode = 2;
+    Pod.Grpc.Messages.Shared.ControlMode Mode = 3;
+}
+
+message HeartbeatRequest
+{
+	Pod.Grpc.Messages.Shared.GuidAsBytes ConnectionId = 1; //The ConnectionId provided by the Connect Service identifying a unquiqe Connection
+}
+
+message HeartbeatResponse{}
+
+message RequestedLoginRequest
+{
+	Pod.Grpc.Messages.Shared.GuidAsBytes ConnectionId = 1; //The ConnectionId provided by the Connect Service identifying a unquiqe Connection
+}
+
+message RequestedLoginResponse
+{
+	Pod.Grpc.Messages.ShellHost.SessionDetails SessionDetails = 1;
+}
+
+message LoginRequest
+{
+	Pod.Grpc.Messages.Shared.GuidAsBytes ConnectionId = 1; //The ConnectionId provided by the Connect Service identifying a unquiqe Connection
+}
+
+message LoginRequestResponse
+{
+	Pod.Grpc.Messages.ShellHost.SessionDetails SessionDetails = 1;
+}
+
+message LoginIntentionReplyRequest
+{
+	Pod.Grpc.Messages.Shared.GuidAsBytes ConnectionId = 1; //The ConnectionId provided by the Connect Service identifying a unquiqe Connection
+	Pod.Grpc.Messages.Shared.GuidAsBytes SessionId = 2; //The SessionId the reply is related to
+	bool IsLoginAccepted = 3;
+}
+
+message LoginIntentionReplyResponse
+{
+	Pod.Grpc.Messages.ShellHost.SessionDetails Session = 1;
+}
+
+message SessionStateRequest
+{
+	Pod.Grpc.Messages.Shared.GuidAsBytes ConnectionId = 1; //The ConnectionId provided by the Connect Service identifying a unquiqe Connection
+}
+
+message SessionStateResponse
+{
+	SessionDetails Session = 1;
+}
+
+message LogoutRequest
+{
+	Pod.Grpc.Messages.Shared.GuidAsBytes ConnectionId = 1; //The ConnectionId provided by the Connect Service identifying a unquiqe Connection
+	Pod.Grpc.Messages.Shared.LogoutReason Reason = 2;
+}
+
+message LogoutResponse{}
+
+message DisconnectRequest
+{
+	Pod.Grpc.Messages.Shared.GuidAsBytes ConnectionId = 1; //The ConnectionId provided by the Connect Service identifying a unquiqe Connection
+}
+
+message DisconnectResponse{}
+
+message SessionDetails
+{
+	Pod.Grpc.Messages.Shared.GuidAsBytes SessionId = 1;
+	Pod.Grpc.Messages.Shared.DateTimeUtcAsLong RequestedOnUtc = 2; //The DateTime UTC this instance was requested & created
+	Pod.Grpc.Messages.Shared.SessionState SessionState = 3; //The State of the Session
+	Pod.Grpc.Messages.Shared.DateTimeUtcAsLong DeadlineUtcForPickUp = 4; //The DateTime the Login Intention/Inteded Session needs to be picked up by the client from the server 
+	Pod.Grpc.Messages.Shared.DateTimeUtcAsLong DeadlineUtcForConfirmation = 5; // The DateTime the Decission must been received by the Server to prevent timeout
+	Pod.Grpc.Messages.Shared.TimeSpanAsLong MaxTimeForConfirmationDecision = 6; // The Time for an User to make a Login Decission
+	Pod.Grpc.Messages.Shared.DateTimeUtcAsLong StartTimeUtc = 7; //The DateTime the Session was confirmed as Started by the Server
+	Pod.Grpc.Messages.Shared.TimeSpanAsLong EffectiveDuration = 8; //The Effective Duration of the Session, this can change from possible Startup Conditions if change requests were made
+	SessionConditions Conditions = 9; // Conditions effecting the Sessions behaviour and limitations
+}
+
+message SessionConditions
+{
+	Pod.Grpc.Messages.Shared.TimeSpanAsLong InitialDurationOnSessionStart = 1; //Sets the sessions duration on start, but can be updated/changed during a running session what will affect the effective duration
+	Pod.Grpc.Messages.Shared.GuidAsBytes AutostartAppIdOnSessionStart = 2; // The App that should be automatically started on confirmation of the Session
+	bool AutoLogoutOnAppExit = 3; // If Session should be automatically ended by logout after an application exited
+	repeated Pod.Grpc.Messages.Shared.GuidAsBytes AllowedApps = 4; //The Apps by Id allowed to be displayed/started by the User if non present than all are allowed
+}

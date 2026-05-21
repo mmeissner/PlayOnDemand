@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="zh-CN" original="LEAPVR.CONTENT.CREATOR.LANGUAGE/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6810.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="LEAPVR.CONTENT.CREATOR.LANGUAGE/RESOURCES.RESX" datatype="resx">
+        <trans-unit id="BasicInfo_SelectLanguage" translate="yes" xml:space="preserve">
+          <source>Select Language</source>
+          <target state="translated" state-qualifier="mt-suggestion">选择语言</target>
+        </trans-unit>
+        <trans-unit id="BasicInfo_TargetPlatform" translate="yes" xml:space="preserve">
+          <source>Target Platform</source>
+          <target state="translated" state-qualifier="tm-suggestion">目标平台</target>
+        </trans-unit>
+        <trans-unit id="Complete_Done" translate="yes" xml:space="preserve">
+          <source>Done</source>
+          <target state="translated" state-qualifier="tm-suggestion">完成</target>
+        </trans-unit>
+        <trans-unit id="Complete_Error" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <target state="translated" state-qualifier="tm-suggestion">错误</target>
+        </trans-unit>
+        <trans-unit id="Complete_ErrorMessage" translate="yes" xml:space="preserve">
+          <source>The VBox Installation Package creation process has encountered a problem. Please check validity of all provided data and try again.</source>
+          <target state="translated">创建过程发生错误，请检查所有已指定的数据并重试。</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_Category" translate="yes" xml:space="preserve">
+          <source>Category</source>
+          <target state="translated" state-qualifier="tm-suggestion">类别</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_Description" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="translated" state-qualifier="tm-suggestion">说明</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_ExecutablePathNotRelative" translate="yes" xml:space="preserve">
+          <source>Provided Executable File Path is not relative to Application Base Directory.</source>
+          <target state="translated">指定的可执行文件路径与指定的游戏根目录不匹配</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_Image" translate="yes" xml:space="preserve">
+          <source>Image</source>
+          <target state="translated" state-qualifier="tm-suggestion">图像</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_ImageRecommendedSize" translate="yes" xml:space="preserve">
+          <source>Recommended Size</source>
+          <target state="translated">推荐尺寸</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_InvalidPictureDimensions" translate="yes" xml:space="preserve">
+          <source>Provided picture have invalid dimensions (max allowed is {0}x{0} px)</source>
+          <target state="translated">指定的图片尺寸不符合要求(最大寸尺：{0}x{0} px)</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_InvalidPictureFile" translate="yes" xml:space="preserve">
+          <source>Provided picture file's format is invalid.</source>
+          <target state="translated">指定的图片格式不符合要求，请重新指定</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_Title" translate="yes" xml:space="preserve">
+          <source>Title</source>
+          <target state="translated">标题</target>
+        </trans-unit>
+        <trans-unit id="Enum_Platform_LeapVR" translate="yes" xml:space="preserve">
+          <source>Leap VR</source>
+          <target state="translated">Leap VR</target>
+        </trans-unit>
+        <trans-unit id="Enum_Platform_Steam" translate="yes" xml:space="preserve">
+          <source>Steam</source>
+          <target state="translated">Steam</target>
+        </trans-unit>
+        <trans-unit id="ExecutableInfo_Advanced" translate="yes" xml:space="preserve">
+          <source>Advanced settings</source>
+          <target state="translated">高级设置</target>
+        </trans-unit>
+        <trans-unit id="ExecutableInfo_GameBaseDirectory" translate="yes" xml:space="preserve">
+          <source>Game Base Directory</source>
+          <target state="translated">程序根目录</target>
+        </trans-unit>
+        <trans-unit id="ExecutableInfo_GameBaseDirectoryInstruction" translate="yes" xml:space="preserve">
+          <source>The highest directory in directory tree that holds all files and directories needed by the game to run properly.</source>
+          <target state="translated">确保程序可正常运行的所有必要文件所在的根目录</target>
+        </trans-unit>
+        <trans-unit id="ExecutableInfo_GameExecutableParameters" translate="yes" xml:space="preserve">
+          <source>Game Executable Parameters</source>
+          <target state="translated">启动参数</target>
+        </trans-unit>
+        <trans-unit id="ExecutableInfo_GameExecutableParametersInstruction" translate="yes" xml:space="preserve">
+          <source>Parameters that will be provided to the main executable when execution of the game is requested.</source>
+          <target state="translated">可执行文件的启动参数，该参数总是应用到指定的可执行文件(游戏本身的可执行文件或启动器)，可选</target>
+        </trans-unit>
+        <trans-unit id="ExecutableInfo_GameFiles" translate="yes" xml:space="preserve">
+          <source>Game Files</source>
+          <target state="translated">文件</target>
+        </trans-unit>
+        <trans-unit id="FlowControl_Back" translate="yes" xml:space="preserve">
+          <source>Back</source>
+          <target state="translated">上一步</target>
+        </trans-unit>
+        <trans-unit id="FlowControl_Create" translate="yes" xml:space="preserve">
+          <source>Create</source>
+          <target state="translated" state-qualifier="tm-suggestion">创建</target>
+        </trans-unit>
+        <trans-unit id="FlowControl_Exit" translate="yes" xml:space="preserve">
+          <source>Exit</source>
+          <target state="translated" state-qualifier="tm-suggestion">退出</target>
+        </trans-unit>
+        <trans-unit id="FlowControl_Next" translate="yes" xml:space="preserve">
+          <source>Next</source>
+          <target state="translated">下一步</target>
+        </trans-unit>
+        <trans-unit id="Global_Browse" translate="yes" xml:space="preserve">
+          <source>Browse</source>
+          <target state="translated" state-qualifier="mt-suggestion">浏览</target>
+        </trans-unit>
+        <trans-unit id="Global_Browse_AllFiles" translate="yes" xml:space="preserve">
+          <source>All Files</source>
+          <target state="translated" state-qualifier="tm-suggestion">所有文件</target>
+        </trans-unit>
+        <trans-unit id="Global_Browse_Container" translate="yes" xml:space="preserve">
+          <source>VBox Installation Package</source>
+          <target state="translated">VBox 安装包</target>
+        </trans-unit>
+        <trans-unit id="Global_Browse_Executable" translate="yes" xml:space="preserve">
+          <source>Executable</source>
+          <target state="translated">可执行文件</target>
+        </trans-unit>
+        <trans-unit id="Global_Browse_ImageFiles" translate="yes" xml:space="preserve">
+          <source>Image Files</source>
+          <target state="translated" state-qualifier="tm-suggestion">图像文件</target>
+        </trans-unit>
+        <trans-unit id="Global_ProductName" translate="yes" xml:space="preserve">
+          <source>VBox Installation Package Creator</source>
+          <target state="translated">VBox 安装包生成器</target>
+        </trans-unit>
+        <trans-unit id="Global_Reload" translate="yes" xml:space="preserve">
+          <source>Reload</source>
+          <target state="translated">加载</target>
+        </trans-unit>
+        <trans-unit id="Global_Validation_CannotBeEmpty" translate="yes" xml:space="preserve">
+          <source>This field cannot be left empty.</source>
+          <target state="translated">该字段不能为空</target>
+        </trans-unit>
+        <trans-unit id="Progress_CreatingFiles" translate="yes" xml:space="preserve">
+          <source>Creating Files</source>
+          <target state="translated">正在创建文件</target>
+        </trans-unit>
+        <trans-unit id="Progress_Done" translate="yes" xml:space="preserve">
+          <source>Done</source>
+          <target state="translated" state-qualifier="tm-suggestion">完成</target>
+        </trans-unit>
+        <trans-unit id="Shell_SelectPlatform" translate="yes" xml:space="preserve">
+          <source>Select platform</source>
+          <target state="translated">选择游戏平台</target>
+        </trans-unit>
+        <trans-unit id="Shell_StartCreation" translate="yes" xml:space="preserve">
+          <source>Create</source>
+          <target state="translated">创建</target>
+        </trans-unit>
+        <trans-unit id="Shell_SteamIDInstruction" translate="yes" xml:space="preserve">
+          <source>Providing SteamID will allow Creator to automatically provide game Title and Image from Steam database.</source>
+          <target state="translated">填入 SteamID，游戏名称和图片将自动从 Steam 上获取(确保英特网畅通)，可选</target>
+        </trans-unit>
+        <trans-unit id="Shell_SteamIdOptional" translate="yes" xml:space="preserve">
+          <source>Steam ID (optional)</source>
+          <target state="translated">Steam ID （可选）</target>
+        </trans-unit>
+        <trans-unit id="Shell_StemId" translate="yes" xml:space="preserve">
+          <source>Steam ID</source>
+          <target state="translated">Steam ID</target>
+        </trans-unit>
+        <trans-unit id="Summary_FileCount" translate="yes" xml:space="preserve">
+          <source>Files Count</source>
+          <target state="translated">文件数</target>
+        </trans-unit>
+        <trans-unit id="Summary_OutputPackageName" translate="yes" xml:space="preserve">
+          <source>Package Output Path</source>
+          <target state="translated">VBox 安装包输出路径</target>
+        </trans-unit>
+        <trans-unit id="Summary_OutputPackageNameInstruction" translate="yes" xml:space="preserve">
+          <source>The output path that the installation package will be saved to when creation process is done. The installation package have `.vbox` extension.</source>
+          <target state="translated">VBox 安装包创建完成后存储的目标路径，Vbox 安装包的扩展名为 '.vbox' </target>
+        </trans-unit>
+        <trans-unit id="Summary_TotalSize" translate="yes" xml:space="preserve">
+          <source>Total Files Size</source>
+          <target state="translated">总文件大小</target>
+        </trans-unit>
+        <trans-unit id="Global_Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated">取消</target>
+        </trans-unit>
+        <trans-unit id="SupportedModes" translate="yes" xml:space="preserve">
+          <source>Supported Modes</source>
+          <target state="translated">支持模式</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_BeyondMaximumFileSizeFormat" translate="yes" xml:space="preserve">
+          <source>The file you upload is beyond maximum allowed size: {0}</source>
+          <target state="translated">该文件超出了最大允许的限制：{0}</target>
+        </trans-unit>
+        <trans-unit id="Summary_Output_FileAlreadyExists" translate="yes" xml:space="preserve">
+          <source>File already exists, are you sure to override the file?</source>
+          <target state="translated">文件已存在，确定要覆盖该文件吗？</target>
+        </trans-unit>
+        <trans-unit id="Global_Warning" translate="yes" xml:space="preserve">
+          <source>Warning</source>
+          <target state="translated">警告</target>
+        </trans-unit>
+        <trans-unit id="Validation_InvalidFilenameCharFormat" translate="yes" xml:space="preserve">
+          <source>Invalid character detected in output path, it is replaced with '{0}' and you could adjust it.</source>
+          <target state="translated">程序名称构造的输出路径存在非法字符，已用 '{0}' 替换，您仍然可以修改输出路径</target>
+        </trans-unit>
+        <trans-unit id="ApplicationMainExecutablePath" translate="yes" xml:space="preserve">
+          <source>Application Main Executable Path</source>
+          <target state="translated">.exe 路径</target>
+        </trans-unit>
+        <trans-unit id="ApplicationMainExecutablePath_Instruction" translate="yes" xml:space="preserve">
+          <source>The path to the applixcation main executable file. Usually it is the application executable itself, for some applications requiring an external launcher this should be set the path to the launcher executable file.</source>
+          <target state="translated">应用程序 .exe 文件路径，通常为该应用程序 .exe 文件本身</target>
+        </trans-unit>
+        <trans-unit id="ApplicationMainProcessName" translate="yes" xml:space="preserve">
+          <source>Application Main Process Name</source>
+          <target state="translated">程序起始进程名</target>
+        </trans-unit>
+        <trans-unit id="ApplicationMainProcessName_Instruction" translate="yes" xml:space="preserve">
+          <source>Application main process name(usually the application executable file name without extension) is used to provide information for the shell to be aware of whether the application is started or not, is it still responding during lifetime and kill the application. Note this should not consider the launcher if there it is.</source>
+          <target state="translated">应用程序主进程名用于检测该应用程序是否成功启动，无响应检测和退出应用程序，该值通常为应用程序本身 .exe 文件名去掉扩展名。注意，对于依赖 Launcher 的应用程序请将主进程设置为应用程序本身的进程名</target>
+        </trans-unit>
+        <trans-unit id="ApplicationProcessNames" translate="yes" xml:space="preserve">
+          <source>Application Process Names</source>
+          <target state="translated">预管理进程名</target>
+        </trans-unit>
+        <trans-unit id="ApplicationProcessNames_Instruction" translate="yes" xml:space="preserve">
+          <source>Besides the application main process name, the application could have multiple different processes running during lifetime. Specify the process names if there are and split them with ";". This is optional</source>
+          <target state="translated">除了应用程序主进程名以外，该程序可能在运行期间启动多个其他进程，使用英文半角 ';' 来分隔这些进程的名称，该选项不是必填项</target>
+        </trans-unit>
+        <trans-unit id="EnableRespondingDetection" translate="yes" xml:space="preserve">
+          <source>Enable Responding Detection</source>
+          <target state="translated">启用无响应检测</target>
+        </trans-unit>
+        <trans-unit id="EnableRespondingDetection_Instruction" translate="yes" xml:space="preserve">
+          <source>Allow the shell to detect application responding and make further decision if it's not responding.</source>
+          <target state="translated">允许系统在应用程序运行期间检测其响应状态，以帮助系统在程序长时间无响应时做出正确的决策</target>
+        </trans-unit>
+        <trans-unit id="EnableTrackingChildProcesses" translate="yes" xml:space="preserve">
+          <source>Enable Tracking Child Processes</source>
+          <target state="translated">启用子进程追踪</target>
+        </trans-unit>
+        <trans-unit id="EnableTrackingChildProcesses_Instruction" translate="yes" xml:space="preserve">
+          <source>Allow the shell to track processes which are dynamically created since the starting process get executed. It is helpful when there're unknown amount of processes executed during an application running. However, this will slow the performance a little bit down.</source>
+          <target state="translated">允许系统追踪应用程序运行期间动态创建的其他进程，但这将轻微损耗性能。当该选项启用时，系统将忽略进程名作为识别应用程序的依据</target>
+        </trans-unit>
+        <trans-unit id="Shell_StartEdit" translate="yes" xml:space="preserve">
+          <source>Edit</source>
+          <target state="translated">编辑</target>
+        </trans-unit>
+        <trans-unit id="Validation_ErrorVBoxPackageOpenEdit" translate="yes" xml:space="preserve">
+          <source>An error occured on opening the VBox Package Files. /n Please check if all files are in place and not corrupt. </source>
+          <target state="translated">打开 VBox 安装包文件时出错 /n 请检查是否所有文件定位正确并完好</target>
+        </trans-unit>
+        <trans-unit id="Validation_VBoxPackage_Edit_MsgBox_Error_Caption" translate="yes" xml:space="preserve">
+          <source>Error during open VBox Package</source>
+          <target state="translated">打开 VBox 安装包文件时出错</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_Thumbnail_Image" translate="yes" xml:space="preserve">
+          <source>Thumbnail Image</source>
+          <target state="translated">缩略图</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_ApplicationGuid" translate="yes" xml:space="preserve">
+          <source>Unique Application ID</source>
+          <target state="translated">App Id(唯一)</target>
+        </trans-unit>
+        <trans-unit id="Global_ContainerVersion" translate="yes" xml:space="preserve">
+          <source>Container Version</source>
+          <target state="translated">容器版本</target>
+        </trans-unit>
+        <trans-unit id="Global_DiskSizeRequired" translate="yes" xml:space="preserve">
+          <source>Game Size on Disk</source>
+          <target state="translated">占用磁盘空间</target>
+        </trans-unit>
+        <trans-unit id="Global_GenerateNewGuid" translate="yes" xml:space="preserve">
+          <source>Generate New ID</source>
+          <target state="translated">生成新 ID</target>
+        </trans-unit>
+        <trans-unit id="Shell_StartVBoxToZip" translate="yes" xml:space="preserve">
+          <source>VBox 2 Zip</source>
+          <target state="translated">VBox 2 Zip</target>
+        </trans-unit>
+        <trans-unit id="Global_Select_Directory" translate="yes" xml:space="preserve">
+          <source>Select Directory</source>
+          <target state="translated">选取目录</target>
+        </trans-unit>
+        <trans-unit id="Global_Select_File" translate="yes" xml:space="preserve">
+          <source>Select File</source>
+          <target state="translated">指定文件</target>
+        </trans-unit>
+        <trans-unit id="Shell_Tools" translate="yes" xml:space="preserve">
+          <source>Tools</source>
+          <target state="translated">工具</target>
+        </trans-unit>
+        <trans-unit id="Add" translate="yes" xml:space="preserve">
+          <source>Add</source>
+          <target state="translated">添加</target>
+        </trans-unit>
+        <trans-unit id="Edit" translate="yes" xml:space="preserve">
+          <source>Edit</source>
+          <target state="translated">编辑</target>
+        </trans-unit>
+        <trans-unit id="ExecutionInstructions" translate="yes" xml:space="preserve">
+          <source>Execution Instructions</source>
+          <target state="translated">配置可执行项</target>
+        </trans-unit>
+        <trans-unit id="Remove" translate="yes" xml:space="preserve">
+          <source>Remove</source>
+          <target state="translated">移除</target>
+        </trans-unit>
+        <trans-unit id="WorkingDirectory" translate="yes" xml:space="preserve">
+          <source>Working Directory</source>
+          <target state="translated">工作目录</target>
+        </trans-unit>
+        <trans-unit id="Global_Ok" translate="yes" xml:space="preserve">
+          <source>OK</source>
+          <target state="translated">OK</target>
+        </trans-unit>
+        <trans-unit id="InstructionName" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <target state="translated">显示名称</target>
+        </trans-unit>
+        <trans-unit id="InstructionName_Introduction" translate="yes" xml:space="preserve">
+          <source>A display name for one executable instruction that infers what's it about</source>
+          <target state="translated">指定一个名字用以向用户展示该启动项隐含的意思</target>
+        </trans-unit>
+        <trans-unit id="SetFromExecutable" translate="yes" xml:space="preserve">
+          <source>Set From Exe</source>
+          <target state="translated">从 .exe 获取</target>
+        </trans-unit>
+        <trans-unit id="WorkingDirectory_Introduction" translate="yes" xml:space="preserve">
+          <source>Working directory of a specific executable. If not set, working directory will be set to the directory where the executable is</source>
+          <target state="translated">.exe 程序执行所依赖的工作目录，若为空，默认为可执行程序所在的目录</target>
+        </trans-unit>
+        <trans-unit id="IsMainExecutable" translate="yes" xml:space="preserve">
+          <source>Is Main Executable</source>
+          <target state="translated">是否为主要进程</target>
+        </trans-unit>
+        <trans-unit id="IsMainExecutable_Introduction" translate="yes" xml:space="preserve">
+          <source>Indicates whether this executable is one of the executables taken into consideration to check if the application is running. Normally an application requires at least one main executable. Multiple main executables mean any of them running will the application be considered as running.</source>
+          <target state="translated">指示该进程是否作为衡量应用程序正在运行的主要进程，通常情况下一个应用程序至少有一个主要进程，如果指定了多个主要进程，那么其中任何一个正在运行，系统将视作该应用程序正在运行</target>
+        </trans-unit>
+        <trans-unit id="KillOnExit" translate="yes" xml:space="preserve">
+          <source>Kill On Application Exit</source>
+          <target state="translated">应用退出时结束进程</target>
+        </trans-unit>
+        <trans-unit id="KillOnExit_Introduction" translate="yes" xml:space="preserve">
+          <source>Indicates whether this process should be killed on application exit</source>
+          <target state="translated">指示系统是否应该在应用退出时结束该进程</target>
+        </trans-unit>
+        <trans-unit id="KillProcessIfNotResponding" translate="yes" xml:space="preserve">
+          <source>Kill on Not Responding</source>
+          <target state="translated">进程无响应时强制结束</target>
+        </trans-unit>
+        <trans-unit id="KillProcessIfNotResponding_Introduction" translate="yes" xml:space="preserve">
+          <source>Indicates whether this process should be killed when the system detects it is not responding</source>
+          <target state="translated">指示系统是否在该进程无响应时强制结束该进程</target>
+        </trans-unit>
+        <trans-unit id="Options" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target state="translated">选项</target>
+        </trans-unit>
+        <trans-unit id="ProcessMonitoring" translate="yes" xml:space="preserve">
+          <source>Process Monitoring</source>
+          <target state="translated">进程监控</target>
+        </trans-unit>
+        <trans-unit id="RequiredVrModule" translate="yes" xml:space="preserve">
+          <source>Required VR Module</source>
+          <target state="translated">依赖的 VR 模块</target>
+        </trans-unit>
+        <trans-unit id="RequiredVrModule_Introduction" translate="yes" xml:space="preserve">
+          <source>Specify the corresponding vr module to match the correct graphic api.</source>
+          <target state="translated">指定与该应用程序相匹配的 VR 模块</target>
+        </trans-unit>
+        <trans-unit id="WatchdogOptions" translate="yes" xml:space="preserve">
+          <source>Watchdog Options</source>
+          <target state="translated">检测选项</target>
+        </trans-unit>
+        <trans-unit id="Executables" translate="yes" xml:space="preserve">
+          <source>Executables</source>
+          <target state="translated">可执行程序</target>
+        </trans-unit>
+        <trans-unit id="NoneExecutableIsMainExecutable" translate="yes" xml:space="preserve">
+          <source>None of added executables is marked as main executable, are you sure to continue?</source>
+          <target state="translated">没有任何可执行程序被标记为起始 .exe，你确定要继续吗？</target>
+        </trans-unit>
+        <trans-unit id="Warning" translate="yes" xml:space="preserve">
+          <source>Warning</source>
+          <target state="translated">警告</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

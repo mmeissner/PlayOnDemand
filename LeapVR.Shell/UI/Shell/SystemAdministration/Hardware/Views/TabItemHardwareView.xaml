@@ -1,0 +1,208 @@
+﻿<UserControl
+    x:Class="LeapVR.Shell.UI.Shell.SystemAdministration.Hardware.Views.TabItemHardwareView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:lex="http://wpflocalizeextension.codeplex.com"
+    xmlns:local="clr-namespace:LeapVR.Shell.UI.Shell.SystemAdministration.Hardware.ViewModels"
+    xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:properties="clr-namespace:LeapVR.Shell.Properties"
+    xmlns:usercontrols="clr-namespace:LeapVR.Shell.UI.Usercontrols"
+    d:DesignHeight="720"
+    d:DesignWidth="1280"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <lvc:ColorsCollection x:Key="Colors">
+            <Color>Green</Color>
+            <Color>#1289FF</Color>
+            <Color>DarkOrange</Color>
+        </lvc:ColorsCollection>
+
+        <Style BasedOn="{StaticResource TextBlockBaseStyle}" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="{DynamicResource H4}" />
+            <Setter Property="Margin" Value="20" />
+        </Style>
+
+        <Style TargetType="lvc:PieSeries">
+            <Setter Property="DataLabels" Value="True" />
+            <Setter Property="LabelPosition" Value="InsideSlice" />
+            <Setter Property="StrokeThickness" Value="0" />
+            <Setter Property="FontSize" Value="{DynamicResource H5}" />
+            <Setter Property="LabelPoint" Value="{x:Static local:SpaceSeriesViewModel.LabelPoint}" />
+        </Style>
+
+
+        <ControlTemplate x:Key="DefaultLegendControlTemplate" TargetType="{x:Type lvc:DefaultLegend}">
+            <Border>
+                <ItemsControl>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel
+                                MaxWidth="{Binding MaxWidth, ElementName=This}"
+                                MaxHeight="{Binding MaxHeight, ElementName=This}"
+                                IsItemsHost="True">
+                                <WrapPanel.Orientation>
+                                    <MultiBinding UpdateSourceTrigger="Default">
+                                        <MultiBinding.Converter>
+                                            <lvc:OrientationConverter />
+                                        </MultiBinding.Converter>
+                                        <Binding Path="Orientation" />
+                                        <Binding Path="InternalOrientation" />
+                                    </MultiBinding>
+                                </WrapPanel.Orientation>
+                            </WrapPanel>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate DataType="{x:Type lvc:SeriesViewModel}">
+                            <Grid Margin="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Path
+                                    Width="{Binding BulletSize, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type UserControl}}}"
+                                    Height="{Binding BulletSize, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type UserControl}}}"
+                                    Data="{Binding PointGeometry}"
+                                    Fill="{Binding Fill}"
+                                    Stretch="Fill"
+                                    Stroke="{Binding Stroke}"
+                                    StrokeThickness="{Binding StrokeThickness}" />
+                                <TextBlock
+                                    Grid.Column="1"
+                                    Margin="4,0"
+                                    VerticalAlignment="Center"
+                                    Text="{Binding Title}" />
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </Border>
+        </ControlTemplate>
+
+    </UserControl.Resources>
+
+    <Grid VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="4*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" VerticalAlignment="Center">
+
+            <TextBlock>
+                <TextBlock.Inlines>
+                    <Run Foreground="{DynamicResource ThemeSecondaryTextColor}" Text="{lex:Loc System_Hardware_StationName}" />
+                    <Span>:</Span>
+                    <Run Text="{Binding StationDetailsViewModel.StationName}" />
+                </TextBlock.Inlines>
+            </TextBlock>
+
+            <TextBlock>
+                <TextBlock.Inlines>
+                    <Run Foreground="{DynamicResource ThemeSecondaryTextColor}" Text="{lex:Loc License_LicenseKey}" />
+                    <Span>:</Span>
+                    <Run Text="{Binding StationDetailsViewModel.LicenseKey}" />
+                </TextBlock.Inlines>
+            </TextBlock>
+
+            <TextBlock>
+                <TextBlock.Inlines>
+                    <Run Foreground="{DynamicResource ThemeSecondaryTextColor}" Text="{lex:Loc System_Hardware_CPU}" />
+                    <Span>:</Span>
+                    <Run Text="{Binding CpuDescription}" />
+                </TextBlock.Inlines>
+            </TextBlock>
+
+            <TextBlock>
+                <TextBlock.Inlines>
+                    <Run Foreground="{DynamicResource ThemeSecondaryTextColor}" Text="{lex:Loc System_Hardware_RAM}" />
+                    <Span>:</Span>
+                    <Run Text="{Binding RamDescription}" />
+                </TextBlock.Inlines>
+            </TextBlock>
+
+            <TextBlock>
+                <TextBlock.Inlines>
+                    <Run Foreground="{DynamicResource ThemeSecondaryTextColor}" Text="{lex:Loc System_Hardware_VGA}" />
+                    <Span>:</Span>
+                    <Run Text="{Binding VgaDescription}" />
+                </TextBlock.Inlines>
+            </TextBlock>
+        </StackPanel>
+
+        <Grid Grid.Row="0" Grid.Column="1">
+            <lvc:PieChart
+                x:Name="Chart"
+                Margin="100"
+                Hoverable="False"
+                InnerRadius="150"
+                LegendLocation="Bottom"
+                SeriesColors="{DynamicResource Colors}">
+                <lvc:PieChart.ChartLegend>
+                    <lvc:DefaultLegend
+                        BulletSize="20"
+                        FontSize="{DynamicResource H6}"
+                        Foreground="White"
+                        Orientation="Horizontal" />
+                </lvc:PieChart.ChartLegend>
+                <lvc:PieChart.DataTooltip>
+                    <lvc:DefaultTooltip Visibility="Collapsed" />
+                </lvc:PieChart.DataTooltip>
+                <lvc:PieChart.Series>
+                    <lvc:PieSeries Title="{Binding FreeSpaceInfo.Title}" Values="{Binding FreeSpaceInfo.ChartValues}" />
+                    <lvc:PieSeries Title="{Binding ApplicationSpaceInfo.Title}" Values="{Binding ApplicationSpaceInfo.ChartValues}" />
+                    <lvc:PieSeries
+                        Title="{Binding SystemSpaceInfo.Title}"
+                        LabelPosition="OutsideSlice"
+                        Values="{Binding SystemSpaceInfo.ChartValues}" />
+                </lvc:PieChart.Series>
+
+            </lvc:PieChart>
+            <TextBlock
+                Grid.Row="0"
+                Margin="32,230,32,285"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                TextAlignment="Center">
+                <TextBlock.Inlines>
+                    <Run FontSize="{DynamicResource H3}">
+                        <Run.Text>
+                            <MultiBinding
+                                Converter="{StaticResource PercentageMultiConverter}"
+                                FallbackValue="N/A"
+                                TargetNullValue="N/A">
+                                <Binding Mode="OneWay" Path="FreeSpaceInfo.Value" />
+                                <Binding Mode="OneWay" Path="TotalSpace" />
+                            </MultiBinding>
+                        </Run.Text>
+                    </Run>
+                    <Span FontSize="{DynamicResource H3}">%</Span>
+                    <LineBreak />
+                    <Run FontSize="{DynamicResource H3}" Text="{lex:Loc System_Hardware_FreeSpace}" />
+                    <LineBreak />
+                    <Run FontSize="{DynamicResource H3}" Text="{Binding FreeSpaceInfo.Value, Mode=OneWay, Converter={StaticResource BytesToProperSpaceUnitConverter}}" />
+                    <!--Run Text="{Binding TotalSpace, Mode=OneWay, Converter={StaticResource BytesToProperSpaceUnitConverter}}" />
+                    <Run Foreground="{DynamicResource ThemeSecondaryTextColor}" Text="{lex:Loc System_Hardware_Total}" /-->
+                </TextBlock.Inlines>
+            </TextBlock>
+        </Grid>
+
+        <TextBlock
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            FontSize="28"
+            TextAlignment="Right">
+            <Run Foreground="{DynamicResource ThemeSecondaryTextColor}" Text="{lex:Loc System_Hardware_VBoxID}" />
+            <Span>:</Span>
+            <Run Text="{Binding HardwareId}" />
+        </TextBlock>
+
+    </Grid>
+</UserControl>

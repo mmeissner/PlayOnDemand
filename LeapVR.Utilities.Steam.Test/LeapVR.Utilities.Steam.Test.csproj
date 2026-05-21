@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Test project for the kiosk-shared LeapVR.Utilities.Steam library.
+    Targets net471 because the SUT itself is net471 (Steam plugin is
+    Windows-only by definition - it reads HKEY_CURRENT_USER\SOFTWARE\Valve\Steam).
+    Runs under `dotnet test` on Windows alongside the rest of the test suite.
+
+    Bootstrapped to cover SteamLib.GetSteamLibraryFolders + ResolveLibraryPath,
+    which crashed the kiosk on first start when Steam's libraryfolders.vdf
+    used the post-2021 schema with `path` nested inside numbered entries.
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net471</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <Configurations>Debug;Release;Release_ShellClient</Configurations>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LeapVR.Utilities.Steam\LeapVR.Utilities.Steam.csproj" />
+  </ItemGroup>
+
+</Project>

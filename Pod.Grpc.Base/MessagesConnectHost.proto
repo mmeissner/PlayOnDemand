@@ -1,0 +1,16 @@
+syntax = "proto3";
+package Pod.Grpc.Messages.ConnectHost;
+
+import "MessagesShared.proto";
+
+message ShellServerRequest {
+	string IdentityId = 1;
+	uint32 MaxInterfaceVersion = 2;
+	Pod.Grpc.Messages.Shared.GuidAsBytes ReconnectConnectionId = 3;
+}
+message ShellServerResponse {
+	Pod.Grpc.Messages.Shared.GuidAsBytes ConnectionId = 1;
+	string HostAddress = 2;
+	uint32 Port = 3;
+	uint32 RequiredInterfaceVersion = 4;
+}

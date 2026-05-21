@@ -1,0 +1,35 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/vrsteamstyles.css" />
+    <include src="file://{resources}/styles/dashboard.css" />
+    <include src="file://{resources}/styles/powermenu.css" />
+	</styles>
+
+  
+  <PowerMenu defaultfocus="Cancel"  selectionpos="auto">
+
+    <Panel id="PowerMenu" hittest="false">
+      <Panel id="ColumnContainer" selectionpos="auto">
+        <Panel id="ColumnOne" class="ContextMenuBody" tabindex="auto" selectionpos="0,0">
+          <Button  id="ResetSeatedPosition" class="Button" tabindex="auto" selectionpos="auto" onactivate="ResetSeatedOrigin(); DismissDashboard();" >
+            <Label class="Label" text="#PowerMenuResetSeatedPosition" />
+          </Button>
+          <!--<Button  id="TurnOffController" class="Button" tabindex="auto" selectionpos="auto" onactivate="TurnOffVRController(); DismissDashboard();" >
+            <Label class="Label" text="#PowerMenuTurnOffController" />
+          </Button>
+          <Button  id="QuitSceneApp" class="Button" onactivate="QuitSceneApp();" tabindex="auto" selectionpos="auto">
+            <Label class="Label" text="#PowerMenuQuitSceneApp" />
+          </Button>
+          <Button  id="ExitVR" class="Button" tabindex="auto" selectionpos="auto" onactivate="QuitOpenVR();" >
+            <Label class="Label" text="#PowerMenuExitVR" />
+          </Button>-->
+          <Button id="Cancel" class="Button" onactivate="DismissDashboard();" tabindex="auto" selectionpos="auto">
+            <Label class="Label" text="#PowerMenuCancel" />
+          </Button>
+        </Panel>
+
+      </Panel>
+    </Panel>
+  </PowerMenu>
+
+</root>

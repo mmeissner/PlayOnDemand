@@ -1,0 +1,200 @@
+﻿<UserControl
+    x:Class="Unosquare.FFME.Windows.Sample.Controls.ControllerPanelControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:vm="clr-namespace:Unosquare.FFME.Windows.Sample.ViewModels"
+    d:DataContext="{StaticResource ViewModel}"
+    mc:Ignorable="d">
+    <Grid Name="Controls" Height="250" Background="{x:Null}" Visibility="Visible">
+        <Canvas Background="{DynamicResource ShadedBackgroundBrush}" IsHitTestVisible="False" />
+
+        <Grid VerticalAlignment="Bottom">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="70" />
+            </Grid.RowDefinitions>
+
+            <Slider
+                Name="PositionSlider"
+                Grid.Row="0"
+                Margin="10,0"
+                Cursor="Hand"
+                IsEnabled="{Binding App.MediaElement.IsOpen}"
+                IsSnapToTickEnabled="False"
+                LargeChange="{Binding App.MediaElement.FrameStepDuration, Converter={StaticResource TimeSpanToSecondsConverter}}"
+                Maximum="{Binding App.MediaElement.NaturalDuration, Converter={StaticResource TimeSpanToSecondsConverter}}"
+                SmallChange="{Binding App.MediaElement.FrameStepDuration, Converter={StaticResource TimeSpanToSecondsConverter}}"
+                Style="{DynamicResource PositionSliderStyle}"
+                Visibility="{Binding Controller.SeekBarVisibility}"
+                Value="{Binding App.MediaElement.Position, Converter={StaticResource TimeSpanToSecondsConverter}}" />
+
+            <DockPanel Name="ProgressPanel" Grid.Row="1" Margin="20,0" LastChildFill="True">
+                <TextBlock
+                    Width="100"
+                    VerticalAlignment="Center"
+                    DockPanel.Dock="Left"
+                    Foreground="{StaticResource CustomSliderHighlightBrush}"
+                    Text="{Binding App.MediaElement.Position, Converter={StaticResource TimeSpanFormatter}, Mode=OneWay}"
+                    Visibility="{Binding Controller.IsMediaOpenVisibility}" />
+                <TextBlock
+                    Width="100"
+                    VerticalAlignment="Center"
+                    DockPanel.Dock="Right"
+                    Foreground="{StaticResource CustomSliderHighlightBrush}"
+                    Text="{Binding App.MediaElement.RemainingDuration, Converter={StaticResource TimeSpanFormatter}, Mode=OneWay}"
+                    TextAlignment="Right"
+                    Visibility="{Binding Controller.SeekBarVisibility}" />
+                <Grid Width="500">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="100" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock
+                        Grid.Column="0"
+                        VerticalAlignment="Center"
+                        Foreground="{StaticResource CustomSliderHighlightBrush}"
+                        Text="{Binding App.MediaElement.BufferingProgress, Converter={StaticResource PercentageFormatter}}"
+                        TextAlignment="Center" ToolTip="Buffering Progress"
+                        Visibility="{Binding Controller.BufferingProgressVisibility}" />
+                    <ProgressBar
+                        Grid.Column="1"
+                        VerticalAlignment="Center"
+                        IsIndeterminate="{Binding App.MediaElement.IsOpening}"
+                        Style="{DynamicResource NetworkProgressBarStyle}"
+                        Visibility="{Binding Controller.BufferingProgressVisibility}"
+                        Value="{Binding App.MediaElement.BufferingProgress, Mode=OneWay}" />
+                    <ProgressBar
+                        Grid.Column="2"
+                        VerticalAlignment="Center"
+                        IsIndeterminate="{Binding App.MediaElement.IsOpening}"
+                        Style="{DynamicResource NetworkProgressBarStyle}"
+                        Visibility="{Binding Controller.DownloadProgressVisibility}"
+                        Value="{Binding App.MediaElement.DownloadProgress, Mode=OneWay}" />
+                    <TextBlock
+                        Grid.Column="3"
+                        VerticalAlignment="Center"
+                        Foreground="{StaticResource CustomSliderHighlightBrush}"
+                        Text="{Binding App.MediaElement.DownloadProgress, Converter={StaticResource PercentageFormatter}}"
+                        TextAlignment="Center" ToolTip="Download Progress"
+                        Visibility="{Binding Controller.DownloadProgressVisibility}" />
+
+                </Grid>
+            </DockPanel>
+
+            <Grid Name="ControlsPanel" Grid.Row="2" Margin="20,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <DockPanel Name="LeftControls" Grid.Column="0" HorizontalAlignment="Left">
+                    <ToggleButton Name="SoundMenuButton" Style="{DynamicResource ModernToggleButtonStyle}" Visibility="{Binding Controller.IsMediaOpenVisibility}">
+                        <Path Data="{Binding Source={StaticResource AudioMenuIcon}, Path=Data}" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type ToggleButton}}}" Stretch="Uniform" />
+                    </ToggleButton>
+                    <Popup
+                        Name="SoundMenuPopup"
+                        HorizontalOffset="-18"
+                        IsOpen="{Binding IsChecked, ElementName=SoundMenuButton, Mode=TwoWay}"
+                        Placement="Top"
+                        PlacementTarget="{Binding ElementName=SoundMenuButton}"
+                        PopupAnimation="Fade" StaysOpen="False" VerticalOffset="2">
+                        <Popup.Resources>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="Foreground" Value="{StaticResource CustomSliderHighlightBrush}" />
+                                <Setter Property="VerticalAlignment" Value="Center" />
+                                <Setter Property="TextAlignment" Value="Center" />
+                            </Style>
+                        </Popup.Resources>
+                        <Border Background="#FF1F1F1F" BorderBrush="#FF767676" BorderThickness="1">
+                            <Grid Width="364" Height="120">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60" />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="60" />
+                                </Grid.ColumnDefinitions>
+
+                                <!--  Volume Slider  -->
+                                <TextBlock Grid.Row="0" Grid.Column="0">Volume</TextBlock>
+                                <Slider
+                                    Grid.Row="0" Grid.Column="1"
+                                    IsEnabled="{Binding Controller.IsAudioControlEnabled}"
+                                    Maximum="1.0" Minimum="0.0"
+                                    Style="{DynamicResource CustomSliderStyle}"
+                                    Value="{Binding App.MediaElement.Volume}" />
+                                <TextBlock Grid.Row="0" Grid.Column="2" Text="{Binding App.MediaElement.Volume, Mode=OneWay, Converter={StaticResource PercentageFormatter}}" />
+
+                                <!--  Balance Slider  -->
+                                <TextBlock Grid.Row="1" Grid.Column="0">Balance</TextBlock>
+                                <Slider
+                                    Grid.Row="1" Grid.Column="1"
+                                    IsEnabled="{Binding Controller.IsAudioControlEnabled}"
+                                    Maximum="1.0" Minimum="-1.0"
+                                    Style="{DynamicResource CustomSliderStyle}"
+                                    Value="{Binding App.MediaElement.Balance}" />
+                                <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding App.MediaElement.Balance, Mode=OneWay, Converter={StaticResource PercentageFormatter}, ConverterParameter=1}" />
+
+                                <!--  Speed Ratio Slider  -->
+                                <TextBlock Grid.Row="2" Grid.Column="0">Speed</TextBlock>
+                                <Slider
+                                    Grid.Row="2" Grid.Column="1"
+                                    IsEnabled="{Binding Controller.IsSpeedRatioEnabled}"
+                                    Maximum="8.0" Minimum="0.0"
+                                    Style="{DynamicResource CustomSliderStyle}"
+                                    Value="{Binding App.MediaElement.SpeedRatio}" />
+                                <TextBlock Grid.Row="2" Grid.Column="2" Text="{Binding App.MediaElement.SpeedRatio, Mode=OneWay, Converter={StaticResource PercentageFormatter}}" />
+
+                            </Grid>
+                        </Border>
+                    </Popup>
+                    <ToggleButton Name="MuteUnmuteButton" IsChecked="{Binding App.MediaElement.IsMuted, Mode=TwoWay}" Style="{DynamicResource ModernToggleButtonStyle}" Visibility="{Binding Controller.AudioControlVisibility}">
+                        <Path Data="{Binding Source={StaticResource UnmuteIcon}, Path=Data}" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type ToggleButton}}}" Stretch="Uniform" />
+                    </ToggleButton>
+                    <ToggleButton Name="ClosedCapttionsButton" IsChecked="{Binding App.MediaElement.ClosedCaptionsChannel, Converter={StaticResource ClosedCaptionsChannelConverter}, Mode=TwoWay}" Style="{DynamicResource ModernToggleButtonStyle}" Visibility="{Binding Controller.ClosedCaptionsVisibility}">
+                        <Path Data="{Binding Source={StaticResource ClosedCaptions}, Path=Data}" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type ToggleButton}}}" Stretch="Uniform" />
+                    </ToggleButton>
+                </DockPanel>
+
+                <DockPanel Name="RightControls" Grid.Column="2" HorizontalAlignment="Right">
+
+                    <Button Command="{Binding App.Commands.CloseCommand}" Style="{DynamicResource ModernButtonStyle}" Visibility="{Binding Controller.CloseButtonVisibility}">
+                        <Path Data="{Binding Source={StaticResource CloseIcon}, Path=Data}" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type Button}}}" Stretch="Uniform" />
+                    </Button>
+
+                    <Button Name="ToggleFullscreenButton" Command="{Binding App.Commands.ToggleFullscreenCommand}" Style="{DynamicResource ModernButtonStyle}">
+                        <Path Data="{Binding Source={StaticResource ToggleFullscreenIcon}, Path=Data}" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type Button}}}" Stretch="Uniform" />
+                    </Button>
+
+                    <ToggleButton Name="OpenDebugButton" IsChecked="{Binding IsPropertiesPanelOpen}" Style="{DynamicResource ModernToggleButtonStyle}">
+                        <Path Data="{Binding Source={StaticResource OpenDebugIcon}, Path=Data}" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type ToggleButton}}}" Stretch="Uniform" />
+                    </ToggleButton>
+
+                    <ToggleButton Name="OpenMenuButton" IsChecked="{Binding IsPlaylistPanelOpen}" Style="{DynamicResource ModernToggleButtonStyle}" Visibility="{Binding Controller.OpenButtonVisibility}">
+                        <Path Data="{Binding Source={StaticResource OpenMenuIcon}, Path=Data}" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type ToggleButton}}}" Stretch="Uniform" />
+                    </ToggleButton>
+
+                </DockPanel>
+
+                <DockPanel Name="CenterControls" Grid.Column="1" HorizontalAlignment="Center">
+                    <Button Command="{Binding App.Commands.PlayCommand}" Style="{DynamicResource ModernButtonStyle}" Visibility="{Binding Controller.PlayButtonVisibility}">
+                        <Path Data="{Binding Source={StaticResource PlayIcon}, Path=Data}" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type Button}}}" Stretch="Uniform" />
+                    </Button>
+                    <Button Command="{Binding App.Commands.PauseCommand}" Style="{DynamicResource ModernButtonStyle}" Visibility="{Binding Controller.PauseButtonVisibility}">
+                        <Path Data="{Binding Source={StaticResource PauseIcon}, Path=Data}" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type Button}}}" Stretch="Uniform" />
+                    </Button>
+                    <Button Command="{Binding App.Commands.StopCommand}" Style="{DynamicResource ModernButtonStyle}" Visibility="{Binding Controller.StopButtonVisibility}">
+                        <Path Data="{Binding Source={StaticResource StopIcon}, Path=Data}" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type Button}}}" Stretch="Uniform" />
+                    </Button>
+                </DockPanel>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

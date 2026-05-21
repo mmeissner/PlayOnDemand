@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="ThemeMainColor" Color="#FFCDCDCD" />
+    <SolidColorBrush x:Key="ThemeHighlightBackgroundColor" Color="Black" />
+    <SolidColorBrush x:Key="ThemeHoverBackgroundColor" Color="#194081B0" />
+    <SolidColorBrush x:Key="ThemeSelectedBackgroundColor" Color="Black" />
+
+    <SolidColorBrush x:Key="ThemeMainTextColor" Color="White" />
+    <SolidColorBrush x:Key="ThemeSecondaryTextColor" Color="#FFCDCDCD" />
+    <SolidColorBrush x:Key="ThemeDisabledTextColor" Color="#FF999999" />
+    <SolidColorBrush x:Key="ThemeBorderColor" Color="White" />
+    <SolidColorBrush x:Key="ThemeMainTextReverseColor" Color="Black" />
+
+    <SolidColorBrush x:Key="LoginViewsPrimaryTipTextForegroundColor" Color="Black" />
+    <SolidColorBrush x:Key="LoginViewsPrimaryTipTextBackgroundColor" Color="Transparent" />
+
+    <SolidColorBrush x:Key="InstallViewsPrimaryPercentageTextForegroundColor" Color="#83A262" />
+</ResourceDictionary>

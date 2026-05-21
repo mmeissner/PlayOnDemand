@@ -1,0 +1,267 @@
+﻿<UserControl
+    x:Class="LeapVR.Shell.Setup.UI.Views.SettingsWizView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cal="http://www.caliburnproject.org" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:lex="http://wpflocalizeextension.codeplex.com" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="600" d:DesignWidth="600"
+    mc:Ignorable="d">
+    <materialDesign:DialogHost x:Name="DialogHost">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <GroupBox
+                Grid.Row="0"
+                Height="auto"
+                Margin="5"
+                Header="{lex:Loc Config_Select_GameStorage_Dir}"
+                Style="{DynamicResource MaterialDesignCardGroupBox}">
+                <GroupBox.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Width="40" Height="40" VerticalAlignment="Center" Kind="Harddisk" />
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource MaterialDesignTitleTextBlock}" Text="{Binding}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </GroupBox.HeaderTemplate>
+                <Grid Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBox
+                        Grid.Row="1" Grid.Column="0"
+                        Width="auto" Height="auto"
+                        Margin="5"
+                        materialDesign:HintAssist.Hint="{lex:Loc Config_GameStoragePath_Hint}"
+                        FontSize="20" IsReadOnly="True"
+                        Text="{Binding GameStorageFilePath}" />
+                    <Button
+                        x:Name="SelectGameDirectory"
+                        Grid.Row="1" Grid.Column="1"
+                        Height="Auto"
+                        Margin="5" VerticalAlignment="Top">
+                        <TextBlock Margin="5" FontSize="20">
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Text" Value="{lex:BLoc Config_Select}" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsStorageChange}" Value="True">
+                                            <Setter Property="Text" Value="{lex:BLoc Config_Change}" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding IsStorageChange}" Value="False">
+                                            <Setter Property="Text" Value="{lex:BLoc Config_Select}" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </Button>
+                    <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+                        <UniformGrid Margin="0" Columns="2" Visibility="{Binding DiskSpaceVisibility}">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:Chip VerticalAlignment="Center" Background="{Binding ElementName=SelectGameDirectory, Path=BorderBrush}">
+                                    <TextBlock FontSize="20" Text="{lex:Loc Config_TotalSpace}" />
+                                </materialDesign:Chip>
+                                <TextBlock x:Name="TotalDiskSpace" Margin="10" FontSize="25" FontWeight="SemiBold" />
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                                <TextBlock x:Name="FreeDiskSpace" Margin="10" FontSize="25" FontWeight="SemiBold" />
+                                <materialDesign:Chip VerticalAlignment="Center" Background="{Binding ElementName=SelectGameDirectory, Path=BorderBrush}">
+                                    <TextBlock FontSize="20" Text="{lex:Loc Config_FreeSpace}" />
+                                </materialDesign:Chip>
+                            </StackPanel>
+                        </UniformGrid>
+                        <Grid Visibility="{Binding DiskSpaceVisibility}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                                <materialDesign:Chip VerticalAlignment="Center" Background="{Binding ElementName=SelectGameDirectory, Path=BorderBrush}">
+                                    <TextBlock FontSize="20" Text="{lex:Loc Config_ReservedFreeSpace}" />
+                                </materialDesign:Chip>
+                                <TextBlock
+                                    x:Name="SliderToolTip"
+                                    Width="120"
+                                    Margin="10"
+                                    FontSize="25" FontWeight="SemiBold" />
+                            </StackPanel>
+                            <Grid Grid.Row="0" Grid.Column="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <RepeatButton
+                                    x:Name="DecreaseFreeSpace"
+                                    Width="50" Height="30"
+                                    Margin="5"
+                                    Content="{materialDesign:PackIcon ArrowLeftBold,
+                                                                      Size=20}"
+                                    ToolTip="Icon" />
+                                <Slider
+                                    Grid.Row="0" Grid.Column="1"
+                                    VerticalAlignment="Center"
+                                    materialDesign:HintAssist.Hint="{lex:Loc Config_GameStoragePath_Hint}"
+                                    Maximum="10000" Minimum="0" TickFrequency="5"
+                                    ToolTip="{Binding SliderToolTip}"
+                                    Value="{Binding FreeSpaceSliderValue}" />
+                                <RepeatButton
+                                    x:Name="IncreaseFreeSpace"
+                                    Grid.Column="2"
+                                    Margin="5"
+                                    Content="{materialDesign:PackIcon ArrowRightBold,
+                                                                      Size=20}"
+                                    ToolTip="Icon" />
+                            </Grid>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </GroupBox>
+            <!--materialDesign:Card Grid.Row="0" Height="auto" Margin="5">
+                <Grid Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.ColumnSpan="2">
+                        <materialDesign:Badged HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBox
+                                MinWidth="280"
+                                Margin="15" VerticalAlignment="Stretch"
+                                FontSize="21"
+                                Text="{lex:Loc Config_Select_GameStorage_Dir}"
+                                TextAlignment="Center" TextWrapping="Wrap" />
+                        </materialDesign:Badged>
+                    </StackPanel>
+                    <TextBox
+                        Grid.Row="1" Grid.Column="0"
+                        Width="auto" Height="auto"
+                        Margin="5"
+                        materialDesign:HintAssist.Hint="{lex:Loc Config_GameStoragePath_Hint}"
+                        FontSize="20" IsReadOnly="True"
+                        Text="{Binding GameStorageFilePath}" />
+                    <Button
+                        x:Name="SelectGameDirectory"
+                        Grid.Row="1" Grid.Column="1"
+                        Height="Auto"
+                        Margin="5" VerticalAlignment="Top">
+                        <TextBlock Margin="5" FontSize="20">
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Text" Value="{lex:BLoc Config_Select}" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsStorageChange}" Value="True">
+                                            <Setter Property="Text" Value="{lex:BLoc Config_Change}" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding IsStorageChange}" Value="False">
+                                            <Setter Property="Text" Value="{lex:BLoc Config_Select}" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </Button>
+
+                    <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+                        <Slider
+                            Grid.Row="2"
+                            Maximum="100" Minimum="0"
+                            Style="{StaticResource MaterialDesignDiscreteSlider}"
+                            ToolTip="MaterialDesignDiscreteSlider"
+                            materialDesign:HintAssist.Hint="{lex:Loc Config_GameStoragePath_Hint}"
+                            Value="50" />
+                        <UniformGrid Margin="10" Columns="2" Visibility="{Binding DiskSpaceVisibility}">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:Chip VerticalAlignment="Center" Background="{Binding ElementName=SelectGameDirectory, Path=BorderBrush}">
+                                    <TextBlock FontSize="20" Text="{lex:Loc Config_TotalSpace}" />
+                                </materialDesign:Chip>
+                                <TextBlock x:Name="TotalDiskSpace" Margin="10" FontSize="25" FontWeight="SemiBold" />
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                                <TextBlock x:Name="FreeDiskSpace" Margin="10" FontSize="25" FontWeight="SemiBold" />
+                                <materialDesign:Chip VerticalAlignment="Center" Background="{Binding ElementName=SelectGameDirectory, Path=BorderBrush}">
+                                    <TextBlock FontSize="20" Text="{lex:Loc Config_FreeSpace}" />
+                                </materialDesign:Chip>
+                            </StackPanel>
+                        </UniformGrid>
+                    </StackPanel>
+                </Grid>
+            </-->
+            <GroupBox
+                Grid.Row="1" Grid.Column="0"
+                Margin="5"
+                Header="{lex:Loc Config_Options}"
+                Style="{DynamicResource MaterialDesignCardGroupBox}">
+                <GroupBox.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Width="32" Height="32" VerticalAlignment="Center" Kind="Gauge" />
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource MaterialDesignTitleTextBlock}" Text="{Binding}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </GroupBox.HeaderTemplate>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <UniformGrid Grid.Row="0" Margin="10" Columns="2">
+                        <TextBlock FontSize="20" Text="{lex:Loc Config_Autostart_with_Windows}" />
+                        <Viewbox Height="30" HorizontalAlignment="Right">
+                            <ToggleButton x:Name="AutostartWithWindows" ToolTip="{lex:Loc Config_Autostart_with_Windows_ToolTip}" />
+                        </Viewbox>
+                    </UniformGrid>
+                    <UniformGrid Grid.Row="1" Margin="10" Columns="2">
+                        <TextBlock FontSize="20" Text="{lex:Loc Config_Disable_WER}" />
+                        <Viewbox Height="30" HorizontalAlignment="Right">
+                            <ToggleButton x:Name="DisableWindowsErrorReporting" ToolTip="{lex:Loc Config_Disable_WER_ToolTip}" />
+                        </Viewbox>
+                    </UniformGrid>
+                    <UniformGrid Grid.Row="2" Margin="10" Columns="2" Visibility="{Binding IsPowerShellAvailible, Converter={StaticResource BoolToVisibilityConverter}}">
+                        <TextBlock FontSize="20" Text="{lex:Loc Config_AddStorageToDefenderExclusion}" />
+                        <Viewbox Height="30" HorizontalAlignment="Right">
+                            <ToggleButton x:Name="ExcludeStorageFromWindowsDefender" ToolTip="{lex:Loc Config_ExcludingStorageFromWD_Hint}" />
+                        </Viewbox>
+                    </UniformGrid>
+                    <UniformGrid Grid.Row="3" Columns="2">
+                        <Label Margin="5" Content="{lex:Loc Config_Select_DefaultLanguage}" FontSize="20" />
+                        <ComboBox
+                            Name="Languages"
+                            Grid.Row="0"
+                            Width="200"
+                            HorizontalAlignment="Right"
+                            FontSize="20"
+                            ToolTip="{lex:Loc Config_Select_DefaultLanguage_Hint}">
+                            <ComboBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel />
+                                </ItemsPanelTemplate>
+                            </ComboBox.ItemsPanel>
+                        </ComboBox>
+                    </UniformGrid>
+                </Grid>
+            </GroupBox>
+        </Grid>
+    </materialDesign:DialogHost>
+</UserControl>

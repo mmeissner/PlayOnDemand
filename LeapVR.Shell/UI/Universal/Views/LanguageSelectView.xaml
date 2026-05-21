@@ -1,0 +1,22 @@
+﻿<UserControl
+    x:Class="LeapVR.Shell.UI.Universal.Views.LanguageSelectView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:behaviors="clr-namespace:LeapVR.Shell.UI.Core.Behaviors" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:local="clr-namespace:LeapVR.Shell.UI.Universal.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:usercontrols="clr-namespace:LeapVR.Shell.UI.Usercontrols"
+    mc:Ignorable="d">
+    <usercontrols:LeapDropDown
+        Background="Transparent" BorderThickness="0"
+        ItemsSource="{Binding SupportedCultures, Mode=OneWay}"
+        PopupPlacement="Bottom"
+        SelectedItem="{Binding CurrentCulture, Mode=TwoWay}">
+        <i:Interaction.Behaviors>
+            <behaviors:SelectorHideSelectedItemBehavior />
+            <!--<behaviors:XInputTriggerButtonNavigationBehavior />-->
+        </i:Interaction.Behaviors>
+        <usercontrols:LeapDropDown.ItemTemplate>
+            <DataTemplate>
+                <Image Source="{Binding Icon, Mode=OneWay}" />
+            </DataTemplate>
+        </usercontrols:LeapDropDown.ItemTemplate>
+    </usercontrols:LeapDropDown>
+</UserControl>

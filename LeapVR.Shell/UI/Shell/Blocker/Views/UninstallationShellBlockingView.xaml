@@ -1,0 +1,69 @@
+﻿<UserControl
+    x:Class="LeapVR.Shell.UI.Shell.Blocker.Views.UninstallationShellBlockingView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cal="http://www.caliburnproject.org" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:lex="http://wpflocalizeextension.codeplex.com" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:properties="clr-namespace:LeapVR.Shell.Properties" xmlns:tz="http://schemas.abtsoftware.co.uk/transitionz"
+    mc:Ignorable="d">
+
+    <DockPanel VerticalAlignment="Center">
+        <ContentControl
+            x:Name="AppThumbnail"
+            Width="460" Height="215"
+            Margin="0,30"
+            cal:View.Context="Normal" DockPanel.Dock="Top" />
+
+        <TextBlock DockPanel.Dock="Top" FontSize="{DynamicResource H3}" Style="{DynamicResource TextBlockBaseStyle}" TextAlignment="Center">
+            <TextBlock.Inlines>
+                <Run Text="{Binding AppName, Mode=OneWay}" />
+            </TextBlock.Inlines>
+        </TextBlock>
+
+
+        <Grid DockPanel.Dock="Top">
+            <StackPanel
+                x:Name="NormalInfo"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                Orientation="Horizontal"
+                Visibility="{Binding IsEnded, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=true}">
+                <ContentControl Width="{DynamicResource H3}" ContentTemplate="{DynamicResource PistonSpinner}" Foreground="{DynamicResource ThemeMainTextColor}" />
+                <TextBlock FontSize="{DynamicResource H3}" Style="{DynamicResource TextBlockBaseStyle}" TextAlignment="Center">
+                    <TextBlock.Inlines>
+                        <Run Text="{lex:Loc Shell_InstallationBlocking_Uninstalling}" />
+                    </TextBlock.Inlines>
+                </TextBlock>
+
+            </StackPanel>
+
+            <Grid x:Name="EndedInfo" d:IsHidden="True" Visibility="{Binding IsEnded, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}">
+
+                <DockPanel x:Name="CompleteInfo" Visibility="{Binding HasError, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=true}">
+                    <TextBlock DockPanel.Dock="Top" FontSize="{DynamicResource H3}" Style="{DynamicResource TextBlockBaseStyle}" TextAlignment="Center">
+                        <TextBlock.Inlines>
+                            <Run Text="{lex:Loc Installation_UninstallationComplete}" />
+                        </TextBlock.Inlines>
+                    </TextBlock>
+                </DockPanel>
+
+
+                <DockPanel x:Name="ErrorInfo" Visibility="{Binding HasError, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}">
+                    <TextBlock DockPanel.Dock="Top" FontSize="{DynamicResource H3}" Style="{DynamicResource TextBlockBaseStyle}" TextAlignment="Center">
+                        <TextBlock.Inlines>
+                            <Run Text="{lex:Loc Shell_InstallationBlocking_Error}" />
+                            <LineBreak />
+                            <Run FontSize="{DynamicResource H5}" Text="{Binding ErrorInfo, Mode=OneWay}" />
+                        </TextBlock.Inlines>
+                    </TextBlock>
+                    <Button
+                        x:Name="Close"
+                        Width="360" Height="60"
+                        Margin="0,30"
+                        Content="OK" DockPanel.Dock="Top"
+                        FontSize="{DynamicResource H5}"
+                        Style="{DynamicResource ButtonBaseStyle}" />
+                </DockPanel>
+
+            </Grid>
+
+        </Grid>
+    </DockPanel>
+</UserControl>

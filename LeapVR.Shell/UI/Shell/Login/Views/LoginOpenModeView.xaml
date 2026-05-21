@@ -1,0 +1,140 @@
+﻿<UserControl
+    x:Class="LeapVR.Shell.UI.Shell.Login.Views.LoginOpenModeView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:behaviors="clr-namespace:LeapVR.Shell.UI.Core.Behaviors"
+    xmlns:cal="http://www.caliburnproject.org"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:lex="http://wpflocalizeextension.codeplex.com"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:usercontrols="clr-namespace:LeapVR.Shell.UI.Usercontrols"
+    d:DesignHeight="1080"
+    d:DesignWidth="1920"
+    Background="Transparent"
+    mc:Ignorable="d">
+
+    <Grid x:Name="OpenModeAwaitingViewRoot" Panel.ZIndex="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="307" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="295" />
+        </Grid.RowDefinitions>
+        <ContentControl
+            x:Name="LanguageSelect"
+            Grid.Row="0"
+            Height="80"
+            Margin="20"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Focusable="False" />
+        <ListBox
+            x:Name="Items"
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            Grid.Column="0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            cal:Message.Attach="[Key Enter] = [Action ExecuteSelectedItem()]"
+            Background="{DynamicResource SessionViewsPrimaryBackgroundColor}"
+            BorderThickness="0"
+            ItemContainerStyle="{DynamicResource ApplicationExecutableContainerStyle}"
+            KeyboardNavigation.DirectionalNavigation="Cycle"
+            ScrollViewer.HorizontalScrollBarVisibility="Auto"
+            ScrollViewer.VerticalScrollBarVisibility="Disabled"
+            SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+            <ListBox.Resources>
+                <Style x:Key="ApplicationExecutableContainerStyle" TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="Foreground" Value="Transparent" />
+                    <Setter Property="Background" Value="Transparent" />
+                    <!--Setter Property="MaxWidth" Value="{Binding ElementName=Items, Path=ActualWidth, Converter={StaticResource ProportionValueConverter}, ConverterParameter=0.332942}" />
+                    <Setter Property="MaxHeight" Value="{Binding ElementName=Items, Path=ActualHeight, Converter={StaticResource ProportionValueConverter}, ConverterParameter=0.5}" /-->
+                    <Setter Property="BorderThickness" Value="0" />
+                    <Setter Property="Margin" Value="23" />
+
+                    <Setter Property="TextBlock.TextTrimming" Value="CharacterEllipsis" />
+                    <Setter Property="UseLayoutRounding" Value="False" />
+                    <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                    <Setter Property="Template" Value="{DynamicResource ApplicationExecutableContainerTemplate}" />
+                </Style>
+
+                <ControlTemplate x:Key="ApplicationExecutableContainerTemplate" TargetType="{x:Type ListBoxItem}">
+                    <Border
+                        x:Name="Border"
+                        Width="auto"
+                        Height="auto"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        cal:Message.Attach="[Event MouseEnter] = [Action SelectItem($dataContext)]"
+                        Background="Transparent">
+                        <ContentPresenter x:Name="ContentSite" TextBlock.Foreground="{TemplateBinding Foreground}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsSelected" Value="false" />
+                                <Condition Property="IsFocused" Value="false" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" Value="Transparent" />
+                        </MultiTrigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsSelected" Value="true" />
+                                <Condition Property="IsFocused" Value="false" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" Value="{DynamicResource ThemeItemActiveBackgroundColor}" />
+                        </MultiTrigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsSelected" Value="true" />
+                                <Condition Property="IsFocused" Value="true" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" Value="{DynamicResource ThemeItemActiveBackgroundColor}" />
+                        </MultiTrigger>
+                        <EventTrigger RoutedEvent="ListBoxItem.Selected">
+                            <EventTrigger.Actions>
+                                <SoundPlayerAction Source="pack://application:,,,/LeapPlay.Shell;component/Resources/ButtonClick.wav" />
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+
+            </ListBox.Resources>
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid
+                        HorizontalAlignment="Left"
+                        Background="Transparent"
+                        IsItemsHost="True"
+                        KeyboardNavigation.TabIndex="1"
+                        Rows="1" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ListBox>
+        <TextBlock
+            x:Name="ButtomTips"
+            Grid.Row="2"
+            Width="800"
+            Margin="0,0,0,50"
+            VerticalAlignment="Bottom"
+            FontSize="{DynamicResource LoginViewsH4}"
+            Foreground="{DynamicResource LoginViewsPrimaryTextForegroundColor}"
+            Text="{Binding Tip, Mode=OneWay}"
+            TextAlignment="Center"
+            TextWrapping="Wrap" />
+        <Image
+            Grid.Row="2"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Panel.ZIndex="-1"
+            Source="{DynamicResource HomeBackgroundSplashscreenButtom}"
+            Stretch="Uniform" />
+
+    </Grid>
+
+</UserControl>
+
+
+

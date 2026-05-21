@@ -1,0 +1,12 @@
+{
+   "dashboard" : {
+      "arcadeMode" : true
+   },
+   "steamvr" : {
+      "enableHomeApp" : false,
+	  "neverKillProcesses" : false
+   },
+	"userinterface" : {
+		"StatusAlwaysOnTop" : true
+	}
+}

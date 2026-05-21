@@ -1,0 +1,18 @@
+{
+    "applications": [
+        {
+            "app_key": "vrleap.vrhome",
+            "arguments": "-popupwindow",
+            "binary_path_windows": "vrlounge_desktop.exe",
+            "is_dashboard_overlay": false,
+			"image_path": "cover_square_image.jpg",
+            "launch_type": "binary",
+            "strings": {
+                "en_us": {
+                    "description": "VR-Leap Home",
+                    "name": "VR-Leap Home"
+                }
+            }
+        }
+    ]
+}

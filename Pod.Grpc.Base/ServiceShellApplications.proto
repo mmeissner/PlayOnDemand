@@ -1,0 +1,12 @@
+syntax = "proto3";
+package Pod.Grpc.ShellApplications;
+
+import "MessagesShellApplications.proto";
+
+service ShellApplicationServiceGrpc {
+    rpc GetSyncAppStates(Pod.Grpc.Messages.ShellApplications.SyncRequest)returns(Pod.Grpc.Messages.ShellApplications.SyncResponse){}
+    rpc SendSyncAppStates(Pod.Grpc.Messages.ShellApplications.SyncAppsRequest)returns(Pod.Grpc.Messages.ShellApplications.SyncAppsResponse){}
+    rpc SendAppInstalled(Pod.Grpc.Messages.ShellApplications.AppInstalledRequest)returns(Pod.Grpc.Messages.ShellApplications.UpdateResponse){}
+    rpc SendAppUpdate(Pod.Grpc.Messages.ShellApplications.AppUpdateRequest)returns(Pod.Grpc.Messages.ShellApplications.UpdateResponse){}
+    rpc SendAppUninstalled(Pod.Grpc.Messages.ShellApplications.AppUninstalledRequest)returns(Pod.Grpc.Messages.ShellApplications.UpdateResponse){}
+}

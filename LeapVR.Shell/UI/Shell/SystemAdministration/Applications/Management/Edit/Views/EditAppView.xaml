@@ -1,0 +1,132 @@
+﻿<UserControl
+    x:Class="LeapVR.Shell.UI.Shell.SystemAdministration.Applications.Management.Edit.Views.EditAppView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:lex="http://wpflocalizeextension.codeplex.com"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:usercontrols="clr-namespace:LeapVR.Shell.UI.Usercontrols"
+    d:DesignHeight="300"
+    d:DesignWidth="840"
+    lex:LocalizeDictionary.DesignCulture="en-US"
+    lex:ResxLocalizationProvider.DefaultAssembly="LeapVR.Shell.Language"
+    lex:ResxLocalizationProvider.DefaultDictionary="Resources"
+    BorderBrush="{DynamicResource ThemeBorderColor}"
+    BorderThickness="3"
+    mc:Ignorable="d">
+    <UserControl.Background>
+        <ImageBrush ImageSource="{DynamicResource ImageShellBlockingBackground}" />
+    </UserControl.Background>
+    <Grid Margin="25">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="5" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock
+                Grid.Row="0"
+                Grid.Column="0"
+                FontSize="{DynamicResource H4}"
+                Style="{DynamicResource TextBlockBaseStyle}"
+                Text="{lex:Loc Application_Name}" />
+            <TextBox
+                Grid.Row="0"
+                Grid.Column="1"
+                FontSize="{DynamicResource H5}"
+                Text="{Binding AppUpdate.Name}" />
+            <TextBlock
+                Grid.Row="2"
+                Grid.Column="0"
+                FontSize="{DynamicResource H4}"
+                Style="{DynamicResource TextBlockBaseStyle}"
+                Text="{lex:Loc Application_Category}" />
+            <usercontrols:LeapDropDown
+                x:Name="Categories"
+                Grid.Row="2"
+                Grid.Column="1"
+                BorderBrush="{DynamicResource ThemeSecondaryTextColor}"
+                BorderThickness="3"
+                IsEditable="False"
+                PopupPlacement="Bottom">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                Grid.Column="0"
+                                Width="50"
+                                Height="50"
+                                Source="{Binding Icon}"
+                                Stretch="Uniform" />
+                            <TextBlock
+                                Grid.Column="1"
+                                HorizontalAlignment="Center"
+                                FontSize="{DynamicResource H5}"
+                                Style="{DynamicResource TextBlockBaseStyle}"
+                                Text="{Binding DisplayName}"
+                                TextAlignment="Center" />
+                        </Grid>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </usercontrols:LeapDropDown>
+        </Grid>
+        <UniformGrid
+            Grid.Row="1"
+            Margin="10"
+            Columns="2">
+            <usercontrols:LeapButton
+                x:Name="Apply"
+                Margin="5"
+                Padding="100,20"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                BorderThickness="1"
+                Focusable="True"
+                FontSize="{DynamicResource GuardViewsH5}"
+                Style="{DynamicResource GuardViewsButtonStyle}">
+                <usercontrols:LeapButton.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock
+                            Margin="0,0,15,0"
+                            VerticalAlignment="Center"
+                            FontSize="{DynamicResource H4}"
+                            Text="{lex:Loc Application_Edit_Apply}" />
+                    </StackPanel>
+                </usercontrols:LeapButton.Content>
+            </usercontrols:LeapButton>
+
+            <usercontrols:LeapButton
+                x:Name="Cancel"
+                Margin="5"
+                Padding="100,20"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                BorderThickness="1"
+                Focusable="True"
+                FontSize="{DynamicResource GuardViewsH5}"
+                Style="{DynamicResource GuardViewsButtonStyle}">
+                <usercontrols:LeapButton.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock
+                            Margin="0,0,15,0"
+                            VerticalAlignment="Center"
+                            FontSize="{DynamicResource H4}"
+                            Text="{lex:Loc Application_Edit_Cancel}" />
+                    </StackPanel>
+                </usercontrols:LeapButton.Content>
+            </usercontrols:LeapButton>
+        </UniformGrid>
+    </Grid>
+</UserControl>

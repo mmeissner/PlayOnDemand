@@ -1,0 +1,1003 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Global_Category_Other" xml:space="preserve">
+    <value>其他</value>
+  </data>
+  <data name="Global_Loading" xml:space="preserve">
+    <value>正在加载...</value>
+  </data>
+  <data name="Global_Login" xml:space="preserve">
+    <value>开玩</value>
+  </data>
+  <data name="Global_Logout" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="Global_ProductName" xml:space="preserve">
+    <value>VrBox</value>
+  </data>
+  <data name="Global_SwitchSkin" xml:space="preserve">
+    <value>切换皮肤</value>
+  </data>
+  <data name="Global_SystemAdministration" xml:space="preserve">
+    <value>系统配置</value>
+  </data>
+  <data name="Shell_InstallationBlocking_Error" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="Shell_InstallationBlocking_InstallationFailed" xml:space="preserve">
+    <value>安装失败，请重试，如果仍然无法安装，请重启机器。</value>
+  </data>
+  <data name="Shell_InstallationBlocking_Installing" xml:space="preserve">
+    <value>正在安装</value>
+  </data>
+  <data name="Shell_InstallationBlocking_UninstallationFailed" xml:space="preserve">
+    <value>卸载完成，请重启机器</value>
+  </data>
+  <data name="Shell_InstallationBlocking_Uninstalling" xml:space="preserve">
+    <value>正在卸载</value>
+  </data>
+  <data name="System_Exit" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="System_Exit_DoYouReallyWantToExit" xml:space="preserve">
+    <value>您真的想退出吗？</value>
+  </data>
+  <data name="System_Exit_ExitNow" xml:space="preserve">
+    <value>立即退出</value>
+  </data>
+  <data name="System_Hardware" xml:space="preserve">
+    <value>硬件信息</value>
+  </data>
+  <data name="System_Hardware_Applications" xml:space="preserve">
+    <value>应用程序</value>
+  </data>
+  <data name="System_Hardware_CPU" xml:space="preserve">
+    <value>CPU</value>
+  </data>
+  <data name="System_Hardware_FreeSpace" xml:space="preserve">
+    <value>可用空间</value>
+  </data>
+  <data name="System_Hardware_RAM" xml:space="preserve">
+    <value>内存</value>
+  </data>
+  <data name="System_Hardware_SoftwareVersion" xml:space="preserve">
+    <value>软件版本</value>
+  </data>
+  <data name="System_Hardware_SystemFiles" xml:space="preserve">
+    <value>系统文件</value>
+  </data>
+  <data name="System_Hardware_Total" xml:space="preserve">
+    <value>总计</value>
+  </data>
+  <data name="System_Hardware_VBoxID" xml:space="preserve">
+    <value>VBox ID</value>
+  </data>
+  <data name="System_Hardware_VBoxType" xml:space="preserve">
+    <value>VBox 类型</value>
+  </data>
+  <data name="System_Hardware_VGA" xml:space="preserve">
+    <value>显卡</value>
+  </data>
+  <data name="System_InputPin" xml:space="preserve">
+    <value>请输入密码</value>
+  </data>
+  <data name="System_Installation" xml:space="preserve">
+    <value>安装/卸载</value>
+  </data>
+  <data name="System_Installation_FreeSpaceCalculating" xml:space="preserve">
+    <value>正在计算可用空间...</value>
+  </data>
+  <data name="System_Installation_Install" xml:space="preserve">
+    <value>安装</value>
+  </data>
+  <data name="System_Installation_NoApplications" xml:space="preserve">
+    <value>未找到应用程序</value>
+  </data>
+  <data name="System_Installation_NoFiles" xml:space="preserve">
+    <value>未找到文件</value>
+  </data>
+  <data name="System_Installation_NoUsbDrive" xml:space="preserve">
+    <value>未找到 USB 驱动器</value>
+  </data>
+  <data name="System_Installation_SpaceFree" xml:space="preserve">
+    <value>可用空间</value>
+  </data>
+  <data name="System_Installation_Uninstall" xml:space="preserve">
+    <value>卸载</value>
+  </data>
+  <data name="System_InvalidPin" xml:space="preserve">
+    <value>密码错误</value>
+  </data>
+  <data name="System_Poweroff" xml:space="preserve">
+    <value>关机</value>
+  </data>
+  <data name="System_Poweroff_DoYouReallyWantToPoweroff" xml:space="preserve">
+    <value>您真的想关机吗？</value>
+  </data>
+  <data name="System_Poweroff_PoweroffNow" xml:space="preserve">
+    <value>立即关机</value>
+  </data>
+  <data name="System_Settings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="System_Settings_Security" xml:space="preserve">
+    <value>修改密码</value>
+  </data>
+  <data name="System_Settings_Security_EnterNewPin" xml:space="preserve">
+    <value>请输入新密码</value>
+  </data>
+  <data name="System_Settings_Security_EnterNewPinAgain" xml:space="preserve">
+    <value>请再次输入新密码</value>
+  </data>
+  <data name="System_Settings_Security_EnterOldPin" xml:space="preserve">
+    <value>请输入密码</value>
+  </data>
+  <data name="System_Settings_Security_FailedToVerifyOldPin" xml:space="preserve">
+    <value>密码错误，请重试</value>
+  </data>
+  <data name="System_Settings_Security_PinChangeSuccessful" xml:space="preserve">
+    <value>变更密码成功</value>
+  </data>
+  <data name="System_Settings_Security_PinNotEqual" xml:space="preserve">
+    <value>两次新密码输入不匹配</value>
+  </data>
+  <data name="System_Statistics" xml:space="preserve">
+    <value>统计信息</value>
+  </data>
+  <data name="System_Statistics_Applications" xml:space="preserve">
+    <value>应用程序</value>
+  </data>
+  <data name="System_Statistics_Applications_Columns_LastTimePlayed" xml:space="preserve">
+    <value>上次运行时间</value>
+  </data>
+  <data name="System_Statistics_Applications_Columns_LongestSession" xml:space="preserve">
+    <value>最长运行时间</value>
+  </data>
+  <data name="System_Statistics_Applications_Columns_Name" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="System_Statistics_Applications_Columns_Number" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="System_Statistics_Applications_Columns_TimesPlayed" xml:space="preserve">
+    <value>运行次数</value>
+  </data>
+  <data name="System_Statistics_Applications_Columns_TotalRuntime" xml:space="preserve">
+    <value>总运行时间</value>
+  </data>
+  <data name="System_Statistics_Applications_NoData" xml:space="preserve">
+    <value>无数据</value>
+  </data>
+  <data name="System_Statistics_Applications_ResetApplicationsStatistics" xml:space="preserve">
+    <value>重置统计信息</value>
+  </data>
+  <data name="System_Statistics_Global" xml:space="preserve">
+    <value>全局统计</value>
+  </data>
+  <data name="System_Statistics_Global_Hours" xml:space="preserve">
+    <value>小时</value>
+  </data>
+  <data name="System_Statistics_Global_LongestGameSession" xml:space="preserve">
+    <value>单次运行时间最长的游戏</value>
+  </data>
+  <data name="System_Statistics_Global_LongestPlayedGame" xml:space="preserve">
+    <value>总运行时间最长的游戏</value>
+  </data>
+  <data name="System_Statistics_Global_Minutes" xml:space="preserve">
+    <value>分钟</value>
+  </data>
+  <data name="System_Statistics_Global_MostPlayedGame" xml:space="preserve">
+    <value>运行次数最多的游戏</value>
+  </data>
+  <data name="System_Statistics_Global_ResetVrBoxStatistics" xml:space="preserve">
+    <value>重置所有统计信息</value>
+  </data>
+  <data name="System_Statistics_Global_Seconds" xml:space="preserve">
+    <value>秒</value>
+  </data>
+  <data name="System_Statistics_Global_Times" xml:space="preserve">
+    <value>次</value>
+  </data>
+  <data name="System_Statistics_Global_TotalRuntime" xml:space="preserve">
+    <value>总运行时间</value>
+  </data>
+  <data name="System_Statistics_NoData" xml:space="preserve">
+    <value>无数据</value>
+  </data>
+  <data name="System_Apps" xml:space="preserve">
+    <value>应用程序</value>
+  </data>
+  <data name="System_Apps_Management" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="Global_Back" xml:space="preserve">
+    <value>返回</value>
+  </data>
+  <data name="System_Logout_DoYouReallyWantToLogout" xml:space="preserve">
+    <value>您确认退出登录吗？</value>
+  </data>
+  <data name="System_Logout_LogoutNow" xml:space="preserve">
+    <value>立即退出</value>
+  </data>
+  <data name="Global_Categories" xml:space="preserve">
+    <value>分类</value>
+  </data>
+  <data name="Shell_Enjoy" xml:space="preserve">
+    <value>登录成功，尽情游玩吧！</value>
+  </data>
+  <data name="Shell_PleaseInsertYourMembershipCard" xml:space="preserve">
+    <value>请插入您的会员卡</value>
+  </data>
+  <data name="Global_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Session_StationCost" xml:space="preserve">
+    <value>计费方式</value>
+  </data>
+  <data name="Session_CurrencyUnit" xml:space="preserve">
+    <value>点数</value>
+  </data>
+  <data name="Session_RateUnit" xml:space="preserve">
+    <value>分钟</value>
+  </data>
+  <data name="Global_LoginTips_IntentionExpired" xml:space="preserve">
+    <value>登录请求已过期，请重试</value>
+  </data>
+  <data name="Global_LoginTips_NotEnoughBalance" xml:space="preserve">
+    <value>您的余额不足，请充值后重试</value>
+  </data>
+  <data name="Global_LoginTips_SessionRateChanged" xml:space="preserve">
+    <value>您请求登录期间费率从外部改变，请取消后重试</value>
+  </data>
+  <data name="Global_LoginTips_StationHaveRunningSession" xml:space="preserve">
+    <value>无法登录，本机站已被占用</value>
+  </data>
+  <data name="Global_LoginTips_UserHaveRunningSession" xml:space="preserve">
+    <value>无法登录，您已在别处登录</value>
+  </data>
+  <data name="Global_Unit_Sec" xml:space="preserve">
+    <value>秒</value>
+  </data>
+  <data name="Global_Session_YouPaid" xml:space="preserve">
+    <value>已消费</value>
+  </data>
+  <data name="Global_Session_YouPlayed" xml:space="preserve">
+    <value>时长</value>
+  </data>
+  <data name="Global_Session_YourBalance" xml:space="preserve">
+    <value>余额</value>
+  </data>
+  <data name="Session_TimeRemaining" xml:space="preserve">
+    <value>剩余</value>
+  </data>
+  <data name="System_EnterPin" xml:space="preserve">
+    <value>输入密码登录系统管理</value>
+  </data>
+  <data name="Global_LoginTips_UnknownNetworkProblem" xml:space="preserve">
+    <value>未知的网络问题</value>
+  </data>
+  <data name="Global_LoginTips_LocalNetworkProblem" xml:space="preserve">
+    <value>链接服务器失败，请检查网线或路由器配置</value>
+  </data>
+  <data name="Global_LoginTips_RemoteServerProblem" xml:space="preserve">
+    <value>无法连接远程服务器</value>
+  </data>
+  <data name="Global_LoginTips_QrCodeGenerationProblem" xml:space="preserve">
+    <value>无法生成二维码</value>
+  </data>
+  <data name="Global_SecondsToPrepare" xml:space="preserve">
+    <value>自动取消倒计时：</value>
+  </data>
+  <data name="Global_Unit_Hour" xml:space="preserve">
+    <value>小时</value>
+  </data>
+  <data name="Global_Unit_Min" xml:space="preserve">
+    <value>分钟</value>
+  </data>
+  <data name="Global_LoginTips_UserBlocked" xml:space="preserve">
+    <value>您的账号已被禁用</value>
+  </data>
+  <data name="Global_LoginTips_UserNotActive" xml:space="preserve">
+    <value>抱歉，您还不是会员。请先完成注册。</value>
+  </data>
+  <data name="System_Updates" xml:space="preserve">
+    <value>软件更新</value>
+  </data>
+  <data name="System_Updates_CheckUpdates" xml:space="preserve">
+    <value>检查更新</value>
+  </data>
+  <data name="System_Updates_CurrentVersion" xml:space="preserve">
+    <value>当前版本</value>
+  </data>
+  <data name="System_Updates_DownloadUpdates" xml:space="preserve">
+    <value>下载</value>
+  </data>
+  <data name="System_Updates_Announcement_Downloading" xml:space="preserve">
+    <value>正在下载最新版本，请稍候...</value>
+  </data>
+  <data name="System_Updates_Announcement_UpToDate" xml:space="preserve">
+    <value>软件已是最新版本</value>
+  </data>
+  <data name="System_Updates_Announcement_ReadyToUpdate" xml:space="preserve">
+    <value>下载完成，是否更新？</value>
+  </data>
+  <data name="System_Updates_Announcement_BeforeDownloading" xml:space="preserve">
+    <value>有新版本可用, 是否下载?</value>
+  </data>
+  <data name="System_Updates_PerformUpdate" xml:space="preserve">
+    <value>立即更新</value>
+  </data>
+  <data name="System_Updates_Announcement_UnexpectedError" xml:space="preserve">
+    <value>未知错误，请检查日志</value>
+  </data>
+  <data name="System_Updates_Announcement_Cancelling" xml:space="preserve">
+    <value>正在取消，请稍候...</value>
+  </data>
+  <data name="System_Updates_Announcement_CheckingNewestVersion" xml:space="preserve">
+    <value>正在检查更新，这可能需要一些时间</value>
+  </data>
+  <data name="System_Updates_Announcement_Errored" xml:space="preserve">
+    <value>更新未完成，请重试</value>
+  </data>
+  <data name="System_Updates_Announcement_Updating" xml:space="preserve">
+    <value>正在更新，这可能需要一些时间</value>
+  </data>
+  <data name="System_Updates_TryAgain" xml:space="preserve">
+    <value>重试</value>
+  </data>
+  <data name="System_Updates_Announcement_Updated" xml:space="preserve">
+    <value>更新完成，请重启软件</value>
+  </data>
+  <data name="System_Updates_Restart" xml:space="preserve">
+    <value>重启</value>
+  </data>
+  <data name="Global_Session_PlayForFree" xml:space="preserve">
+    <value>免费</value>
+  </data>
+  <data name="Session_Info_StationInactive" xml:space="preserve">
+    <value>机站长时间未响应，自动登出</value>
+  </data>
+  <data name="Session_Info_UserBlocked" xml:space="preserve">
+    <value>用户被禁用，自动登出</value>
+  </data>
+  <data name="Session_Info_InternetProblems" xml:space="preserve">
+    <value>网络连接出现问题</value>
+  </data>
+  <data name="System_Hardware_StationName" xml:space="preserve">
+    <value>机站名称</value>
+  </data>
+  <data name="Global_Unset" xml:space="preserve">
+    <value>未设置</value>
+  </data>
+  <data name="License_LicenseKey" xml:space="preserve">
+    <value>授权码</value>
+  </data>
+  <data name="License_Inactive" xml:space="preserve">
+    <value>未激活</value>
+  </data>
+  <data name="Exceptions_VersionOutOfDate" xml:space="preserve">
+    <value>软件版本已过期，请先更新软件</value>
+  </data>
+  <data name="Exceptions_LicenseNotDeployed" xml:space="preserve">
+    <value>本机站未检测到授权码，请联系技术支持</value>
+  </data>
+  <data name="Exceptions_LicenseNotFound" xml:space="preserve">
+    <value>授权码尚未注册，请与管理员联系</value>
+  </data>
+  <data name="Exceptions_LicenseNotLinked" xml:space="preserve">
+    <value>本机站尚未激活，请联系技术支持</value>
+  </data>
+  <data name="Exceptions_LicenseRevoked" xml:space="preserve">
+    <value>本机站授权码已从远程系统移除，请联系技术支持</value>
+  </data>
+  <data name="Exceptions_LicenseSuspended" xml:space="preserve">
+    <value>本机站授权码已暂停使用，请联系技术支持</value>
+  </data>
+  <data name="Exceptions_StationRevoked" xml:space="preserve">
+    <value>本机站已从远程服务器撤销</value>
+  </data>
+  <data name="Exceptions_StationSuspended" xml:space="preserve">
+    <value>本机站暂停使用，请与管理员联系</value>
+  </data>
+  <data name="Applications_NoAppAvailable" xml:space="preserve">
+    <value>未找到可用的应用程序</value>
+  </data>
+  <data name="Info_AutoStartStringFormat" xml:space="preserve">
+    <value>自动开始倒计时</value>
+  </data>
+  <data name="StationMode_MixedReality" xml:space="preserve">
+    <value>MR 模式</value>
+  </data>
+  <data name="StationMode_Screen" xml:space="preserve">
+    <value>大屏模式</value>
+  </data>
+  <data name="StationMode_VirtualReality" xml:space="preserve">
+    <value>VR 模式</value>
+  </data>
+  <data name="StationMode" xml:space="preserve">
+    <value>机站模式</value>
+  </data>
+  <data name="Global_Confirm" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="Session_MessageBeforeLogout" xml:space="preserve">
+    <value>确定要登出吗？</value>
+  </data>
+  <data name="Statistics_ResetConfirmationMessage" xml:space="preserve">
+    <value>确定要重置数据吗？</value>
+  </data>
+  <data name="Execution_StartVrAppInScreenModeConfirmation" xml:space="preserve">
+    <value>当前为大屏模式，确定要启动 VR 应用吗？</value>
+  </data>
+  <data name="Execution_StartScreenAppInVrModeConfirmation" xml:space="preserve">
+    <value>当前为 VR 模式，确定要启动非 VR 应用吗？</value>
+  </data>
+  <data name="Installation_InstallationComplete" xml:space="preserve">
+    <value>安装完成</value>
+  </data>
+  <data name="Installation_UninstallationComplete" xml:space="preserve">
+    <value>卸载完成</value>
+  </data>
+  <data name="StationMode_CurrentMode" xml:space="preserve">
+    <value>当前模式</value>
+  </data>
+  <data name="StationName" xml:space="preserve">
+    <value>机站名称</value>
+  </data>
+  <data name="ScanningPackages" xml:space="preserve">
+    <value>扫描安装包</value>
+  </data>
+  <data name="StartTip_Button" xml:space="preserve">
+    <value>点击开玩！</value>
+  </data>
+  <data name="StartTip_QRCode" xml:space="preserve">
+    <value>扫码开玩！</value>
+  </data>
+  <data name="FailedToStart_AnonymouseSessionNotAllowed" xml:space="preserve">
+    <value>本机站不支持开放模式，请联系技术支持</value>
+  </data>
+  <data name="FailedToStart_StationHaveActiveLoginIntention" xml:space="preserve">
+    <value>另一个登录请求正在处理中，请稍后再试</value>
+  </data>
+  <data name="FailedToStart_StationHaveRunningSession" xml:space="preserve">
+    <value>机站仍处于登录状态，请稍候当前登录退出</value>
+  </data>
+  <data name="FailedToStart_UnknwonError" xml:space="preserve">
+    <value>未知错误，请稍后重试</value>
+  </data>
+  <data name="ConfirmLoginIntention" xml:space="preserve">
+    <value>开玩</value>
+  </data>
+  <data name="SelectAppExecutionResult" xml:space="preserve">
+    <value>选择一个启动项</value>
+  </data>
+  <data name="System_HardwareId" xml:space="preserve">
+    <value>硬件 ID</value>
+  </data>
+  <data name="Global_ConnectingToService" xml:space="preserve">
+    <value>连接中，请稍候</value>
+  </data>
+  <data name="Config_Select_Certificate_File" xml:space="preserve">
+    <value>选择授权码文件</value>
+  </data>
+  <data name="Config_Select_PrivateKey_File" xml:space="preserve">
+    <value>选择密钥文件</value>
+  </data>
+  <data name="Config_Select_Language" xml:space="preserve">
+    <value>选择语言</value>
+  </data>
+  <data name="Config_Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Config_Move_Next" xml:space="preserve">
+    <value>下一步</value>
+  </data>
+  <data name="Config_Move_Previous" xml:space="preserve">
+    <value>返回</value>
+  </data>
+  <data name="Config_Select_License_Files" xml:space="preserve">
+    <value>请选择你的授权码文件</value>
+  </data>
+  <data name="Config_CertificateFile_Hint" xml:space="preserve">
+    <value>授权码文件</value>
+  </data>
+  <data name="Config_Select" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="Config_Issuer" xml:space="preserve">
+    <value>发行方</value>
+  </data>
+  <data name="Config_License" xml:space="preserve">
+    <value>授权码</value>
+  </data>
+  <data name="Config_LicenseID" xml:space="preserve">
+    <value>授权码ID：</value>
+  </data>
+  <data name="Config_LicenseSN" xml:space="preserve">
+    <value>授权码序列号：</value>
+  </data>
+  <data name="Config_LicenseType" xml:space="preserve">
+    <value>类型：</value>
+  </data>
+  <data name="Config_PrivateKey" xml:space="preserve">
+    <value>密钥值：</value>
+  </data>
+  <data name="Config_PrivateKey_File_Hint" xml:space="preserve">
+    <value>密钥文件</value>
+  </data>
+  <data name="Config_GameStoragePath_Hint" xml:space="preserve">
+    <value>你的游戏存储目录</value>
+  </data>
+  <data name="Config_Select_GameStorage_Dir" xml:space="preserve">
+    <value>选择游戏存储目录</value>
+  </data>
+  <data name="Config_Software_Setup" xml:space="preserve">
+    <value>软件设置</value>
+  </data>
+  <data name="Culture_en_US" xml:space="preserve">
+    <value>英语</value>
+  </data>
+  <data name="Config_Autostart_with_Windows" xml:space="preserve">
+    <value>开机自启动</value>
+  </data>
+  <data name="Config_Autostart_with_Windows_ToolTip" xml:space="preserve">
+    <value>开机登陆Windows后自动启动软件</value>
+  </data>
+  <data name="Config_FreeSpace" xml:space="preserve">
+    <value>可用硬盘空间</value>
+  </data>
+  <data name="Config_Options" xml:space="preserve">
+    <value>选项</value>
+  </data>
+  <data name="Config_TotalSpace" xml:space="preserve">
+    <value>总磁盘空间</value>
+  </data>
+  <data name="Config_Select_DefaultLanguage" xml:space="preserve">
+    <value>选择默认语言</value>
+  </data>
+  <data name="Config_Change" xml:space="preserve">
+    <value>更改</value>
+  </data>
+  <data name="Config_Disable_WER" xml:space="preserve">
+    <value>禁止Windows错误报告</value>
+  </data>
+  <data name="Config_Disable_WER_ToolTip" xml:space="preserve">
+    <value>当程序异常崩溃时，禁止windows弹出错误对话框。
+此对话框将影响软件检测应用的退出状态。</value>
+  </data>
+  <data name="Config_Adding_License" xml:space="preserve">
+    <value>添加授权码文件</value>
+  </data>
+  <data name="Config_StartupTask_Created" xml:space="preserve">
+    <value>开机自启动设置 完成</value>
+  </data>
+  <data name="Config_Storage_Updated" xml:space="preserve">
+    <value>游戏存储目录设置 完成</value>
+  </data>
+  <data name="Config_WER_Updated" xml:space="preserve">
+    <value>Windows错误报告设置 完成</value>
+  </data>
+  <data name="Config_AddStorageToDefenderExclusion" xml:space="preserve">
+    <value>关闭游戏目录的Windows防护</value>
+  </data>
+  <data name="Config_ExcludingStorageFromWD" xml:space="preserve">
+    <value>更改游戏目录的Windows防护设置</value>
+  </data>
+  <data name="Config_ExcludingStorageFromWD_Hint" xml:space="preserve">
+    <value>关闭游戏目录的Window防护，将防止某些文件被错误清除，而导致的游戏文件损坏，但也同时增加了系统感染的风险。</value>
+  </data>
+  <data name="Config_Select_DefaultLanguage_Hint" xml:space="preserve">
+    <value>软件每次启动，或登出后的待登陆界面语言。</value>
+  </data>
+  <data name="Application_Category" xml:space="preserve">
+    <value>类别</value>
+  </data>
+  <data name="Application_Name" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="Application_Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="Application_Edit_Apply" xml:space="preserve">
+    <value>应用</value>
+  </data>
+  <data name="Application_Edit_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="System_Statistics_Applications_Count" xml:space="preserve">
+    <value>已有统计数据的应用</value>
+  </data>
+  <data name="System_Updates_OnlineVersion" xml:space="preserve">
+    <value>线上版本</value>
+  </data>
+  <data name="Config_Activate_License" xml:space="preserve">
+    <value>激活你的授权码</value>
+  </data>
+  <data name="Config_Register_AddLicenseToAccount" xml:space="preserve">
+    <value>添加授权码至你的账号</value>
+  </data>
+  <data name="Config_Register_AddLicenseToAccount_Text" xml:space="preserve">
+    <value>填充表格并输入你的授权码以激活</value>
+  </data>
+  <data name="Config_Register_Done" xml:space="preserve">
+    <value>全部完成！准备开玩！</value>
+  </data>
+  <data name="Config_Register_Done_Text" xml:space="preserve">
+    <value>通过官网了解更多关于内容包制作以及商业版功能</value>
+  </data>
+  <data name="Config_Register_ExistingAccountBtn" xml:space="preserve">
+    <value>已有账号</value>
+  </data>
+  <data name="Config_Register_NewAccountBtn" xml:space="preserve">
+    <value>新账号</value>
+  </data>
+  <data name="Config_Register_VisitActivationSite" xml:space="preserve">
+    <value>前往激活页面</value>
+  </data>
+  <data name="Config_ReservedFreeSpace" xml:space="preserve">
+    <value>保留空间</value>
+  </data>
+  <data name="Shell_Menue_ExitToWindows" xml:space="preserve">
+    <value>桌面</value>
+  </data>
+  <data name="Shell_Menue_Games" xml:space="preserve">
+    <value>游戏</value>
+  </data>
+  <data name="Shell_Menue_PowerOff" xml:space="preserve">
+    <value>关机</value>
+  </data>
+  <data name="Shell_Menue_Settings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Business_BackgroundSplashLeft" xml:space="preserve" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Business_BackgroundSplashLeft_CN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Business_BackgroundSplashRight" xml:space="preserve" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Business_BackgroundSplashRight_CN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Exceptions_UnknownError" xml:space="preserve">
+    <value>未知的错误，请稍后重试。</value>
+  </data>
+  <data name="System_Platform_ConfirmDeleteAccount" xml:space="preserve">
+    <value>确定删除此账号？</value>
+  </data>
+  <data name="System_Platform_Account" xml:space="preserve">
+    <value>账号</value>
+  </data>
+  <data name="System_Platform_Account_Create" xml:space="preserve">
+    <value>创建</value>
+  </data>
+  <data name="System_Platform_Account_Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="System_Platform_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="System_Platform_Password" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="System_Platform_Username" xml:space="preserve">
+    <value>用户名</value>
+  </data>
+  <data name="System_Platform_NoPlatformAvailible" xml:space="preserve">
+    <value>无可用平台</value>
+  </data>
+  <data name="System_Platform_SelectPlatform" xml:space="preserve">
+    <value>选择平台</value>
+  </data>
+  <data name="System_Platform_NoPlatformSelected" xml:space="preserve">
+    <value>未选择平台</value>
+  </data>
+  <data name="System_Platform" xml:space="preserve">
+    <value>平台</value>
+  </data>
+  <data name="System_Accounts" xml:space="preserve">
+    <value>账号</value>
+  </data>
+  <data name="System_Account_AddLicense" xml:space="preserve">
+    <value>绑定账号</value>
+  </data>
+  <data name="System_Account_RemoveLicense" xml:space="preserve">
+    <value>解绑账号</value>
+  </data>
+  <data name="System_Application_Advance_Edit" xml:space="preserve">
+    <value>高级设置</value>
+  </data>
+  <data name="System_Application_Advance_Edit_ExecutableInfo_SelectExecutable" xml:space="preserve">
+    <value>选择执行程序</value>
+  </data>
+  <data name="System_Application_Advance_Edit_ExecutableInfo_SelectFolder" xml:space="preserve">
+    <value>选择文件夹</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Execution_Instruction" xml:space="preserve">
+    <value>配置可执行项</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Apply" xml:space="preserve">
+    <value>应用</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Remove" xml:space="preserve">
+    <value>移除</value>
+  </data>
+  <data name="System_Application_Advance_Edit_ApplicationMainExecutablePath" xml:space="preserve">
+    <value>应用路径</value>
+  </data>
+  <data name="System_Application_Advance_Edit_ExecutableParameters" xml:space="preserve">
+    <value>执行参数</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Executables" xml:space="preserve">
+    <value>可执行程序</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Info_ExeName" xml:space="preserve">
+    <value>指定一个名称用以向用户展示该启动项隐含的意思</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Info_ExeParameters" xml:space="preserve">
+    <value>可执行文件的启动参数,该参数总是应用到指定的可执行文件(游戏本身的可执行文件或启动器),可选</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Info_IsMainExe" xml:space="preserve">
+    <value>指示该进程是否作为衡量应用程序正在运行的主要进程,通常情况下一个应用程序至少有一个主要进程,如果指定了多个主要进程,那么其中任何一个正在运行,系统将视作该应用程序者正在运行</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Info_KillNotResponding" xml:space="preserve">
+    <value>指示系统是否在应用退出时结束该进程</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Info_KillOnExit" xml:space="preserve">
+    <value>指示系统是否在该进程无响应是强制结束该进程</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Info_MainExePath" xml:space="preserve">
+    <value>应用主要进程的可执行程序,通常为应用程序本身.对于需要启动器的应用,则为启动器执行程序</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Info_RequiredVrModule" xml:space="preserve">
+    <value>指定与该应用程序相匹配的VR模块</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Info_WorkingDirectory" xml:space="preserve">
+    <value>可执行程序所依赖的工作目录.若为空,默认为可执行程序所在的目录</value>
+  </data>
+  <data name="System_Application_Advance_Edit_IsMainExe" xml:space="preserve">
+    <value>是否为主要进程</value>
+  </data>
+  <data name="System_Application_Advance_Edit_KillNotResponding" xml:space="preserve">
+    <value>进程无响应时强制结束</value>
+  </data>
+  <data name="System_Application_Advance_Edit_KillOnExit" xml:space="preserve">
+    <value>应用退出时结束进程</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Options" xml:space="preserve">
+    <value>选项</value>
+  </data>
+  <data name="System_Application_Advance_Edit_ProcessMonitoring" xml:space="preserve">
+    <value>进程监控</value>
+  </data>
+  <data name="System_Application_Advance_Edit_SetFromExecutable" xml:space="preserve">
+    <value>从.exe 获取</value>
+  </data>
+  <data name="System_Application_Advance_Edit_WatchDogOptions" xml:space="preserve">
+    <value>检测选项</value>
+  </data>
+  <data name="System_Application_Advance_Edit_ExeName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="System_Application_Advance_Edit_RequiredVrModule" xml:space="preserve">
+    <value>依赖的VR模块</value>
+  </data>
+  <data name="System_Application_Advance_Edit_WorkingDirectory" xml:space="preserve">
+    <value>工作目录</value>
+  </data>
+  <data name="System_Application_Advance_Edit_ExecutableInfo_ExeFiles" xml:space="preserve">
+    <value>执行程序文件</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Warning" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Warning_NoMainExecutable" xml:space="preserve">
+    <value>没有任何程序为主要进程,你确定继续吗?</value>
+  </data>
+  <data name="System_Installation_SelectVBoxFile" xml:space="preserve">
+    <value>选择Vbox文件</value>
+  </data>
+  <data name="System_Installation_VBoxFile" xml:space="preserve">
+    <value>VBox文件</value>
+  </data>
+  <data name="System_Installation_Install_Failed" xml:space="preserve">
+    <value>安装失败:</value>
+  </data>
+  <data name="System_Installation_Install_OnlyVBoxFiles" xml:space="preserve">
+    <value>目标文件不是Vbox文件!</value>
+  </data>
+  <data name="PlatformState_ApplicationRunning" xml:space="preserve">
+    <value>应用正在运行</value>
+  </data>
+  <data name="PlatformState_ApplicationUpdateRequired" xml:space="preserve">
+    <value>应用需要更新!</value>
+  </data>
+  <data name="PlatformState_Done" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="PlatformState_LoggingIn" xml:space="preserve">
+    <value>用户登录客户端</value>
+  </data>
+  <data name="PlatformState_LoggingOut" xml:space="preserve">
+    <value>用户登出客户端</value>
+  </data>
+  <data name="PlatformState_StartingApplication" xml:space="preserve">
+    <value>启动应用</value>
+  </data>
+  <data name="PlatformState_StartingApplicationError" xml:space="preserve">
+    <value>应用启动过程出错!</value>
+  </data>
+  <data name="PlatformState_StartingClient" xml:space="preserve">
+    <value>启动客户端</value>
+  </data>
+  <data name="PlatformState_StartingClientError" xml:space="preserve">
+    <value>客户端启动出错!</value>
+  </data>
+  <data name="PlatformState_StoppingClient" xml:space="preserve">
+    <value>退出客户端</value>
+  </data>
+  <data name="PlatformState_Unavailible" xml:space="preserve">
+    <value>等待状态</value>
+  </data>
+  <data name="StationMode_ForceRestartVrDriver" xml:space="preserve">
+    <value>退出每个应用后重启SteamVR</value>
+  </data>
+  <data name="System_Multimedia" xml:space="preserve">
+    <value>多媒体</value>
+  </data>
+  <data name="System_Multimedia_AutoPlay" xml:space="preserve">
+    <value>自动播放</value>
+  </data>
+  <data name="System_Multimedia_BackgroundVideo" xml:space="preserve">
+    <value>背景视频</value>
+  </data>
+  <data name="System_Multimedia_Playlist" xml:space="preserve">
+    <value>播放列表</value>
+  </data>
+  <data name="System_Multimedia_Playlist_Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="System_Multimedia_Playlist_Remove" xml:space="preserve">
+    <value>移除</value>
+  </data>
+  <data name="System_Multimedia_Repeat" xml:space="preserve">
+    <value>列表循环</value>
+  </data>
+  <data name="System_Multimedia_SelectMediaFile" xml:space="preserve">
+    <value>选择媒体文件</value>
+  </data>
+  <data name="System_Account_NoAccountSelected" xml:space="preserve">
+    <value>未选择账号</value>
+  </data>
+  <data name="Global_Error" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="Global_Retry" xml:space="preserve">
+    <value>重试</value>
+  </data>
+  <data name="StationMode_VrDriverInteraction" xml:space="preserve">
+    <value>SteamVR窗口交互</value>
+  </data>
+  <data name="System_Multimedia_Volume" xml:space="preserve">
+    <value>音量</value>
+  </data>
+  <data name="System_Multimedia_Track" xml:space="preserve">
+    <value>媒体轨道</value>
+  </data>
+  <data name="Config_TasksApply_Error" xml:space="preserve">
+    <value>任务执行过程中遇到一些问题</value>
+  </data>
+  <data name="Config_TasksApply_Success" xml:space="preserve">
+    <value>所有任务执行成功</value>
+  </data>
+  <data name="Config_TasksApply_Topic" xml:space="preserve">
+    <value>正在设置您的系统</value>
+  </data>
+  <data name="Config_Dialog_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Config_Dialog_HeaderInfo" xml:space="preserve">
+    <value>信息</value>
+  </data>
+  <data name="Config_Dialog_HeaderWarning" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="Config_Dialog_StorageChangeNotEmpty" xml:space="preserve">
+    <value>你当前的游戏存储目录不为空，你需要手动将当前目录下内容移至新的存储目录</value>
+  </data>
+  <data name="Config_Dialog_StorageUseEmptyRecommend" xml:space="preserve">
+    <value>你的游戏存储目录不为空，建议使用空目录作为存储目录</value>
+  </data>
+  <data name="Config_Dialog_Understood" xml:space="preserve">
+    <value>了解</value>
+  </data>
+  <data name="PlatformState_UpdatingApplication" xml:space="preserve">
+    <value>正在更新程序</value>
+  </data>
+  <data name="PlatformState_UpdatingClient" xml:space="preserve">
+    <value>正在更新客户端</value>
+  </data>
+  <data name="System_Installation_SelectFile" xml:space="preserve">
+    <value>选择文件</value>
+  </data>
+  <data name="Config_DefaultLanguage_Changed" xml:space="preserve">
+    <value>修改默认语言成功</value>
+  </data>
+  <data name="Exceptions_InvalidUsernamePassword" xml:space="preserve">
+    <value>账号密码错误</value>
+  </data>
+  <data name="Connect_AutoLogin" xml:space="preserve">
+    <value>自动登录</value>
+  </data>
+  <data name="Connect_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Connect_Connect" xml:space="preserve">
+    <value>登录</value>
+  </data>
+  <data name="Connect_Connect_ServerUnreachable" xml:space="preserve">
+    <value>无法连接服务器，请一会重试</value>
+  </data>
+  <data name="Connect_Disconnect" xml:space="preserve">
+    <value>断开连接</value>
+  </data>
+  <data name="Connect_Error_Invalid_Credentials" xml:space="preserve">
+    <value>密码错误</value>
+  </data>
+  <data name="Connect_Error_Invalid_Password" xml:space="preserve">
+    <value>密码错误</value>
+  </data>
+  <data name="Connect_Error_Invalid_StationId" xml:space="preserve">
+    <value>站点账号错误</value>
+  </data>
+  <data name="Connect_Password" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="Connect_StationId" xml:space="preserve">
+    <value>站点账号</value>
+  </data>
+  <data name="Connect_LoginTitle" xml:space="preserve">
+    <value>登录</value>
+  </data>
+  <data name="Connect_Connected" xml:space="preserve">
+    <value>登录成功</value>
+  </data>
+  <data name="Connect_Connecting" xml:space="preserve">
+    <value>正在登录</value>
+  </data>
+  <data name="Connect_Disconnected" xml:space="preserve">
+    <value>退出登录成功</value>
+  </data>
+  <data name="Connect_Disconnecting" xml:space="preserve">
+    <value>正在退出登录</value>
+  </data>
+  <data name="Connect_Recconecting" xml:space="preserve">
+    <value>重新登录中</value>
+  </data>
+  <data name="System_Settings_ConnectionPanel" xml:space="preserve">
+    <value>登录面板</value>
+  </data>
+  <data name="Session_Info_SessionLimitReached" xml:space="preserve">
+    <value>时间到</value>
+  </data>
+</root>

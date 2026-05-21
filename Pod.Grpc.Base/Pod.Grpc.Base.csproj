@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!--
+      Multi-targeted so a single set of .proto files emits stubs that work
+      both for the kiosk (.NET Framework 4.7.1, via the netstandard2.0
+      consumers Pod.Grpc.Messages + Pod.Grpc.Base.Client) and the server
+      (net10.0, via Pod.Grpc.*Host.Server using Grpc.AspNetCore).
+
+      The generated *.cs land in Export/ regardless of target — the code
+      itself is target-agnostic (it references Grpc.Core.Api types that
+      both Grpc.Core 2.46.x and Grpc.AspNetCore.Server provide). The csproj
+      below conditionally pulls the right runtime for each target.
+    -->
+    <TargetFrameworks>netstandard2.0;net10.0</TargetFrameworks>
+    <Configurations>Debug;Release;Release_ShellClient</Configurations>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <!-- Common: protobuf runtime + protoc/grpc_csharp_plugin (build-time only). -->
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.27.3" />
+    <PackageReference Include="Grpc.Tools" Version="2.66.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <!-- netstandard2.0 target: Grpc.Core (legacy runtime; kiosk path).         -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="Grpc.Core" Version="2.46.6" />
+  </ItemGroup>
+
+  <!-- net10.0 target: Grpc.AspNetCore (server-side ASP.NET Core integration).
+       Grpc.AspNetCore transitively pulls Grpc.AspNetCore.Server +
+       Grpc.Core.Api so the generated *Base classes resolve.            -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
+    <PackageReference Include="Grpc.AspNetCore" Version="2.66.0" />
+  </ItemGroup>
+
+  <!--
+    Generate stubs into Export/. CompileOutputs="false" keeps this project
+    a pure code-gen leaf: the generated files are LINKED into the consumers
+    (Pod.Grpc.Messages, Pod.Grpc.Base.Client, Pod.Grpc.*Host.Server) and
+    compiled there.
+
+    Two include groups:
+      • Service*.proto  -> GrpcServices="Both"  (emits *Grpc.cs with both
+        client + server bases; one set of stubs satisfies every consumer)
+      • Messages*.proto -> GrpcServices="None"  (no service block; only
+        the message DTOs are generated, no *Grpc.cs)
+  -->
+  <ItemGroup>
+    <Protobuf Include="Service*.proto"
+              OutputDir="%(RelativeDir)Export"
+              CompileOutputs="false"
+              GrpcServices="Both" />
+    <Protobuf Include="Messages*.proto"
+              OutputDir="%(RelativeDir)Export"
+              CompileOutputs="false"
+              GrpcServices="None" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Export\" />
+  </ItemGroup>
+</Project>

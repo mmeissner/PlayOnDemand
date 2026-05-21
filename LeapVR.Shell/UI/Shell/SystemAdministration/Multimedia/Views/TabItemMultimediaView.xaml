@@ -1,0 +1,192 @@
+﻿<UserControl
+    x:Class="LeapVR.Shell.UI.Shell.SystemAdministration.Multimedia.Views.TabItemMultimediaView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cal="http://www.caliburnproject.org" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:lex="http://wpflocalizeextension.codeplex.com" xmlns:local="clr-namespace:LeapVR.Shell.UI.Shell.SystemAdministration.Multimedia.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:usercontrols="clr-namespace:LeapVR.Shell.UI.Usercontrols"
+    d:DesignHeight="800" d:DesignWidth="1700"
+    mc:Ignorable="d">
+    <Grid Background="Transparent">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock
+            Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+            HorizontalAlignment="Center" VerticalAlignment="Center"
+            FontSize="{DynamicResource LoginViewsH3}"
+            Foreground="{DynamicResource ThemeMainTextColor}"
+            Text="{lex:Loc System_Multimedia_BackgroundVideo}"
+            TextAlignment="Center" />
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <UniformGrid
+                    Grid.Row="0" Grid.Column="0"
+                    Margin="15"
+                    Columns="2" Rows="2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <TextBlock
+                            Grid.Row="0" Grid.Column="0"
+                            HorizontalAlignment="Left" VerticalAlignment="Center"
+                            FontSize="{DynamicResource H5}"
+                            Foreground="{DynamicResource ThemeMainTextColor}"
+                            Text="{lex:Loc System_Multimedia_AutoPlay}"
+                            TextAlignment="Center" />
+                        <usercontrols:SwitchButton
+                            Grid.Row="0" Grid.Column="2"
+                            Height="{DynamicResource H5}"
+                            Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center"
+                            IsSwitchOn="{Binding AutoStart, Mode=TwoWay, FallbackValue=False}" />
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <TextBlock
+                            Grid.Row="0" Grid.Column="0"
+                            HorizontalAlignment="Left" VerticalAlignment="Center"
+                            FontSize="{DynamicResource H5}"
+                            Foreground="{DynamicResource ThemeMainTextColor}"
+                            Text="{lex:Loc System_Multimedia_Repeat}"
+                            TextAlignment="Center" />
+                        <usercontrols:SwitchButton
+                            Grid.Row="0" Grid.Column="2"
+                            Height="{DynamicResource H5}"
+                            Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center"
+                            IsSwitchOn="{Binding Repeat, Mode=TwoWay, FallbackValue=False}" />
+                    </Grid>
+                </UniformGrid>
+                <GroupBox Grid.Row="1" Grid.Column="0" Margin="0,0,0,20">
+                    <GroupBox.Header>
+                        <TextBlock
+                            Grid.Row="0" Grid.Column="0"
+                            HorizontalAlignment="Left" VerticalAlignment="Center"
+                            FontSize="{DynamicResource H6}"
+                            Foreground="{DynamicResource ThemeMainTextColor}"
+                            Text="{lex:Loc System_Multimedia_Track}"
+                            TextAlignment="Center" />
+                    </GroupBox.Header>
+                    <TextBlock
+                        HorizontalAlignment="Center" VerticalAlignment="Center"
+                        FontSize="{DynamicResource H6}"
+                        Foreground="{DynamicResource ThemeMainTextColor}"
+                        Text="{Binding MultiMediaElement.Source, Converter={StaticResource UriToTrackStringConverter}, Mode=OneWay}"
+                        TextAlignment="Center" />
+                </GroupBox>
+                <GroupBox Grid.Row="2" Grid.Column="0" Margin="0,0,0,20">
+                    <GroupBox.Header>
+                        <TextBlock
+                            Grid.Row="0" Grid.Column="0"
+                            HorizontalAlignment="Left" VerticalAlignment="Center"
+                            FontSize="{DynamicResource H6}"
+                            Foreground="{DynamicResource ThemeMainTextColor}"
+                            Text="{lex:Loc System_Multimedia_Volume}"
+                            TextAlignment="Center" />
+                    </GroupBox.Header>
+                    <Slider x:Name="VolumeInt" Margin="5" Maximum="100" Minimum="1" />
+                </GroupBox>
+            </Grid>
+            <TextBlock
+                Grid.Row="2" Grid.Column="0"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                FontSize="{DynamicResource H5}"
+                Foreground="{DynamicResource ThemeMainTextColor}"
+                Text="{lex:Loc System_Multimedia_Playlist}"
+                TextAlignment="Center" />
+
+            <ListView
+                x:Name="PlaylistItems"
+                Grid.Row="3" Grid.RowSpan="3" Grid.Column="0"
+                Margin="0,10,0,20" HorizontalContentAlignment="Stretch"
+                cal:Message.Attach="[Event MouseDoubleClick]=[Action PlaylistItemDoubleClick($this.SelectedItem)]"
+                ItemContainerStyle="{DynamicResource ListViewItemForUniversalItem}"
+                ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                SelectedIndex="{Binding SelectedPlaylistIndex}"
+                Style="{StaticResource ListViewStyleWithoutColumns}"
+                VirtualizingPanel.ScrollUnit="Pixel">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock FontSize="{DynamicResource LoginViewsH6}" Foreground="{DynamicResource ThemeMainTextColor}" Text="{Binding LocalPath}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel cal:Action.TargetWithoutContext="{Binding}" Orientation="Vertical" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ListView>
+
+            <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Vertical">
+                <Button
+                    x:Name="MoveUp"
+                    Grid.Row="1" Grid.Column="1"
+                    Margin="15" HorizontalAlignment="Left"
+                    FontSize="{DynamicResource H6}"
+                    Style="{DynamicResource ButtonBaseStyle}">
+                    <Button.Content>
+                        <Image Width="50" Height="50" Source="{StaticResource IconScrollUp}" />
+                    </Button.Content>
+                </Button>
+                <Button
+                    x:Name="MoveDown"
+                    Grid.Row="3" Grid.Column="1"
+                    Margin="15" HorizontalAlignment="Left"
+                    FontSize="{DynamicResource H6}"
+                    Style="{DynamicResource ButtonBaseStyle}">
+                    <Button.Content>
+                        <Image Width="50" Height="50" Source="{StaticResource IconScrollDown}" />
+                    </Button.Content>
+                </Button>
+            </StackPanel>
+
+            <UniformGrid Grid.Row="6" Grid.Column="0" Margin="10" Columns="2">
+                <Button
+                    x:Name="Add"
+                    Margin="15" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                    Content="{lex:Loc System_Multimedia_Playlist_Add}"
+                    FontSize="{DynamicResource H5}"
+                    Style="{DynamicResource ButtonBaseStyle}" />
+                <Button
+                    x:Name="Remove"
+                    Margin="15" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                    Content="{lex:Loc System_Multimedia_Playlist_Remove}"
+                    FontSize="{DynamicResource H5}"
+                    Style="{DynamicResource ButtonBaseStyle}" />
+            </UniformGrid>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,1336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="zh-CN" original="LEAPVR.SHELL.LANGUAGE/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1795.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="LEAPVR.SHELL.LANGUAGE/RESOURCES.RESX" datatype="resx">
+        <trans-unit id="Global_Category_Other" translate="yes" xml:space="preserve">
+          <source>Other</source>
+          <target state="translated" state-qualifier="tm-suggestion">其他</target>
+        </trans-unit>
+        <trans-unit id="Global_Loading" translate="yes" xml:space="preserve">
+          <source>Loading...</source>
+          <target state="translated" state-qualifier="tm-suggestion">正在加载...</target>
+        </trans-unit>
+        <trans-unit id="Global_Login" translate="yes" xml:space="preserve">
+          <source>Login</source>
+          <target state="translated">开玩</target>
+        </trans-unit>
+        <trans-unit id="Global_Logout" translate="yes" xml:space="preserve">
+          <source>Logout</source>
+          <target state="translated">退出</target>
+        </trans-unit>
+        <trans-unit id="Global_ProductName" translate="yes" xml:space="preserve">
+          <source>VrBox</source>
+          <target state="translated" state-qualifier="mt-suggestion">VrBox</target>
+        </trans-unit>
+        <trans-unit id="Global_SwitchSkin" translate="yes" xml:space="preserve">
+          <source>Switch Skin</source>
+          <target state="translated" state-qualifier="mt-suggestion">切换皮肤</target>
+        </trans-unit>
+        <trans-unit id="Global_SystemAdministration" translate="yes" xml:space="preserve">
+          <source>System</source>
+          <target state="translated">系统配置</target>
+        </trans-unit>
+        <trans-unit id="Shell_InstallationBlocking_Error" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <target state="translated">错误</target>
+        </trans-unit>
+        <trans-unit id="Shell_InstallationBlocking_InstallationFailed" translate="yes" xml:space="preserve">
+          <source>Installation failed, please try again. If it doesn't help, restart the machine.</source>
+          <target state="translated">安装失败，请重试，如果仍然无法安装，请重启机器。</target>
+        </trans-unit>
+        <trans-unit id="Shell_InstallationBlocking_Installing" translate="yes" xml:space="preserve">
+          <source>Installing</source>
+          <target state="translated" state-qualifier="tm-suggestion">正在安装</target>
+        </trans-unit>
+        <trans-unit id="Shell_InstallationBlocking_UninstallationFailed" translate="yes" xml:space="preserve">
+          <source>Uninstallation completed, please restart the machine.</source>
+          <target state="translated">卸载完成，请重启机器</target>
+        </trans-unit>
+        <trans-unit id="Shell_InstallationBlocking_Uninstalling" translate="yes" xml:space="preserve">
+          <source>Uninstalling</source>
+          <target state="translated" state-qualifier="tm-suggestion">正在卸载</target>
+        </trans-unit>
+        <trans-unit id="System_Exit" translate="yes" xml:space="preserve">
+          <source>Exit Application</source>
+          <target state="translated">退出</target>
+        </trans-unit>
+        <trans-unit id="System_Exit_DoYouReallyWantToExit" translate="yes" xml:space="preserve">
+          <source>Do you really want to Exit?</source>
+          <target state="translated">您真的想退出吗？</target>
+        </trans-unit>
+        <trans-unit id="System_Exit_ExitNow" translate="yes" xml:space="preserve">
+          <source>Exit Now</source>
+          <target state="translated">立即退出</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware" translate="yes" xml:space="preserve">
+          <source>Hardware</source>
+          <target state="translated">硬件信息</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_Applications" translate="yes" xml:space="preserve">
+          <source>Applications</source>
+          <target state="translated" state-qualifier="tm-suggestion">应用程序</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_CPU" translate="yes" xml:space="preserve">
+          <source>CPU</source>
+          <target state="translated" state-qualifier="tm-suggestion">CPU</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_FreeSpace" translate="yes" xml:space="preserve">
+          <source>Free Space</source>
+          <target state="translated" state-qualifier="tm-suggestion">可用空间</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_RAM" translate="yes" xml:space="preserve">
+          <source>RAM</source>
+          <target state="translated">内存</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_SoftwareVersion" translate="yes" xml:space="preserve">
+          <source>Software Version</source>
+          <target state="translated" state-qualifier="tm-suggestion">软件版本</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_SystemFiles" translate="yes" xml:space="preserve">
+          <source>System Files</source>
+          <target state="translated" state-qualifier="tm-suggestion">系统文件</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_Total" translate="yes" xml:space="preserve">
+          <source>Total</source>
+          <target state="translated" state-qualifier="tm-suggestion">总计</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_VBoxID" translate="yes" xml:space="preserve">
+          <source>VBox ID</source>
+          <target state="translated" state-qualifier="mt-suggestion">VBox ID</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_VBoxType" translate="yes" xml:space="preserve">
+          <source>VBox Type</source>
+          <target state="translated" state-qualifier="mt-suggestion">VBox 类型</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_VGA" translate="yes" xml:space="preserve">
+          <source>VGA</source>
+          <target state="translated">显卡</target>
+        </trans-unit>
+        <trans-unit id="System_InputPin" translate="yes" xml:space="preserve">
+          <source>Input PIN</source>
+          <target state="translated">请输入密码</target>
+        </trans-unit>
+        <trans-unit id="System_Installation" translate="yes" xml:space="preserve">
+          <source>Install/Uninstall</source>
+          <target state="translated" state-qualifier="mt-suggestion">安装/卸载</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_FreeSpaceCalculating" translate="yes" xml:space="preserve">
+          <source>Free Space Calculating...</source>
+          <target state="translated">正在计算可用空间...</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_Install" translate="yes" xml:space="preserve">
+          <source>Install</source>
+          <target state="translated" state-qualifier="tm-suggestion">安装</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_NoApplications" translate="yes" xml:space="preserve">
+          <source>No Applications</source>
+          <target state="translated">未找到应用程序</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_NoFiles" translate="yes" xml:space="preserve">
+          <source>No Files</source>
+          <target state="translated">未找到文件</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_NoUsbDrive" translate="yes" xml:space="preserve">
+          <source>No USB Drive</source>
+          <target state="translated">未找到 USB 驱动器</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_SpaceFree" translate="yes" xml:space="preserve">
+          <source>Space Free</source>
+          <target state="translated" state-qualifier="mt-suggestion">可用空间</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_Uninstall" translate="yes" xml:space="preserve">
+          <source>Uninstall</source>
+          <target state="translated" state-qualifier="tm-suggestion">卸载</target>
+        </trans-unit>
+        <trans-unit id="System_InvalidPin" translate="yes" xml:space="preserve">
+          <source>Invalid PIN</source>
+          <target state="translated">密码错误</target>
+        </trans-unit>
+        <trans-unit id="System_Poweroff" translate="yes" xml:space="preserve">
+          <source>Power Off</source>
+          <target state="translated">关机</target>
+        </trans-unit>
+        <trans-unit id="System_Poweroff_DoYouReallyWantToPoweroff" translate="yes" xml:space="preserve">
+          <source>Do you really want to Power Off?</source>
+          <target state="translated">您真的想关机吗？</target>
+        </trans-unit>
+        <trans-unit id="System_Poweroff_PoweroffNow" translate="yes" xml:space="preserve">
+          <source>Power Off Now</source>
+          <target state="translated">立即关机</target>
+        </trans-unit>
+        <trans-unit id="System_Settings" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="translated">设置</target>
+        </trans-unit>
+        <trans-unit id="System_Settings_Security" translate="yes" xml:space="preserve">
+          <source>Security</source>
+          <target state="translated">修改密码</target>
+        </trans-unit>
+        <trans-unit id="System_Settings_Security_EnterNewPin" translate="yes" xml:space="preserve">
+          <source>Please enter new PIN</source>
+          <target state="translated">请输入新密码</target>
+        </trans-unit>
+        <trans-unit id="System_Settings_Security_EnterNewPinAgain" translate="yes" xml:space="preserve">
+          <source>Please enter new PIN again</source>
+          <target state="translated">请再次输入新密码</target>
+        </trans-unit>
+        <trans-unit id="System_Settings_Security_EnterOldPin" translate="yes" xml:space="preserve">
+          <source>Please enter old PIN</source>
+          <target state="translated">请输入密码</target>
+        </trans-unit>
+        <trans-unit id="System_Settings_Security_FailedToVerifyOldPin" translate="yes" xml:space="preserve">
+          <source>Incorrect PIN, please try again</source>
+          <target state="translated">密码错误，请重试</target>
+        </trans-unit>
+        <trans-unit id="System_Settings_Security_PinChangeSuccessful" translate="yes" xml:space="preserve">
+          <source>PIN change successful</source>
+          <target state="translated">变更密码成功</target>
+        </trans-unit>
+        <trans-unit id="System_Settings_Security_PinNotEqual" translate="yes" xml:space="preserve">
+          <source>New PIN doesn't match</source>
+          <target state="translated">两次新密码输入不匹配</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics" translate="yes" xml:space="preserve">
+          <source>Statistics</source>
+          <target state="translated" state-qualifier="tm-suggestion">统计信息</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Applications" translate="yes" xml:space="preserve">
+          <source>Applications</source>
+          <target state="translated" state-qualifier="tm-suggestion">应用程序</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Applications_Columns_LastTimePlayed" translate="yes" xml:space="preserve">
+          <source>Last Time Played</source>
+          <target state="translated">上次运行时间</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Applications_Columns_LongestSession" translate="yes" xml:space="preserve">
+          <source>Longest Session</source>
+          <target state="translated">最长运行时间</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Applications_Columns_Name" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <target state="translated">名称</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Applications_Columns_Number" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target state="translated" state-qualifier="tm-suggestion">编号</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Applications_Columns_TimesPlayed" translate="yes" xml:space="preserve">
+          <source>Times Played</source>
+          <target state="translated">运行次数</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Applications_Columns_TotalRuntime" translate="yes" xml:space="preserve">
+          <source>Total Runtime</source>
+          <target state="translated" state-qualifier="mt-suggestion">总运行时间</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Applications_NoData" translate="yes" xml:space="preserve">
+          <source>No Data</source>
+          <target state="translated" state-qualifier="tm-suggestion">无数据</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Applications_ResetApplicationsStatistics" translate="yes" xml:space="preserve">
+          <source>Reset Game Statistics</source>
+          <target state="translated">重置统计信息</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Global" translate="yes" xml:space="preserve">
+          <source>Global</source>
+          <target state="translated">全局统计</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Global_Hours" translate="yes" xml:space="preserve">
+          <source>Hours</source>
+          <target state="translated" state-qualifier="tm-suggestion">小时</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Global_LongestGameSession" translate="yes" xml:space="preserve">
+          <source>Longest Game Session</source>
+          <target state="translated">单次运行时间最长的游戏</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Global_LongestPlayedGame" translate="yes" xml:space="preserve">
+          <source>Longest Played Game</source>
+          <target state="translated">总运行时间最长的游戏</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Global_Minutes" translate="yes" xml:space="preserve">
+          <source>Minutes</source>
+          <target state="translated" state-qualifier="tm-suggestion">分钟</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Global_MostPlayedGame" translate="yes" xml:space="preserve">
+          <source>Most Played Game</source>
+          <target state="translated">运行次数最多的游戏</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Global_ResetVrBoxStatistics" translate="yes" xml:space="preserve">
+          <source>Reset VR Box Statistics</source>
+          <target state="translated">重置所有统计信息</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Global_Seconds" translate="yes" xml:space="preserve">
+          <source>Seconds</source>
+          <target state="translated" state-qualifier="tm-suggestion">秒</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Global_Times" translate="yes" xml:space="preserve">
+          <source>Times</source>
+          <target state="translated">次</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Global_TotalRuntime" translate="yes" xml:space="preserve">
+          <source>Total Runtime</source>
+          <target state="translated" state-qualifier="mt-suggestion">总运行时间</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_NoData" translate="yes" xml:space="preserve">
+          <source>No Data</source>
+          <target state="translated" state-qualifier="tm-suggestion">无数据</target>
+        </trans-unit>
+        <trans-unit id="System_Apps" translate="yes" xml:space="preserve">
+          <source>Apps</source>
+          <target state="translated">应用程序</target>
+        </trans-unit>
+        <trans-unit id="System_Apps_Management" translate="yes" xml:space="preserve">
+          <source>Management</source>
+          <target state="translated">管理</target>
+        </trans-unit>
+        <trans-unit id="Global_Back" translate="yes" xml:space="preserve">
+          <source>Back</source>
+          <target state="translated">返回</target>
+        </trans-unit>
+        <trans-unit id="System_Logout_DoYouReallyWantToLogout" translate="yes" xml:space="preserve">
+          <source>Do you really want to Logout?</source>
+          <target state="translated">您确认退出登录吗？</target>
+        </trans-unit>
+        <trans-unit id="System_Logout_LogoutNow" translate="yes" xml:space="preserve">
+          <source>Logout Now</source>
+          <target state="translated">立即退出</target>
+        </trans-unit>
+        <trans-unit id="Global_Categories" translate="yes" xml:space="preserve">
+          <source>Categories</source>
+          <target state="translated">分类</target>
+        </trans-unit>
+        <trans-unit id="Shell_Enjoy" translate="yes" xml:space="preserve">
+          <source>Login Succeeded, Enjoy!</source>
+          <target state="translated">登录成功，尽情游玩吧！</target>
+        </trans-unit>
+        <trans-unit id="Shell_PleaseInsertYourMembershipCard" translate="yes" xml:space="preserve">
+          <source>Please Insert Your Membership Card</source>
+          <target state="translated">请插入您的会员卡</target>
+        </trans-unit>
+        <trans-unit id="Global_Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated">取消</target>
+        </trans-unit>
+        <trans-unit id="Session_StationCost" translate="yes" xml:space="preserve">
+          <source>Station Cost</source>
+          <target state="translated">计费方式</target>
+        </trans-unit>
+        <trans-unit id="Session_CurrencyUnit" translate="yes" xml:space="preserve">
+          <source>point(s)</source>
+          <target state="translated">点数</target>
+        </trans-unit>
+        <trans-unit id="Session_RateUnit" translate="yes" xml:space="preserve">
+          <source>min</source>
+          <target state="translated">分钟</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_IntentionExpired" translate="yes" xml:space="preserve">
+          <source>Login request exipred, please try again.</source>
+          <target state="translated">登录请求已过期，请重试</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_NotEnoughBalance" translate="yes" xml:space="preserve">
+          <source>Not enough balance, please top up and try again.</source>
+          <target state="translated">您的余额不足，请充值后重试</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_SessionRateChanged" translate="yes" xml:space="preserve">
+          <source>Session rate has already changed, please cancel and try again.</source>
+          <target state="translated">您请求登录期间费率从外部改变，请取消后重试</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_StationHaveRunningSession" translate="yes" xml:space="preserve">
+          <source>Sorry, there's already a running session in this station.</source>
+          <target state="translated">无法登录，本机站已被占用</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_UserHaveRunningSession" translate="yes" xml:space="preserve">
+          <source>Sorry, you're in session somewhere else.</source>
+          <target state="translated">无法登录，您已在别处登录</target>
+        </trans-unit>
+        <trans-unit id="Global_Unit_Sec" translate="yes" xml:space="preserve">
+          <source>second(s)</source>
+          <target state="translated">秒</target>
+        </trans-unit>
+        <trans-unit id="Global_Session_YouPaid" translate="yes" xml:space="preserve">
+          <source>Spent</source>
+          <target state="translated">已消费</target>
+        </trans-unit>
+        <trans-unit id="Global_Session_YouPlayed" translate="yes" xml:space="preserve">
+          <source>Played</source>
+          <target state="translated">时长</target>
+        </trans-unit>
+        <trans-unit id="Global_Session_YourBalance" translate="yes" xml:space="preserve">
+          <source>Balance</source>
+          <target state="translated">余额</target>
+        </trans-unit>
+        <trans-unit id="Session_TimeRemaining" translate="yes" xml:space="preserve">
+          <source>Remaining</source>
+          <target state="translated">剩余</target>
+        </trans-unit>
+        <trans-unit id="System_EnterPin" translate="yes" xml:space="preserve">
+          <source>Enter Pin to access system management</source>
+          <target state="translated">输入密码登录系统管理</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_UnknownNetworkProblem" translate="yes" xml:space="preserve">
+          <source>Unknown network problem.</source>
+          <target state="translated">未知的网络问题</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_LocalNetworkProblem" translate="yes" xml:space="preserve">
+          <source>Not Connected To Server.</source>
+          <target state="translated">链接服务器失败，请检查网线或路由器配置</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_RemoteServerProblem" translate="yes" xml:space="preserve">
+          <source>Can not connect remote server.</source>
+          <target state="translated">无法连接远程服务器</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_QrCodeGenerationProblem" translate="yes" xml:space="preserve">
+          <source>Can not generate QR code.</source>
+          <target state="translated">无法生成二维码</target>
+        </trans-unit>
+        <trans-unit id="Global_SecondsToPrepare" translate="yes" xml:space="preserve">
+          <source>Auto cancel in</source>
+          <target state="translated">自动取消倒计时：</target>
+        </trans-unit>
+        <trans-unit id="Global_Unit_Hour" translate="yes" xml:space="preserve">
+          <source>hour(s)</source>
+          <target state="translated">小时</target>
+        </trans-unit>
+        <trans-unit id="Global_Unit_Min" translate="yes" xml:space="preserve">
+          <source>minute(s)</source>
+          <target state="translated">分钟</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_UserBlocked" translate="yes" xml:space="preserve">
+          <source>Your Account is blocked.</source>
+          <target state="translated">您的账号已被禁用</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_UserNotActive" translate="yes" xml:space="preserve">
+          <source>Sorry, you are not a member yet. Please finish the Registration</source>
+          <target state="translated">抱歉，您还不是会员。请先完成注册。</target>
+        </trans-unit>
+        <trans-unit id="System_Updates" translate="yes" xml:space="preserve">
+          <source>Updates</source>
+          <target state="translated">软件更新</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_CheckUpdates" translate="yes" xml:space="preserve">
+          <source>Check Updates</source>
+          <target state="translated">检查更新</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_CurrentVersion" translate="yes" xml:space="preserve">
+          <source>Current version</source>
+          <target state="translated">当前版本</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_DownloadUpdates" translate="yes" xml:space="preserve">
+          <source>Download</source>
+          <target state="translated">下载</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Announcement_Downloading" translate="yes" xml:space="preserve">
+          <source>Downloading, please wait...</source>
+          <target state="translated">正在下载最新版本，请稍候...</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Announcement_UpToDate" translate="yes" xml:space="preserve">
+          <source>Software is already up to date</source>
+          <target state="translated">软件已是最新版本</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Announcement_ReadyToUpdate" translate="yes" xml:space="preserve">
+          <source>Download complete, proceed to update?</source>
+          <target state="translated">下载完成，是否更新？</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Announcement_BeforeDownloading" translate="yes" xml:space="preserve">
+          <source>New version available, proceed to download?</source>
+          <target state="translated">有新版本可用, 是否下载?</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_PerformUpdate" translate="yes" xml:space="preserve">
+          <source>Update Now</source>
+          <target state="translated">立即更新</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Announcement_UnexpectedError" translate="yes" xml:space="preserve">
+          <source>Unexpected error occurred, please check the logs.</source>
+          <target state="translated">未知错误，请检查日志</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Announcement_Cancelling" translate="yes" xml:space="preserve">
+          <source>Cancelling, please wait...</source>
+          <target state="translated">正在取消，请稍候...</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Announcement_CheckingNewestVersion" translate="yes" xml:space="preserve">
+          <source>Checking updates might take a while to complete.</source>
+          <target state="translated">正在检查更新，这可能需要一些时间</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Announcement_Errored" translate="yes" xml:space="preserve">
+          <source>Updating process did not finish, please try it again.</source>
+          <target state="translated">更新未完成，请重试</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Announcement_Updating" translate="yes" xml:space="preserve">
+          <source>Updating might take a while to complete.</source>
+          <target state="translated">正在更新，这可能需要一些时间</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_TryAgain" translate="yes" xml:space="preserve">
+          <source>Try Again</source>
+          <target state="translated">重试</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Announcement_Updated" translate="yes" xml:space="preserve">
+          <source>Update complete, please restart the software to apply the new version.</source>
+          <target state="translated">更新完成，请重启软件</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Restart" translate="yes" xml:space="preserve">
+          <source>Restart</source>
+          <target state="translated">重启</target>
+        </trans-unit>
+        <trans-unit id="Global_Session_PlayForFree" translate="yes" xml:space="preserve">
+          <source>Play for free</source>
+          <target state="translated">免费</target>
+        </trans-unit>
+        <trans-unit id="Session_Info_StationInactive" translate="yes" xml:space="preserve">
+          <source>Auto logout due to inactiveity.</source>
+          <target state="translated">机站长时间未响应，自动登出</target>
+        </trans-unit>
+        <trans-unit id="Session_Info_UserBlocked" translate="yes" xml:space="preserve">
+          <source>Auto logout due to user is blocked.</source>
+          <target state="translated">用户被禁用，自动登出</target>
+        </trans-unit>
+        <trans-unit id="Session_Info_InternetProblems" translate="yes" xml:space="preserve">
+          <source>Auto logout due to internet problems.</source>
+          <target state="translated">网络连接出现问题</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_StationName" translate="yes" xml:space="preserve">
+          <source>Station Name</source>
+          <target state="translated">机站名称</target>
+        </trans-unit>
+        <trans-unit id="Global_Unset" translate="yes" xml:space="preserve">
+          <source>Unset</source>
+          <target state="translated">未设置</target>
+        </trans-unit>
+        <trans-unit id="License_LicenseKey" translate="yes" xml:space="preserve">
+          <source>License Key</source>
+          <target state="translated">授权码</target>
+        </trans-unit>
+        <trans-unit id="License_Inactive" translate="yes" xml:space="preserve">
+          <source>Inactive</source>
+          <target state="translated">未激活</target>
+        </trans-unit>
+        <trans-unit id="Exceptions_VersionOutOfDate" translate="yes" xml:space="preserve">
+          <source>Software is out of date, please update to the latest version.</source>
+          <target state="translated">软件版本已过期，请先更新软件</target>
+        </trans-unit>
+        <trans-unit id="Exceptions_LicenseNotDeployed" translate="yes" xml:space="preserve">
+          <source>No license deployed to this station. Run the configuration.</source>
+          <target state="translated">本机站未检测到授权码，请联系技术支持</target>
+        </trans-unit>
+        <trans-unit id="Exceptions_LicenseNotFound" translate="yes" xml:space="preserve">
+          <source>License is not registered in the system.</source>
+          <target state="translated">授权码尚未注册，请与管理员联系</target>
+        </trans-unit>
+        <trans-unit id="Exceptions_LicenseNotLinked" translate="yes" xml:space="preserve">
+          <source>License is not yet linked to an Account.</source>
+          <target state="translated">本机站尚未激活，请联系技术支持</target>
+        </trans-unit>
+        <trans-unit id="Exceptions_LicenseRevoked" translate="yes" xml:space="preserve">
+          <source>License has been revoked. Please contact the support</source>
+          <target state="translated">本机站授权码已从远程系统移除，请联系技术支持</target>
+        </trans-unit>
+        <trans-unit id="Exceptions_LicenseSuspended" translate="yes" xml:space="preserve">
+          <source>License is suspended. Please contact the support</source>
+          <target state="translated">本机站授权码已暂停使用，请联系技术支持</target>
+        </trans-unit>
+        <trans-unit id="Exceptions_StationRevoked" translate="yes" xml:space="preserve">
+          <source>Station is currently revoked.</source>
+          <target state="translated">本机站已从远程服务器撤销</target>
+        </trans-unit>
+        <trans-unit id="Exceptions_StationSuspended" translate="yes" xml:space="preserve">
+          <source>Station is currently suspended.</source>
+          <target state="translated">本机站暂停使用，请与管理员联系</target>
+        </trans-unit>
+        <trans-unit id="Applications_NoAppAvailable" translate="yes" xml:space="preserve">
+          <source>No Application Available.</source>
+          <target state="translated">未找到可用的应用程序</target>
+        </trans-unit>
+        <trans-unit id="Info_AutoStartStringFormat" translate="yes" xml:space="preserve">
+          <source>Auto start in </source>
+          <target state="translated">自动开始倒计时</target>
+        </trans-unit>
+        <trans-unit id="StationMode_MixedReality" translate="yes" xml:space="preserve">
+          <source>MR Mode</source>
+          <target state="translated">MR 模式</target>
+        </trans-unit>
+        <trans-unit id="StationMode_Screen" translate="yes" xml:space="preserve">
+          <source>Screen Mode</source>
+          <target state="translated">大屏模式</target>
+        </trans-unit>
+        <trans-unit id="StationMode_VirtualReality" translate="yes" xml:space="preserve">
+          <source>VR Mode</source>
+          <target state="translated">VR 模式</target>
+        </trans-unit>
+        <trans-unit id="StationMode" translate="yes" xml:space="preserve">
+          <source>Station Mode</source>
+          <target state="translated">机站模式</target>
+        </trans-unit>
+        <trans-unit id="Global_Confirm" translate="yes" xml:space="preserve">
+          <source>Confirm</source>
+          <target state="translated">确定</target>
+        </trans-unit>
+        <trans-unit id="Session_MessageBeforeLogout" translate="yes" xml:space="preserve">
+          <source>Do you really want to logout?</source>
+          <target state="translated">确定要登出吗？</target>
+        </trans-unit>
+        <trans-unit id="Statistics_ResetConfirmationMessage" translate="yes" xml:space="preserve">
+          <source>Are you sure to reset statistics data?</source>
+          <target state="translated">确定要重置数据吗？</target>
+        </trans-unit>
+        <trans-unit id="Execution_StartVrAppInScreenModeConfirmation" translate="yes" xml:space="preserve">
+          <source>Are you sure to start a VR application in Screen mode?</source>
+          <target state="translated">当前为大屏模式，确定要启动 VR 应用吗？</target>
+        </trans-unit>
+        <trans-unit id="Execution_StartScreenAppInVrModeConfirmation" translate="yes" xml:space="preserve">
+          <source>Are you sure to start a non-VR application in VR mode?</source>
+          <target state="translated">当前为 VR 模式，确定要启动非 VR 应用吗？</target>
+        </trans-unit>
+        <trans-unit id="Installation_InstallationComplete" translate="yes" xml:space="preserve">
+          <source>Installation Complete</source>
+          <target state="translated">安装完成</target>
+        </trans-unit>
+        <trans-unit id="Installation_UninstallationComplete" translate="yes" xml:space="preserve">
+          <source>Uninstalltion Complete</source>
+          <target state="translated">卸载完成</target>
+        </trans-unit>
+        <trans-unit id="StationMode_CurrentMode" translate="yes" xml:space="preserve">
+          <source>Current Mode</source>
+          <target state="translated">当前模式</target>
+        </trans-unit>
+        <trans-unit id="StationName" translate="yes" xml:space="preserve">
+          <source>Station Name</source>
+          <target state="translated">机站名称</target>
+        </trans-unit>
+        <trans-unit id="ScanningPackages" translate="yes" xml:space="preserve">
+          <source>Scanning Packages</source>
+          <target state="translated">扫描安装包</target>
+        </trans-unit>
+        <trans-unit id="StartTip_Button" translate="yes" xml:space="preserve">
+          <source>Click to Start</source>
+          <target state="translated">点击开玩！</target>
+        </trans-unit>
+        <trans-unit id="StartTip_QRCode" translate="yes" xml:space="preserve">
+          <source>Scan the QR Code to Start</source>
+          <target state="translated">扫码开玩！</target>
+        </trans-unit>
+        <trans-unit id="FailedToStart_AnonymouseSessionNotAllowed" translate="yes" xml:space="preserve">
+          <source>Open mode is not allowed on this station. Please verify your settings.</source>
+          <target state="translated">本机站不支持开放模式，请联系技术支持</target>
+        </trans-unit>
+        <trans-unit id="FailedToStart_StationHaveActiveLoginIntention" translate="yes" xml:space="preserve">
+          <source>Last login intention ended unexpectedly, please wait for the server to handle it.</source>
+          <target state="translated">另一个登录请求正在处理中，请稍后再试</target>
+        </trans-unit>
+        <trans-unit id="FailedToStart_StationHaveRunningSession" translate="yes" xml:space="preserve">
+          <source>There an session already running. Abandoned Sessions will end after a short while.</source>
+          <target state="translated">机站仍处于登录状态，请稍候当前登录退出</target>
+        </trans-unit>
+        <trans-unit id="FailedToStart_UnknwonError" translate="yes" xml:space="preserve">
+          <source>There is an unknown error, please try again later.</source>
+          <target state="translated">未知错误，请稍后重试</target>
+        </trans-unit>
+        <trans-unit id="ConfirmLoginIntention" translate="yes" xml:space="preserve">
+          <source>Confirm</source>
+          <target state="translated">开玩</target>
+        </trans-unit>
+        <trans-unit id="SelectAppExecutionResult" translate="yes" xml:space="preserve">
+          <source>Select an option to start with</source>
+          <target state="translated">选择一个启动项</target>
+        </trans-unit>
+        <trans-unit id="System_HardwareId" translate="yes" xml:space="preserve">
+          <source>Hardware Id</source>
+          <target state="translated">硬件 ID</target>
+        </trans-unit>
+        <trans-unit id="Global_ConnectingToService" translate="yes" xml:space="preserve">
+          <source>Please wait trying to connect</source>
+          <target state="translated">连接中，请稍候</target>
+        </trans-unit>
+        <trans-unit id="Config_Select_Certificate_File" translate="yes" xml:space="preserve">
+          <source>Select License Certificate File</source>
+          <target state="translated">选择授权码文件</target>
+        </trans-unit>
+        <trans-unit id="Config_Select_PrivateKey_File" translate="yes" xml:space="preserve">
+          <source>Select Private-Key File</source>
+          <target state="translated">选择密钥文件</target>
+        </trans-unit>
+        <trans-unit id="Config_Select_Language" translate="yes" xml:space="preserve">
+          <source>Select Language</source>
+          <target state="translated">选择语言</target>
+        </trans-unit>
+        <trans-unit id="Config_Close" translate="yes" xml:space="preserve">
+          <source>CLOSE</source>
+          <target state="translated">关闭</target>
+        </trans-unit>
+        <trans-unit id="Config_Move_Next" translate="yes" xml:space="preserve">
+          <source>NEXT</source>
+          <target state="translated">下一步</target>
+        </trans-unit>
+        <trans-unit id="Config_Move_Previous" translate="yes" xml:space="preserve">
+          <source>PREVIOUS</source>
+          <target state="translated">返回</target>
+        </trans-unit>
+        <trans-unit id="Config_Select_License_Files" translate="yes" xml:space="preserve">
+          <source>Please select your license files to continue.</source>
+          <target state="translated">请选择你的授权码文件</target>
+        </trans-unit>
+        <trans-unit id="Config_CertificateFile_Hint" translate="yes" xml:space="preserve">
+          <source>Certificate File</source>
+          <target state="translated">授权码文件</target>
+        </trans-unit>
+        <trans-unit id="Config_Select" translate="yes" xml:space="preserve">
+          <source>Select</source>
+          <target state="translated">选择</target>
+        </trans-unit>
+        <trans-unit id="Config_Issuer" translate="yes" xml:space="preserve">
+          <source>Issuer :</source>
+          <target state="translated">发行方</target>
+        </trans-unit>
+        <trans-unit id="Config_License" translate="yes" xml:space="preserve">
+          <source>License</source>
+          <target state="translated">授权码</target>
+        </trans-unit>
+        <trans-unit id="Config_LicenseID" translate="yes" xml:space="preserve">
+          <source>License ID :</source>
+          <target state="translated">授权码ID：</target>
+        </trans-unit>
+        <trans-unit id="Config_LicenseSN" translate="yes" xml:space="preserve">
+          <source>License SN :</source>
+          <target state="translated">授权码序列号：</target>
+        </trans-unit>
+        <trans-unit id="Config_LicenseType" translate="yes" xml:space="preserve">
+          <source>Type :</source>
+          <target state="translated">类型：</target>
+        </trans-unit>
+        <trans-unit id="Config_PrivateKey" translate="yes" xml:space="preserve">
+          <source>Private Key :</source>
+          <target state="translated">密钥值：</target>
+        </trans-unit>
+        <trans-unit id="Config_PrivateKey_File_Hint" translate="yes" xml:space="preserve">
+          <source>PrivateKey File</source>
+          <target state="translated">密钥文件</target>
+        </trans-unit>
+        <trans-unit id="Config_GameStoragePath_Hint" translate="yes" xml:space="preserve">
+          <source>Your Games Directory</source>
+          <target state="translated">你的游戏存储目录</target>
+        </trans-unit>
+        <trans-unit id="Config_Select_GameStorage_Dir" translate="yes" xml:space="preserve">
+          <source>Select Games Storage Directory</source>
+          <target state="translated">选择游戏存储目录</target>
+        </trans-unit>
+        <trans-unit id="Config_Software_Setup" translate="yes" xml:space="preserve">
+          <source>Software Setup</source>
+          <target state="translated">软件设置</target>
+        </trans-unit>
+        <trans-unit id="Culture_en_US" translate="yes" xml:space="preserve">
+          <source>English</source>
+          <target state="translated">英语</target>
+        </trans-unit>
+        <trans-unit id="Config_Autostart_with_Windows" translate="yes" xml:space="preserve">
+          <source>Autostart with Windows</source>
+          <target state="translated">开机自启动</target>
+        </trans-unit>
+        <trans-unit id="Config_Autostart_with_Windows_ToolTip" translate="yes" xml:space="preserve">
+          <source>Starts the Application automatically when you Login into Windows</source>
+          <target state="translated">开机登陆Windows后自动启动软件</target>
+        </trans-unit>
+        <trans-unit id="Config_FreeSpace" translate="yes" xml:space="preserve">
+          <source>Free Disk Space</source>
+          <target state="translated">可用硬盘空间</target>
+        </trans-unit>
+        <trans-unit id="Config_Options" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target state="translated">选项</target>
+        </trans-unit>
+        <trans-unit id="Config_TotalSpace" translate="yes" xml:space="preserve">
+          <source>Total Disk Size</source>
+          <target state="translated">总磁盘空间</target>
+        </trans-unit>
+        <trans-unit id="Config_Select_DefaultLanguage" translate="yes" xml:space="preserve">
+          <source>Select Default Language</source>
+          <target state="translated">选择默认语言</target>
+        </trans-unit>
+        <trans-unit id="Config_Change" translate="yes" xml:space="preserve">
+          <source>Change</source>
+          <target state="translated">更改</target>
+        </trans-unit>
+        <trans-unit id="Config_Disable_WER" translate="yes" xml:space="preserve">
+          <source>Disable Window Error Reporting</source>
+          <target state="translated">禁止Windows错误报告</target>
+        </trans-unit>
+        <trans-unit id="Config_Disable_WER_ToolTip" translate="yes" xml:space="preserve">
+          <source>Disables the Windows Dialog when an Application Crashes.
+This Error Dialog can prevent the software  from detecting when an Application Ended</source>
+          <target state="translated">当程序异常崩溃时，禁止windows弹出错误对话框。
+此对话框将影响软件检测应用的退出状态。</target>
+        </trans-unit>
+        <trans-unit id="Config_Adding_License" translate="yes" xml:space="preserve">
+          <source>Adding License Files</source>
+          <target state="translated">添加授权码文件</target>
+        </trans-unit>
+        <trans-unit id="Config_StartupTask_Created" translate="yes" xml:space="preserve">
+          <source>Startup Task Changes Applied</source>
+          <target state="translated">开机自启动设置 完成</target>
+        </trans-unit>
+        <trans-unit id="Config_Storage_Updated" translate="yes" xml:space="preserve">
+          <source>Game Storage Values Updated</source>
+          <target state="translated">游戏存储目录设置 完成</target>
+        </trans-unit>
+        <trans-unit id="Config_WER_Updated" translate="yes" xml:space="preserve">
+          <source>Windows Error Reporting Updated</source>
+          <target state="translated">Windows错误报告设置 完成</target>
+        </trans-unit>
+        <trans-unit id="Config_AddStorageToDefenderExclusion" translate="yes" xml:space="preserve">
+          <source>Exclude Storage from Win Defender </source>
+          <target state="translated">关闭游戏目录的Windows防护</target>
+        </trans-unit>
+        <trans-unit id="Config_ExcludingStorageFromWD" translate="yes" xml:space="preserve">
+          <source>Change of Windows Defender Excluded Folders</source>
+          <target state="translated">更改游戏目录的Windows防护设置</target>
+        </trans-unit>
+        <trans-unit id="Config_ExcludingStorageFromWD_Hint" translate="yes" xml:space="preserve">
+          <source>Changes the Windows Defender Exclusion Settings for the Storage Folder.
+This can prevent game corruption in case of false positives from WD,
+but also expose the System to a higer risk of infections.</source>
+          <target state="translated">关闭游戏目录的Window防护，将防止某些文件被错误清除，而导致的游戏文件损坏，但也同时增加了系统感染的风险。</target>
+        </trans-unit>
+        <trans-unit id="Config_Select_DefaultLanguage_Hint" translate="yes" xml:space="preserve">
+          <source>The Language that is selected when the Software starts or it reverts after a Logout.</source>
+          <target state="translated">软件每次启动，或登出后的待登陆界面语言。</target>
+        </trans-unit>
+        <trans-unit id="Application_Category" translate="yes" xml:space="preserve">
+          <source>Category</source>
+          <target state="translated">类别</target>
+        </trans-unit>
+        <trans-unit id="Application_Name" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <target state="translated">名称</target>
+        </trans-unit>
+        <trans-unit id="Application_Edit" translate="yes" xml:space="preserve">
+          <source>Edit</source>
+          <target state="translated">编辑</target>
+        </trans-unit>
+        <trans-unit id="Application_Edit_Apply" translate="yes" xml:space="preserve">
+          <source>Apply</source>
+          <target state="translated">应用</target>
+        </trans-unit>
+        <trans-unit id="Application_Edit_Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated">取消</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Applications_Count" translate="yes" xml:space="preserve">
+          <source>Applications with Statistics</source>
+          <target state="translated">已有统计数据的应用</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_OnlineVersion" translate="yes" xml:space="preserve">
+          <source>Version Online</source>
+          <target state="translated">线上版本</target>
+        </trans-unit>
+        <trans-unit id="Config_Activate_License" translate="yes" xml:space="preserve">
+          <source>Activate your License</source>
+          <target state="translated">激活你的授权码</target>
+        </trans-unit>
+        <trans-unit id="Config_Register_AddLicenseToAccount" translate="yes" xml:space="preserve">
+          <source>Add License to your Account</source>
+          <target state="translated">添加授权码至你的账号</target>
+        </trans-unit>
+        <trans-unit id="Config_Register_AddLicenseToAccount_Text" translate="yes" xml:space="preserve">
+          <source>Fill out the Form and Enter your License Key for Activation</source>
+          <target state="translated">填充表格并输入你的授权码以激活</target>
+        </trans-unit>
+        <trans-unit id="Config_Register_Done" translate="yes" xml:space="preserve">
+          <source>All Done! Ready to Play!</source>
+          <target state="translated">全部完成！准备开玩！</target>
+        </trans-unit>
+        <trans-unit id="Config_Register_Done_Text" translate="yes" xml:space="preserve">
+          <source>Learn more about Content Creation and Business Functions on our Website</source>
+          <target state="translated">通过官网了解更多关于内容包制作以及商业版功能</target>
+        </trans-unit>
+        <trans-unit id="Config_Register_ExistingAccountBtn" translate="yes" xml:space="preserve">
+          <source>Existing Account</source>
+          <target state="translated">已有账号</target>
+        </trans-unit>
+        <trans-unit id="Config_Register_NewAccountBtn" translate="yes" xml:space="preserve">
+          <source>New Account</source>
+          <target state="translated">新账号</target>
+        </trans-unit>
+        <trans-unit id="Config_Register_VisitActivationSite" translate="yes" xml:space="preserve">
+          <source>Visit the Activation Site</source>
+          <target state="translated">前往激活页面</target>
+        </trans-unit>
+        <trans-unit id="Config_ReservedFreeSpace" translate="yes" xml:space="preserve">
+          <source>Reserved Space</source>
+          <target state="translated">保留空间</target>
+        </trans-unit>
+        <trans-unit id="Shell_Menue_ExitToWindows" translate="yes" xml:space="preserve">
+          <source>Windows</source>
+          <target state="translated">桌面</target>
+        </trans-unit>
+        <trans-unit id="Shell_Menue_Games" translate="yes" xml:space="preserve">
+          <source>Games</source>
+          <target state="translated">游戏</target>
+        </trans-unit>
+        <trans-unit id="Shell_Menue_PowerOff" translate="yes" xml:space="preserve">
+          <source>Power Off</source>
+          <target state="translated">关机</target>
+        </trans-unit>
+        <trans-unit id="Shell_Menue_Settings" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="translated">设置</target>
+        </trans-unit>
+        <trans-unit id="Business_BackgroundSplashLeft" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>Resources\Business_BackgroundSplashLeft_EN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="final">Resources\Business_BackgroundSplashLeft_CN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="Business_BackgroundSplashRight" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>Resources\Business_BackgroundSplashRight_EN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="final">Resources\Business_BackgroundSplashRight_CN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="Exceptions_UnknownError" translate="yes" xml:space="preserve">
+          <source>Unknown error, please try again later.</source>
+          <target state="translated">未知的错误，请稍后重试。</target>
+        </trans-unit>
+        <trans-unit id="System_Platform_ConfirmDeleteAccount" translate="yes" xml:space="preserve">
+          <source>Are you really sure you want to delete the account?</source>
+          <target state="translated">确定删除此账号？</target>
+        </trans-unit>
+        <trans-unit id="System_Platform_Account" translate="yes" xml:space="preserve">
+          <source>Account</source>
+          <target state="translated">账号</target>
+        </trans-unit>
+        <trans-unit id="System_Platform_Account_Create" translate="yes" xml:space="preserve">
+          <source>Create</source>
+          <target state="translated">创建</target>
+        </trans-unit>
+        <trans-unit id="System_Platform_Account_Delete" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated">删除</target>
+        </trans-unit>
+        <trans-unit id="System_Platform_Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated">取消</target>
+        </trans-unit>
+        <trans-unit id="System_Platform_Password" translate="yes" xml:space="preserve">
+          <source>Password</source>
+          <target state="translated">密码</target>
+        </trans-unit>
+        <trans-unit id="System_Platform_Username" translate="yes" xml:space="preserve">
+          <source>Username</source>
+          <target state="translated">用户名</target>
+        </trans-unit>
+        <trans-unit id="System_Platform_NoPlatformAvailible" translate="yes" xml:space="preserve">
+          <source>No Platform availible</source>
+          <target state="translated">无可用平台</target>
+        </trans-unit>
+        <trans-unit id="System_Platform_SelectPlatform" translate="yes" xml:space="preserve">
+          <source>Select Platform</source>
+          <target state="translated">选择平台</target>
+        </trans-unit>
+        <trans-unit id="System_Platform_NoPlatformSelected" translate="yes" xml:space="preserve">
+          <source>No Platform Selected</source>
+          <target state="translated">未选择平台</target>
+        </trans-unit>
+        <trans-unit id="System_Platform" translate="yes" xml:space="preserve">
+          <source>Platform</source>
+          <target state="translated">平台</target>
+        </trans-unit>
+        <trans-unit id="System_Accounts" translate="yes" xml:space="preserve">
+          <source>Accounts</source>
+          <target state="translated">账号</target>
+        </trans-unit>
+        <trans-unit id="System_Account_AddLicense" translate="yes" xml:space="preserve">
+          <source>Add License</source>
+          <target state="translated">绑定账号</target>
+        </trans-unit>
+        <trans-unit id="System_Account_RemoveLicense" translate="yes" xml:space="preserve">
+          <source>Remove License</source>
+          <target state="translated">解绑账号</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit" translate="yes" xml:space="preserve">
+          <source>Advanced</source>
+          <target state="translated">高级设置</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_ExecutableInfo_SelectExecutable" translate="yes" xml:space="preserve">
+          <source>Select Exe</source>
+          <target state="translated">选择执行程序</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_ExecutableInfo_SelectFolder" translate="yes" xml:space="preserve">
+          <source>Select Folder</source>
+          <target state="translated">选择文件夹</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Execution_Instruction" translate="yes" xml:space="preserve">
+          <source>Execution Instructions</source>
+          <target state="translated">配置可执行项</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Add" translate="yes" xml:space="preserve">
+          <source>Add</source>
+          <target state="translated">添加</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Apply" translate="yes" xml:space="preserve">
+          <source>Apply</source>
+          <target state="translated">应用</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated">取消</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Edit" translate="yes" xml:space="preserve">
+          <source>Edit</source>
+          <target state="translated">编辑</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Remove" translate="yes" xml:space="preserve">
+          <source>Remove</source>
+          <target state="translated">移除</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_ApplicationMainExecutablePath" translate="yes" xml:space="preserve">
+          <source>Application Main Executable Path</source>
+          <target state="translated">应用路径</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_ExecutableParameters" translate="yes" xml:space="preserve">
+          <source>Executable Parameters</source>
+          <target state="translated">执行参数</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Executables" translate="yes" xml:space="preserve">
+          <source>Executables</source>
+          <target state="translated">可执行程序</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Info_ExeName" translate="yes" xml:space="preserve">
+          <source>A display name for one executable instruction that infers what's it about</source>
+          <target state="translated">指定一个名称用以向用户展示该启动项隐含的意思</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Info_ExeParameters" translate="yes" xml:space="preserve">
+          <source>Parameters that will be provided to the main executable when execution of the game is requested.</source>
+          <target state="translated">可执行文件的启动参数,该参数总是应用到指定的可执行文件(游戏本身的可执行文件或启动器),可选</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Info_IsMainExe" translate="yes" xml:space="preserve">
+          <source>Indicates whether this executable is one of the executables taken into consideration to check if the application is running. Normally an application requires at least one main executable. Multiple main executables mean any of them running will the application be considered as running.</source>
+          <target state="translated">指示该进程是否作为衡量应用程序正在运行的主要进程,通常情况下一个应用程序至少有一个主要进程,如果指定了多个主要进程,那么其中任何一个正在运行,系统将视作该应用程序者正在运行</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Info_KillNotResponding" translate="yes" xml:space="preserve">
+          <source>Indicates whether this process should be killed when the system detects it is not responding</source>
+          <target state="translated">指示系统是否在应用退出时结束该进程</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Info_KillOnExit" translate="yes" xml:space="preserve">
+          <source>Indicates whether this process should be killed on application exit</source>
+          <target state="translated">指示系统是否在该进程无响应是强制结束该进程</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Info_MainExePath" translate="yes" xml:space="preserve">
+          <source>The path to the applixcation main executable file. Usually it is the application executable itself, for some applications requiring an external launcher this should be set the path to the launcher executable file.</source>
+          <target state="translated">应用主要进程的可执行程序,通常为应用程序本身.对于需要启动器的应用,则为启动器执行程序</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Info_RequiredVrModule" translate="yes" xml:space="preserve">
+          <source>Specify the corresponding vr module to match the correct graphic api.</source>
+          <target state="translated">指定与该应用程序相匹配的VR模块</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Info_WorkingDirectory" translate="yes" xml:space="preserve">
+          <source>Working directory of a specific executable. If not set, working directory will be set to the directory where the executable is</source>
+          <target state="translated">可执行程序所依赖的工作目录.若为空,默认为可执行程序所在的目录</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_IsMainExe" translate="yes" xml:space="preserve">
+          <source>Is Main Executable</source>
+          <target state="translated">是否为主要进程</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_KillNotResponding" translate="yes" xml:space="preserve">
+          <source>Kill on Not Responding</source>
+          <target state="translated">进程无响应时强制结束</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_KillOnExit" translate="yes" xml:space="preserve">
+          <source>Kill On Application Exit</source>
+          <target state="translated">应用退出时结束进程</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Ok" translate="yes" xml:space="preserve">
+          <source>Ok</source>
+          <target state="translated">OK</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Options" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target state="translated">选项</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_ProcessMonitoring" translate="yes" xml:space="preserve">
+          <source>Process Monitoring</source>
+          <target state="translated">进程监控</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_SetFromExecutable" translate="yes" xml:space="preserve">
+          <source>Set From Exe</source>
+          <target state="translated">从.exe 获取</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_WatchDogOptions" translate="yes" xml:space="preserve">
+          <source>Watchdog Options</source>
+          <target state="translated">检测选项</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_ExeName" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <target state="translated">名称</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_RequiredVrModule" translate="yes" xml:space="preserve">
+          <source>Required VR-Module</source>
+          <target state="translated">依赖的VR模块</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_WorkingDirectory" translate="yes" xml:space="preserve">
+          <source>Working Directory</source>
+          <target state="translated">工作目录</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_ExecutableInfo_ExeFiles" translate="yes" xml:space="preserve">
+          <source>Exe Files</source>
+          <target state="translated">执行程序文件</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Warning" translate="yes" xml:space="preserve">
+          <source>Warning</source>
+          <target state="translated">警告</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Warning_NoMainExecutable" translate="yes" xml:space="preserve">
+          <source>None of added executables is marked as main executable, are you sure to continue?</source>
+          <target state="translated">没有任何程序为主要进程,你确定继续吗?</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_SelectVBoxFile" translate="yes" xml:space="preserve">
+          <source>Select VBox File</source>
+          <target state="translated">选择Vbox文件</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_VBoxFile" translate="yes" xml:space="preserve">
+          <source>VBox Files</source>
+          <target state="translated">VBox文件</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_Install_Failed" translate="yes" xml:space="preserve">
+          <source>Installation failed with Status:</source>
+          <target state="translated">安装失败:</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_Install_OnlyVBoxFiles" translate="yes" xml:space="preserve">
+          <source>This file is not a VBox File!</source>
+          <target state="translated">目标文件不是Vbox文件!</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_ApplicationRunning" translate="yes" xml:space="preserve">
+          <source>Application Running</source>
+          <target state="translated">应用正在运行</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_ApplicationUpdateRequired" translate="yes" xml:space="preserve">
+          <source>Application Requires Update!</source>
+          <target state="translated">应用需要更新!</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_Done" translate="yes" xml:space="preserve">
+          <source>Done</source>
+          <target state="translated">完成</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_LoggingIn" translate="yes" xml:space="preserve">
+          <source>User Login on Client</source>
+          <target state="translated">用户登录客户端</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_LoggingOut" translate="yes" xml:space="preserve">
+          <source>User Logout on Client</source>
+          <target state="translated">用户登出客户端</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_StartingApplication" translate="yes" xml:space="preserve">
+          <source>Starting Application</source>
+          <target state="translated">启动应用</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_StartingApplicationError" translate="yes" xml:space="preserve">
+          <source>Error during Application Start!</source>
+          <target state="translated">应用启动过程出错!</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_StartingClient" translate="yes" xml:space="preserve">
+          <source>Starting Client</source>
+          <target state="translated">启动客户端</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_StartingClientError" translate="yes" xml:space="preserve">
+          <source>Error during Client Start!</source>
+          <target state="translated">客户端启动出错!</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_StoppingClient" translate="yes" xml:space="preserve">
+          <source>Exiting Client</source>
+          <target state="translated">退出客户端</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_Unavailible" translate="yes" xml:space="preserve">
+          <source>Waiting for State</source>
+          <target state="translated">等待状态</target>
+        </trans-unit>
+        <trans-unit id="StationMode_ForceRestartVrDriver" translate="yes" xml:space="preserve">
+          <source>Restart Vr Driver after each App</source>
+          <target state="translated">退出每个应用后重启SteamVR</target>
+        </trans-unit>
+        <trans-unit id="System_Multimedia" translate="yes" xml:space="preserve">
+          <source>Multimedia</source>
+          <target state="translated">多媒体</target>
+        </trans-unit>
+        <trans-unit id="System_Multimedia_AutoPlay" translate="yes" xml:space="preserve">
+          <source>AutoPlay</source>
+          <target state="translated">自动播放</target>
+        </trans-unit>
+        <trans-unit id="System_Multimedia_BackgroundVideo" translate="yes" xml:space="preserve">
+          <source>Background Video</source>
+          <target state="translated">背景视频</target>
+        </trans-unit>
+        <trans-unit id="System_Multimedia_Playlist" translate="yes" xml:space="preserve">
+          <source>Playlist</source>
+          <target state="translated">播放列表</target>
+        </trans-unit>
+        <trans-unit id="System_Multimedia_Playlist_Add" translate="yes" xml:space="preserve">
+          <source>Add</source>
+          <target state="translated">添加</target>
+        </trans-unit>
+        <trans-unit id="System_Multimedia_Playlist_Remove" translate="yes" xml:space="preserve">
+          <source>Remove</source>
+          <target state="translated">移除</target>
+        </trans-unit>
+        <trans-unit id="System_Multimedia_Repeat" translate="yes" xml:space="preserve">
+          <source>Repeat</source>
+          <target state="translated">列表循环</target>
+        </trans-unit>
+        <trans-unit id="System_Multimedia_SelectMediaFile" translate="yes" xml:space="preserve">
+          <source>Select Media Files</source>
+          <target state="translated">选择媒体文件</target>
+        </trans-unit>
+        <trans-unit id="System_Account_NoAccountSelected" translate="yes" xml:space="preserve">
+          <source>No Account Selected</source>
+          <target state="translated">未选择账号</target>
+        </trans-unit>
+        <trans-unit id="Global_Error" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <target state="translated">错误</target>
+        </trans-unit>
+        <trans-unit id="Global_Retry" translate="yes" xml:space="preserve">
+          <source>Retry</source>
+          <target state="translated">重试</target>
+        </trans-unit>
+        <trans-unit id="StationMode_VrDriverInteraction" translate="yes" xml:space="preserve">
+          <source>VR Driver Interaction</source>
+          <target state="translated">SteamVR窗口交互</target>
+        </trans-unit>
+        <trans-unit id="System_Multimedia_Volume" translate="yes" xml:space="preserve">
+          <source>Volume</source>
+          <target state="translated">音量</target>
+        </trans-unit>
+        <trans-unit id="System_Multimedia_Track" translate="yes" xml:space="preserve">
+          <source>Track</source>
+          <target state="translated">媒体轨道</target>
+        </trans-unit>
+        <trans-unit id="Config_TasksApply_Error" translate="yes" xml:space="preserve">
+          <source>There were some Problems during execution of the Tasks</source>
+          <target state="translated">任务执行过程中遇到一些问题</target>
+        </trans-unit>
+        <trans-unit id="Config_TasksApply_Success" translate="yes" xml:space="preserve">
+          <source>All Tasks Finished Successfully</source>
+          <target state="translated">所有任务执行成功</target>
+        </trans-unit>
+        <trans-unit id="Config_TasksApply_Topic" translate="yes" xml:space="preserve">
+          <source>Setting Up your System</source>
+          <target state="translated">正在设置您的系统</target>
+        </trans-unit>
+        <trans-unit id="Config_Dialog_Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated">取消</target>
+        </trans-unit>
+        <trans-unit id="Config_Dialog_HeaderInfo" translate="yes" xml:space="preserve">
+          <source>Info</source>
+          <target state="translated">信息</target>
+        </trans-unit>
+        <trans-unit id="Config_Dialog_HeaderWarning" translate="yes" xml:space="preserve">
+          <source>Warning</source>
+          <target state="translated">警告</target>
+        </trans-unit>
+        <trans-unit id="Config_Dialog_StorageChangeNotEmpty" translate="yes" xml:space="preserve">
+          <source>Your storage directory is not empty and you will need to move all your contents manually to the new destination</source>
+          <target state="translated">你当前的游戏存储目录不为空，你需要手动将当前目录下内容移至新的存储目录</target>
+        </trans-unit>
+        <trans-unit id="Config_Dialog_StorageUseEmptyRecommend" translate="yes" xml:space="preserve">
+          <source>Your storage directory is not empty, it's recommended to use a dedicated directory as your game directory</source>
+          <target state="translated">你的游戏存储目录不为空，建议使用空目录作为存储目录</target>
+        </trans-unit>
+        <trans-unit id="Config_Dialog_Understood" translate="yes" xml:space="preserve">
+          <source>Understood</source>
+          <target state="translated">了解</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_UpdatingApplication" translate="yes" xml:space="preserve">
+          <source>Updating Application</source>
+          <target state="translated">正在更新程序</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_UpdatingClient" translate="yes" xml:space="preserve">
+          <source>Updating Client</source>
+          <target state="translated">正在更新客户端</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_SelectFile" translate="yes" xml:space="preserve">
+          <source>Select File</source>
+          <target state="translated">选择文件</target>
+        </trans-unit>
+        <trans-unit id="Executable_NoSuitableExecution" translate="yes" xml:space="preserve">
+          <source>Sorry there is no Execution Option availible! Please check if you have any configured and that your system meets the requirements.</source>
+          <target state="new">Sorry there is no Execution Option availible! Please check if you have any configured and that your system meets the requirements.</target>
+        </trans-unit>
+        <trans-unit id="Config_DefaultLanguage_Changed" translate="yes" xml:space="preserve">
+          <source>Default Language changed</source>
+          <target state="translated">修改默认语言成功</target>
+        </trans-unit>
+        <trans-unit id="Exceptions_InvalidUsernamePassword" translate="yes" xml:space="preserve">
+          <source>The Username Password combination is invalid</source>
+          <target state="translated">账号密码错误</target>
+        </trans-unit>
+        <trans-unit id="Connect_AutoLogin" translate="yes" xml:space="preserve">
+          <source>Auto Login</source>
+          <target state="translated">自动登录</target>
+        </trans-unit>
+        <trans-unit id="Connect_Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated">取消</target>
+        </trans-unit>
+        <trans-unit id="Connect_Connect" translate="yes" xml:space="preserve">
+          <source>Connect</source>
+          <target state="translated">登录</target>
+        </trans-unit>
+        <trans-unit id="Connect_Connect_ServerUnreachable" translate="yes" xml:space="preserve">
+          <source>Can not connect to Server. Please try again later.</source>
+          <target state="translated">无法连接服务器，请一会重试</target>
+        </trans-unit>
+        <trans-unit id="Connect_Disconnect" translate="yes" xml:space="preserve">
+          <source>Disconnect</source>
+          <target state="translated">断开连接</target>
+        </trans-unit>
+        <trans-unit id="Connect_Error_Invalid_Credentials" translate="yes" xml:space="preserve">
+          <source>Login failed !Please check your Credentials</source>
+          <target state="translated">密码错误</target>
+        </trans-unit>
+        <trans-unit id="Connect_Error_Invalid_Password" translate="yes" xml:space="preserve">
+          <source>Invalid Password</source>
+          <target state="translated">密码错误</target>
+        </trans-unit>
+        <trans-unit id="Connect_Error_Invalid_StationId" translate="yes" xml:space="preserve">
+          <source>Invalid Station Id</source>
+          <target state="translated">站点账号错误</target>
+        </trans-unit>
+        <trans-unit id="Connect_Password" translate="yes" xml:space="preserve">
+          <source>Password</source>
+          <target state="translated">密码</target>
+        </trans-unit>
+        <trans-unit id="Connect_StationId" translate="yes" xml:space="preserve">
+          <source>Station Id</source>
+          <target state="translated">站点账号</target>
+        </trans-unit>
+        <trans-unit id="Connect_LoginTitle" translate="yes" xml:space="preserve">
+          <source>Login</source>
+          <target state="translated">登录</target>
+        </trans-unit>
+        <trans-unit id="Connect_Connected" translate="yes" xml:space="preserve">
+          <source>Connected</source>
+          <target state="translated">登录成功</target>
+        </trans-unit>
+        <trans-unit id="Connect_Connecting" translate="yes" xml:space="preserve">
+          <source>Connecting</source>
+          <target state="translated">正在登录</target>
+        </trans-unit>
+        <trans-unit id="Connect_Disconnected" translate="yes" xml:space="preserve">
+          <source>Disconnected</source>
+          <target state="translated">退出登录成功</target>
+        </trans-unit>
+        <trans-unit id="Connect_Disconnecting" translate="yes" xml:space="preserve">
+          <source>Disconnecting</source>
+          <target state="translated">正在退出登录</target>
+        </trans-unit>
+        <trans-unit id="Connect_Recconecting" translate="yes" xml:space="preserve">
+          <source>Reconnecing</source>
+          <target state="translated">重新登录中</target>
+        </trans-unit>
+        <trans-unit id="System_Settings_ConnectionPanel" translate="yes" xml:space="preserve">
+          <source>Connection Panel</source>
+          <target state="translated">登录面板</target>
+        </trans-unit>
+        <trans-unit id="Session_Info_SessionLimitReached" translate="yes" xml:space="preserve">
+          <source>The Session has ended.</source>
+          <target state="translated">时间到</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

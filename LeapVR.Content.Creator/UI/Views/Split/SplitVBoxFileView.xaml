@@ -1,0 +1,83 @@
+<UserControl
+    x:Class="LeapVR.Content.Creator.UI.Views.SplitVBoxFileView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:fa="http://schemas.fontawesome.io/icons/" xmlns:lex="http://wpflocalizeextension.codeplex.com" xmlns:local="clr-namespace:LeapVR.Content.Creator.UI.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignWidth="600"
+    mc:Ignorable="d">
+    <Grid Width="auto">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{StaticResource RowHeightOfGrid}" />
+            <RowDefinition Height="{StaticResource RowHeightOfGrid}" />
+            <RowDefinition Height="{StaticResource RowHeightOfGrid}" />
+            <RowDefinition Height="{StaticResource RowHeightOfGrid}" />
+            <RowDefinition Height="{StaticResource RowHeightOfGrid}" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="{StaticResource ColumnWidthForCaption}" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="{StaticResource ColumnWidthForBrowse}" />
+        </Grid.ColumnDefinitions>
+
+        <TextBox Name="SplitVBoxFilePathName" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
+        <Button
+            Name="SelectSplitVBoxFilePathName"
+            Grid.Row="0" Grid.Column="2"
+            Width="Auto"
+            Content="{lex:Loc Global_Select_File}" />
+
+        <TextBox Name="ZipOutputDirectory" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" />
+        <Button
+            Name="SelectOutPutDirectory"
+            Grid.Row="1" Grid.Column="2"
+            Width="Auto"
+            Content="{lex:Loc Global_Select_Directory}" />
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Visibility="{Binding WasStarted, Converter={StaticResource BoolToVisibilityConverter}}">
+            <TextBlock.Inlines>
+                <Run Text="{lex:Loc Summary_FileCount}" />
+                <Span>:</Span>
+            </TextBlock.Inlines>
+        </TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="1" TextAlignment="Left" Visibility="{Binding WasStarted, Converter={StaticResource BoolToVisibilityConverter}}">
+            <TextBlock.Text>
+                <MultiBinding StringFormat="{}{0} / {1}">
+                    <Binding Path="DoneFilesCount" />
+                    <Binding Path="TotalFilesCount" />
+                </MultiBinding>
+            </TextBlock.Text>
+        </TextBlock>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Visibility="{Binding WasStarted, Converter={StaticResource BoolToVisibilityConverter}}">
+            <TextBlock.Inlines>
+                <Run Text="{lex:Loc Summary_TotalSize}" />
+                <Span>:</Span>
+            </TextBlock.Inlines>
+        </TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="1" TextAlignment="Left" Visibility="{Binding WasStarted, Converter={StaticResource BoolToVisibilityConverter}}">
+            <TextBlock.Text>
+                <MultiBinding StringFormat="{}{0} / {1}">
+                    <Binding Converter="{StaticResource BytesToProperSpaceUnitConverter}" Path="DoneFilesSize" />
+                    <Binding Converter="{StaticResource BytesToProperSpaceUnitConverter}" Path="TotalFilesSize" />
+                </MultiBinding>
+            </TextBlock.Text>
+        </TextBlock>
+
+        <ProgressBar
+            Name="DonePercents"
+            Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3"
+            Height="30"
+            Margin="100,0"
+            Maximum="100" Minimum="0"
+            Visibility="{Binding WasStarted, Converter={StaticResource BoolToVisibilityConverter}}" />
+
+        <fa:ImageAwesome
+            Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3"
+            Height="120"
+            Foreground="#FF7E7E7E" Icon="Cog"
+            Spin="{Binding WorkInProgress}"
+            SpinDuration="5"
+            Visibility="{Binding SpinnerVisibility}" />
+    </Grid>
+</UserControl>

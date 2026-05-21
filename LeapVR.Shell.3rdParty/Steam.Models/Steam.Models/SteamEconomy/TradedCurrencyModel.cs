@@ -1,0 +1,48 @@
+﻿#region Licence
+/****************************************************************
+ *  Filename: TradedCurrencyModel.cs
+ *  ----------------------------------------------------------
+ *  Author        Martin Meissner
+ *  Date          2026-05-19
+ *  Copyright (c) 2026 Martin Meissner.
+ *                Released under the Apache License 2.0 as part of
+ *                the open-source PlayOnDemand release.
+ *
+ *  SPDX-License-Identifier: Apache-2.0
+ ****************************************************************/
+#endregion
+namespace Steam.Models.SteamEconomy
+{
+    public class TradedCurrencyModel
+    {
+        public uint AppId { get; set; }
+
+        public uint ContextId { get; set; }
+
+        public uint CurrencyId { get; set; }
+
+        public uint AmountTraded { get; set; }
+
+        public uint ClassId { get; set; }
+
+        /// <summary>
+        /// The currency ID given after the trade completed
+        /// </summary>
+        public ulong CurrencyIdAfterTrade { get; set; }
+
+        /// <summary>
+        /// The context ID the currency was placed in
+        /// </summary>
+        public uint ContextIdAfterTrade { get; set; }
+
+        /// <summary>
+        /// If the trade has been rolled back, the new currency ID given in the rollback
+        /// </summary>
+        public ulong CurrencyIdAfterRollback { get; set; }
+
+        /// <summary>
+        /// If the trade has been rolled back, the context ID the new asset was placed in
+        /// </summary>
+        public uint ContextIdAfterRollback { get; set; }
+    }
+}

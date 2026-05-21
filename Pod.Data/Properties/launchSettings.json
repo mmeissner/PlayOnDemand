@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Pod.Data": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "EFCORE_DESIGNTIME": "DesignTime"
+      }
+    }
+  }
+}

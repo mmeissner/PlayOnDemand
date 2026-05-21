@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4818D7CE-514A-42C5-A1E2-28DE3D5F26C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LeapVR.Shell.Modules</RootNamespace>
+    <AssemblyName>LeapVR.Shell.Modules</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_ShellClient|AnyCPU'">
+    <OutputPath>bin\Release_ShellClient\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_ShellClient|x64'">
+    <OutputPath>bin\x64\Release_ShellClient\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetZip, Version=1.10.1.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.10.1\lib\net20\DotNetZip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Interop.NetFwTypeLib">
+      <HintPath>..\LeapVR.Shell.3rdParty\bin\Interop.NetFwTypeLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.NETWORKLIST">
+      <HintPath>..\LeapVR.Shell.3rdParty\bin\Interop.NETWORKLIST.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="netstandard" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.5.11\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Polly, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Polly.5.7.0\lib\net45\Polly.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Reactive, Version=4.1.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.4.1.5\lib\net46\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Core, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Core.4.1.5\lib\net46\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Interfaces.4.1.5\lib\net46\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Linq.4.1.5\lib\net46\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.PlatformServices.4.1.5\lib\net46\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Windows.Threading, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Windows.Threading.4.1.5\lib\net46\System.Reactive.Windows.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigFileRepository.cs" />
+    <Compile Include="Container\AppInstallationFile.cs" />
+    <Compile Include="Container\IContainerModule.cs" />
+    <Compile Include="Container\InternalFileInfo.cs" />
+    <Compile Include="Container\EditableAppInstallationContainer.cs" />
+    <Compile Include="Container\NewAppInstallationContainer.cs" />
+    <Compile Include="Container\NewAppInstallationHeader.cs" />
+    <Compile Include="Container\NewPackage.cs" />
+    <Compile Include="Container\AppInstallationContainer.cs" />
+    <Compile Include="Container\ZipContainer.cs" />
+    <Compile Include="Container\ZipReadablePackage.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="FileConfig\XInputModuleConfig.cs" />
+    <Compile Include="FileConfig\VrDesktopModuleConfig.cs" />
+    <Compile Include="Hardware\HardwareDeviceUtil.cs" />
+    <Compile Include="Multimedia\MultimediaModule.cs" />
+    <Compile Include="Multimedia\MultimediaPlaylist.cs" />
+    <Compile Include="Multimedia\MultimediaPlaylistData.cs" />
+    <Compile Include="Multimedia\MultimediaProvider.cs" />
+    <Compile Include="Multimedia\PlaylistModule.cs" />
+    <Compile Include="Network\NetworkListManagerEvents.cs" />
+    <Compile Include="Network\NetworkModule.cs" />
+    <Compile Include="Platform\BaseApplicationExecution.cs" />
+    <Compile Include="Platform\PlatformStateProvider.cs" />
+    <Compile Include="Platform\Steam\DiskEntity.cs" />
+    <Compile Include="Platform\Steam\SteamPlatformProvider.cs" />
+    <Compile Include="Platform\Steam\SteamAppDisplayInfo.cs" />
+    <Compile Include="Platform\Steam\SteamApplicationExecution.cs" />
+    <Compile Include="Platform\Steam\SteamProcessExecutionLogic.cs" />
+    <Compile Include="Platform\Steam\SteamProcessMonitorInstruction.cs" />
+    <Compile Include="Platform\VBox\VBoxApplicationExecution.cs" />
+    <Compile Include="FileConfig\OpenVrModuleConfig.cs" />
+    <Compile Include="Hardware\HardwareDeviceModule.cs" />
+    <Compile Include="Hardware\HardwareDevice.cs" />
+    <Compile Include="Container\ContainerModule.cs" />
+    <Compile Include="Platform\Steam\SteamPlatformModule.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ShellConfigurator\ShellConfigurator.cs" />
+    <Compile Include="Utilities\WinApi\MainWindowFilter.cs" />
+    <Compile Include="Utilities\WinApi\WindowClassNameFilter.cs" />
+    <Compile Include="Vr\ControllerButtonActionEvent.cs" />
+    <Compile Include="Vr\HmdActivityEvent.cs" />
+    <Compile Include="Vr\HmdActivityWatchdog.cs" />
+    <Compile Include="Vr\OpenVrModule.cs" />
+    <Compile Include="Vr\OpenVRFilesHandler.cs" />
+    <Compile Include="Vr\OpenVrProcessHandler.cs" />
+    <Compile Include="Vr\OpenVrSettingEntityDetails.cs" />
+    <Compile Include="Vr\OpenVrSettingFile.cs" />
+    <Compile Include="Vr\OpenVrSettingFileDto.cs" />
+    <Compile Include="Vr\OpenVrSettingsSet.cs" />
+    <Compile Include="Vr\OpenVrSettingsSetDto.cs" />
+    <Compile Include="Vr\OpenVrSettingsSetRepository.cs" />
+    <Compile Include="Vr\SteamVrConfigFile.cs" />
+    <Compile Include="Platform\VBox\VBoxPlatformModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vr\VrConstants.cs" />
+    <Compile Include="Vr\VrDesktopModule.cs" />
+    <Compile Include="XInput\XInputBinding.cs" />
+    <Compile Include="XInput\XInputEventArgs.cs" />
+    <Compile Include="XInput\XInputGesture.cs" />
+    <Compile Include="XInput\XInputModule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LeapVR.Shared.Lib.Win\LeapVR.Shared.Lib.Win.csproj">
+      <Project>{AB764488-13AA-4D82-8BF8-97E0F5C00820}</Project>
+      <Name>LeapVR.Shared.Lib.Win</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Shared.Lib\LeapVR.Shared.Lib.csproj">
+      <Project>{0d026240-e3fe-4d30-bbfd-aac388b278d2}</Project>
+      <Name>LeapVR.Shared.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Shell.3rdParty\ffmediaelement\Unosquare.FFME.Common\Unosquare.FFME.Common.csproj">
+      <Project>{75ce397b-2363-4fb0-9e2f-9bfdb8cd4bd4}</Project>
+      <Name>Unosquare.FFME.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Shell.3rdParty\ffmediaelement\Unosquare.FFME.Windows\Unosquare.FFME.Windows.csproj">
+      <Project>{a6eb99a6-aae2-4e6e-ab9e-93992ce5b84d}</Project>
+      <Name>Unosquare.FFME.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Shell.3rdParty\XInputDotNet\XInputDotNetPure\XInputDotNetPure.csproj">
+      <Project>{952700cd-a384-43a4-ac4b-52256f83836e}</Project>
+      <Name>XInputDotNetPure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Shell.Categories\LeapVR.Shell.Categories.csproj">
+      <Project>{8367265A-3EE7-4FB7-A8EA-27D6601572B2}</Project>
+      <Name>LeapVR.Shell.Categories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Shell.Domain.Models\LeapVR.Shell.Domain.Models.csproj">
+      <Project>{aee42744-9545-463a-b67e-e21346f364e1}</Project>
+      <Name>LeapVR.Shell.Domain.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Shell.Managers\LeapVR.Shell.Managers.csproj">
+      <Project>{1E8581DD-BE15-4FA6-953B-D4906FE1AE89}</Project>
+      <Name>LeapVR.Shell.Managers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Shell.Modules.Interfaces\LeapVR.Shell.Modules.Interfaces.csproj">
+      <Project>{80d1a44d-0cd7-488f-b13f-4320b2723fad}</Project>
+      <Name>LeapVR.Shell.Modules.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Shell.OpenVR.Wrapper\LeapVR.Shell.OpenVR.Wrapper.csproj">
+      <Project>{096f2015-6827-4f55-9ee2-a2fac7b662ed}</Project>
+      <Name>LeapVR.Shell.OpenVR.Wrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Shell.Repository.Interfaces\LeapVR.Shell.Repository.Interfaces.csproj">
+      <Project>{90EF6E37-6C94-42FD-90D0-922DEA61DCBB}</Project>
+      <Name>LeapVR.Shell.Repository.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Utilities.Steam\LeapVR.Utilities.Steam.csproj">
+      <Project>{CB0FF9A9-08A9-4124-AFEB-0A68B553A433}</Project>
+      <Name>LeapVR.Utilities.Steam</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Utilities.Windows\LeapVR.Utilities.Windows.csproj">
+      <Project>{CC3FA7EF-0349-45DF-999D-A833406B2414}</Project>
+      <Name>LeapVR.Utilities.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pod.Data.Infrastructure\Pod.Data.Infrastructure.csproj">
+      <Project>{c485e8c0-fab2-4fa4-827d-4c44f5e0b8eb}</Project>
+      <Name>Pod.Data.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="LeapVR.Shell.Modules.licenseheader" />
+    <None Include="packages.config" />
+    <None Include="Resources\rootca.crt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\DevCon.exe" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\LeapVR.Shell.3rdParty\XInputDotNet\BinariesX64\Release\XInputInterface.dll">
+      <Link>XInputInterface.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

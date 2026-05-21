@@ -1,0 +1,48 @@
+﻿<UserControl
+    x:Class="LeapVR.Content.Creator.UI.Views.BusyCancelableView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:lex="http://wpflocalizeextension.codeplex.com" xmlns:local="clr-namespace:LeapVR.Content.Creator.UI.Views" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="300" Height="200"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <Storyboard x:Key="DotRecycling">
+            <ObjectAnimationUsingKeyFrames RepeatBehavior="Forever" Storyboard.Target="{Binding ElementName=TextDotIncreasing}" Storyboard.TargetName="TextDotIncreasing" Storyboard.TargetProperty="(TextBlock.Text)">
+                <ObjectAnimationUsingKeyFrames.KeyFrames>
+                    <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="." />
+                    <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value=".." />
+                    <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="..." />
+                    <DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="...." />
+                    <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="....." />
+                    <DiscreteObjectKeyFrame KeyTime="0:0:2.5" Value="......" />
+                    <DiscreteObjectKeyFrame KeyTime="0:0:3" Value="......" />
+                </ObjectAnimationUsingKeyFrames.KeyFrames>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="Control.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource DotRecycling}" />
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Border BorderBrush="DimGray" BorderThickness="1">
+        <Grid Background="Azure">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBlock
+                Name="TextDotIncreasing"
+                Margin="20" VerticalAlignment="Center"
+                FontSize="{DynamicResource H2}"
+                Text="...." TextAlignment="Center" />
+            <Button
+                Name="RequestCancel"
+                Grid.Row="1"
+                Width="Auto" Height="Auto"
+                Margin="20,10,20,10"
+                Content="{lex:Loc Global_Cancel}"
+                FontSize="22"
+                IsEnabled="{Binding CanRequestCancel}" />
+        </Grid>
+    </Border>
+</UserControl>

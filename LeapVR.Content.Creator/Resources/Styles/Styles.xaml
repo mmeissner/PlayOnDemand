@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:Double x:Key="WidthOfControl">130</system:Double>
+    <system:Double x:Key="HeightOfControl">28</system:Double>
+    <system:Double x:Key="FontSizeOfCommonText">16</system:Double>
+
+    <system:Double x:Key="H1">72</system:Double>
+    <system:Double x:Key="H2">60</system:Double>
+    <system:Double x:Key="H3">48</system:Double>
+    <system:Double x:Key="H4">36</system:Double>
+    <system:Double x:Key="H5">28</system:Double>
+    <system:Double x:Key="H6">20</system:Double>
+    <system:Double x:Key="Paragraph">12</system:Double>
+
+    <Thickness x:Key="MarginOfControl">10,0</Thickness>
+    <GridLength x:Key="RowHeightOfGrid">50</GridLength>
+    <GridLength x:Key="ColumnWidthForCaption">300</GridLength>
+    <GridLength x:Key="ColumnWidthForBrowse">200</GridLength>
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Clickable.xaml" />
+        <ResourceDictionary Source="ComboBox.xaml" />
+        <ResourceDictionary Source="Templates.xaml" />
+        <ResourceDictionary Source="TextElement.xaml" />
+        <ResourceDictionary Source="Expander.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+
+</ResourceDictionary>

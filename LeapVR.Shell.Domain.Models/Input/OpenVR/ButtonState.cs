@@ -1,0 +1,31 @@
+﻿#region Licence
+/****************************************************************
+ *  Filename: ButtonState.cs
+ *  ----------------------------------------------------------
+ *  Author        Martin Meissner
+ *  Contributors  FrostHe
+ *  Date          2018-3-8
+ *  Copyright (c) 2017-2026 Martin Meissner. Originally
+ *                authored at VSpace Tech Dev Ltd. as part of the
+ *                LeapVR / LeapPlay product; relicensed under the
+ *                Apache License 2.0 in the open-source PlayOnDemand
+ *                release.
+ *
+ *  SPDX-License-Identifier: Apache-2.0
+ ****************************************************************/
+#endregion
+
+namespace LeapVR.Shell.Domain.Models.Input.OpenVR
+{
+    /// <summary>
+    /// Represent Vive controller's button state at some moment in time.
+    /// </summary>
+    public enum ButtonState
+    {
+        Unknown = 0,
+
+        Idle = 0,
+        Touched = 1,
+        Pressed = 2,
+    }
+}

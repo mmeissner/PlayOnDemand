@@ -1,0 +1,53 @@
+<UserControl
+    x:Class="LeapVR.Content.Creator.UI.Views.WizardView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:lex="http://wpflocalizeextension.codeplex.com"
+    xmlns:properties="clr-namespace:LeapVR.Content.Creator.Properties"
+    MinWidth="848">
+
+    <Grid Background="#FFE8E8E8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="70" />
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="4*" />
+            </Grid.ColumnDefinitions>
+            <!--<TextBlock
+                TextAlignment="Center"
+                Text="Some images goes here"></TextBlock>-->
+            <ContentControl x:Name="ActiveItem" Grid.Column="1" />
+        </Grid>
+        <DockPanel Grid.Row="1" LastChildFill="False">
+            <Button
+                x:Name="Exit"
+                Content="{lex:Loc FlowControl_Exit}"
+                DockPanel.Dock="Right"
+                IsEnabled="{Binding CanExit}" />
+            <Button
+                x:Name="Next"
+                Content="{lex:Loc FlowControl_Next}"
+                DockPanel.Dock="Right"
+                IsEnabled="{Binding CanNext}"
+                Visibility="{Binding IsLastStep, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=true}" />
+            <Button
+                x:Name="Create"
+                Content="{lex:Loc FlowControl_Create}"
+                DockPanel.Dock="Right"
+                IsEnabled="{Binding CanCreate}"
+                Visibility="{Binding IsLastStep, Converter={StaticResource BoolToVisibilityConverter}}" />
+            <Button
+                x:Name="Back"
+                Content="{lex:Loc FlowControl_Back}"
+                DockPanel.Dock="Right"
+                IsEnabled="{Binding CanBack}" />
+
+        </DockPanel>
+    </Grid>
+
+</UserControl>

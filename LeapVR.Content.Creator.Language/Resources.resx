@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="ApplicationMainExecutablePath" xml:space="preserve">
+    <value>Application Main Executable Path</value>
+  </data>
+  <data name="ApplicationMainExecutablePath_Instruction" xml:space="preserve">
+    <value>The path to the applixcation main executable file. Usually it is the application executable itself, for some applications requiring an external launcher this should be set the path to the launcher executable file.</value>
+  </data>
+  <data name="ApplicationMainProcessName" xml:space="preserve">
+    <value>Application Main Process Name</value>
+  </data>
+  <data name="ApplicationMainProcessName_Instruction" xml:space="preserve">
+    <value>Application main process name(usually the application executable file name without extension) is used to provide information for the shell to be aware of whether the application is started or not, is it still responding during lifetime and kill the application. Note this should not consider the launcher if there it is.</value>
+  </data>
+  <data name="ApplicationProcessNames" xml:space="preserve">
+    <value>Application Process Names</value>
+  </data>
+  <data name="ApplicationProcessNames_Instruction" xml:space="preserve">
+    <value>Besides the application main process name, the application could have multiple different processes running during lifetime. Specify the process names if there are and split them with ";". This is optional</value>
+  </data>
+  <data name="BasicInfo_SelectLanguage" xml:space="preserve">
+    <value>Select Language</value>
+  </data>
+  <data name="BasicInfo_TargetPlatform" xml:space="preserve">
+    <value>Target Platform</value>
+  </data>
+  <data name="Complete_Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="Complete_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Complete_ErrorMessage" xml:space="preserve">
+    <value>The VBox Installation Package creation process has encountered a problem. Please check validity of all provided data and try again.</value>
+  </data>
+  <data name="DetailInfo_ApplicationGuid" xml:space="preserve">
+    <value>Unique Application ID</value>
+  </data>
+  <data name="DetailInfo_BeyondMaximumFileSizeFormat" xml:space="preserve">
+    <value>The file you upload is beyond maximum allowed size: {0}</value>
+  </data>
+  <data name="DetailInfo_Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="DetailInfo_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DetailInfo_ExecutablePathNotRelative" xml:space="preserve">
+    <value>Provided Executable File Path is not relative to Application Base Directory.</value>
+  </data>
+  <data name="DetailInfo_Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="DetailInfo_ImageRecommendedSize" xml:space="preserve">
+    <value>Recommended Size</value>
+  </data>
+  <data name="DetailInfo_InvalidPictureDimensions" xml:space="preserve">
+    <value>Provided picture have invalid dimensions (max allowed is {0}x{0} px)</value>
+  </data>
+  <data name="DetailInfo_InvalidPictureFile" xml:space="preserve">
+    <value>Provided picture file's format is invalid.</value>
+  </data>
+  <data name="DetailInfo_Thumbnail_Image" xml:space="preserve">
+    <value>Thumbnail Image</value>
+  </data>
+  <data name="DetailInfo_Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EnableRespondingDetection" xml:space="preserve">
+    <value>Enable Responding Detection</value>
+  </data>
+  <data name="EnableRespondingDetection_Instruction" xml:space="preserve">
+    <value>Allow the shell to detect application responding and make further decision if it's not responding.</value>
+  </data>
+  <data name="EnableTrackingChildProcesses" xml:space="preserve">
+    <value>Enable Tracking Child Processes</value>
+  </data>
+  <data name="EnableTrackingChildProcesses_Instruction" xml:space="preserve">
+    <value>Allow the shell to track processes which are dynamically created since the starting process get executed. It is helpful when there're unknown amount of processes executed during an application running. However, this will slow the performance a little bit down.</value>
+  </data>
+  <data name="Enum_Platform_LeapVR" xml:space="preserve">
+    <value>Leap VR</value>
+  </data>
+  <data name="Enum_Platform_Steam" xml:space="preserve">
+    <value>Steam</value>
+  </data>
+  <data name="ExecutableInfo_Advanced" xml:space="preserve">
+    <value>Advanced settings</value>
+  </data>
+  <data name="ExecutableInfo_GameBaseDirectory" xml:space="preserve">
+    <value>Game Base Directory</value>
+  </data>
+  <data name="ExecutableInfo_GameBaseDirectoryInstruction" xml:space="preserve">
+    <value>The highest directory in directory tree that holds all files and directories needed by the game to run properly.</value>
+  </data>
+  <data name="ExecutableInfo_GameExecutableParameters" xml:space="preserve">
+    <value>Game Executable Parameters</value>
+  </data>
+  <data name="ExecutableInfo_GameExecutableParametersInstruction" xml:space="preserve">
+    <value>Parameters that will be provided to the main executable when execution of the game is requested.</value>
+  </data>
+  <data name="ExecutableInfo_GameFiles" xml:space="preserve">
+    <value>Game Files</value>
+  </data>
+  <data name="Executables" xml:space="preserve">
+    <value>Executables</value>
+  </data>
+  <data name="ExecutionInstructions" xml:space="preserve">
+    <value>Execution Instructions</value>
+  </data>
+  <data name="FlowControl_Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="FlowControl_Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="FlowControl_Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="FlowControl_Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="Global_Browse" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="Global_Browse_AllFiles" xml:space="preserve">
+    <value>All Files</value>
+  </data>
+  <data name="Global_Browse_Container" xml:space="preserve">
+    <value>VBox Installation Package</value>
+  </data>
+  <data name="Global_Browse_Executable" xml:space="preserve">
+    <value>Executable</value>
+  </data>
+  <data name="Global_Browse_ImageFiles" xml:space="preserve">
+    <value>Image Files</value>
+  </data>
+  <data name="Global_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Global_ContainerVersion" xml:space="preserve">
+    <value>Container Version</value>
+  </data>
+  <data name="Global_DiskSizeRequired" xml:space="preserve">
+    <value>Game Size on Disk</value>
+  </data>
+  <data name="Global_GenerateNewGuid" xml:space="preserve">
+    <value>Generate New ID</value>
+  </data>
+  <data name="Global_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Global_ProductName" xml:space="preserve">
+    <value>VBox Installation Package Creator</value>
+  </data>
+  <data name="Global_Reload" xml:space="preserve">
+    <value>Reload</value>
+  </data>
+  <data name="Global_Select_Directory" xml:space="preserve">
+    <value>Select Directory</value>
+  </data>
+  <data name="Global_Select_File" xml:space="preserve">
+    <value>Select File</value>
+  </data>
+  <data name="Global_Validation_CannotBeEmpty" xml:space="preserve">
+    <value>This field cannot be left empty.</value>
+  </data>
+  <data name="Global_Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="InstructionName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="InstructionName_Introduction" xml:space="preserve">
+    <value>A display name for one executable instruction that infers what's it about</value>
+  </data>
+  <data name="IsMainExecutable" xml:space="preserve">
+    <value>Is Main Executable</value>
+  </data>
+  <data name="IsMainExecutable_Introduction" xml:space="preserve">
+    <value>Indicates whether this executable is one of the executables taken into consideration to check if the application is running. Normally an application requires at least one main executable. Multiple main executables mean any of them running will the application be considered as running.</value>
+  </data>
+  <data name="KillOnExit" xml:space="preserve">
+    <value>Kill On Application Exit</value>
+  </data>
+  <data name="KillOnExit_Introduction" xml:space="preserve">
+    <value>Indicates whether this process should be killed on application exit</value>
+  </data>
+  <data name="KillProcessIfNotResponding" xml:space="preserve">
+    <value>Kill on Not Responding</value>
+  </data>
+  <data name="KillProcessIfNotResponding_Introduction" xml:space="preserve">
+    <value>Indicates whether this process should be killed when the system detects it is not responding</value>
+  </data>
+  <data name="NoneExecutableIsMainExecutable" xml:space="preserve">
+    <value>None of added executables is marked as main executable, are you sure to continue?</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="ProcessMonitoring" xml:space="preserve">
+    <value>Process Monitoring</value>
+  </data>
+  <data name="Progress_CreatingFiles" xml:space="preserve">
+    <value>Creating Files</value>
+  </data>
+  <data name="Progress_Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="RequiredVrModule" xml:space="preserve">
+    <value>Required VR Module</value>
+  </data>
+  <data name="RequiredVrModule_Introduction" xml:space="preserve">
+    <value>Specify the corresponding vr module to match the correct graphic api.</value>
+  </data>
+  <data name="SetFromExecutable" xml:space="preserve">
+    <value>Set From Exe</value>
+  </data>
+  <data name="Shell_SelectPlatform" xml:space="preserve">
+    <value>Select platform</value>
+  </data>
+  <data name="Shell_StartCreation" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="Shell_StartEdit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Shell_StartVBoxToZip" xml:space="preserve">
+    <value>VBox 2 Zip</value>
+  </data>
+  <data name="Shell_SteamIDInstruction" xml:space="preserve">
+    <value>Providing SteamID will allow Creator to automatically provide game Title and Image from Steam database.</value>
+  </data>
+  <data name="Shell_SteamIdOptional" xml:space="preserve">
+    <value>Steam ID (optional)</value>
+  </data>
+  <data name="Shell_StemId" xml:space="preserve">
+    <value>Steam ID</value>
+  </data>
+  <data name="Shell_Tools" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="Summary_FileCount" xml:space="preserve">
+    <value>Files Count</value>
+  </data>
+  <data name="Summary_OutputPackageName" xml:space="preserve">
+    <value>Package Output Path</value>
+  </data>
+  <data name="Summary_OutputPackageNameInstruction" xml:space="preserve">
+    <value>The output path that the installation package will be saved to when creation process is done. The installation package have `.vbox` extension.</value>
+  </data>
+  <data name="Summary_Output_FileAlreadyExists" xml:space="preserve">
+    <value>File already exists, are you sure to override the file?</value>
+  </data>
+  <data name="Summary_TotalSize" xml:space="preserve">
+    <value>Total Files Size</value>
+  </data>
+  <data name="SupportedModes" xml:space="preserve">
+    <value>Supported Modes</value>
+  </data>
+  <data name="Validation_ErrorVBoxPackageOpenEdit" xml:space="preserve">
+    <value>An error occured on opening the VBox Package Files. /n Please check if all files are in place and not corrupt. </value>
+  </data>
+  <data name="Validation_InvalidFilenameCharFormat" xml:space="preserve">
+    <value>Invalid character detected in output path, it is replaced with '{0}' and you could adjust it.</value>
+  </data>
+  <data name="Validation_VBoxPackage_Edit_MsgBox_Error_Caption" xml:space="preserve">
+    <value>Error during open VBox Package</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="WatchdogOptions" xml:space="preserve">
+    <value>Watchdog Options</value>
+  </data>
+  <data name="WorkingDirectory" xml:space="preserve">
+    <value>Working Directory</value>
+  </data>
+  <data name="WorkingDirectory_Introduction" xml:space="preserve">
+    <value>Working directory of a specific executable. If not set, working directory will be set to the directory where the executable is</value>
+  </data>
+</root>

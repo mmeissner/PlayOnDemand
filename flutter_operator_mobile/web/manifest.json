@@ -1,0 +1,11 @@
+{
+  "name": "PoD Operator Mobile",
+  "short_name": "PoD Mobile",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7cb342",
+  "description": "PlayOnDemand operator daily-ops app",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
+}

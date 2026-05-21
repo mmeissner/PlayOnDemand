@@ -1,0 +1,135 @@
+﻿<UserControl
+    x:Class="LeapVR.Shell.UI.Universal.Platform.Views.PlatformAppView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cal="http://www.caliburnproject.org"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:lex="http://wpflocalizeextension.codeplex.com"
+    xmlns:licenseEnum="clr-namespace:LeapVR.Shell.UI.Shell.SystemAdministration.Applications.Platform.ViewModels;assembly=LeapPlay.Shell"
+    xmlns:local="clr-namespace:LeapVR.Shell.UI.Shell.SystemAdministration.Applications.Platform.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:platformAppEnum="clr-namespace:LeapVR.Shell.Domain.Models.App;assembly=LeapVR.Shell.Domain.Models"
+    xmlns:viewModels="clr-namespace:LeapVR.Shell.UI.Universal.Platform.ViewModels"
+    d:DesignHeight="50"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style BasedOn="{StaticResource TextBlockBaseStyle}" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="{DynamicResource H5}" />
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid Visibility="{Binding IsLoadingError, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Visible}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Border
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="5">
+                <Image Height="40" Source="{StaticResource IconPlatformAppError}" />
+            </Border>
+            <TextBlock
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="5,0,5,0"
+                HorizontalAlignment="Left"
+                FontSize="{DynamicResource H6}"
+                Style="{DynamicResource TextBlockBaseStyle}"
+                Text="{lex:Loc Global_Error}" />
+            <Button
+                x:Name="UpdateDisplayData"
+                Grid.Row="0"
+                Grid.Column="2"
+                MinWidth="100"
+                Margin="15"
+                HorizontalAlignment="Center"
+                Content="{lex:Loc Global_Retry}"
+                FontSize="{DynamicResource H6}"
+                Style="{DynamicResource ButtonBaseStyle}" />
+        </Grid>
+        <ContentControl ContentTemplate="{DynamicResource InstallationLoadingItem}">
+            <ContentControl.Visibility>
+                <MultiBinding Converter="{StaticResource PlatformAppLoadingErrorToVisibilityConverter}">
+                    <Binding Path="IsLoaded" />
+                    <Binding Path="IsLoadingError" />
+                </MultiBinding>
+            </ContentControl.Visibility>
+        </ContentControl>
+        <Grid IsHitTestVisible="False" Visibility="{Binding IsLoaded, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="40" />
+                <ColumnDefinition Width="40" />
+            </Grid.ColumnDefinitions>
+
+            <ContentControl
+                x:Name="Thumbnail"
+                Grid.Row="0"
+                Grid.Column="0"
+                Width="92"
+                Height="43"
+                Margin="5"
+                cal:View.Context="Small" />
+
+            <TextBlock
+                x:Name="Title"
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="5,0,5,0"
+                HorizontalAlignment="Left"
+                Text="Very very very very long Application Name" />
+
+            <Image
+                Grid.Column="2"
+                Width="40"
+                Height="40">
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=PlatformInstallationState}" Value="{x:Static platformAppEnum:PlatformInstallState.Unavailable}">
+                                <Setter Property="Source" Value="{DynamicResource IconPlatformAppUnavailable}" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=PlatformInstallationState}" Value="{x:Static platformAppEnum:PlatformInstallState.Local}">
+                                <Setter Property="Source" Value="{DynamicResource IconPlatformAppLocalInstalled}" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=PlatformInstallationState}" Value="{x:Static platformAppEnum:PlatformInstallState.Online}">
+                                <Setter Property="Source" Value="{DynamicResource IconPlatformAppOnlineInstallable}" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=PlatformInstallationState}" Value="{x:Static platformAppEnum:PlatformInstallState.Installing}">
+                                <Setter Property="Source" Value="{DynamicResource IconPlatformAppInstalling}" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=PlatformInstallationState}" Value="{x:Static platformAppEnum:PlatformInstallState.Error}">
+                                <Setter Property="Source" Value="{DynamicResource IconPlatformAppError}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+            </Image>
+            <Image
+                Grid.Column="3"
+                Width="40"
+                Height="40">
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=LicenseState}" Value="{x:Static viewModels:PlatformAppViewModel+License.Missing}">
+                                <Setter Property="Source" Value="{StaticResource IconPlatformAppLicenseUnavailable}" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=LicenseState}" Value="{x:Static viewModels:PlatformAppViewModel+License.Available}">
+                                <Setter Property="Source" Value="{StaticResource IconPlatformAppLicenseAvailable}" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=LicenseState}" Value="{x:Static viewModels:PlatformAppViewModel+License.Free}">
+                                <Setter Property="Source" Value="{StaticResource IconPlatformAppLicenseFree}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+            </Image>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BasicInfo_SelectLanguage" xml:space="preserve">
+    <value>选择语言</value>
+  </data>
+  <data name="BasicInfo_TargetPlatform" xml:space="preserve">
+    <value>目标平台</value>
+  </data>
+  <data name="Complete_Done" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="Complete_Error" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="Complete_ErrorMessage" xml:space="preserve">
+    <value>创建过程发生错误，请检查所有已指定的数据并重试。</value>
+  </data>
+  <data name="DetailInfo_Category" xml:space="preserve">
+    <value>类别</value>
+  </data>
+  <data name="DetailInfo_Description" xml:space="preserve">
+    <value>说明</value>
+  </data>
+  <data name="DetailInfo_ExecutablePathNotRelative" xml:space="preserve">
+    <value>指定的可执行文件路径与指定的游戏根目录不匹配</value>
+  </data>
+  <data name="DetailInfo_Image" xml:space="preserve">
+    <value>图像</value>
+  </data>
+  <data name="DetailInfo_ImageRecommendedSize" xml:space="preserve">
+    <value>推荐尺寸</value>
+  </data>
+  <data name="DetailInfo_InvalidPictureDimensions" xml:space="preserve">
+    <value>指定的图片尺寸不符合要求(最大寸尺：{0}x{0} px)</value>
+  </data>
+  <data name="DetailInfo_InvalidPictureFile" xml:space="preserve">
+    <value>指定的图片格式不符合要求，请重新指定</value>
+  </data>
+  <data name="DetailInfo_Title" xml:space="preserve">
+    <value>标题</value>
+  </data>
+  <data name="Enum_Platform_LeapVR" xml:space="preserve">
+    <value>Leap VR</value>
+  </data>
+  <data name="Enum_Platform_Steam" xml:space="preserve">
+    <value>Steam</value>
+  </data>
+  <data name="ExecutableInfo_Advanced" xml:space="preserve">
+    <value>高级设置</value>
+  </data>
+  <data name="ExecutableInfo_GameBaseDirectory" xml:space="preserve">
+    <value>程序根目录</value>
+  </data>
+  <data name="ExecutableInfo_GameBaseDirectoryInstruction" xml:space="preserve">
+    <value>确保程序可正常运行的所有必要文件所在的根目录</value>
+  </data>
+  <data name="ExecutableInfo_GameExecutableParameters" xml:space="preserve">
+    <value>启动参数</value>
+  </data>
+  <data name="ExecutableInfo_GameExecutableParametersInstruction" xml:space="preserve">
+    <value>可执行文件的启动参数，该参数总是应用到指定的可执行文件(游戏本身的可执行文件或启动器)，可选</value>
+  </data>
+  <data name="ExecutableInfo_GameFiles" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="FlowControl_Back" xml:space="preserve">
+    <value>上一步</value>
+  </data>
+  <data name="FlowControl_Create" xml:space="preserve">
+    <value>创建</value>
+  </data>
+  <data name="FlowControl_Exit" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="FlowControl_Next" xml:space="preserve">
+    <value>下一步</value>
+  </data>
+  <data name="Global_Browse" xml:space="preserve">
+    <value>浏览</value>
+  </data>
+  <data name="Global_Browse_AllFiles" xml:space="preserve">
+    <value>所有文件</value>
+  </data>
+  <data name="Global_Browse_Container" xml:space="preserve">
+    <value>VBox 安装包</value>
+  </data>
+  <data name="Global_Browse_Executable" xml:space="preserve">
+    <value>可执行文件</value>
+  </data>
+  <data name="Global_Browse_ImageFiles" xml:space="preserve">
+    <value>图像文件</value>
+  </data>
+  <data name="Global_ProductName" xml:space="preserve">
+    <value>VBox 安装包生成器</value>
+  </data>
+  <data name="Global_Reload" xml:space="preserve">
+    <value>加载</value>
+  </data>
+  <data name="Global_Validation_CannotBeEmpty" xml:space="preserve">
+    <value>该字段不能为空</value>
+  </data>
+  <data name="Progress_CreatingFiles" xml:space="preserve">
+    <value>正在创建文件</value>
+  </data>
+  <data name="Progress_Done" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="Shell_SelectPlatform" xml:space="preserve">
+    <value>选择游戏平台</value>
+  </data>
+  <data name="Shell_StartCreation" xml:space="preserve">
+    <value>创建</value>
+  </data>
+  <data name="Shell_SteamIDInstruction" xml:space="preserve">
+    <value>填入 SteamID，游戏名称和图片将自动从 Steam 上获取(确保英特网畅通)，可选</value>
+  </data>
+  <data name="Shell_SteamIdOptional" xml:space="preserve">
+    <value>Steam ID （可选）</value>
+  </data>
+  <data name="Shell_StemId" xml:space="preserve">
+    <value>Steam ID</value>
+  </data>
+  <data name="Summary_FileCount" xml:space="preserve">
+    <value>文件数</value>
+  </data>
+  <data name="Summary_OutputPackageName" xml:space="preserve">
+    <value>VBox 安装包输出路径</value>
+  </data>
+  <data name="Summary_OutputPackageNameInstruction" xml:space="preserve">
+    <value>VBox 安装包创建完成后存储的目标路径，Vbox 安装包的扩展名为 '.vbox' </value>
+  </data>
+  <data name="Summary_TotalSize" xml:space="preserve">
+    <value>总文件大小</value>
+  </data>
+  <data name="Global_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="SupportedModes" xml:space="preserve">
+    <value>支持模式</value>
+  </data>
+  <data name="DetailInfo_BeyondMaximumFileSizeFormat" xml:space="preserve">
+    <value>该文件超出了最大允许的限制：{0}</value>
+  </data>
+  <data name="Summary_Output_FileAlreadyExists" xml:space="preserve">
+    <value>文件已存在，确定要覆盖该文件吗？</value>
+  </data>
+  <data name="Global_Warning" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="Validation_InvalidFilenameCharFormat" xml:space="preserve">
+    <value>程序名称构造的输出路径存在非法字符，已用 '{0}' 替换，您仍然可以修改输出路径</value>
+  </data>
+  <data name="ApplicationMainExecutablePath" xml:space="preserve">
+    <value>.exe 路径</value>
+  </data>
+  <data name="ApplicationMainExecutablePath_Instruction" xml:space="preserve">
+    <value>应用程序 .exe 文件路径，通常为该应用程序 .exe 文件本身</value>
+  </data>
+  <data name="ApplicationMainProcessName" xml:space="preserve">
+    <value>程序起始进程名</value>
+  </data>
+  <data name="ApplicationMainProcessName_Instruction" xml:space="preserve">
+    <value>应用程序主进程名用于检测该应用程序是否成功启动，无响应检测和退出应用程序，该值通常为应用程序本身 .exe 文件名去掉扩展名。注意，对于依赖 Launcher 的应用程序请将主进程设置为应用程序本身的进程名</value>
+  </data>
+  <data name="ApplicationProcessNames" xml:space="preserve">
+    <value>预管理进程名</value>
+  </data>
+  <data name="ApplicationProcessNames_Instruction" xml:space="preserve">
+    <value>除了应用程序主进程名以外，该程序可能在运行期间启动多个其他进程，使用英文半角 ';' 来分隔这些进程的名称，该选项不是必填项</value>
+  </data>
+  <data name="EnableRespondingDetection" xml:space="preserve">
+    <value>启用无响应检测</value>
+  </data>
+  <data name="EnableRespondingDetection_Instruction" xml:space="preserve">
+    <value>允许系统在应用程序运行期间检测其响应状态，以帮助系统在程序长时间无响应时做出正确的决策</value>
+  </data>
+  <data name="EnableTrackingChildProcesses" xml:space="preserve">
+    <value>启用子进程追踪</value>
+  </data>
+  <data name="EnableTrackingChildProcesses_Instruction" xml:space="preserve">
+    <value>允许系统追踪应用程序运行期间动态创建的其他进程，但这将轻微损耗性能。当该选项启用时，系统将忽略进程名作为识别应用程序的依据</value>
+  </data>
+  <data name="Shell_StartEdit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="Validation_ErrorVBoxPackageOpenEdit" xml:space="preserve">
+    <value>打开 VBox 安装包文件时出错 /n 请检查是否所有文件定位正确并完好</value>
+  </data>
+  <data name="Validation_VBoxPackage_Edit_MsgBox_Error_Caption" xml:space="preserve">
+    <value>打开 VBox 安装包文件时出错</value>
+  </data>
+  <data name="DetailInfo_Thumbnail_Image" xml:space="preserve">
+    <value>缩略图</value>
+  </data>
+  <data name="DetailInfo_ApplicationGuid" xml:space="preserve">
+    <value>App Id(唯一)</value>
+  </data>
+  <data name="Global_ContainerVersion" xml:space="preserve">
+    <value>容器版本</value>
+  </data>
+  <data name="Global_DiskSizeRequired" xml:space="preserve">
+    <value>占用磁盘空间</value>
+  </data>
+  <data name="Global_GenerateNewGuid" xml:space="preserve">
+    <value>生成新 ID</value>
+  </data>
+  <data name="Shell_StartVBoxToZip" xml:space="preserve">
+    <value>VBox 2 Zip</value>
+  </data>
+  <data name="Global_Select_Directory" xml:space="preserve">
+    <value>选取目录</value>
+  </data>
+  <data name="Global_Select_File" xml:space="preserve">
+    <value>指定文件</value>
+  </data>
+  <data name="Shell_Tools" xml:space="preserve">
+    <value>工具</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="ExecutionInstructions" xml:space="preserve">
+    <value>配置可执行项</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>移除</value>
+  </data>
+  <data name="WorkingDirectory" xml:space="preserve">
+    <value>工作目录</value>
+  </data>
+  <data name="Global_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="InstructionName" xml:space="preserve">
+    <value>显示名称</value>
+  </data>
+  <data name="InstructionName_Introduction" xml:space="preserve">
+    <value>指定一个名字用以向用户展示该启动项隐含的意思</value>
+  </data>
+  <data name="SetFromExecutable" xml:space="preserve">
+    <value>从 .exe 获取</value>
+  </data>
+  <data name="WorkingDirectory_Introduction" xml:space="preserve">
+    <value>.exe 程序执行所依赖的工作目录，若为空，默认为可执行程序所在的目录</value>
+  </data>
+  <data name="IsMainExecutable" xml:space="preserve">
+    <value>是否为主要进程</value>
+  </data>
+  <data name="IsMainExecutable_Introduction" xml:space="preserve">
+    <value>指示该进程是否作为衡量应用程序正在运行的主要进程，通常情况下一个应用程序至少有一个主要进程，如果指定了多个主要进程，那么其中任何一个正在运行，系统将视作该应用程序正在运行</value>
+  </data>
+  <data name="KillOnExit" xml:space="preserve">
+    <value>应用退出时结束进程</value>
+  </data>
+  <data name="KillOnExit_Introduction" xml:space="preserve">
+    <value>指示系统是否应该在应用退出时结束该进程</value>
+  </data>
+  <data name="KillProcessIfNotResponding" xml:space="preserve">
+    <value>进程无响应时强制结束</value>
+  </data>
+  <data name="KillProcessIfNotResponding_Introduction" xml:space="preserve">
+    <value>指示系统是否在该进程无响应时强制结束该进程</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>选项</value>
+  </data>
+  <data name="ProcessMonitoring" xml:space="preserve">
+    <value>进程监控</value>
+  </data>
+  <data name="RequiredVrModule" xml:space="preserve">
+    <value>依赖的 VR 模块</value>
+  </data>
+  <data name="RequiredVrModule_Introduction" xml:space="preserve">
+    <value>指定与该应用程序相匹配的 VR 模块</value>
+  </data>
+  <data name="WatchdogOptions" xml:space="preserve">
+    <value>检测选项</value>
+  </data>
+  <data name="Executables" xml:space="preserve">
+    <value>可执行程序</value>
+  </data>
+  <data name="NoneExecutableIsMainExecutable" xml:space="preserve">
+    <value>没有任何可执行程序被标记为起始 .exe，你确定要继续吗？</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>警告</value>
+  </data>
+</root>

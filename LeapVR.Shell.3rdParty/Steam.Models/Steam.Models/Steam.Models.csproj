@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C1820B6-F58D-4A1D-A9AD-A4B0844722B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Steam.Models</RootNamespace>
+    <AssemblyName>Steam.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\net46\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AvailableGameStatsModel.cs" />
+    <Compile Include="CSGO\ServerStatusAppModel.cs" />
+    <Compile Include="CSGO\ServerStatusDatacenterModel.cs" />
+    <Compile Include="CSGO\ServerStatusMatchmakingModel.cs" />
+    <Compile Include="CSGO\ServerStatusModel.cs" />
+    <Compile Include="CSGO\ServerStatusServicesModel.cs" />
+    <Compile Include="DOTA2\AbilitySchemaItemModel.cs" />
+    <Compile Include="DOTA2\AbilitySpecialSchemaItemModel.cs" />
+    <Compile Include="DOTA2\BarracksStateModel.cs" />
+    <Compile Include="DOTA2\DotaAttackType.cs" />
+    <Compile Include="DOTA2\DotaBlogFeedItem.cs" />
+    <Compile Include="DOTA2\DotaDamageType.cs" />
+    <Compile Include="DOTA2\DotaEnumType.cs" />
+    <Compile Include="DOTA2\DotaHeroAbilityBehaviorType.cs" />
+    <Compile Include="DOTA2\DotaHeroAbilityType.cs" />
+    <Compile Include="DOTA2\DotaHeroPrimaryAttributeType.cs" />
+    <Compile Include="DOTA2\DotaItemDeclarationType.cs" />
+    <Compile Include="DOTA2\DotaItemDisassembleType.cs" />
+    <Compile Include="DOTA2\DotaItemShareabilityType.cs" />
+    <Compile Include="DOTA2\DotaLeagueTier.cs" />
+    <Compile Include="DOTA2\DotaSpellImmunityType.cs" />
+    <Compile Include="DOTA2\DotaTeamType.cs" />
+    <Compile Include="DOTA2\DotaUnitTargetFlag.cs" />
+    <Compile Include="DOTA2\DotaUnitTargetTeamType.cs" />
+    <Compile Include="DOTA2\DotaUnitTargetType.cs" />
+    <Compile Include="DOTA2\GameFile.cs" />
+    <Compile Include="DOTA2\HeroAbilityDetailModel.cs" />
+    <Compile Include="DOTA2\HeroAbilitySpecialDetailModel.cs" />
+    <Compile Include="DOTA2\HeroDetailModel.cs" />
+    <Compile Include="DOTA2\HeroModel.cs" />
+    <Compile Include="DOTA2\HeroRoleModel.cs" />
+    <Compile Include="DOTA2\HeroSchemaModel.cs" />
+    <Compile Include="DOTA2\ItemAbilitySchemaItemModel.cs" />
+    <Compile Include="DOTA2\ItemBuildGroupSchemaItemModel.cs" />
+    <Compile Include="DOTA2\ItemBuildSchemaItemModel.cs" />
+    <Compile Include="DOTA2\LeagueModel.cs" />
+    <Compile Include="DOTA2\LiveLeagueGameAbilityModel.cs" />
+    <Compile Include="DOTA2\LiveLeagueGameBanModel.cs" />
+    <Compile Include="DOTA2\LiveLeagueGameFlattenedModel.cs" />
+    <Compile Include="DOTA2\LiveLeagueGameHeroModel.cs" />
+    <Compile Include="DOTA2\LiveLeagueGameItemModel.cs" />
+    <Compile Include="DOTA2\LiveLeagueGameModel.cs" />
+    <Compile Include="DOTA2\LiveLeagueGamePickModel.cs" />
+    <Compile Include="DOTA2\LiveLeagueGamePlayerDetailModel.cs" />
+    <Compile Include="DOTA2\LiveLeagueGamePlayerInfoModel.cs" />
+    <Compile Include="DOTA2\LiveLeagueGamePlayerModel.cs" />
+    <Compile Include="DOTA2\GameItemModel.cs" />
+    <Compile Include="DOTA2\LiveLeagueGameScoreboardModel.cs" />
+    <Compile Include="DOTA2\LiveLeagueGameTeamDireDetailModel.cs" />
+    <Compile Include="DOTA2\LiveLeagueGameTeamDireInfoModel.cs" />
+    <Compile Include="DOTA2\LiveLeagueGameTeamRadiantDetailModel.cs" />
+    <Compile Include="DOTA2\LiveLeagueGameTeamRadiantInfoModel.cs" />
+    <Compile Include="DOTA2\MatchDetailModel.cs" />
+    <Compile Include="DOTA2\MatchHistoryBySequenceNumberMatchModel.cs" />
+    <Compile Include="DOTA2\MatchHistoryBySequenceNumberMatchPlayerAbilityUpgradeModel.cs" />
+    <Compile Include="DOTA2\MatchHistoryBySequenceNumberMatchPlayerModel.cs" />
+    <Compile Include="DOTA2\MatchHistoryMatchModel.cs" />
+    <Compile Include="DOTA2\MatchHistoryModel.cs" />
+    <Compile Include="DOTA2\MatchHistoryPlayerModel.cs" />
+    <Compile Include="DOTA2\MatchPickBanModel.cs" />
+    <Compile Include="DOTA2\MatchPlayerAbilityUpgradeModel.cs" />
+    <Compile Include="DOTA2\MatchPlayerModel.cs" />
+    <Compile Include="DOTA2\PlayerOfficialInfoModel.cs" />
+    <Compile Include="DOTA2\ProPlayerDetailModel.cs" />
+    <Compile Include="DOTA2\ProPlayerInfoModel.cs" />
+    <Compile Include="DOTA2\ProPlayerLeaderboardModel.cs" />
+    <Compile Include="DOTA2\RarityModel.cs" />
+    <Compile Include="DOTA2\SchemaColorModel.cs" />
+    <Compile Include="DOTA2\SchemaGameInfoModel.cs" />
+    <Compile Include="DOTA2\SchemaItemAutographModel.cs" />
+    <Compile Include="DOTA2\SchemaItemModel.cs" />
+    <Compile Include="DOTA2\SchemaItemPriceInfoModel.cs" />
+    <Compile Include="DOTA2\SchemaItemSetModel.cs" />
+    <Compile Include="DOTA2\SchemaItemToolModel.cs" />
+    <Compile Include="DOTA2\SchemaItemToolUsageModel.cs" />
+    <Compile Include="DOTA2\SchemaModel.cs" />
+    <Compile Include="DOTA2\SchemaPrefabCapabilityModel.cs" />
+    <Compile Include="DOTA2\SchemaPrefabModel.cs" />
+    <Compile Include="DOTA2\SchemaQualityModel.cs" />
+    <Compile Include="DOTA2\SchemaRarityModel.cs" />
+    <Compile Include="DOTA2\TeamInfoModel.cs" />
+    <Compile Include="DOTA2\TowerStateModel.cs" />
+    <Compile Include="GameClientResultModel.cs" />
+    <Compile Include="GameEconomy\EconItemAttributeAccountInfoModel.cs" />
+    <Compile Include="GameEconomy\EconItemAttributeModel.cs" />
+    <Compile Include="GameEconomy\EconItemEquippedModel.cs" />
+    <Compile Include="GameEconomy\EconItemModel.cs" />
+    <Compile Include="GameEconomy\EconItemResultModel.cs" />
+    <Compile Include="GameEconomy\StoreBannerModel.cs" />
+    <Compile Include="GameEconomy\StoreCarouselDataModel.cs" />
+    <Compile Include="GameEconomy\StoreConfigModel.cs" />
+    <Compile Include="GameEconomy\StoreDropdownDataModel.cs" />
+    <Compile Include="GameEconomy\StoreDropdownModel.cs" />
+    <Compile Include="GameEconomy\StoreFilterAllElementModel.cs" />
+    <Compile Include="GameEconomy\StoreFilterElementModel.cs" />
+    <Compile Include="GameEconomy\StoreFilterModel.cs" />
+    <Compile Include="GameEconomy\StoreHomePageDataModel.cs" />
+    <Compile Include="GameEconomy\StoreMetaDataModel.cs" />
+    <Compile Include="GameEconomy\StorePlayerClassDataModel.cs" />
+    <Compile Include="GameEconomy\StorePopularItemModel.cs" />
+    <Compile Include="GameEconomy\StorePrefabModel.cs" />
+    <Compile Include="GameEconomy\StoreSorterModel.cs" />
+    <Compile Include="GameEconomy\StoreSorterIdModel.cs" />
+    <Compile Include="GameEconomy\StoreSortingModel.cs" />
+    <Compile Include="GameEconomy\StoreSortingPrefabModel.cs" />
+    <Compile Include="GameEconomy\StoreTabChildModel.cs" />
+    <Compile Include="GameEconomy\StoreTabModel.cs" />
+    <Compile Include="DOTA2\PlayerCountModel.cs" />
+    <Compile Include="NewsItemModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DOTA2\SourceFileModel.cs" />
+    <Compile Include="SchemaForGameResultModel.cs" />
+    <Compile Include="SchemaGameAchievementModel.cs" />
+    <Compile Include="SchemaGameStatModel.cs" />
+    <Compile Include="SteamAppModel.cs" />
+    <Compile Include="SteamAppUpToDateCheckModel.cs" />
+    <Compile Include="SteamCommunity\BadgeModel.cs" />
+    <Compile Include="SteamCommunity\BadgeQuestModel.cs" />
+    <Compile Include="SteamCommunity\BadgesResultModel.cs" />
+    <Compile Include="SteamCommunity\CommentPermission.cs" />
+    <Compile Include="SteamCommunity\FriendModel.cs" />
+    <Compile Include="SteamCommunity\GlobalAchievementPercentageModel.cs" />
+    <Compile Include="SteamCommunity\GlobalStatModel.cs" />
+    <Compile Include="SteamCommunity\OwnedGameModel.cs" />
+    <Compile Include="SteamCommunity\OwnedGamesResultModel.cs" />
+    <Compile Include="SteamCommunity\PlayerBansModel.cs" />
+    <Compile Include="SteamCommunity\PlayerSummaryModel.cs" />
+    <Compile Include="SteamCommunity\ProfileVisibility.cs" />
+    <Compile Include="SteamCommunity\RecentlyPlayedGameModel.cs" />
+    <Compile Include="SteamCommunity\RecentlyPlayedGamesResultModel.cs" />
+    <Compile Include="SteamCommunity\SteamCommunityProfileModel.cs" />
+    <Compile Include="SteamCommunity\UserStatus.cs" />
+    <Compile Include="SteamEconomy\AssetClassActionModel.cs" />
+    <Compile Include="SteamEconomy\AssetClassAppDataFilterModel.cs" />
+    <Compile Include="SteamEconomy\AssetClassAppDataModel.cs" />
+    <Compile Include="SteamEconomy\AssetClassDescriptionModel.cs" />
+    <Compile Include="SteamEconomy\AssetClassInfoModel.cs" />
+    <Compile Include="SteamEconomy\AssetClassInfoResultModel.cs" />
+    <Compile Include="SteamEconomy\AssetClassMarketActionModel.cs" />
+    <Compile Include="SteamEconomy\AssetClassModel.cs" />
+    <Compile Include="SteamEconomy\AssetClassTagModel.cs" />
+    <Compile Include="SteamEconomy\AssetModel.cs" />
+    <Compile Include="SteamEconomy\AssetPriceResultModel.cs" />
+    <Compile Include="SteamEconomy\AssetPricesModel.cs" />
+    <Compile Include="SteamEconomy\AssetTagIdsModel.cs" />
+    <Compile Include="SteamEconomy\AssetTagsModel.cs" />
+    <Compile Include="SteamEconomy\TradeAssetModel.cs" />
+    <Compile Include="SteamEconomy\TradedAssetModel.cs" />
+    <Compile Include="SteamEconomy\TradedCurrencyModel.cs" />
+    <Compile Include="SteamEconomy\TradeHistoryModel.cs" />
+    <Compile Include="SteamEconomy\TradeModel.cs" />
+    <Compile Include="SteamEconomy\TradeOfferConfirmationMethod.cs" />
+    <Compile Include="SteamEconomy\TradeOfferModel.cs" />
+    <Compile Include="SteamEconomy\TradeOfferResultModel.cs" />
+    <Compile Include="SteamEconomy\TradeOffersResultModel.cs" />
+    <Compile Include="SteamEconomy\TradeOfferState.cs" />
+    <Compile Include="SteamEconomy\TradeStatus.cs" />
+    <Compile Include="SteamInterfaceModel.cs" />
+    <Compile Include="SteamMethodModel.cs" />
+    <Compile Include="SteamNewsResultModel.cs" />
+    <Compile Include="SteamParameterModel.cs" />
+    <Compile Include="SteamPlayer\PlayerAchievementModel.cs" />
+    <Compile Include="SteamPlayer\PlayerAchievementResultModel.cs" />
+    <Compile Include="SteamPlayer\UserStatAchievementModel.cs" />
+    <Compile Include="SteamPlayer\UserStatModel.cs" />
+    <Compile Include="SteamPlayer\UserStatsForGameResultModel.cs" />
+    <Compile Include="SteamServerInfo.cs" />
+    <Compile Include="SteamServerInfoModel.cs" />
+    <Compile Include="SteamStore\StoreComingSoonModel.cs" />
+    <Compile Include="SteamStore\StoreFeaturedCategoriesModel.cs" />
+    <Compile Include="SteamStore\StoreAppDetailsDataModel.cs" />
+    <Compile Include="SteamStore\StoreCategoryModel.cs" />
+    <Compile Include="SteamStore\StoreFeaturedLinuxModel.cs" />
+    <Compile Include="SteamStore\StoreFeaturedMacModel.cs" />
+    <Compile Include="SteamStore\StoreFeaturedProductsModel.cs" />
+    <Compile Include="SteamStore\StoreFeaturedWinModel.cs" />
+    <Compile Include="SteamStore\StoreGenreModel.cs" />
+    <Compile Include="SteamStore\StoreFeaturedCategoryGenreModel.cs" />
+    <Compile Include="SteamStore\StoreItemModel.cs" />
+    <Compile Include="SteamStore\StoreLargeCapsuleModel.cs" />
+    <Compile Include="SteamStore\StoreLinuxRequirementsModel.cs" />
+    <Compile Include="SteamStore\StoreMacRequirementsModel.cs" />
+    <Compile Include="SteamStore\StoreMetacriticModel.cs" />
+    <Compile Include="SteamStore\StoreMovieModel.cs" />
+    <Compile Include="SteamStore\StoreNewReleasesModel.cs" />
+    <Compile Include="SteamStore\StorePackageGroupModel.cs" />
+    <Compile Include="SteamStore\StorePcRequirementsModel.cs" />
+    <Compile Include="SteamStore\StorePlatformsModel.cs" />
+    <Compile Include="SteamStore\StoreRecommendationsModel.cs" />
+    <Compile Include="SteamStore\StoreReleaseDateModel.cs" />
+    <Compile Include="SteamStore\StoreScreenshotModel.cs" />
+    <Compile Include="SteamStore\StoreSpecialsModel.cs" />
+    <Compile Include="SteamStore\StoreSubModel.cs" />
+    <Compile Include="SteamStore\StoreSupportInfoModel.cs" />
+    <Compile Include="SteamStore\StoreTopSellersModel.cs" />
+    <Compile Include="SteamStore\StoreTrailerSlideshowModel.cs" />
+    <Compile Include="SteamStore\StoreWebmModel.cs" />
+    <Compile Include="TF2\GoldenWrenchModel.cs" />
+    <Compile Include="TF2\SchemaAdditionalHiddenBodygroupsModel.cs" />
+    <Compile Include="TF2\SchemaAttributeControlledAttachedParticleModel.cs" />
+    <Compile Include="TF2\SchemaAttributeModel.cs" />
+    <Compile Include="TF2\SchemaCapabilitiesModel.cs" />
+    <Compile Include="TF2\SchemaItemAttributeModel.cs" />
+    <Compile Include="TF2\SchemaItemLevelModel.cs" />
+    <Compile Include="TF2\SchemaItemModel.cs" />
+    <Compile Include="TF2\SchemaItemSetAttributeModel.cs" />
+    <Compile Include="TF2\SchemaItemSetModel.cs" />
+    <Compile Include="TF2\SchemaKillEaterScoreTypeModel.cs" />
+    <Compile Include="TF2\SchemaLevelModel.cs" />
+    <Compile Include="TF2\SchemaModel.cs" />
+    <Compile Include="TF2\SchemaOriginNameModel.cs" />
+    <Compile Include="TF2\SchemaPerClassLoadoutSlotsModel.cs" />
+    <Compile Include="TF2\SchemaQualitiesModel.cs" />
+    <Compile Include="TF2\SchemaStringLookupModel.cs" />
+    <Compile Include="TF2\SchemaStringModel.cs" />
+    <Compile Include="TF2\SchemaStyleModel.cs" />
+    <Compile Include="TF2\SchemaToolModel.cs" />
+    <Compile Include="TF2\SchemaUsageCapabilitiesModel.cs" />
+    <Compile Include="UGCFileDetailsModel.cs" />
+    <Compile Include="Utilities\DateTimeExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target> -->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

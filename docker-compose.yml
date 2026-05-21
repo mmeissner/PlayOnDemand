@@ -1,0 +1,160 @@
+# PlayOnDemand server stack.
+#
+#   docker compose up -d        - start postgres + server
+#   docker compose logs -f      - tail server logs
+#   docker compose down -v      - tear down and drop data
+#
+# Configuration:
+#   .env (gitignored)           - copy .env.example and fill in real values
+#
+# On first run the server applies EF migrations against postgres and seeds the
+# admin user from ConfigSuperuser__Username/Password. Subsequent runs are
+# idempotent.
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-pod_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required in .env}
+      POSTGRES_DB: ${POSTGRES_DB:-pod}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-pod_user} -d ${POSTGRES_DB:-pod}"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 30s
+
+  server:
+    build:
+      context: .
+      dockerfile: Pod.Web.Center/Dockerfile
+    image: pod-web-center:latest
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "80:80"
+      # 443 is only published when LETSENCRYPT_ENABLED=true. With LE disabled the
+      # server binds cleartext :80 only (HTTP/1.1 + h2c for gRPC). For private
+      # deployments terminate TLS at an upstream reverse proxy.
+      - "443:443"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      # Connection string with the password sourced from .env via env-var substitution.
+      ConnectionStrings__PodApiContext: "User ID=${POSTGRES_USER:-pod_user};Password=${POSTGRES_PASSWORD};Host=postgres;Port=5432;Database=${POSTGRES_DB:-pod};Pooling=true;"
+
+      AuthConfig__SecretKey: ${JWT_SECRET:?JWT_SECRET is required in .env (32+ ASCII bytes)}
+
+      ConfigSuperuser__Username: ${ADMIN_USERNAME:-superuser}
+      ConfigSuperuser__Email: ${ADMIN_EMAIL:?ADMIN_EMAIL is required in .env}
+      ConfigSuperuser__Password: ${ADMIN_PASSWORD:?ADMIN_PASSWORD is required in .env}
+      ConfigSuperuser__StationPassword: ${STATION_PASSWORD:?STATION_PASSWORD is required in .env}
+
+      ConfigShellServer__HostAddress: ${POD_HOSTNAME:-localhost}
+      ConfigShellServer__DisplayName: ${POD_DISPLAY_NAME:-PlayOnDemand}
+      # gRPC + REST share the same Kestrel listener in the .NET-10 architecture.
+      # The seeded ShellServer record advertises this port to kiosks, which then
+      # open their second gRPC channel against <HostAddress>:<Port>. Production
+      # behind LE uses 443; the dev-TLS path uses 443 too; an upstream reverse
+      # proxy in front may map it elsewhere.
+      ConfigShellServer__Port: ${POD_SHELLHOST_PORT:-443}
+
+      LetsEncryptOptions__IsEnabled: ${LETSENCRYPT_ENABLED:-false}
+      LetsEncryptOptions__AcceptTermsOfService: ${LETSENCRYPT_ACCEPT_TOS:-false}
+      LetsEncryptOptions__EmailAddress: ${LETSENCRYPT_EMAIL:-admin@example.com}
+      LetsEncryptOptions__Hosts__0: ${POD_HOSTNAME:-localhost}
+      LetsEncryptOptions__CacheFolder: certs            # joined with /app (ContentRootPath) -> /app/certs (matches the volume mount below)
+      LetsEncryptOptions__EncryptionPassword: ${LETSENCRYPT_ENCRYPTION_PASSWORD:-change-me-or-disable-letsencrypt}
+
+      # Local-dev TLS: when set and a PFX is mounted at the path below, Kestrel
+      # binds :443 with the supplied cert. Used for kiosk gRPC smoke against the
+      # docker-compose stack (the kiosk's Grpc.Core client requires TLS). Leave
+      # unset for production - use LetsEncryptOptions instead.
+      DevTlsOptions__PfxPath: ${DEV_TLS_PFX_PATH:-}
+      DevTlsOptions__PfxPassword: ${DEV_TLS_PFX_PASSWORD:-}
+      # When set, raises Kestrel + Grpc.AspNetCore logging to Debug so each
+      # incoming connection + RPC call lands in `docker logs`. Useful for the
+      # kiosk-gRPC smoke; leave unset in production.
+      Logging__LogLevel__Microsoft.AspNetCore.Server.Kestrel: ${KESTREL_LOG:-Information}
+      Logging__LogLevel__Grpc.AspNetCore.Server: ${GRPC_LOG:-Information}
+
+      JwtIssuerOptionsConfig__Audience: "https://${POD_HOSTNAME:-localhost}/"
+    volumes:
+      - letsencrypt-data:/app/certs
+      - server-data:/app/data
+      # Optional bind-mount for the dev-TLS PFX. Only used when
+      # DEV_TLS_PFX_PATH=/app/dev-tls/server.pfx (matching the mount target).
+      - ./_Certificates/dev-tls:/app/dev-tls:ro
+    healthcheck:
+      # When LETSENCRYPT_ENABLED=true the in-container server has both :80 and :443;
+      # we probe :80 either way because the ACME challenge endpoint is mounted there
+      # and the redirector for the rest of the surface is fine for a liveness probe.
+      test: ["CMD", "curl", "-fS", "http://localhost/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 60s
+
+  operator:
+    # Minimal admin reference web UI (login + station list + API-key mint).
+    # nginx proxies /api/* and /swagger/* to the `server` container so the SPA
+    # and the API share an origin (no CORS).
+    #
+    # The image can be built outside compose so the Flutter SDK download
+    # (~1.5 GB) happens once on the host instead of in the image:
+    #
+    #   cd flutter_operator && flutter pub get && flutter build web --release
+    #   docker build -t pod-operator:latest -f flutter_operator/Dockerfile.prebuilt .
+    #
+    # The all-in-one `flutter_operator/Dockerfile` works too if you have
+    # outbound network to ghcr.io and ~1.5 GB to spare per rebuild.
+    build:
+      context: .
+      dockerfile: flutter_operator/Dockerfile
+    image: pod-operator:latest
+    restart: unless-stopped
+    depends_on:
+      server:
+        condition: service_healthy
+    ports:
+      - "8080:80"
+    healthcheck:
+      # use 127.0.0.1 explicitly - alpine's musl resolver may try IPv6 first for
+      # "localhost" and fail before falling back to IPv4. -T 3 caps each attempt.
+      test: ["CMD", "wget", "-qO-", "-T", "3", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  operator-mobile:
+    # Full daily-ops web app: stations list with auto-polling, per-station tabs
+    # (overview / sessions / API keys / settings), all-sessions admin view,
+    # account password change. Modern Dart-3 port of the legacy leap_play_x_app.
+    # Same nginx-+-proxy shape as the `operator` service above; different port.
+    build:
+      context: .
+      dockerfile: flutter_operator_mobile/Dockerfile
+    image: pod-operator-mobile:latest
+    restart: unless-stopped
+    depends_on:
+      server:
+        condition: service_healthy
+    ports:
+      - "8081:80"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "-T", "3", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  postgres-data:
+  letsencrypt-data:
+  server-data:

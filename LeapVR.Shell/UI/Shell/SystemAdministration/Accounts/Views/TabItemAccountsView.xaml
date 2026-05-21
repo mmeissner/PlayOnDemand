@@ -1,0 +1,23 @@
+﻿<UserControl
+    x:Class="LeapVR.Shell.UI.Shell.SystemAdministration.Accounts.Views.TabItemAccountsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:lex="http://wpflocalizeextension.codeplex.com" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:properties="clr-namespace:LeapVR.Shell.Properties"
+    d:DesignHeight="720" d:DesignWidth="1280"
+    mc:Ignorable="d">
+    <Grid Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ContentControl x:Name="PlatformAccountSelector" Grid.Row="0" Grid.Column="0" Margin="0" />
+        <ContentControl x:Name="PlatformAccountAppsViewModel" Grid.Row="1" Grid.Column="0" Margin="0" />
+        <TextBlock
+            Grid.Row="1" Grid.Column="0"
+            HorizontalAlignment="Center" VerticalAlignment="Center"
+            FontSize="{DynamicResource LoginViewsH5}"
+            Foreground="{DynamicResource ThemeMainTextColor}"
+            Text="{lex:BLoc System_Account_NoAccountSelected}"
+            TextAlignment="Center"
+            Visibility="{Binding ShowNoAccountSelected, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}" />
+    </Grid>
+</UserControl>

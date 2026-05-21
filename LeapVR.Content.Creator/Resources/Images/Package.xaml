@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <BitmapImage x:Key="Icon-Flag-Cn" UriSource="icon-flag-cn.png" />
+    <BitmapImage x:Key="Icon-Flag-Us" UriSource="icon-flag-us.png" />
+    <BitmapImage x:Key="Banner-LeapVr" UriSource="banner-leapvr.png" />
+    <BitmapImage x:Key="Icon-Logo-Green" UriSource="icon-logo-green.png" />
+    <BitmapImage x:Key="Image-Ok" UriSource="image-ok.png" />
+    <BitmapImage x:Key="Image-Error" UriSource="image-error.png" />
+
+</ResourceDictionary>

@@ -1,0 +1,77 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    SDK-style migration of LeapVR.Shell.Language. Carries the localised
+    string resx files for the kiosk + Setup wizard (lex:ResxLocalizationProvider
+    points at this assembly's `Resources` dictionary). Under the legacy csproj
+    + `dotnet msbuild`, the AL task is incomplete so culture-specific satellite
+    assemblies (en-US, zh-CN) were excluded, leaving only the neutral resx -
+    the explicit-culture lookup in WPFLocalizeExtension then displayed
+    untranslated keys ("missing translations" in the Setup wizard).
+
+    SDK-style + GenerateSatelliteAssembliesForCore=true uses Roslyn's
+    /target:library invocation to produce the satellite assemblies, side-
+    stepping the AL task entirely.
+
+    Backup at LeapVR.Shell.Language.csproj.bak.
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net471</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LeapVR.Shell.Language</RootNamespace>
+    <AssemblyName>LeapVR.Shell.Language</AssemblyName>
+    <ProjectGuid>{188B2F8A-C42B-495E-B875-6E1F1E149373}</ProjectGuid>
+    <Configurations>Debug;Release;Release_ShellClient</Configurations>
+    <Platforms>AnyCPU;x64</Platforms>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Deterministic>false</Deterministic>
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+    <!-- Build satellite assemblies via Roslyn instead of the legacy AL task. -->
+    <GenerateSatelliteAssembliesForCore>true</GenerateSatelliteAssembliesForCore>
+  </PropertyGroup>
+
+  <PropertyGroup Label="MultilingualAppToolkit">
+    <MultilingualAppToolkitVersion>4.0</MultilingualAppToolkitVersion>
+    <MultilingualFallbackLanguage>en</MultilingualFallbackLanguage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="LeapVR.Shell.Language.csproj.bak" />
+    <None Remove="LeapVR.Shell.Language.csproj.bak" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="4.5.11" />
+    <PackageReference Include="WPFLocalizeExtension" Version="3.1.2" />
+    <PackageReference Include="XAMLMarkupExtensions" Version="1.3.0" />
+    <PackageReference Include="System.Resources.Extensions" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LeapVR.Shell.Domain.Models\LeapVR.Shell.Domain.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <XliffResource Include="MultilingualResources\LeapVR.Shell.Language.en-US.xlf" />
+    <XliffResource Include="MultilingualResources\LeapVR.Shell.Language.zh-CN.xlf" />
+  </ItemGroup>
+
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.ResxResources.targets')" />
+
+</Project>

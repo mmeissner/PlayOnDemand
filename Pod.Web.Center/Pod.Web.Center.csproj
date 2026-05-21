@@ -1,0 +1,109 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <UserSecretsId>8d0f9b82-d878-4917-b968-c977fc85f9b9</UserSecretsId>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <Configurations>Debug;Release</Configurations>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Swagger\index.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- ASP.NET Core (REST + Razor Pages + gRPC server) -->
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+
+    <!-- JSON: keep Newtonsoft.Json (used by Razor + DTO converters). Modern integration. -->
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="10.0.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+
+    <!-- JWT Bearer auth (no longer in AspNetCore.App framework reference) -->
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.4" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.14.0" />
+
+    <!-- Logging -->
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.4.0" />
+
+    <!-- Swagger -->
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.7" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="10.1.7" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="10.0.1" />
+
+    <!-- Rate limiting (was vendored; use AspNetCoreRateLimit 5.x from NuGet) -->
+    <PackageReference Include="AspNetCoreRateLimit" Version="5.0.0" />
+
+    <!-- gRPC server (provides AddGrpc / MapGrpcService) -->
+    <PackageReference Include="Grpc.AspNetCore" Version="2.66.0" />
+
+    <!-- /health endpoint backed by EF DbContext connectivity probe -->
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="10.0.4" />
+
+    <!-- Required by `dotnet ef` when this project is the startup -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pod.Data.Models\Pod.Data.Models.csproj" />
+    <ProjectReference Include="..\Pod.Data\Pod.Data.csproj" />
+    <ProjectReference Include="..\Pod.DtoModels\Pod.DtoModels.csproj" />
+    <ProjectReference Include="..\Pod.Grpc.ConnectHost.Server\Pod.Grpc.ConnectHost.Server.csproj" />
+    <ProjectReference Include="..\Pod.Grpc.ShellHost.Server\Pod.Grpc.ShellHost.Server.csproj" />
+    <ProjectReference Include="..\Pod.LetsEncrypt\Pod.LetsEncrypt.csproj" />
+    <ProjectReference Include="..\Pod.Web.Authentication.ApiKeySecret\Pod.Web.Authentication.ApiKeySecret.csproj" />
+    <!-- AspNetCoreRateLimit project reference removed (now NuGet, see PackageReference above) -->
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\Account\" />
+    <Folder Include="Pages\Shared\" />
+    <Folder Include="ssl_credentials\" />
+    <Folder Include="wwwroot\lib\" />
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\_Certificates\ssl create\ca.crt" Link="ssl_credentials\ca.crt" Condition="Exists('..\_Certificates\ssl create\ca.crt')">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\_Certificates\ssl create\server.crt" Link="ssl_credentials\server.crt" Condition="Exists('..\_Certificates\ssl create\server.crt')">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\_Certificates\ssl create\server.key" Link="ssl_credentials\server.key" Condition="Exists('..\_Certificates\ssl create\server.key')">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Swagger\index.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="nlog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\swagger-ui\custom.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\swagger-ui\favicon-16x16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\swagger-ui\favicon-32x32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\swagger-ui\images\leap_play_logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

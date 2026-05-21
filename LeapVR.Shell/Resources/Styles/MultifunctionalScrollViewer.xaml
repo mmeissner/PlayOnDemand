@@ -1,0 +1,165 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:usercontrols="clr-namespace:LeapVR.Shell.UI.Usercontrols">
+    <Style TargetType="{x:Type usercontrols:MultifunctionalScrollViewer}">
+        <Setter Property="EnableColumns" Value="False" />
+        <Setter Property="HorizontalVisibility" Value="Collapsed" />
+
+        <Setter Property="ScrollUpButtonTemplate">
+            <Setter.Value>
+                <ControlTemplate TargetType="RepeatButton">
+                    <Button Content="Up" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="ScrollDownButtonTemplate">
+            <Setter.Value>
+                <ControlTemplate TargetType="RepeatButton">
+                    <Button Content="Down" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="ScrollLeftButtonTemplate">
+            <Setter.Value>
+                <ControlTemplate TargetType="RepeatButton">
+                    <Button Content="Left" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="ScrollRightButtonTemplate">
+            <Setter.Value>
+                <ControlTemplate TargetType="RepeatButton">
+                    <Button Content="Right" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="ScrollUpButtonContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock><![CDATA[^]]></TextBlock>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ScrollDownButtonContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock><![CDATA[v]]></TextBlock>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ScrollLeftButtonContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock><![CDATA[<]]></TextBlock>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ScrollRightButtonContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock><![CDATA[>]]></TextBlock>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type usercontrols:MultifunctionalScrollViewer}">
+                    <Grid x:Name="Grid" Background="{TemplateBinding Background}">
+                        <Grid.Resources>
+                            <!--<converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"></converters:BoolToVisibilityConverter>
+                            <converters:VisibilityToBoolConverter x:Key="VisibilityToBoolConverter"></converters:VisibilityToBoolConverter>-->
+                        </Grid.Resources>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <RepeatButton
+                            x:Name="PART_ScrollUpButton"
+                            Grid.Row="0" Grid.Column="1"
+                            Padding="0,5,0,5"
+                            Command="{x:Static ScrollBar.LineUpCommand}"
+                            ContentTemplate="{TemplateBinding ScrollUpButtonContentTemplate}"
+                            IsEnabled="{TemplateBinding ComputedVerticalScrollBarVisibility,
+                                                        Converter={StaticResource VisibilityToBoolConverter}}"
+                            Template="{TemplateBinding ScrollUpButtonTemplate}"
+                            Visibility="{TemplateBinding VerticalVisibility}" />
+
+                        <RepeatButton
+                            x:Name="PART_ScrollDownButton"
+                            Grid.Row="2" Grid.Column="1"
+                            Padding="0,5,0,5"
+                            Command="{x:Static ScrollBar.LineDownCommand}"
+                            ContentTemplate="{TemplateBinding ScrollDownButtonContentTemplate}"
+                            IsEnabled="{TemplateBinding ComputedVerticalScrollBarVisibility,
+                                                        Converter={StaticResource VisibilityToBoolConverter}}"
+                            Template="{TemplateBinding ScrollDownButtonTemplate}"
+                            Visibility="{TemplateBinding VerticalVisibility}" />
+
+                        <RepeatButton
+                            x:Name="PART_ScrollLeftButton"
+                            Grid.Row="1" Grid.Column="0"
+                            Padding="5,0,5,0"
+                            Command="{x:Static ScrollBar.LineLeftCommand}"
+                            ContentTemplate="{TemplateBinding ScrollLeftButtonContentTemplate}"
+                            IsEnabled="{TemplateBinding ComputedHorizontalScrollBarVisibility,
+                                                        Converter={StaticResource VisibilityToBoolConverter}}"
+                            Template="{TemplateBinding ScrollLeftButtonTemplate}"
+                            Visibility="{TemplateBinding HorizontalVisibility}" />
+
+                        <RepeatButton
+                            x:Name="PART_ScrollRightButton"
+                            Grid.Row="1" Grid.Column="2"
+                            Padding="5,0,5,0"
+                            Command="{x:Static ScrollBar.LineRightCommand}"
+                            ContentTemplate="{TemplateBinding ScrollRightButtonContentTemplate}"
+                            IsEnabled="{TemplateBinding ComputedHorizontalScrollBarVisibility,
+                                                        Converter={StaticResource VisibilityToBoolConverter}}"
+                            Template="{TemplateBinding ScrollRightButtonTemplate}"
+                            Visibility="{TemplateBinding HorizontalVisibility}" />
+
+                        <DockPanel Grid.Row="1" Grid.Column="1" Margin="{TemplateBinding Padding}">
+                            <ScrollViewer
+                                DockPanel.Dock="Top" Focusable="False" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"
+                                Visibility="{TemplateBinding EnableColumns,
+                                                             Converter={StaticResource BoolToVisibilityConverter}}">
+                                <GridViewHeaderRowPresenter
+                                    Margin="2,0"
+                                    AllowsColumnReorder="{Binding TemplatedParent.View.AllowsColumnReorder, RelativeSource={RelativeSource TemplatedParent}}"
+                                    ColumnHeaderContainerStyle="{Binding TemplatedParent.View.ColumnHeaderContainerStyle, RelativeSource={RelativeSource TemplatedParent}}"
+                                    ColumnHeaderContextMenu="{Binding TemplatedParent.View.ColumnHeaderContextMenu, RelativeSource={RelativeSource TemplatedParent}}"
+                                    ColumnHeaderTemplate="{Binding TemplatedParent.View.ColumnHeaderTemplate, RelativeSource={RelativeSource TemplatedParent}}"
+                                    ColumnHeaderToolTip="{Binding TemplatedParent.View.ColumnHeaderToolTip, RelativeSource={RelativeSource TemplatedParent}}"
+                                    Columns="{Binding TemplatedParent.View.Columns, RelativeSource={RelativeSource TemplatedParent}}"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                            </ScrollViewer>
+                            <ScrollContentPresenter
+                                x:Name="PART_ScrollContentPresenter"
+                                CanContentScroll="{TemplateBinding CanContentScroll}"
+                                CanHorizontallyScroll="False" CanVerticallyScroll="False"
+                                Content="{TemplateBinding Content}"
+                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                DockPanel.Dock="Top" KeyboardNavigation.DirectionalNavigation="Local"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        </DockPanel>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" Value="Transparent" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,48 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib" xmlns:usercontrols="clr-namespace:LeapVR.Shell.UI.Usercontrols">
+
+    <system:Double x:Key="GuardViewsH1">72</system:Double>
+    <system:Double x:Key="GuardViewsH2">60</system:Double>
+    <system:Double x:Key="GuardViewsH3">48</system:Double>
+    <system:Double x:Key="GuardViewsH4">36</system:Double>
+    <system:Double x:Key="GuardViewsH5">28</system:Double>
+    <system:Double x:Key="GuardViewsH6">20</system:Double>
+
+    <!--  color for normal state color  -->
+    <SolidColorBrush x:Key="GuardViewsPrimaryForegroundColor" Color="White" />
+    <SolidColorBrush x:Key="GuardViewsPrimaryBackgroundColor" Color="Transparent" />
+    <SolidColorBrush x:Key="GuardViewsPrimaryBorderColor" Color="White" />
+
+    <!--  color for hover state color  -->
+    <SolidColorBrush x:Key="GuardViewsHoverForegroundColor" Color="Black" />
+    <SolidColorBrush x:Key="GuardViewsHoverBackgroundColor" Color="White" />
+    <SolidColorBrush x:Key="GuardViewsHoverBorderColor" Color="Black" />
+
+    <!--  color for pressed state color  -->
+    <SolidColorBrush x:Key="GuardViewsPressedForegroundColor" Color="Black" />
+    <SolidColorBrush x:Key="GuardViewsPressedBackgroundColor" Color="Gray" />
+    <SolidColorBrush x:Key="GuardViewsPressedBorderColor" Color="Black" />
+
+    <!--  color for disabled state color  -->
+    <SolidColorBrush x:Key="GuardViewsDisabledForegroundColor" Color="#FF999999" />
+    <SolidColorBrush x:Key="GuardViewsDisabledBackgroundColor" Color="Transparent" />
+    <SolidColorBrush x:Key="GuardViewsDisabledBorderColor" Color="#FF999999" />
+
+    <!--  color for active state color  -->
+    <SolidColorBrush x:Key="GuardViewsActiveForegroundColor" Color="White" />
+    <SolidColorBrush x:Key="GuardViewsActiveBackgroundColor" Color="Black" />
+    <SolidColorBrush x:Key="GuardViewsActiveBorderColor" Color="Black" />
+
+    <system:Double x:Key="GuardViewsButtonFontSize">48</system:Double>
+    <system:Double x:Key="GuardViewsButtonWidth">400</system:Double>
+    <system:Double x:Key="GuardViewsButtonHeight">100</system:Double>
+    <CornerRadius x:Key="GuardViewsButtonBorderRadius">15</CornerRadius>
+    <Thickness x:Key="GuardViewsButtonBorderThickness">5</Thickness>
+
+
+    <system:Double x:Key="SettingLikeButtonFontSize">36</system:Double>
+    <system:Double x:Key="SettingLikeButtonWidth">80</system:Double>
+    <system:Double x:Key="SettingLikeButtonHeight">80</system:Double>
+    <CornerRadius x:Key="SettingLikeButtonBorderRadius">0,15,0,15</CornerRadius>
+    <Thickness x:Key="SettingLikeButtonBorderThickness">2</Thickness>
+
+</ResourceDictionary>

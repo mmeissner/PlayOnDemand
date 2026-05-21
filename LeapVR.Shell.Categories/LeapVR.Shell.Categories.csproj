@@ -1,0 +1,85 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <!--
+    SDK-style migration of the legacy LeapVR.Shell.Categories.csproj. Carries
+    Resources/Images/Categories/Categories.xaml as a ResourceDictionary that
+    LeapVR.Shell/App.xaml loads via
+    `pack://application:,,,/LeapVR.Shell.Categories;component/Resources/Images/Categories/Categories.xaml`.
+    Under the legacy csproj, that .xaml wasn't compiled to BAML when built via
+    `dotnet build` (MSBuild 18 doesn't load the WPF target chain for legacy
+    csprojs), and the kiosk crashed at startup with
+    `System.IO.IOException: Cannot locate resource 'categories/...'`.
+    SDK-style with UseWpf=true wires MarkupCompilePass1 + PresentationBuildTasks
+    so the BAML lands in the assembly.
+
+    Backup at LeapVR.Shell.Categories.csproj.bak.
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net471</TargetFramework>
+    <OutputType>Library</OutputType>
+    <UseWpf>true</UseWpf>
+    <RootNamespace>LeapVR.Shell.Categories</RootNamespace>
+    <AssemblyName>LeapVR.Shell.Categories</AssemblyName>
+    <ProjectGuid>{8367265A-3EE7-4FB7-A8EA-27D6601572B2}</ProjectGuid>
+    <Configurations>Debug;Release;Release_ShellClient</Configurations>
+    <Platforms>AnyCPU;x64</Platforms>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Deterministic>false</Deterministic>
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+    <!-- Build satellite assemblies via Roslyn (sidesteps the AL task that's
+         incomplete under dotnet's MSBuild). -->
+    <GenerateSatelliteAssembliesForCore>true</GenerateSatelliteAssembliesForCore>
+  </PropertyGroup>
+
+  <PropertyGroup Label="MultilingualAppToolkit">
+    <MultilingualAppToolkitVersion>4.0</MultilingualAppToolkitVersion>
+    <MultilingualFallbackLanguage>en</MultilingualFallbackLanguage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="LeapVR.Shell.Categories.csproj.bak" />
+    <None Remove="LeapVR.Shell.Categories.csproj.bak" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Caliburn.Micro" Version="3.2.0" />
+    <PackageReference Include="Caliburn.Micro.Core" Version="3.2.0" />
+    <PackageReference Include="NLog" Version="4.5.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LeapVR.Shared.Lib.Wpf\LeapVR.Shared.Lib.Wpf.csproj" />
+    <ProjectReference Include="..\LeapVR.Shell.Domain.Models\LeapVR.Shell.Domain.Models.csproj" />
+  </ItemGroup>
+
+  <!-- The neutral Resource.resx is always included. Culture-specific variants
+       generate satellite assemblies via the AL task, which is incomplete in
+       dotnet's MSBuild (MSB4063/MSB4064 on ToolPath/ToolExe). Gate them to
+       non-Core runtimes; full MSBuild from VS 2022 17.15+ processes them
+       unconditionally. -->
+  <ItemGroup>
+    <EmbeddedResource Update="Resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <XliffResource Include="MultilingualResources\LeapVR.Shell.Categories.en-US.xlf" />
+    <XliffResource Include="MultilingualResources\LeapVR.Shell.Categories.zh-CN.xlf" />
+  </ItemGroup>
+
+  <!-- Pre-serialized resx writer at runtime. PackageReference (SDK-style)
+       brings the DLL into the consumer's output dir; Reference-HintPath under
+       legacy packages.config didn't. -->
+  <ItemGroup>
+    <PackageReference Include="System.Resources.Extensions" Version="9.0.0" />
+  </ItemGroup>
+
+  <Import Project="MsBuildAL1073WarningWorkaround.targets" Condition="Exists('MsBuildAL1073WarningWorkaround.targets')" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.ResxResources.targets')" />
+
+</Project>

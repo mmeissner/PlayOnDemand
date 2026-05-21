@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Colors.xaml" />
+        <ResourceDictionary Source="TextSizes.xaml" />
+        <ResourceDictionary Source="GuardViewsTheming.xaml" />
+        <ResourceDictionary Source="SessionViewsTheming.xaml" />
+        <ResourceDictionary Source="LoginViewsTheming.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

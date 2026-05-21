@@ -1,0 +1,57 @@
+﻿#region Licence
+/****************************************************************
+ *  Filename: OwnedGamesResultContainer.cs
+ *  ----------------------------------------------------------
+ *  Author        Martin Meissner
+ *  Date          2026-05-19
+ *  Copyright (c) 2026 Martin Meissner.
+ *                Released under the Apache License 2.0 as part of
+ *                the open-source PlayOnDemand release.
+ *
+ *  SPDX-License-Identifier: Apache-2.0
+ ****************************************************************/
+#endregion
+using Newtonsoft.Json;
+using System.Collections.Generic;
+
+namespace SteamWebAPI2.Models.SteamPlayer
+{
+    internal class OwnedGame
+    {
+        [JsonProperty("appid")]
+        public int AppId { get; set; }
+
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        [JsonProperty("playtime_forever")]
+        public int PlaytimeForever { get; set; }
+
+        [JsonProperty("img_icon_url")]
+        public string ImgIconUrl { get; set; }
+
+        [JsonProperty("img_logo_url")]
+        public string ImgLogoUrl { get; set; }
+
+        [JsonProperty("has_community_visible_stats")]
+        public bool HasCommunityVisibleStats { get; set; }
+
+        [JsonProperty("playtime_2weeks")]
+        public int? Playtime2weeks { get; set; }
+    }
+
+    internal class OwnedGamesResult
+    {
+        [JsonProperty("game_count")]
+        public int GameCount { get; set; }
+
+        [JsonProperty("games")]
+        public IList<OwnedGame> OwnedGames { get; set; }
+    }
+
+    internal class OwnedGamesResultContainer
+    {
+        [JsonProperty("response")]
+        public OwnedGamesResult Result { get; set; }
+    }
+}

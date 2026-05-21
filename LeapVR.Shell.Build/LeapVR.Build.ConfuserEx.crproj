@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://confuser.codeplex.com" seed="SeedsAreForGrowthAndNotForProtectionOf010101" outputDir="..\Obfuscation_Temp" baseDir="Obfuscation_Input" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ConfuserPrj.xsd">
+	<!-- Often used option [assembly: Obfuscation(Exclude = false, Feature = "preset(none);ctrl flow;+constants;+rename(mode=decodable,flatten=false,renPublic=true,renPdb=true)")] -->
+	<!-- Basic Rule that all other will inherit -->
+	<rule pattern="true" preset="none">
+		<protection id="rename">
+			<argument name="mode" value="decodable" />
+			<argument name="flatten" value="false" />
+			<argument name="renPdb" value="true" />
+			<argument name="renPublic" value="true" />
+			<argument name="renXaml" value="false" />
+		</protection>
+		<protection id="ctrl flow">
+			<argument name="type" value="switch" />
+			<argument name="predicate" value="expression" />
+			<argument name="intensity" value="60" />
+			<argument name="depth" value="8" />
+			<argument name="junk" value="false" />
+		</protection>
+			<protection id="ref proxy">
+			<argument name="mode" value="mild" />
+			<argument name="encoding" value="normal" />
+			<argument name="depth" value="8" />
+			<argument name="internal" value="false" />
+			<argument name="typeErasure" value="false" />
+		</protection>
+		<!--protection id="anti debug" action="remove"/>
+		<protection id="anti dump" action="remove"/>
+		<protection id="anti tamper" action="remove"/>
+		<protection id="constants" action="remove"/>
+		<protection id="ctrl flow" action="remove"/>
+		<protection id="invalid metadata" action="remove"/>
+		<protection id="rename" action="remove">
+			<argument name="renXaml" value="false"/>
+		</protection>
+		<protection id="ref proxy" action="remove"/>
+		<protection id="resources" action="remove"/>
+		<protection id="typescramble" action="remove"/-->
+	</rule>
+
+	<!-- Protected Modules -->
+	<module path="LeapVR.Utilities.Windows.dll">
+		<rule inherit="true" pattern="true"/>
+	</module>
+
+	<module path="LeapVR.Utilities.Steam.dll">
+		<rule inherit="true" pattern="true"/>
+	</module>
+
+	<module path="LeapVR.Shell.Modules.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename">
+			<argument name="mode" value="decodable" />
+			<argument name="flatten" value="false" />
+			<argument name="renPdb" value="true" />
+			<argument name="renPublic" value="false" />
+			<argument name="renXaml" value="false" />
+		</protection>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+
+	<module path="LeapVR.Shell.Managers.dll">
+		<rule inherit="true" pattern="true"/>
+	</module>
+
+	<module path="LeapVR.Shell.Controllers.dll">
+		<rule inherit="true" pattern="true"/>
+	</module>
+
+	<module path="LeapVR.Shared.Lib.Wpf.dll">
+		<rule inherit="true" pattern="true"/>
+	</module>
+
+	<module path="LeapVR.Shared.Lib.Win.dll">
+		<rule inherit="true" pattern="true"/>
+	</module>
+
+	<module path="LeapVR.OpenVR.Wrapper.dll">
+		<rule inherit="true" pattern="true"/>
+	</module>
+
+	<module path="LeapVR.Content.Util.dll">
+		<rule inherit="true" pattern="true"/>
+	</module>
+
+	<module path="LeapVR.Content.Creator.Logic.dll">
+		<rule inherit="true" pattern="true"/>
+	</module>
+
+	<!-- Modules without Protection -->
+	<module path="LeapPlay.Content.Creator.exe">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+	<module path="LeapVR.Shell.Services.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+	
+	<module path="LeapVR.Content.Shared.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+	
+	<module path="LeapVR.Shell.Repository.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+
+	<module path="LeapVR.Shell.Repository.Interfaces.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+
+	<module path="LeapVR.Shell.Modules.Interfaces.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+
+	<module path="LeapVR.Shell.Language.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+
+	<module path="LeapPlay.Shell.exe">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+
+	<module path="LeapVR.Shell.Domain.Models.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+
+	<module path="LeapVR.Shell.Setup.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+
+	<module path="LeapVR.Shell.Categories.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+	
+	<module path="Pod.Grpc.Utilities.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+
+	<module path="Pod.Grpc.Messages.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+
+	<module path="Pod.Grpc.Base.Const.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+	
+	<module path="Pod.Grpc.Base.Client.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+	
+	<module path="Pod.Enums.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+	
+	<module path="Pod.Data.Infrastructure.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+	
+	<module path="LeapVR.Content.Creator.Language.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+
+	<module path="en-US\LeapVR.Shell.Language.resources.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+
+	<module path="en-US\LeapVR.Content.Creator.Language.resources.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+
+	<module path="en-US\LeapVR.Shell.Categories.resources.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+
+	<module path="zh-CN\LeapVR.Shell.Language.resources.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+
+	<module path="zh-CN\LeapVR.Content.Creator.Language.resources.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+
+	<module path="zh-CN\LeapVR.Shell.Categories.resources.dll">
+		<rule inherit="true" pattern="true">
+			<protection id="rename" action="remove"/>
+			<protection id="ctrl flow" action="remove"/>
+			<protection id="ref proxy" action="remove"/>
+		</rule>
+	</module>
+
+
+	<probePath>..\..\..\packages\System.Interactive.Async.3.1.1\lib\net46</probePath>
+	<probePath>..\..\..\packages\System.Interactive.Async.3.2.0\lib\net46</probePath>
+	<probePath>..\..\..\packages\Newtonsoft.Json.11.0.2\lib\net45</probePath>
+	<probePath>..\..\..\packages\Newtonsoft.Json.12.0.2\lib\net45</probePath>
+	<probePath>..\..\..\packages\Newtonsoft.Json.12.0.2\lib\netstandard2.0</probePath>
+	<probePath>..\..\..\packages\LiteDB.4.1.2\lib\net40</probePath>
+	<probePath>.\</probePath>
+</project>

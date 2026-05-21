@@ -1,0 +1,9 @@
+﻿Hey %Username%,
+sorry if you did not receive the previous email! This link let you verify your e-mail:
+%EMailVerificationTokenLink%
+
+In case you like to use our API to verify your e-mail, here the email verification token:
+%EMailVerificationToken%
+
+Please ignore this email if the request was not send by you!
+Hope that helped!

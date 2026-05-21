@@ -1,0 +1,15 @@
+# syntax=docker/dockerfile:1.7
+#
+# Offline-friendly nginx-only image. Assumes you have ALREADY run
+# `flutter build web --release` on the host and the static output is at
+# flutter_operator/build/web/. This is what you want when ghcr.io is
+# unreachable or you don't want a 1.5 GB Flutter SDK download per build.
+#
+# Build:
+#   cd flutter_operator && flutter pub get && flutter build web --release
+#   docker build -t pod-operator:latest -f flutter_operator/Dockerfile.prebuilt .
+
+FROM nginx:1.27-alpine
+COPY flutter_operator/build/web /usr/share/nginx/html
+COPY flutter_operator/nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 80

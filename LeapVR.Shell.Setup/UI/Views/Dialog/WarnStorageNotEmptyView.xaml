@@ -1,0 +1,43 @@
+﻿<UserControl
+    x:Class="LeapVR.Shell.Setup.UI.Views.Dialog.WarnStorageNotEmptyView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:lex="http://wpflocalizeextension.codeplex.com" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="300" d:DesignWidth="400"
+    mc:Ignorable="d">
+    <GroupBox
+        Width="350"
+        Margin="16"
+        materialDesign:ColorZoneAssist.Mode="PrimaryDark"
+        Header="{lex:Loc Config_Dialog_HeaderInfo}"
+        Style="{DynamicResource MaterialDesignGroupBox}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <TextBlock
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                FontSize="17"
+                Text="{lex:Loc Config_Dialog_StorageUseEmptyRecommend}"
+                TextAlignment="Center" TextWrapping="Wrap">
+                <TextBlock.Effect>
+                    <DropShadowEffect BlurRadius="8" ShadowDepth="3" />
+                </TextBlock.Effect>
+            </TextBlock>
+            <UniformGrid Grid.Row="1" Columns="2">
+                <Button
+                    x:Name="Understand"
+                    Margin="10"
+                    Content="{lex:Loc Config_Dialog_Understood}"
+                    IsDefault="True"
+                    Style="{StaticResource MaterialDesignRaisedButton}" />
+                <Button
+                    x:Name="Cancel"
+                    Margin="10"
+                    Content="{lex:Loc Config_Dialog_Cancel}"
+                    IsCancel="True"
+                    Style="{StaticResource MaterialDesignFlatButton}" />
+            </UniformGrid>
+        </Grid>
+    </GroupBox>
+</UserControl>

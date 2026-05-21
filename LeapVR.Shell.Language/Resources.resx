@@ -1,0 +1,1114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Global_Category_Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="Global_Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="Global_Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Global_Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Global_ProductName" xml:space="preserve">
+    <value>VrBox</value>
+  </data>
+  <data name="Global_SwitchSkin" xml:space="preserve">
+    <value>Switch Skin</value>
+  </data>
+  <data name="Global_SystemAdministration" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Shell_InstallationBlocking_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Shell_InstallationBlocking_InstallationFailed" xml:space="preserve">
+    <value>Installation failed, please try again. If it doesn't help, restart the machine.</value>
+  </data>
+  <data name="Shell_InstallationBlocking_Installing" xml:space="preserve">
+    <value>Installing</value>
+  </data>
+  <data name="Shell_InstallationBlocking_UninstallationFailed" xml:space="preserve">
+    <value>Uninstallation completed, please restart the machine.</value>
+  </data>
+  <data name="Shell_InstallationBlocking_Uninstalling" xml:space="preserve">
+    <value>Uninstalling</value>
+  </data>
+  <data name="System_Apps_Management" xml:space="preserve">
+    <value>Management</value>
+  </data>
+  <data name="System_Apps" xml:space="preserve">
+    <value>Apps</value>
+  </data>
+  <data name="System_Exit" xml:space="preserve">
+    <value>Exit Application</value>
+  </data>
+  <data name="System_Exit_DoYouReallyWantToExit" xml:space="preserve">
+    <value>Do you really want to Exit?</value>
+  </data>
+  <data name="System_Exit_ExitNow" xml:space="preserve">
+    <value>Exit Now</value>
+  </data>
+  <data name="System_Hardware" xml:space="preserve">
+    <value>Hardware</value>
+  </data>
+  <data name="System_Hardware_Applications" xml:space="preserve">
+    <value>Applications</value>
+  </data>
+  <data name="System_Hardware_CPU" xml:space="preserve">
+    <value>CPU</value>
+  </data>
+  <data name="System_Hardware_FreeSpace" xml:space="preserve">
+    <value>Free Space</value>
+  </data>
+  <data name="System_Hardware_RAM" xml:space="preserve">
+    <value>RAM</value>
+  </data>
+  <data name="System_Hardware_SoftwareVersion" xml:space="preserve">
+    <value>Software Version</value>
+  </data>
+  <data name="System_Hardware_SystemFiles" xml:space="preserve">
+    <value>System Files</value>
+  </data>
+  <data name="System_Hardware_Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="System_Hardware_VBoxID" xml:space="preserve">
+    <value>VBox ID</value>
+  </data>
+  <data name="System_Hardware_VBoxType" xml:space="preserve">
+    <value>VBox Type</value>
+  </data>
+  <data name="System_Hardware_VGA" xml:space="preserve">
+    <value>VGA</value>
+  </data>
+  <data name="System_InputPin" xml:space="preserve">
+    <value>Input PIN</value>
+  </data>
+  <data name="System_Installation" xml:space="preserve">
+    <value>Install/Uninstall</value>
+  </data>
+  <data name="System_Installation_FreeSpaceCalculating" xml:space="preserve">
+    <value>Free Space Calculating...</value>
+  </data>
+  <data name="System_Installation_Install" xml:space="preserve">
+    <value>Install</value>
+  </data>
+  <data name="System_Installation_NoApplications" xml:space="preserve">
+    <value>No Applications</value>
+  </data>
+  <data name="System_Installation_NoFiles" xml:space="preserve">
+    <value>No Files</value>
+  </data>
+  <data name="System_Installation_NoUsbDrive" xml:space="preserve">
+    <value>No USB Drive</value>
+  </data>
+  <data name="System_Installation_SpaceFree" xml:space="preserve">
+    <value>Space Free</value>
+  </data>
+  <data name="System_Installation_Uninstall" xml:space="preserve">
+    <value>Uninstall</value>
+  </data>
+  <data name="System_InvalidPin" xml:space="preserve">
+    <value>Invalid PIN</value>
+  </data>
+  <data name="System_Poweroff" xml:space="preserve">
+    <value>Power Off</value>
+  </data>
+  <data name="System_Poweroff_DoYouReallyWantToPoweroff" xml:space="preserve">
+    <value>Do you really want to Power Off?</value>
+  </data>
+  <data name="System_Poweroff_PoweroffNow" xml:space="preserve">
+    <value>Power Off Now</value>
+  </data>
+  <data name="System_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="System_Settings_Security" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="System_Settings_Security_EnterNewPin" xml:space="preserve">
+    <value>Please enter new PIN</value>
+  </data>
+  <data name="System_Settings_Security_EnterNewPinAgain" xml:space="preserve">
+    <value>Please enter new PIN again</value>
+  </data>
+  <data name="System_Settings_Security_EnterOldPin" xml:space="preserve">
+    <value>Please enter old PIN</value>
+  </data>
+  <data name="System_Settings_Security_FailedToVerifyOldPin" xml:space="preserve">
+    <value>Incorrect PIN, please try again</value>
+  </data>
+  <data name="System_Settings_Security_PinChangeSuccessful" xml:space="preserve">
+    <value>PIN change successful</value>
+  </data>
+  <data name="System_Settings_Security_PinNotEqual" xml:space="preserve">
+    <value>New PIN doesn't match</value>
+  </data>
+  <data name="System_Statistics" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="System_Statistics_Applications" xml:space="preserve">
+    <value>Applications</value>
+  </data>
+  <data name="System_Statistics_Applications_Columns_LastTimePlayed" xml:space="preserve">
+    <value>Last Time Played</value>
+  </data>
+  <data name="System_Statistics_Applications_Columns_LongestSession" xml:space="preserve">
+    <value>Longest Session</value>
+  </data>
+  <data name="System_Statistics_Applications_Columns_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="System_Statistics_Applications_Columns_Number" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="System_Statistics_Applications_Columns_TimesPlayed" xml:space="preserve">
+    <value>Times Played</value>
+  </data>
+  <data name="System_Statistics_Applications_Columns_TotalRuntime" xml:space="preserve">
+    <value>Total Runtime</value>
+  </data>
+  <data name="System_Statistics_Applications_Count" xml:space="preserve">
+    <value>Applications with Statistics</value>
+  </data>
+  <data name="System_Statistics_Applications_NoData" xml:space="preserve">
+    <value>No Data</value>
+  </data>
+  <data name="System_Statistics_Applications_ResetApplicationsStatistics" xml:space="preserve">
+    <value>Reset Game Statistics</value>
+  </data>
+  <data name="System_Statistics_Global" xml:space="preserve">
+    <value>Global</value>
+  </data>
+  <data name="System_Statistics_Global_Hours" xml:space="preserve">
+    <value>Hours</value>
+  </data>
+  <data name="System_Statistics_Global_LongestGameSession" xml:space="preserve">
+    <value>Longest Game Session</value>
+  </data>
+  <data name="System_Statistics_Global_LongestPlayedGame" xml:space="preserve">
+    <value>Longest Played Game</value>
+  </data>
+  <data name="System_Statistics_Global_Minutes" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
+  <data name="System_Statistics_Global_MostPlayedGame" xml:space="preserve">
+    <value>Most Played Game</value>
+  </data>
+  <data name="System_Statistics_Global_ResetVrBoxStatistics" xml:space="preserve">
+    <value>Reset VR Box Statistics</value>
+  </data>
+  <data name="System_Statistics_Global_Seconds" xml:space="preserve">
+    <value>Seconds</value>
+  </data>
+  <data name="System_Statistics_Global_Times" xml:space="preserve">
+    <value>Times</value>
+  </data>
+  <data name="System_Statistics_Global_TotalRuntime" xml:space="preserve">
+    <value>Total Runtime</value>
+  </data>
+  <data name="System_Statistics_NoData" xml:space="preserve">
+    <value>No Data</value>
+  </data>
+  <data name="Global_Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="System_Logout_DoYouReallyWantToLogout" xml:space="preserve">
+    <value>Do you really want to Logout?</value>
+  </data>
+  <data name="System_Logout_LogoutNow" xml:space="preserve">
+    <value>Logout Now</value>
+  </data>
+  <data name="Global_Categories" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="Shell_Enjoy" xml:space="preserve">
+    <value>Login Succeeded, Enjoy!</value>
+  </data>
+  <data name="Shell_PleaseInsertYourMembershipCard" xml:space="preserve">
+    <value>Please Insert Your Membership Card</value>
+  </data>
+  <data name="Global_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Session_CurrencyUnit" xml:space="preserve">
+    <value>point(s)</value>
+  </data>
+  <data name="Session_RateUnit" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="Session_StationCost" xml:space="preserve">
+    <value>Station Cost</value>
+  </data>
+  <data name="Global_LoginTips_IntentionExpired" xml:space="preserve">
+    <value>Login request exipred, please try again.</value>
+  </data>
+  <data name="Global_LoginTips_NotEnoughBalance" xml:space="preserve">
+    <value>Not enough balance, please top up and try again.</value>
+  </data>
+  <data name="Global_LoginTips_SessionRateChanged" xml:space="preserve">
+    <value>Session rate has already changed, please cancel and try again.</value>
+  </data>
+  <data name="Global_LoginTips_StationHaveRunningSession" xml:space="preserve">
+    <value>Sorry, there's already a running session in this station.</value>
+  </data>
+  <data name="Exceptions_UnknownError" xml:space="preserve">
+    <value>Unknown error, please try again later.</value>
+  </data>
+  <data name="Global_LoginTips_UserHaveRunningSession" xml:space="preserve">
+    <value>Sorry, you're in session somewhere else.</value>
+  </data>
+  <data name="Global_Session_YouPaid" xml:space="preserve">
+    <value>Spent</value>
+  </data>
+  <data name="Global_Session_YouPlayed" xml:space="preserve">
+    <value>Played</value>
+  </data>
+  <data name="Global_Session_YourBalance" xml:space="preserve">
+    <value>Balance</value>
+  </data>
+  <data name="Global_Unit_Sec" xml:space="preserve">
+    <value>second(s)</value>
+  </data>
+  <data name="Session_TimeRemaining" xml:space="preserve">
+    <value>Remaining</value>
+  </data>
+  <data name="System_EnterPin" xml:space="preserve">
+    <value>Enter Pin to access system management</value>
+  </data>
+  <data name="Global_LoginTips_UnknownNetworkProblem" xml:space="preserve">
+    <value>Unknown network problem.</value>
+  </data>
+  <data name="Global_LoginTips_LocalNetworkProblem" xml:space="preserve">
+    <value>Not Connected To Server.</value>
+  </data>
+  <data name="Global_LoginTips_QrCodeGenerationProblem" xml:space="preserve">
+    <value>Can not generate QR code.</value>
+  </data>
+  <data name="Global_LoginTips_RemoteServerProblem" xml:space="preserve">
+    <value>Can not connect remote server.</value>
+  </data>
+  <data name="Global_SecondsToPrepare" xml:space="preserve">
+    <value>Auto cancel in</value>
+  </data>
+  <data name="Global_Unit_Hour" xml:space="preserve">
+    <value>hour(s)</value>
+  </data>
+  <data name="Global_Unit_Min" xml:space="preserve">
+    <value>minute(s)</value>
+  </data>
+  <data name="Global_LoginTips_UserBlocked" xml:space="preserve">
+    <value>Your Account is blocked.</value>
+  </data>
+  <data name="Global_LoginTips_UserNotActive" xml:space="preserve">
+    <value>Sorry, you are not a member yet. Please finish the Registration</value>
+  </data>
+  <data name="System_Updates" xml:space="preserve">
+    <value>Updates</value>
+  </data>
+  <data name="System_Updates_Announcement_Downloading" xml:space="preserve">
+    <value>Downloading, please wait...</value>
+  </data>
+  <data name="System_Updates_Announcement_ReadyToUpdate" xml:space="preserve">
+    <value>Download complete, proceed to update?</value>
+  </data>
+  <data name="System_Updates_Announcement_UpToDate" xml:space="preserve">
+    <value>Software is already up to date</value>
+  </data>
+  <data name="System_Updates_CheckUpdates" xml:space="preserve">
+    <value>Check Updates</value>
+  </data>
+  <data name="System_Updates_CurrentVersion" xml:space="preserve">
+    <value>Current version</value>
+  </data>
+  <data name="System_Updates_DownloadUpdates" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="System_Updates_Announcement_BeforeDownloading" xml:space="preserve">
+    <value>New version available, proceed to download?</value>
+  </data>
+  <data name="System_Updates_Announcement_UnexpectedError" xml:space="preserve">
+    <value>Unexpected error occurred, please check the logs.</value>
+  </data>
+  <data name="System_Updates_PerformUpdate" xml:space="preserve">
+    <value>Update Now</value>
+  </data>
+  <data name="System_Updates_Announcement_Cancelling" xml:space="preserve">
+    <value>Cancelling, please wait...</value>
+  </data>
+  <data name="System_Updates_Announcement_CheckingNewestVersion" xml:space="preserve">
+    <value>Checking updates might take a while to complete.</value>
+  </data>
+  <data name="System_Updates_Announcement_Errored" xml:space="preserve">
+    <value>Updating process did not finish, please try it again.</value>
+  </data>
+  <data name="System_Updates_Announcement_Updated" xml:space="preserve">
+    <value>Update complete, please restart the software to apply the new version.</value>
+  </data>
+  <data name="System_Updates_Announcement_Updating" xml:space="preserve">
+    <value>Updating might take a while to complete.</value>
+  </data>
+  <data name="System_Updates_OnlineVersion" xml:space="preserve">
+    <value>Version Online</value>
+  </data>
+  <data name="System_Updates_Restart" xml:space="preserve">
+    <value>Restart</value>
+  </data>
+  <data name="System_Updates_TryAgain" xml:space="preserve">
+    <value>Try Again</value>
+  </data>
+  <data name="Global_Session_PlayForFree" xml:space="preserve">
+    <value>Play for free</value>
+  </data>
+  <data name="Session_Info_StationInactive" xml:space="preserve">
+    <value>Auto logout due to inactiveity.</value>
+  </data>
+  <data name="Session_Info_UserBlocked" xml:space="preserve">
+    <value>Auto logout due to user is blocked.</value>
+  </data>
+  <data name="Session_Info_SessionLimitReached" xml:space="preserve">
+    <value>The Session has ended.</value>
+  </data>
+  <data name="Session_Info_InternetProblems" xml:space="preserve">
+    <value>Auto logout due to internet problems.</value>
+  </data>
+  <data name="License_LicenseKey" xml:space="preserve">
+    <value>License Key</value>
+  </data>
+  <data name="System_Hardware_StationName" xml:space="preserve">
+    <value>Station Name</value>
+  </data>
+  <data name="Global_Unset" xml:space="preserve">
+    <value>Unset</value>
+  </data>
+  <data name="License_Inactive" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="Exceptions_VersionOutOfDate" xml:space="preserve">
+    <value>Software is out of date, please update to the latest version.</value>
+  </data>
+  <data name="Exceptions_LicenseNotDeployed" xml:space="preserve">
+    <value>No license deployed to this station. Run the configuration.</value>
+  </data>
+  <data name="Exceptions_LicenseNotFound" xml:space="preserve">
+    <value>License is not registered in the system.</value>
+  </data>
+  <data name="Exceptions_LicenseNotLinked" xml:space="preserve">
+    <value>License is not yet linked to an Account.</value>
+  </data>
+  <data name="Exceptions_LicenseRevoked" xml:space="preserve">
+    <value>License has been revoked. Please contact the support</value>
+  </data>
+  <data name="Exceptions_LicenseSuspended" xml:space="preserve">
+    <value>License is suspended. Please contact the support</value>
+  </data>
+  <data name="Exceptions_StationRevoked" xml:space="preserve">
+    <value>Station is currently revoked.</value>
+  </data>
+  <data name="Exceptions_StationSuspended" xml:space="preserve">
+    <value>Station is currently suspended.</value>
+  </data>
+  <data name="Applications_NoAppAvailable" xml:space="preserve">
+    <value>No Application Available.</value>
+  </data>
+  <data name="Info_AutoStartStringFormat" xml:space="preserve">
+    <value>Auto start in </value>
+  </data>
+  <data name="StationMode_MixedReality" xml:space="preserve">
+    <value>MR Mode</value>
+  </data>
+  <data name="StationMode_Screen" xml:space="preserve">
+    <value>Screen Mode</value>
+  </data>
+  <data name="StationMode_VirtualReality" xml:space="preserve">
+    <value>VR Mode</value>
+  </data>
+  <data name="Global_Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="StationMode" xml:space="preserve">
+    <value>Station Mode</value>
+  </data>
+  <data name="Session_MessageBeforeLogout" xml:space="preserve">
+    <value>Do you really want to logout?</value>
+  </data>
+  <data name="Statistics_ResetConfirmationMessage" xml:space="preserve">
+    <value>Are you sure to reset statistics data?</value>
+  </data>
+  <data name="Execution_StartVrAppInScreenModeConfirmation" xml:space="preserve">
+    <value>Are you sure to start a VR application in Screen mode?</value>
+  </data>
+  <data name="Execution_StartScreenAppInVrModeConfirmation" xml:space="preserve">
+    <value>Are you sure to start a non-VR application in VR mode?</value>
+  </data>
+  <data name="Installation_InstallationComplete" xml:space="preserve">
+    <value>Installation Complete</value>
+  </data>
+  <data name="Installation_UninstallationComplete" xml:space="preserve">
+    <value>Uninstalltion Complete</value>
+  </data>
+  <data name="StationMode_CurrentMode" xml:space="preserve">
+    <value>Current Mode</value>
+  </data>
+  <data name="StationName" xml:space="preserve">
+    <value>Station Name</value>
+  </data>
+  <data name="ScanningPackages" xml:space="preserve">
+    <value>Scanning Packages</value>
+  </data>
+  <data name="ConfirmLoginIntention" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="FailedToStart_AnonymouseSessionNotAllowed" xml:space="preserve">
+    <value>Open mode is not allowed on this station. Please verify your settings.</value>
+  </data>
+  <data name="FailedToStart_StationHaveActiveLoginIntention" xml:space="preserve">
+    <value>Last login intention ended unexpectedly, please wait for the server to handle it.</value>
+  </data>
+  <data name="FailedToStart_StationHaveRunningSession" xml:space="preserve">
+    <value>There an session already running. Abandoned Sessions will end after a short while.</value>
+  </data>
+  <data name="FailedToStart_UnknwonError" xml:space="preserve">
+    <value>There is an unknown error, please try again later.</value>
+  </data>
+  <data name="StartTip_Button" xml:space="preserve">
+    <value>Click to Start</value>
+  </data>
+  <data name="StartTip_QRCode" xml:space="preserve">
+    <value>Scan the QR Code to Start</value>
+  </data>
+  <data name="SelectAppExecutionResult" xml:space="preserve">
+    <value>Select an option to start with</value>
+  </data>
+  <data name="System_HardwareId" xml:space="preserve">
+    <value>Hardware Id</value>
+  </data>
+  <data name="Global_ConnectingToService" xml:space="preserve">
+    <value>Please wait trying to connect</value>
+  </data>
+  <data name="Config_CertificateFile_Hint" xml:space="preserve">
+    <value>Certificate File</value>
+  </data>
+  <data name="Config_Close" xml:space="preserve">
+    <value>CLOSE</value>
+  </data>
+  <data name="Config_GameStoragePath_Hint" xml:space="preserve">
+    <value>Your Games Directory</value>
+  </data>
+  <data name="Config_Issuer" xml:space="preserve">
+    <value>Issuer :</value>
+  </data>
+  <data name="Config_License" xml:space="preserve">
+    <value>License</value>
+  </data>
+  <data name="Config_LicenseID" xml:space="preserve">
+    <value>License ID :</value>
+  </data>
+  <data name="Config_LicenseSN" xml:space="preserve">
+    <value>License SN :</value>
+  </data>
+  <data name="Config_LicenseType" xml:space="preserve">
+    <value>Type :</value>
+  </data>
+  <data name="Config_Move_Next" xml:space="preserve">
+    <value>NEXT</value>
+  </data>
+  <data name="Config_Move_Previous" xml:space="preserve">
+    <value>PREVIOUS</value>
+  </data>
+  <data name="Config_PrivateKey" xml:space="preserve">
+    <value>Private Key :</value>
+  </data>
+  <data name="Config_PrivateKey_File_Hint" xml:space="preserve">
+    <value>PrivateKey File</value>
+  </data>
+  <data name="Config_Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Config_Select_Certificate_File" xml:space="preserve">
+    <value>Select License Certificate File</value>
+  </data>
+  <data name="Config_Select_GameStorage_Dir" xml:space="preserve">
+    <value>Select Games Storage Directory</value>
+  </data>
+  <data name="Config_Select_Language" xml:space="preserve">
+    <value>Select Language</value>
+  </data>
+  <data name="Config_Select_License_Files" xml:space="preserve">
+    <value>Please select your license files to continue.</value>
+  </data>
+  <data name="Config_Select_PrivateKey_File" xml:space="preserve">
+    <value>Select Private-Key File</value>
+  </data>
+  <data name="Config_Software_Setup" xml:space="preserve">
+    <value>Software Setup</value>
+  </data>
+  <data name="Culture_en_US" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Config_Autostart_with_Windows" xml:space="preserve">
+    <value>Autostart with Windows</value>
+  </data>
+  <data name="Config_Autostart_with_Windows_ToolTip" xml:space="preserve">
+    <value>Starts the Application automatically when you Login into Windows</value>
+  </data>
+  <data name="Config_FreeSpace" xml:space="preserve">
+    <value>Free Disk Space</value>
+  </data>
+  <data name="Config_Options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="Config_TotalSpace" xml:space="preserve">
+    <value>Total Disk Size</value>
+  </data>
+  <data name="Config_Select_DefaultLanguage" xml:space="preserve">
+    <value>Select Default Language</value>
+  </data>
+  <data name="Config_Change" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="Config_Disable_WER" xml:space="preserve">
+    <value>Disable Window Error Reporting</value>
+  </data>
+  <data name="Config_Disable_WER_ToolTip" xml:space="preserve">
+    <value>Disables the Windows Dialog when an Application Crashes.
+This Error Dialog can prevent the software  from detecting when an Application Ended</value>
+  </data>
+  <data name="Config_Adding_License" xml:space="preserve">
+    <value>Adding License Files</value>
+  </data>
+  <data name="Config_StartupTask_Created" xml:space="preserve">
+    <value>Startup Task Changes Applied</value>
+  </data>
+  <data name="Config_Storage_Updated" xml:space="preserve">
+    <value>Game Storage Values Updated</value>
+  </data>
+  <data name="Config_WER_Updated" xml:space="preserve">
+    <value>Windows Error Reporting Updated</value>
+  </data>
+  <data name="Config_AddStorageToDefenderExclusion" xml:space="preserve">
+    <value>Exclude Storage from Win Defender </value>
+  </data>
+  <data name="Config_ExcludingStorageFromWD" xml:space="preserve">
+    <value>Change of Windows Defender Excluded Folders</value>
+  </data>
+  <data name="Config_ExcludingStorageFromWD_Hint" xml:space="preserve">
+    <value>Changes the Windows Defender Exclusion Settings for the Storage Folder.
+This can prevent game corruption in case of false positives from WD,
+but also expose the System to a higer risk of infections.</value>
+  </data>
+  <data name="Config_Select_DefaultLanguage_Hint" xml:space="preserve">
+    <value>The Language that is selected when the Software starts or it reverts after a Logout.</value>
+  </data>
+  <data name="Application_Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="Application_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Application_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Application_Edit_Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="Application_Edit_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Config_Activate_License" xml:space="preserve">
+    <value>Activate your License</value>
+  </data>
+  <data name="Config_Register_AddLicenseToAccount" xml:space="preserve">
+    <value>Add License to your Account</value>
+  </data>
+  <data name="Config_Register_AddLicenseToAccount_Text" xml:space="preserve">
+    <value>Fill out the Form and Enter your License Key for Activation</value>
+  </data>
+  <data name="Config_Register_Done" xml:space="preserve">
+    <value>All Done! Ready to Play!</value>
+  </data>
+  <data name="Config_Register_Done_Text" xml:space="preserve">
+    <value>Learn more about Content Creation and Business Functions on our Website</value>
+  </data>
+  <data name="Config_Register_ExistingAccountBtn" xml:space="preserve">
+    <value>Existing Account</value>
+  </data>
+  <data name="Config_Register_NewAccountBtn" xml:space="preserve">
+    <value>New Account</value>
+  </data>
+  <data name="Config_Register_VisitActivationSite" xml:space="preserve">
+    <value>Visit the Activation Site</value>
+  </data>
+  <data name="Config_ReservedFreeSpace" xml:space="preserve">
+    <value>Reserved Space</value>
+  </data>
+  <data name="Shell_Menue_ExitToWindows" xml:space="preserve">
+    <value>Windows</value>
+  </data>
+  <data name="Shell_Menue_Games" xml:space="preserve">
+    <value>Games</value>
+  </data>
+  <data name="Shell_Menue_PowerOff" xml:space="preserve">
+    <value>Power Off</value>
+  </data>
+  <data name="Shell_Menue_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Business_BackgroundSplashLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Business_BackgroundSplashLeft_EN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Business_BackgroundSplashRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Business_BackgroundSplashRight_EN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="System_Platform" xml:space="preserve">
+    <value>Platform</value>
+  </data>
+  <data name="System_Platform_ConfirmDeleteAccount" xml:space="preserve">
+    <value>Are you really sure you want to delete the account?</value>
+  </data>
+  <data name="System_Platform_Account" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="System_Platform_Account_Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="System_Platform_Account_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="System_Platform_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="System_Platform_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="System_Platform_Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="System_Platform_NoPlatformAvailible" xml:space="preserve">
+    <value>No Platform availible</value>
+  </data>
+  <data name="System_Platform_SelectPlatform" xml:space="preserve">
+    <value>Select Platform</value>
+  </data>
+  <data name="System_Platform_NoPlatformSelected" xml:space="preserve">
+    <value>No Platform Selected</value>
+  </data>
+  <data name="System_Accounts" xml:space="preserve">
+    <value>Accounts</value>
+  </data>
+  <data name="System_Account_AddLicense" xml:space="preserve">
+    <value>Add License</value>
+  </data>
+  <data name="System_Account_RemoveLicense" xml:space="preserve">
+    <value>Remove License</value>
+  </data>
+  <data name="System_Application_Advance_Edit" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="System_Application_Advance_Edit_ExecutableInfo_SelectExecutable" xml:space="preserve">
+    <value>Select Exe</value>
+  </data>
+  <data name="System_Application_Advance_Edit_ExecutableInfo_SelectFolder" xml:space="preserve">
+    <value>Select Folder</value>
+  </data>
+  <data name="System_Application_Advance_Edit_ApplicationMainExecutablePath" xml:space="preserve">
+    <value>Application Main Executable Path</value>
+  </data>
+  <data name="System_Application_Advance_Edit_ExecutableParameters" xml:space="preserve">
+    <value>Executable Parameters</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Executables" xml:space="preserve">
+    <value>Executables</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Execution_Instruction" xml:space="preserve">
+    <value>Execution Instructions</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Info_ExeName" xml:space="preserve">
+    <value>A display name for one executable instruction that infers what's it about</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Info_ExeParameters" xml:space="preserve">
+    <value>Parameters that will be provided to the main executable when execution of the game is requested.</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Info_IsMainExe" xml:space="preserve">
+    <value>Indicates whether this executable is one of the executables taken into consideration to check if the application is running. Normally an application requires at least one main executable. Multiple main executables mean any of them running will the application be considered as running.</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Info_KillNotResponding" xml:space="preserve">
+    <value>Indicates whether this process should be killed when the system detects it is not responding</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Info_KillOnExit" xml:space="preserve">
+    <value>Indicates whether this process should be killed on application exit</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Info_MainExePath" xml:space="preserve">
+    <value>The path to the applixcation main executable file. Usually it is the application executable itself, for some applications requiring an external launcher this should be set the path to the launcher executable file.</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Info_RequiredVrModule" xml:space="preserve">
+    <value>Specify the corresponding vr module to match the correct graphic api.</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Info_WorkingDirectory" xml:space="preserve">
+    <value>Working directory of a specific executable. If not set, working directory will be set to the directory where the executable is</value>
+  </data>
+  <data name="System_Application_Advance_Edit_IsMainExe" xml:space="preserve">
+    <value>Is Main Executable</value>
+  </data>
+  <data name="System_Application_Advance_Edit_KillNotResponding" xml:space="preserve">
+    <value>Kill on Not Responding</value>
+  </data>
+  <data name="System_Application_Advance_Edit_KillOnExit" xml:space="preserve">
+    <value>Kill On Application Exit</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="System_Application_Advance_Edit_ProcessMonitoring" xml:space="preserve">
+    <value>Process Monitoring</value>
+  </data>
+  <data name="System_Application_Advance_Edit_SetFromExecutable" xml:space="preserve">
+    <value>Set From Exe</value>
+  </data>
+  <data name="System_Application_Advance_Edit_WatchDogOptions" xml:space="preserve">
+    <value>Watchdog Options</value>
+  </data>
+  <data name="System_Application_Advance_Edit_ExeName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="System_Application_Advance_Edit_RequiredVrModule" xml:space="preserve">
+    <value>Required VR-Module</value>
+  </data>
+  <data name="System_Application_Advance_Edit_WorkingDirectory" xml:space="preserve">
+    <value>Working Directory</value>
+  </data>
+  <data name="System_Application_Advance_Edit_ExecutableInfo_ExeFiles" xml:space="preserve">
+    <value>Exe Files</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="System_Application_Advance_Edit_Warning_NoMainExecutable" xml:space="preserve">
+    <value>None of added executables is marked as main executable, are you sure to continue?</value>
+  </data>
+  <data name="System_Installation_SelectVBoxFile" xml:space="preserve">
+    <value>Select VBox File</value>
+  </data>
+  <data name="System_Installation_VBoxFile" xml:space="preserve">
+    <value>VBox Files</value>
+  </data>
+  <data name="System_Installation_Install_Failed" xml:space="preserve">
+    <value>Installation failed with Status:</value>
+  </data>
+  <data name="System_Installation_Install_OnlyVBoxFiles" xml:space="preserve">
+    <value>This file is not a VBox File!</value>
+  </data>
+  <data name="PlatformState_ApplicationRunning" xml:space="preserve">
+    <value>Application Running</value>
+  </data>
+  <data name="PlatformState_ApplicationUpdateRequired" xml:space="preserve">
+    <value>Application Requires Update!</value>
+  </data>
+  <data name="PlatformState_Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="PlatformState_LoggingIn" xml:space="preserve">
+    <value>User Login on Client</value>
+  </data>
+  <data name="PlatformState_LoggingOut" xml:space="preserve">
+    <value>User Logout on Client</value>
+  </data>
+  <data name="PlatformState_StartingApplication" xml:space="preserve">
+    <value>Starting Application</value>
+  </data>
+  <data name="PlatformState_StartingApplicationError" xml:space="preserve">
+    <value>Error during Application Start!</value>
+  </data>
+  <data name="PlatformState_StartingClient" xml:space="preserve">
+    <value>Starting Client</value>
+  </data>
+  <data name="PlatformState_StartingClientError" xml:space="preserve">
+    <value>Error during Client Start!</value>
+  </data>
+  <data name="PlatformState_StoppingClient" xml:space="preserve">
+    <value>Exiting Client</value>
+  </data>
+  <data name="PlatformState_Unavailible" xml:space="preserve">
+    <value>Waiting for State</value>
+  </data>
+  <data name="PlatformState_UpdatingApplication" xml:space="preserve">
+    <value>Updating Application</value>
+  </data>
+  <data name="PlatformState_UpdatingClient" xml:space="preserve">
+    <value>Updating Client</value>
+  </data>
+  <data name="StationMode_ForceRestartVrDriver" xml:space="preserve">
+    <value>Restart Vr Driver after each App</value>
+  </data>
+  <data name="System_Multimedia" xml:space="preserve">
+    <value>Multimedia</value>
+  </data>
+  <data name="System_Multimedia_AutoPlay" xml:space="preserve">
+    <value>AutoPlay</value>
+  </data>
+  <data name="System_Multimedia_BackgroundVideo" xml:space="preserve">
+    <value>Background Video</value>
+  </data>
+  <data name="System_Multimedia_Playlist" xml:space="preserve">
+    <value>Playlist</value>
+  </data>
+  <data name="System_Multimedia_Playlist_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="System_Multimedia_Playlist_Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="System_Multimedia_Repeat" xml:space="preserve">
+    <value>Repeat</value>
+  </data>
+  <data name="System_Multimedia_SelectMediaFile" xml:space="preserve">
+    <value>Select Media Files</value>
+  </data>
+  <data name="System_Account_NoAccountSelected" xml:space="preserve">
+    <value>No Account Selected</value>
+  </data>
+  <data name="Global_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Global_Retry" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="StationMode_VrDriverInteraction" xml:space="preserve">
+    <value>VR Driver Interaction</value>
+  </data>
+  <data name="System_Multimedia_Track" xml:space="preserve">
+    <value>Track</value>
+  </data>
+  <data name="System_Multimedia_Volume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="Config_TasksApply_Error" xml:space="preserve">
+    <value>There were some Problems during execution of the Tasks</value>
+  </data>
+  <data name="Config_TasksApply_Success" xml:space="preserve">
+    <value>All Tasks Finished Successfully</value>
+  </data>
+  <data name="Config_TasksApply_Topic" xml:space="preserve">
+    <value>Setting Up your System</value>
+  </data>
+  <data name="Config_Dialog_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Config_Dialog_HeaderInfo" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="Config_Dialog_HeaderWarning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="Config_Dialog_StorageChangeNotEmpty" xml:space="preserve">
+    <value>Your storage directory is not empty and you will need to move all your contents manually to the new destination</value>
+  </data>
+  <data name="Config_Dialog_StorageUseEmptyRecommend" xml:space="preserve">
+    <value>Your storage directory is not empty, it's recommended to use a dedicated directory as your game directory</value>
+  </data>
+  <data name="Config_Dialog_Understood" xml:space="preserve">
+    <value>Understood</value>
+  </data>
+  <data name="System_Installation_SelectFile" xml:space="preserve">
+    <value>Select File</value>
+  </data>
+  <data name="Executable_NoSuitableExecution" xml:space="preserve">
+    <value>Sorry there is no Execution Option availible! Please check if you have any configured and that your system meets the requirements.</value>
+  </data>
+  <data name="Config_DefaultLanguage_Changed" xml:space="preserve">
+    <value>Default Language changed</value>
+  </data>
+  <data name="Exceptions_InvalidUsernamePassword" xml:space="preserve">
+    <value>The Username Password combination is invalid</value>
+  </data>
+  <data name="Connect_AutoLogin" xml:space="preserve">
+    <value>Auto Login</value>
+  </data>
+  <data name="Connect_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Connect_Connect" xml:space="preserve">
+    <value>Connect</value>
+  </data>
+  <data name="Connect_Connect_ServerUnreachable" xml:space="preserve">
+    <value>Can not connect to Server. Please try again later.</value>
+  </data>
+  <data name="Connect_Disconnect" xml:space="preserve">
+    <value>Disconnect</value>
+  </data>
+  <data name="Connect_Error_Invalid_Credentials" xml:space="preserve">
+    <value>Login failed !Please check your Credentials</value>
+  </data>
+  <data name="Connect_Error_Invalid_Password" xml:space="preserve">
+    <value>Invalid Password</value>
+  </data>
+  <data name="Connect_Error_Invalid_StationId" xml:space="preserve">
+    <value>Invalid Station Id</value>
+  </data>
+  <data name="Connect_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Connect_StationId" xml:space="preserve">
+    <value>Station Id</value>
+  </data>
+  <data name="Connect_LoginTitle" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Connect_Connected" xml:space="preserve">
+    <value>Connected</value>
+  </data>
+  <data name="Connect_Connecting" xml:space="preserve">
+    <value>Connecting</value>
+  </data>
+  <data name="Connect_Disconnected" xml:space="preserve">
+    <value>Disconnected</value>
+  </data>
+  <data name="Connect_Disconnecting" xml:space="preserve">
+    <value>Disconnecting</value>
+  </data>
+  <data name="Connect_Recconecting" xml:space="preserve">
+    <value>Reconnecing</value>
+  </data>
+  <data name="System_Settings_ConnectionPanel" xml:space="preserve">
+    <value>Connection Panel</value>
+  </data>
+</root>

@@ -1,0 +1,26 @@
+﻿<UserControl
+    x:Class="LeapVR.Shell.UI.Shell.Blocker.Views.InformationShellBlockingView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:lex="http://wpflocalizeextension.codeplex.com" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="600" d:DesignWidth="1000"
+    mc:Ignorable="d">
+
+    <DockPanel VerticalAlignment="Center">
+        <Image
+            Width="460" Height="215"
+            Margin="0,30"
+            DockPanel.Dock="Top"
+            Source="{Binding Thumbnail, Mode=OneWay, FallbackValue={StaticResource ThumbnailAppNoPicture}, TargetNullValue={StaticResource ThumbnailAppNoPicture}}"
+            Stretch="Uniform" />
+
+        <TextBlock
+            x:Name="Information"
+            Margin="50,15"
+            DockPanel.Dock="Top"
+            FontSize="{DynamicResource H4}"
+            Style="{DynamicResource TextBlockBaseStyle}"
+            Text="{Binding Information, Mode=OneWay}"
+            TextAlignment="Center" />
+
+    </DockPanel>
+</UserControl>

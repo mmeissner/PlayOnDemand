@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="en-US" original="LEAPVR.CONTENT.CREATOR.LANGUAGE/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1795.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="LEAPVR.CONTENT.CREATOR.LANGUAGE/RESOURCES.RESX">
+        <trans-unit id="Add" translate="yes" xml:space="preserve">
+          <source>Add</source>
+          <target state="new">Add</target>
+        </trans-unit>
+        <trans-unit id="ApplicationMainExecutablePath" translate="yes" xml:space="preserve">
+          <source>Application Main Executable Path</source>
+          <target state="new">Application Main Executable Path</target>
+        </trans-unit>
+        <trans-unit id="ApplicationMainExecutablePath_Instruction" translate="yes" xml:space="preserve">
+          <source>The path to the applixcation main executable file. Usually it is the application executable itself, for some applications requiring an external launcher this should be set the path to the launcher executable file.</source>
+          <target state="new">The path to the applixcation main executable file. Usually it is the application executable itself, for some applications requiring an external launcher this should be set the path to the launcher executable file.</target>
+        </trans-unit>
+        <trans-unit id="ApplicationMainProcessName" translate="yes" xml:space="preserve">
+          <source>Application Main Process Name</source>
+          <target state="new">Application Main Process Name</target>
+        </trans-unit>
+        <trans-unit id="ApplicationMainProcessName_Instruction" translate="yes" xml:space="preserve">
+          <source>Application main process name(usually the application executable file name without extension) is used to provide information for the shell to be aware of whether the application is started or not, is it still responding during lifetime and kill the application. Note this should not consider the launcher if there it is.</source>
+          <target state="new">Application main process name(usually the application executable file name without extension) is used to provide information for the shell to be aware of whether the application is started or not, is it still responding during lifetime and kill the application. Note this should not consider the launcher if there it is.</target>
+        </trans-unit>
+        <trans-unit id="ApplicationProcessNames" translate="yes" xml:space="preserve">
+          <source>Application Process Names</source>
+          <target state="new">Application Process Names</target>
+        </trans-unit>
+        <trans-unit id="ApplicationProcessNames_Instruction" translate="yes" xml:space="preserve">
+          <source>Besides the application main process name, the application could have multiple different processes running during lifetime. Specify the process names if there are and split them with ";". This is optional</source>
+          <target state="new">Besides the application main process name, the application could have multiple different processes running during lifetime. Specify the process names if there are and split them with ";". This is optional</target>
+        </trans-unit>
+        <trans-unit id="BasicInfo_SelectLanguage" translate="yes" xml:space="preserve">
+          <source>Select Language</source>
+          <target state="new">Select Language</target>
+        </trans-unit>
+        <trans-unit id="BasicInfo_TargetPlatform" translate="yes" xml:space="preserve">
+          <source>Target Platform</source>
+          <target state="new">Target Platform</target>
+        </trans-unit>
+        <trans-unit id="Complete_Done" translate="yes" xml:space="preserve">
+          <source>Done</source>
+          <target state="new">Done</target>
+        </trans-unit>
+        <trans-unit id="Complete_Error" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <target state="new">Error</target>
+        </trans-unit>
+        <trans-unit id="Complete_ErrorMessage" translate="yes" xml:space="preserve">
+          <source>The VBox Installation Package creation process has encountered a problem. Please check validity of all provided data and try again.</source>
+          <target state="new">The VBox Installation Package creation process has encountered a problem. Please check validity of all provided data and try again.</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_ApplicationGuid" translate="yes" xml:space="preserve">
+          <source>Unique Application ID</source>
+          <target state="new">Unique Application ID</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_BeyondMaximumFileSizeFormat" translate="yes" xml:space="preserve">
+          <source>The file you upload is beyond maximum allowed size: {0}</source>
+          <target state="new">The file you upload is beyond maximum allowed size: {0}</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_Category" translate="yes" xml:space="preserve">
+          <source>Category</source>
+          <target state="new">Category</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_Description" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="new">Description</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_ExecutablePathNotRelative" translate="yes" xml:space="preserve">
+          <source>Provided Executable File Path is not relative to Application Base Directory.</source>
+          <target state="new">Provided Executable File Path is not relative to Application Base Directory.</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_Image" translate="yes" xml:space="preserve">
+          <source>Image</source>
+          <target state="new">Image</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_ImageRecommendedSize" translate="yes" xml:space="preserve">
+          <source>Recommended Size</source>
+          <target state="new">Recommended Size</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_InvalidPictureDimensions" translate="yes" xml:space="preserve">
+          <source>Provided picture have invalid dimensions (max allowed is {0}x{0} px)</source>
+          <target state="new">Provided picture have invalid dimensions (max allowed is {0}x{0} px)</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_InvalidPictureFile" translate="yes" xml:space="preserve">
+          <source>Provided picture file's format is invalid.</source>
+          <target state="new">Provided picture file's format is invalid.</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_Thumbnail_Image" translate="yes" xml:space="preserve">
+          <source>Thumbnail Image</source>
+          <target state="new">Thumbnail Image</target>
+        </trans-unit>
+        <trans-unit id="DetailInfo_Title" translate="yes" xml:space="preserve">
+          <source>Title</source>
+          <target state="new">Title</target>
+        </trans-unit>
+        <trans-unit id="Edit" translate="yes" xml:space="preserve">
+          <source>Edit</source>
+          <target state="new">Edit</target>
+        </trans-unit>
+        <trans-unit id="EnableRespondingDetection" translate="yes" xml:space="preserve">
+          <source>Enable Responding Detection</source>
+          <target state="new">Enable Responding Detection</target>
+        </trans-unit>
+        <trans-unit id="EnableRespondingDetection_Instruction" translate="yes" xml:space="preserve">
+          <source>Allow the shell to detect application responding and make further decision if it's not responding.</source>
+          <target state="new">Allow the shell to detect application responding and make further decision if it's not responding.</target>
+        </trans-unit>
+        <trans-unit id="EnableTrackingChildProcesses" translate="yes" xml:space="preserve">
+          <source>Enable Tracking Child Processes</source>
+          <target state="new">Enable Tracking Child Processes</target>
+        </trans-unit>
+        <trans-unit id="EnableTrackingChildProcesses_Instruction" translate="yes" xml:space="preserve">
+          <source>Allow the shell to track processes which are dynamically created since the starting process get executed. It is helpful when there're unknown amount of processes executed during an application running. However, this will slow the performance a little bit down.</source>
+          <target state="new">Allow the shell to track processes which are dynamically created since the starting process get executed. It is helpful when there're unknown amount of processes executed during an application running. However, this will slow the performance a little bit down.</target>
+        </trans-unit>
+        <trans-unit id="Enum_Platform_LeapVR" translate="yes" xml:space="preserve">
+          <source>Leap VR</source>
+          <target state="new">Leap VR</target>
+        </trans-unit>
+        <trans-unit id="Enum_Platform_Steam" translate="yes" xml:space="preserve">
+          <source>Steam</source>
+          <target state="new">Steam</target>
+        </trans-unit>
+        <trans-unit id="ExecutableInfo_Advanced" translate="yes" xml:space="preserve">
+          <source>Advanced settings</source>
+          <target state="new">Advanced settings</target>
+        </trans-unit>
+        <trans-unit id="ExecutableInfo_GameBaseDirectory" translate="yes" xml:space="preserve">
+          <source>Game Base Directory</source>
+          <target state="new">Game Base Directory</target>
+        </trans-unit>
+        <trans-unit id="ExecutableInfo_GameBaseDirectoryInstruction" translate="yes" xml:space="preserve">
+          <source>The highest directory in directory tree that holds all files and directories needed by the game to run properly.</source>
+          <target state="new">The highest directory in directory tree that holds all files and directories needed by the game to run properly.</target>
+        </trans-unit>
+        <trans-unit id="ExecutableInfo_GameExecutableParameters" translate="yes" xml:space="preserve">
+          <source>Game Executable Parameters</source>
+          <target state="new">Game Executable Parameters</target>
+        </trans-unit>
+        <trans-unit id="ExecutableInfo_GameExecutableParametersInstruction" translate="yes" xml:space="preserve">
+          <source>Parameters that will be provided to the main executable when execution of the game is requested.</source>
+          <target state="new">Parameters that will be provided to the main executable when execution of the game is requested.</target>
+        </trans-unit>
+        <trans-unit id="ExecutableInfo_GameFiles" translate="yes" xml:space="preserve">
+          <source>Game Files</source>
+          <target state="new">Game Files</target>
+        </trans-unit>
+        <trans-unit id="Executables" translate="yes" xml:space="preserve">
+          <source>Executables</source>
+          <target state="new">Executables</target>
+        </trans-unit>
+        <trans-unit id="ExecutionInstructions" translate="yes" xml:space="preserve">
+          <source>Execution Instructions</source>
+          <target state="new">Execution Instructions</target>
+        </trans-unit>
+        <trans-unit id="FlowControl_Back" translate="yes" xml:space="preserve">
+          <source>Back</source>
+          <target state="new">Back</target>
+        </trans-unit>
+        <trans-unit id="FlowControl_Create" translate="yes" xml:space="preserve">
+          <source>Create</source>
+          <target state="new">Create</target>
+        </trans-unit>
+        <trans-unit id="FlowControl_Exit" translate="yes" xml:space="preserve">
+          <source>Exit</source>
+          <target state="new">Exit</target>
+        </trans-unit>
+        <trans-unit id="FlowControl_Next" translate="yes" xml:space="preserve">
+          <source>Next</source>
+          <target state="new">Next</target>
+        </trans-unit>
+        <trans-unit id="Global_Browse" translate="yes" xml:space="preserve">
+          <source>Browse</source>
+          <target state="new">Browse</target>
+        </trans-unit>
+        <trans-unit id="Global_Browse_AllFiles" translate="yes" xml:space="preserve">
+          <source>All Files</source>
+          <target state="new">All Files</target>
+        </trans-unit>
+        <trans-unit id="Global_Browse_Container" translate="yes" xml:space="preserve">
+          <source>VBox Installation Package</source>
+          <target state="new">VBox Installation Package</target>
+        </trans-unit>
+        <trans-unit id="Global_Browse_Executable" translate="yes" xml:space="preserve">
+          <source>Executable</source>
+          <target state="new">Executable</target>
+        </trans-unit>
+        <trans-unit id="Global_Browse_ImageFiles" translate="yes" xml:space="preserve">
+          <source>Image Files</source>
+          <target state="new">Image Files</target>
+        </trans-unit>
+        <trans-unit id="Global_Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="new">Cancel</target>
+        </trans-unit>
+        <trans-unit id="Global_ContainerVersion" translate="yes" xml:space="preserve">
+          <source>Container Version</source>
+          <target state="new">Container Version</target>
+        </trans-unit>
+        <trans-unit id="Global_DiskSizeRequired" translate="yes" xml:space="preserve">
+          <source>Game Size on Disk</source>
+          <target state="new">Game Size on Disk</target>
+        </trans-unit>
+        <trans-unit id="Global_GenerateNewGuid" translate="yes" xml:space="preserve">
+          <source>Generate New ID</source>
+          <target state="new">Generate New ID</target>
+        </trans-unit>
+        <trans-unit id="Global_Ok" translate="yes" xml:space="preserve">
+          <source>OK</source>
+          <target state="new">OK</target>
+        </trans-unit>
+        <trans-unit id="Global_ProductName" translate="yes" xml:space="preserve">
+          <source>VBox Installation Package Creator</source>
+          <target state="new">VBox Installation Package Creator</target>
+        </trans-unit>
+        <trans-unit id="Global_Reload" translate="yes" xml:space="preserve">
+          <source>Reload</source>
+          <target state="new">Reload</target>
+        </trans-unit>
+        <trans-unit id="Global_Select_Directory" translate="yes" xml:space="preserve">
+          <source>Select Directory</source>
+          <target state="new">Select Directory</target>
+        </trans-unit>
+        <trans-unit id="Global_Select_File" translate="yes" xml:space="preserve">
+          <source>Select File</source>
+          <target state="new">Select File</target>
+        </trans-unit>
+        <trans-unit id="Global_Validation_CannotBeEmpty" translate="yes" xml:space="preserve">
+          <source>This field cannot be left empty.</source>
+          <target state="new">This field cannot be left empty.</target>
+        </trans-unit>
+        <trans-unit id="Global_Warning" translate="yes" xml:space="preserve">
+          <source>Warning</source>
+          <target state="new">Warning</target>
+        </trans-unit>
+        <trans-unit id="InstructionName" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <target state="new">Name</target>
+        </trans-unit>
+        <trans-unit id="InstructionName_Introduction" translate="yes" xml:space="preserve">
+          <source>A display name for one executable instruction that infers what's it about</source>
+          <target state="new">A display name for one executable instruction that infers what's it about</target>
+        </trans-unit>
+        <trans-unit id="IsMainExecutable" translate="yes" xml:space="preserve">
+          <source>Is Main Executable</source>
+          <target state="new">Is Main Executable</target>
+        </trans-unit>
+        <trans-unit id="IsMainExecutable_Introduction" translate="yes" xml:space="preserve">
+          <source>Indicates whether this executable is one of the executables taken into consideration to check if the application is running. Normally an application requires at least one main executable. Multiple main executables mean any of them running will the application be considered as running.</source>
+          <target state="new">Indicates whether this executable is one of the executables taken into consideration to check if the application is running. Normally an application requires at least one main executable. Multiple main executables mean any of them running will the application be considered as running.</target>
+        </trans-unit>
+        <trans-unit id="KillOnExit" translate="yes" xml:space="preserve">
+          <source>Kill On Application Exit</source>
+          <target state="new">Kill On Application Exit</target>
+        </trans-unit>
+        <trans-unit id="KillOnExit_Introduction" translate="yes" xml:space="preserve">
+          <source>Indicates whether this process should be killed on application exit</source>
+          <target state="new">Indicates whether this process should be killed on application exit</target>
+        </trans-unit>
+        <trans-unit id="KillProcessIfNotResponding" translate="yes" xml:space="preserve">
+          <source>Kill on Not Responding</source>
+          <target state="new">Kill on Not Responding</target>
+        </trans-unit>
+        <trans-unit id="KillProcessIfNotResponding_Introduction" translate="yes" xml:space="preserve">
+          <source>Indicates whether this process should be killed when the system detects it is not responding</source>
+          <target state="new">Indicates whether this process should be killed when the system detects it is not responding</target>
+        </trans-unit>
+        <trans-unit id="NoneExecutableIsMainExecutable" translate="yes" xml:space="preserve">
+          <source>None of added executables is marked as main executable, are you sure to continue?</source>
+          <target state="new">None of added executables is marked as main executable, are you sure to continue?</target>
+        </trans-unit>
+        <trans-unit id="Options" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target state="new">Options</target>
+        </trans-unit>
+        <trans-unit id="ProcessMonitoring" translate="yes" xml:space="preserve">
+          <source>Process Monitoring</source>
+          <target state="new">Process Monitoring</target>
+        </trans-unit>
+        <trans-unit id="Progress_CreatingFiles" translate="yes" xml:space="preserve">
+          <source>Creating Files</source>
+          <target state="new">Creating Files</target>
+        </trans-unit>
+        <trans-unit id="Progress_Done" translate="yes" xml:space="preserve">
+          <source>Done</source>
+          <target state="new">Done</target>
+        </trans-unit>
+        <trans-unit id="Remove" translate="yes" xml:space="preserve">
+          <source>Remove</source>
+          <target state="new">Remove</target>
+        </trans-unit>
+        <trans-unit id="RequiredVrModule" translate="yes" xml:space="preserve">
+          <source>Required VR Module</source>
+          <target state="new">Required VR Module</target>
+        </trans-unit>
+        <trans-unit id="RequiredVrModule_Introduction" translate="yes" xml:space="preserve">
+          <source>Specify the corresponding vr module to match the correct graphic api.</source>
+          <target state="new">Specify the corresponding vr module to match the correct graphic api.</target>
+        </trans-unit>
+        <trans-unit id="SetFromExecutable" translate="yes" xml:space="preserve">
+          <source>Set From Exe</source>
+          <target state="new">Set From Exe</target>
+        </trans-unit>
+        <trans-unit id="Shell_SelectPlatform" translate="yes" xml:space="preserve">
+          <source>Select platform</source>
+          <target state="new">Select platform</target>
+        </trans-unit>
+        <trans-unit id="Shell_StartCreation" translate="yes" xml:space="preserve">
+          <source>Create</source>
+          <target state="new">Create</target>
+        </trans-unit>
+        <trans-unit id="Shell_StartEdit" translate="yes" xml:space="preserve">
+          <source>Edit</source>
+          <target state="new">Edit</target>
+        </trans-unit>
+        <trans-unit id="Shell_StartVBoxToZip" translate="yes" xml:space="preserve">
+          <source>VBox 2 Zip</source>
+          <target state="new">VBox 2 Zip</target>
+        </trans-unit>
+        <trans-unit id="Shell_SteamIDInstruction" translate="yes" xml:space="preserve">
+          <source>Providing SteamID will allow Creator to automatically provide game Title and Image from Steam database.</source>
+          <target state="new">Providing SteamID will allow Creator to automatically provide game Title and Image from Steam database.</target>
+        </trans-unit>
+        <trans-unit id="Shell_SteamIdOptional" translate="yes" xml:space="preserve">
+          <source>Steam ID (optional)</source>
+          <target state="new">Steam ID (optional)</target>
+        </trans-unit>
+        <trans-unit id="Shell_StemId" translate="yes" xml:space="preserve">
+          <source>Steam ID</source>
+          <target state="new">Steam ID</target>
+        </trans-unit>
+        <trans-unit id="Shell_Tools" translate="yes" xml:space="preserve">
+          <source>Tools</source>
+          <target state="new">Tools</target>
+        </trans-unit>
+        <trans-unit id="Summary_FileCount" translate="yes" xml:space="preserve">
+          <source>Files Count</source>
+          <target state="new">Files Count</target>
+        </trans-unit>
+        <trans-unit id="Summary_OutputPackageName" translate="yes" xml:space="preserve">
+          <source>Package Output Path</source>
+          <target state="new">Package Output Path</target>
+        </trans-unit>
+        <trans-unit id="Summary_OutputPackageNameInstruction" translate="yes" xml:space="preserve">
+          <source>The output path that the installation package will be saved to when creation process is done. The installation package have `.vbox` extension.</source>
+          <target state="new">The output path that the installation package will be saved to when creation process is done. The installation package have `.vbox` extension.</target>
+        </trans-unit>
+        <trans-unit id="Summary_Output_FileAlreadyExists" translate="yes" xml:space="preserve">
+          <source>File already exists, are you sure to override the file?</source>
+          <target state="new">File already exists, are you sure to override the file?</target>
+        </trans-unit>
+        <trans-unit id="Summary_TotalSize" translate="yes" xml:space="preserve">
+          <source>Total Files Size</source>
+          <target state="new">Total Files Size</target>
+        </trans-unit>
+        <trans-unit id="SupportedModes" translate="yes" xml:space="preserve">
+          <source>Supported Modes</source>
+          <target state="new">Supported Modes</target>
+        </trans-unit>
+        <trans-unit id="Validation_ErrorVBoxPackageOpenEdit" translate="yes" xml:space="preserve">
+          <source>An error occured on opening the VBox Package Files. /n Please check if all files are in place and not corrupt. </source>
+          <target state="new">An error occured on opening the VBox Package Files. /n Please check if all files are in place and not corrupt. </target>
+        </trans-unit>
+        <trans-unit id="Validation_InvalidFilenameCharFormat" translate="yes" xml:space="preserve">
+          <source>Invalid character detected in output path, it is replaced with '{0}' and you could adjust it.</source>
+          <target state="new">Invalid character detected in output path, it is replaced with '{0}' and you could adjust it.</target>
+        </trans-unit>
+        <trans-unit id="Validation_VBoxPackage_Edit_MsgBox_Error_Caption" translate="yes" xml:space="preserve">
+          <source>Error during open VBox Package</source>
+          <target state="new">Error during open VBox Package</target>
+        </trans-unit>
+        <trans-unit id="Warning" translate="yes" xml:space="preserve">
+          <source>Warning</source>
+          <target state="new">Warning</target>
+        </trans-unit>
+        <trans-unit id="WatchdogOptions" translate="yes" xml:space="preserve">
+          <source>Watchdog Options</source>
+          <target state="new">Watchdog Options</target>
+        </trans-unit>
+        <trans-unit id="WorkingDirectory" translate="yes" xml:space="preserve">
+          <source>Working Directory</source>
+          <target state="new">Working Directory</target>
+        </trans-unit>
+        <trans-unit id="WorkingDirectory_Introduction" translate="yes" xml:space="preserve">
+          <source>Working directory of a specific executable. If not set, working directory will be set to the directory where the executable is</source>
+          <target state="new">Working directory of a specific executable. If not set, working directory will be set to the directory where the executable is</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

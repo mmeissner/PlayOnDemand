@@ -1,0 +1,492 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pod.Web.Center</name>
+    </assembly>
+    <members>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.AccountsController.Register(Pod.DtoModels.RequestRegisterUserDto)">
+            <summary>
+            Registers a User Account
+            </summary>
+            <param name="registerRequest"></param>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.AccountsController.ChangePassword(Pod.DtoModels.RequestChangePasswordDto)">
+            <summary>
+            Changes the Password and provides a new Refresh Token
+            </summary>
+            <param name="changePasswordRequest">The change password request.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.AccountsController.RequestPassword(Pod.DtoModels.RequestForgotPasswordDto)">
+            <summary>
+            Receives a Reset Token that is required to reset the Password
+            </summary>
+            <param name="forgotPasswordRequest">Request object holding the required parameter</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.AccountsController.ResetPassword(Pod.DtoModels.RequestResetPasswordDto)">
+            <summary>
+            Resets the Password with an Reset Token
+            </summary>
+            <param name="resetPasswordRequest">The request reset password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.AccountsController.ConfirmEmail(Pod.DtoModels.RequestEmailConfirmationDto)">
+            <summary>
+            Confirms ownership of an E-Mail Address by an E-Mail Confirmation Token
+            </summary>
+            <param name="emailConfirmationRequest">The request email confirmation.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.AccountsController.ResendEMailConfirmation(Pod.DtoModels.RequestResendConfirmationEmailDto)">
+            <summary>
+            Re-sends a message with a EMail Confirmation Token.
+            </summary>
+            <param name="resendConfirmationEmailRequest">The resend email confirmation request.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.AdminController.GetAllRoles">
+            <summary>
+            Get all available User Roles
+            </summary>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.AdminController.GetUserRoles(System.String)">
+            <summary>
+            Get all roles of a user
+            </summary>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.AdminController.AddUserToRole(Pod.DtoModels.RequestAddRemoveUserToRoleDto)">
+            <summary>
+            Adds a user to the specified Role
+            </summary>
+            <param name="addUserToRole">the role</param>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.AdminController.RemoveUserFromRole(Pod.DtoModels.RequestAddRemoveUserToRoleDto)">
+            <summary>
+            Removes a user from the specified Role
+            </summary>
+            <param name="removeUserFromRole">the role</param>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.AdminController.DeleteUser(System.String)">
+            <summary>
+            Deletes a user
+            </summary>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.AdminController.ShutdownServer">
+            <summary>
+            Initializes the Shutdown of the Server
+            </summary>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.AdminController.GetSystemSettings">
+            <summary>
+            Sets the current system settings
+            </summary>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.AdminController.SetSystemSettings(Pod.DtoModels.RequestSetSystemSettings)">
+            <summary>
+            Gets the current system settings
+            </summary>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.AuthController.Login(Pod.DtoModels.RequestLoginModelDto)">
+            <summary>
+            Receive an Access and Refresh Token
+            </summary>
+            <param name="loginRequest">Login Request Dto</param>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.AuthController.Logout">
+            <summary>
+            Invalidate the Refresh token
+            </summary>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.AuthController.RefreshToken(Pod.DtoModels.RequestTokenRefreshDto,System.String)">
+            <summary>
+            Receive a new Access token
+            </summary>
+            <param name="requestTokenRefresh">Refresh Token Dto</param>
+            <param name="bearerToken">Any previous Access Token.</param>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.EmailController.EMailAccountsGetAll">
+            <summary>
+            Get all available Email Accounts
+            </summary>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.EmailController.EMailAccountCreate(Pod.DtoModels.RequestCreateEmailAccountDto)">
+            <summary>
+            Creates a new Email Account
+            </summary>
+            <param name="requestEmailAccountCreateDto">The account data</param>
+            <returns>The created Account</returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.EmailController.GetEmailsToSend(System.Int32,System.Int32,System.Nullable{Pod.Enums.EmailSendState})">
+            <summary>
+            Provides overview about Emails
+            </summary>
+            <param name="sendState">filter for states</param>
+            <param name="take">Entries to return</param>
+            <param name="skip">Entries to skip</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationController.GetState">
+            <summary>
+            Get the Station's State
+            </summary>
+            <returns>Station State ViewModels</returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationController.GetSettings">
+            <summary>
+            Get the Settings of an Station
+            </summary>
+            <returns>Station Settings ViewModel</returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationController.SetSettings(Pod.DtoModels.RequestStationSettingsDto)">
+            <summary>
+            Sets the Settings for an Station 
+            </summary>
+            <param name="setSettingsRequest">Settings Dto</param>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationController.SetQrCode(Pod.DtoModels.RequestStationQrCodeDto)">
+            <summary>
+            Sets the QrCode
+            </summary>
+            <param name="setQrCodeRequest">QrCode</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationController.SetMode(Pod.DtoModels.RequestStationModeDto)">
+            <summary>
+            Sets the Operation Mode
+            </summary>
+            <param name="setModeRequest">The Operation Mode</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationController.CreateSession(Pod.DtoModels.RequestNewStationSessionDto)">
+            <summary>
+            Creates a Session
+            </summary>
+            <param name="createSessionRequest">New Session Request Dto</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationController.UpdateSession(Pod.DtoModels.RequestSessionUpdateDto)">
+            <summary>
+            Updates a running Session.
+            </summary>
+            <param name="updateSessionRequest">The Update Request Dto</param>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationController.StopSession">
+            <summary>
+            Stops a running Session
+            </summary>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationController.GetSessionLogsById(System.Int32,System.Int32)">
+            <summary>
+            Gets closed Sessions a Station
+            </summary>
+            <param name="take">Entries to return</param>
+            <param name="skip">Entries to skip</param>
+            <returns></returns>
+        </member>
+        <member name="T:Pod.Web.Center.Areas.Api.v1.StationsController">
+            <summary>
+            Provides Functionality for remote control of an Station with an Users Access Token
+            </summary>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationsController.CreateStation(Pod.DtoModels.RequestCreateStationDto)">
+            <summary>
+            Creates a Station
+            </summary>
+            <param name="createStation">Create Station Dto</param>
+            <returns>Station State</returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationsController.CreateApiKey(System.Guid,System.String)">
+            <summary>
+            Creates a APIKey for a Station
+            </summary>
+            <param name="stationId">Station Id</param>
+            <param name="keyName">The Display name for the ApiKey</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationsController.GetApiKeys(System.Guid)">
+            <summary>
+            Gets all APIKeys for a Station
+            </summary>
+            <param name="stationId">Station Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationsController.DeleteApiKey(System.Guid,System.String)">
+            <summary>
+            Deletes a APIKey for a Station
+            </summary>
+            <param name="stationId">Station Id</param>
+            <param name="publicKey">The ApiPublicKey component</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationsController.GetState(System.Guid)">
+            <summary>
+            Get the Station's State
+            </summary>
+            <param name="stationId">Station Id</param>
+            <returns>Station State ViewModels</returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationsController.GetStates(System.Nullable{Pod.Enums.NetworkState})">
+            <summary>
+            Gets Collection of Station States
+            </summary>
+            <param name="networkStateFilter">Optional Network State Filter</param>
+            <returns>Collection of Station State ViewModels</returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationsController.GetSettings">
+            <summary>
+            Gets the Settings of all Stations
+            </summary>
+            <returns>Collection of Station Settings ViewModels</returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationsController.GetSettingsByStationId(System.Guid)">
+            <summary>
+            Get the Settings of an Station
+            </summary>
+            <param name="stationId">Station Id</param>
+            <returns>Station Settings ViewModel</returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationsController.SetSettings(System.Guid,Pod.DtoModels.RequestStationSettingsDto)">
+            <summary>
+            Sets the Settings for an Station 
+            </summary>
+            <param name="stationId">Station Id</param>
+            <param name="setSettingsRequest">Settings Dto</param>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationsController.SetQrCode(System.Guid,Pod.DtoModels.RequestStationQrCodeDto)">
+            <summary>
+            Sets the QrCode
+            </summary>
+            <param name="stationId">Station Id</param>
+            <param name="setQrCodeRequest">QrCode</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationsController.SetMode(System.Guid,Pod.DtoModels.RequestStationModeDto)">
+            <summary>
+            Sets the Operation Mode
+            </summary>
+            <param name="stationId">Station Id</param>
+            <param name="setModeRequest">The Operation Mode</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationsController.SetPassword(System.Guid,Pod.DtoModels.RequestSetStationPasswordDto)">
+            <summary>
+            Changes the Password
+            </summary>
+            <param name="stationId">Station Id</param>
+            <param name="setPasswordRequest">New Password</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationsController.CreateSession(System.Guid,Pod.DtoModels.RequestNewStationSessionDto)">
+            <summary>
+            Creates a Session
+            </summary>
+            <param name="stationId">Station Id</param>
+            <param name="createSessionRequest">New Session Request Dto</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationsController.UpdateSession(System.Guid,Pod.DtoModels.RequestSessionUpdateDto)">
+            <summary>
+            Updates a running Session.
+            </summary>
+            <param name="stationId">Station Id</param>
+            <param name="updateSessionRequest">The Update Request Dto</param>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationsController.StopSession(System.Guid)">
+            <summary>
+            Stops a running Session
+            </summary>
+            <param name="stationId">Station Id</param>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationsController.GetSessionLogsById(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            Gets closed Sessions for one Station
+            </summary>
+            <param name="stationId">Station Id</param>
+            <param name="take">Entries to return</param>
+            <param name="skip">Entries to skip</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.StationsController.GetSessionLogs(System.Int32,System.Int32)">
+            <summary>
+            Gets closed Sessions from all stations
+            </summary>
+            <param name="take">Entries to return</param>
+            <param name="skip">Entries to skip</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pod.Web.Center.Areas.Api.v1.SupportController.GetSessionLogsById(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            Gets closed Sessions for a Station
+            </summary>
+            <param name="stationId">Station Id</param>
+            <param name="take">Entries to return</param>
+            <param name="skip">Entries to skip</param>
+            <returns></returns>
+        </member>
+        <member name="T:Pod.Web.Center.Authentication.ApiKeySecretValidator">
+            <summary>
+            Validate Http Requests for Authentication with an API Key/Secret
+            </summary>
+        </member>
+        <member name="M:Pod.Web.Center.Authentication.ApiKeySecretValidator.Validate(Pod.Web.Authentication.ApiKeySecret.IApiKeySecretRequest)">
+            <summary>
+            Validates an Authorization Request for amx Scheme.
+            Validates Route, ApiKey, Hash/Data. Prevents Replay Attacks 
+            </summary>
+            <param name="request">The Request</param>
+        </member>
+        <member name="M:Pod.Web.Center.Authentication.ApiKeySecretValidator.IsValidRequest(Microsoft.AspNetCore.Http.HttpRequest,System.String,System.String,System.String,System.String)">
+            <summary>
+            Checks if the Authentication Request is valid
+            </summary>
+            <param name="request">The Http Request for authentication</param>
+            <param name="publicKey">The Public Key from the Request</param>
+            <param name="receivedSignatureAsBase64">The HMAC SHA 256 hash signature as Base64 string</param>
+            <param name="nonce">The nonce used by the client that was used in creating the signature</param>
+            <param name="requestTimeStamp">The timestamp used by the client that was used in creating the signature</param>
+            <returns></returns>
+        </member>
+        <member name="M:Pod.Web.Center.Authentication.ApiKeySecretValidator.IsTimestampValid(System.String,System.String)">
+            <summary>
+            Checks if the Request is not to far off by time from the server
+            and checks if it was not already once processed
+            </summary>
+            <param name="nonce"></param>
+            <param name="requestTimeStamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pod.Web.Center.Authentication.ApiKeySecretValidator.ComputeMd5Hash(System.IO.Stream)">
+            <summary>
+            Computes the Md5 Hash from a stream 
+            </summary>
+            <param name="body">The stream</param>
+            <returns>The hash as bytes or null</returns>
+        </member>
+        <member name="M:Pod.Web.Center.Authentication.ApiKeySecretValidator.GetBytes(System.IO.Stream)">
+            <summary>
+            Reads Bytes from an Input Stream with undefined length to a
+            memory stream and returns a byte array when the Input stream is
+            completely read
+            </summary>
+            <param name="input">The input stream</param>
+            <returns>The input streams content as byte array</returns>
+        </member>
+        <member name="T:Pod.Web.Center.Authentication.ApiKeySecretResponse">
+            <summary>
+            Authentication Validation Response
+            </summary>
+        </member>
+        <member name="P:Pod.Web.Center.Authentication.ApiKeySecretResponse.IsSuccess">
+            <summary>
+            Indicates if the Authentication Succeeded
+            </summary>
+        </member>
+        <member name="P:Pod.Web.Center.Authentication.ApiKeySecretResponse.IsInvalidSignature">
+            <summary>
+            Indicates if all was ok except that the signature did not match
+            </summary>
+        </member>
+        <member name="P:Pod.Web.Center.Authentication.ApiKeySecretResponse.ClaimsPrincipal">
+            <summary>
+            The authenticated Identity
+            </summary>
+        </member>
+        <member name="M:Pod.Web.Center.PodIdentityServiceCollectionExtensions.AddIdentityCore``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds and configures the identity system for the specified User and Role types.
+            </summary>
+            <typeparam name="TUser">The type representing a User in the system.</typeparam>
+            <typeparam name="TRole">The type representing a Role in the system.</typeparam>
+            <param name="services">The services available in the application.</param>
+            <returns>An <see cref="T:Microsoft.AspNetCore.Identity.IdentityBuilder"/> for creating and configuring the identity system.</returns>
+        </member>
+        <member name="M:Pod.Web.Center.PodIdentityServiceCollectionExtensions.AddIdentityCore``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.AspNetCore.Identity.IdentityOptions})">
+            <summary>
+            Adds and configures the identity system for the specified User and Role types.
+            </summary>
+            <typeparam name="TUser">The type representing a User in the system.</typeparam>
+            <typeparam name="TRole">The type representing a Role in the system.</typeparam>
+            <param name="services">The services available in the application.</param>
+            <param name="setupAction">An action to configure the <see cref="T:Microsoft.AspNetCore.Identity.IdentityOptions"/>.</param>
+            <returns>An <see cref="T:Microsoft.AspNetCore.Identity.IdentityBuilder"/> for creating and configuring the identity system.</returns>
+        </member>
+        <member name="M:Pod.Web.Center.UserExtensions.GetUserId(System.Security.Claims.ClaimsPrincipal,System.Guid@)">
+            <summary>
+            Will be available if the User is authenticated by a JWT/Bearer authentication
+            </summary>
+            <returns>true if user Id was found</returns>
+        </member>
+        <member name="M:Pod.Web.Center.UserExtensions.GetStationApiKeyData(System.Security.Claims.ClaimsPrincipal,System.Guid@,System.Guid@)">
+            <summary>
+            Will be available if the authentication was done with a <see cref="T:Pod.Data.Models.Shell.StationApiKey"/>
+            </summary>
+            <param name="claimsPrincipal">The Claims Principal set by the authentication</param>
+            <param name="userId">The User Id from the claim</param>
+            <param name="stationId">The Station Id from the claim</param>
+            <returns>true if all values were found</returns>
+        </member>
+        <member name="T:Pod.Web.Center.ServicesHosted.ConnectionHealthServiceHosted">
+            <summary>
+            Background service that checks periodically for Connections/Sessions that were not properly closed
+            and handles them accordingly
+            </summary>
+        </member>
+        <member name="M:Pod.Web.Center.ServicesHosted.ConnectionHealthServiceHosted.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            Method for Background Service to perform work
+            Will scan periodically for orphaned connections and clean their status.
+            This is mainly needed for stations that closed their connection ungracefully and
+            never come online afterwards
+            </summary>
+            <param name="stoppingToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pod.Web.Center.ServicesHosted.GrpcHostedServer">
+            <summary>
+            Services that can be Hosted in Asp.Net Core that provides Grpc Services for clients
+            </summary>
+        </member>
+        <member name="T:Pod.Web.Center.ServicesHosted.GrpcServicesServer">
+            <summary>
+            Grpc Server providing multiple Services as <see cref="T:Pod.Grpc.ShellHost.Server.Services.ShellHostServiceGrpc"/>, <see cref="T:Pod.Grpc.ConnectHost.Server.Services.ConnectHostServiceGrpc"/>, <see cref="T:Pod.Grpc.ShellHost.Server.Services.ShellApplicationServiceGrpc"/>
+            </summary>
+        </member>
+        <member name="T:Pod.Web.Center.ServicesHosted.SendEmailServiceHosted">
+            <summary>
+            Background Service sending Emails from Templates
+            </summary>
+        </member>
+        <member name="T:Pod.Web.Center.Swagger.ApiExplorerGroupPerVersionConvention">
+            <summary>
+            This Method applies Conventions for the ApiExplorerGroups that are used by swagger to assign Controller Methods to Swagger Documents
+            The default implementation inspects ApiDescription.GroupName and returns true if the value is either null OR equal to the requested document name.
+            </summary>
+        </member>
+        <member name="T:Pod.Web.Center.Swagger.AuthorizationOperationFilter">
+            <summary>
+            Filters Routes for the Authorize attribute and applies the authentication scheme and response for doc
+            </summary>
+        </member>
+        <member name="T:Pod.Web.Center.Swagger.EnumDocumentFilter">
+            <summary>
+            Add enum value descriptions to Swagger
+            </summary>
+        </member>
+        <member name="M:Pod.Web.Center.Swagger.EnumDocumentFilter.Apply(Swashbuckle.AspNetCore.Swagger.SwaggerDocument,Swashbuckle.AspNetCore.SwaggerGen.DocumentFilterContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:Pod.Web.Center.TokenProvider.PasswordResetTokenProvider`1">
+            <summary>
+            Subclass of DataProtectorTokenProvider to allow different settings for these providers
+            </summary>
+            <typeparam name="TUser"></typeparam>
+        </member>
+        <member name="T:Pod.Web.Center.TokenProvider.EmailConfirmationTokenProvider`1">
+            <summary>
+            Subclass of DataProtectorTokenProvider to allow different settings for these providers
+            </summary>
+            <typeparam name="TUser"></typeparam>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,10 @@
+[req]
+distinguished_name = req_dn
+prompt = no
+x509_extensions = v3_ca
+[req_dn]
+CN = PoD Dev CA
+O = PoD Dev
+[v3_ca]
+basicConstraints = critical, CA:TRUE
+keyUsage = critical, keyCertSign, cRLSign

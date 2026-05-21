@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Configurations>Debug;Release</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pod.DtoModels\Pod.DtoModels.csproj" />
+    <ProjectReference Include="..\Pod.Enums\Pod.Enums.csproj" />
+    <ProjectReference Include="..\Pod.ViewModels\Pod.ViewModels.csproj" />
+    <ProjectReference Include="..\Pod.Web.Client.Rest\Pod.Web.Client.Rest.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AEE42744-9545-463A-B67E-E21346F364E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LeapVR.Shell.Domain.Models</RootNamespace>
+    <AssemblyName>LeapVR.Shell.Domain.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_ShellClient|AnyCPU'">
+    <OutputPath>bin\Release_ShellClient\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_ShellClient|x64'">
+    <OutputPath>bin\x64\Release_ShellClient\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.5.11\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App\FirewallState.cs" />
+    <Compile Include="App\IAppCategory.cs" />
+    <Compile Include="App\IAppExecutablesUpdate.cs" />
+    <Compile Include="App\IAppInstallationInfo.cs" />
+    <Compile Include="App\IAppLicenseInfo.cs" />
+    <Compile Include="App\IAppDisplayData.cs" />
+    <Compile Include="App\IAppDisplayUpdate.cs" />
+    <Compile Include="App\IAppDisplayUpdateInfo.cs" />
+    <Compile Include="App\IProcessExecutionLogic.cs" />
+    <Compile Include="App\IProcessMonitorInstruction.cs" />
+    <Compile Include="Container\IAppPlatformDataDto.cs" />
+    <Compile Include="Controllers\IRemoteServiceController.cs" />
+    <Compile Include="Customization\LoginConfig.cs" />
+    <Compile Include="UserInterface\EventMessages\IUIConnectionStateChangedEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\IUISession.cs" />
+    <Compile Include="Container\IAppInstallationHeader.cs" />
+    <Compile Include="Container\IAppInstallationHeaderSerializer.cs" />
+    <Compile Include="Container\INewApplicationInstallationContainer.cs" />
+    <Compile Include="Container\IZipContainerHeader.cs" />
+    <Compile Include="Container\IZipContainerHeaderSerializer.cs" />
+    <Compile Include="Customization\ServerConfig.cs" />
+    <Compile Include="Customization\DiskConfig.cs" />
+    <Compile Include="Customization\SecurityConfig.cs" />
+    <Compile Include="Authentication\LoginDecisionType.cs" />
+    <Compile Include="Billing\AnonymousLoginSettingsBase.cs" />
+    <Compile Include="Authentication\ILoginDecision.cs" />
+    <Compile Include="Authentication\ILoginIntention.cs" />
+    <Compile Include="Authentication\IntendAnonymouseSessionResult.cs" />
+    <Compile Include="Billing\INoBillingSessionRate.cs" />
+    <Compile Include="Billing\IPrepaidSessionRate.cs" />
+    <Compile Include="Billing\ISessionRate.cs" />
+    <Compile Include="Billing\ISessionSettings.cs" />
+    <Compile Include="Billing\SessionType.cs" />
+    <Compile Include="Billing\QrCodeLoginSettingsBase.cs" />
+    <Compile Include="Billing\SessionStopReason.cs" />
+    <Compile Include="Container\IAppInstallationContainer.cs" />
+    <Compile Include="Container\IContainer.cs" />
+    <Compile Include="Customization\ConfigObject.cs" />
+    <Compile Include="Customization\IConfigFileRepository.cs" />
+    <Compile Include="Container\ContentType.cs" />
+    <Compile Include="Container\PackagePhases.cs" />
+    <Compile Include="Customization\StationConfig.cs" />
+    <Compile Include="Customization\SystemConfig.cs" />
+    <Compile Include="Disk\IDiskEntity.cs" />
+    <Compile Include="GlobalConfig.cs" />
+    <Compile Include="Language\ILanguageSelector.cs" />
+    <Compile Include="Module\ICacheEntity.cs" />
+    <Compile Include="Module\ISelectableVrType.cs" />
+    <Compile Include="Multimedia\IMultimediaSettings.cs" />
+    <Compile Include="Multimedia\IMultimediaSettingsData.cs" />
+    <Compile Include="Platform\Account\IAccountAccess.cs" />
+    <Compile Include="Platform\Account\IPlatformAccount.cs" />
+    <Compile Include="Platform\Account\PlatformConverter.cs" />
+    <Compile Include="Container\Installation\InstallationPhases.cs" />
+    <Compile Include="Container\Installation\InstallationProgress.cs" />
+    <Compile Include="Container\PackageProgress.cs" />
+    <Compile Include="Controllers\IDiskController.cs" />
+    <Compile Include="Disk\IWholeDiskUsage.cs" />
+    <Compile Include="Disk\PackageState.cs" />
+    <Compile Include="Execution\ExecutionPhase.cs" />
+    <Compile Include="Execution\ProcessMonitorOption.cs" />
+    <Compile Include="App\AppExecutionMessage.cs" />
+    <Compile Include="App\IAppDisplayInfo.cs" />
+    <Compile Include="Container\INewPackage.cs" />
+    <Compile Include="Container\IProgressAwarePackage.cs" />
+    <Compile Include="Container\IContainerPackage.cs" />
+    <Compile Include="Execution\IAppExecutionInfo.cs" />
+    <Compile Include="Execution\IExecuteable.cs" />
+    <Compile Include="Execution\IExecutionMessageReceiver.cs" />
+    <Compile Include="Container\IProcessMonitorInstructionDto.cs" />
+    <Compile Include="Execution\IApplicationExecution.cs" />
+    <Compile Include="Hardware\DeviceState.cs" />
+    <Compile Include="Customization\IConfigObject.cs" />
+    <Compile Include="Hardware\HardwareDeviceTemplate.cs" />
+    <Compile Include="Container\IAppDisplayDataDto.cs" />
+    <Compile Include="App\IAppStatisticsData.cs" />
+    <Compile Include="Container\IDiskEntityDto.cs" />
+    <Compile Include="Disk\IStoredPackageData.cs" />
+    <Compile Include="Execution\ExecutionOptionFlags.cs" />
+    <Compile Include="App\IAppHardwareData.cs" />
+    <Compile Include="App\IAppInstallationData.cs" />
+    <Compile Include="App\IAppPlatformData.cs" />
+    <Compile Include="Container\IPackageData.cs" />
+    <Compile Include="Container\IProcessExecutionLogicDto.cs" />
+    <Compile Include="Hardware\IHardwareDeviceTemplateData.cs" />
+    <Compile Include="Controllers\IController.cs" />
+    <Compile Include="Hardware\IHardwareDeviceTemplateRepository.cs" />
+    <Compile Include="Input\OpenVR\ButtonState.cs" />
+    <Compile Include="Input\OpenVR\ConditionScope.cs" />
+    <Compile Include="Input\OpenVR\IControllerKeyAction.cs" />
+    <Compile Include="Input\OpenVR\IControllerKeyActionWatch.cs" />
+    <Compile Include="Input\OpenVR\IControllerKeyState.cs" />
+    <Compile Include="Input\OpenVR\IControllerShortcutWatch.cs" />
+    <Compile Include="Input\XInput\InputState.cs" />
+    <Compile Include="Input\XInput\XInputButtonArgs.cs" />
+    <Compile Include="Input\XInput\XInputButtons.cs" />
+    <Compile Include="Input\XInput\XInputButtonState.cs" />
+    <Compile Include="Input\XInput\XInputCompositeArgs.cs" />
+    <Compile Include="Container\Installation\CanUninstallStatus.cs" />
+    <Compile Include="Container\Installation\CanInstallStatus.cs" />
+    <Compile Include="Platform\Account\IPlatformAccountData.cs" />
+    <Compile Include="LoggingExtensions.cs" />
+    <Compile Include="App\IAppPlatformInfo.cs" />
+    <Compile Include="Platform\AppPlatformData.cs" />
+    <Compile Include="Platform\IPlatform.cs" />
+    <Compile Include="Platform\IPlatformInstallationProcessInfo.cs" />
+    <Compile Include="Platform\IPlatformInstallationProgress.cs" />
+    <Compile Include="Platform\PlatformInstallationPhase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Authentication\LoginDecisionResultType.cs" />
+    <Compile Include="Platform\IAppInfoProcessor.cs" />
+    <Compile Include="Container\Installation\IInstallationProcessInfo.cs" />
+    <Compile Include="Container\Installation\InstallationState.cs" />
+    <Compile Include="Station\ILocalMachine.cs" />
+    <Compile Include="Station\IShellClientInfo.cs" />
+    <Compile Include="Container\Installation\IUninstallationProcessInfo.cs" />
+    <Compile Include="Station\ShellVersionStatus.cs" />
+    <Compile Include="Station\StationMessage.cs" />
+    <Compile Include="Station\StationMode.cs" />
+    <Compile Include="Station\LicenseStatus.cs" />
+    <Compile Include="Station\NetworkConnectionStatus.cs" />
+    <Compile Include="Station\VrMode.cs" />
+    <Compile Include="Customization\GlobalConfiguration.cs" />
+    <Compile Include="Statistics\IAppStatistic.cs" />
+    <Compile Include="System\IApplicationHost.cs" />
+    <Compile Include="System\StartupOptions.cs" />
+    <Compile Include="System\TerminationSignal.cs" />
+    <Compile Include="UserInterface\EventMessages\EventMessageEnums.cs" />
+    <Compile Include="UserInterface\EventMessages\IUIPlatformNotificationsAvailableEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\UIAdminAccessApprovedEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\UIAdminAccessAttemptEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\UIAdminAccessDismissEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\UIAppEnabledStateChangedEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\UIAppDisplayInfoChanged.cs" />
+    <Compile Include="UserInterface\EventMessages\UIAppInstallationStartedEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\UIAppExecutionEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\UIAppInstalledEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\UIConnectDialogEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\UIPlatformAccountChanged.cs" />
+    <Compile Include="UserInterface\EventMessages\UIAppUninstalledEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\UICultureInfoChangedEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\UILoginDecisionResultEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\UILoginIntendedEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\UILoginIntentionExpiredEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\UIClientInfoChangedEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\UINetworkStateChanged.cs" />
+    <Compile Include="UserInterface\EventMessages\UIPlatformAppInstallationStartedEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\UISessionSetupChangedEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\UISessionStartedEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\UISessionUpdatedEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\UISessionStoppingEvent.cs" />
+    <Compile Include="UserInterface\EventMessages\UIStationModeChangedEvent.cs" />
+    <Compile Include="UserInterface\IUIMessageBroker.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LeapVR.Shared.Lib\LeapVR.Shared.Lib.csproj">
+      <Project>{0d026240-e3fe-4d30-bbfd-aac388b278d2}</Project>
+      <Name>LeapVR.Shared.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pod.Data.Infrastructure\Pod.Data.Infrastructure.csproj">
+      <Project>{C485E8C0-FAB2-4FA4-827D-4C44F5E0B8EB}</Project>
+      <Name>Pod.Data.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LeapVR.Shell.Domain.Models.licenseheader" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

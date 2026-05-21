@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net471</TargetFrameworks>
+    <RootNamespace>Unosquare.FFME</RootNamespace>
+    <Version>4.0.270</Version>
+    <Authors>Mario Di Vece and Contributors to the FFME project</Authors>
+    <Company>Unosquare SA de CV</Company>
+    <Product>FFME Cross-Platform Media Engine</Product>
+    <Description>Contains all portable, cross platform Media Core engine components</Description>
+    <Copyright>Unosquare SA de CV, Mario Di Vece, and Contributors, (C) 2017-2018</Copyright>
+    <PackageProjectUrl>https://github.com/unosquare/ffmediaelement</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/unosquare/ffmediaelement/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl>https://github.com/unosquare/ffmediaelement/blob/master/ffme.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/unosquare/ffmediaelement</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>FFmpeg, Media, Audio, Video, Decoding</PackageTags>
+    <AssemblyName>ffme.common</AssemblyName>
+    <Platforms>AnyCPU</Platforms>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <AssemblyVersion>4.0.270.0</AssemblyVersion>
+    <FileVersion>4.0.270.0</FileVersion>
+    <LangVersion>latest</LangVersion>
+	<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+	<Configurations>Debug;Release;Release_ShellClient</Configurations>
+  </PropertyGroup>
+
+  <!-- Vendored third-party code: do not enforce StyleCop on it. The upstream
+       ..\StyleCop.Analyzers.ruleset that was meant to relax these rules is
+       not present in our tree, so the Debug-config "TreatWarningsAsErrors"
+       block turned every SA/SX warning into a build error (3000+ on a
+       solution-level Debug|AnyCPU build, which is what the Roslyn LSP picks
+       by default when VSCode loads PoD.sln). The whole policy is dropped
+       here together with the analyzer reference; we ship vendored code
+       as-is and fix any real issues in our own projects. -->
+
+  
+  <ItemGroup Condition="'$(TargetFramework)'=='net461'">
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\FFmpeg.AutoGen\FFmpeg.AutoGen\FFmpeg.AutoGen.csproj" />
+  </ItemGroup>
+
+</Project>

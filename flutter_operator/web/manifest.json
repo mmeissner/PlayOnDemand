@@ -1,0 +1,11 @@
+{
+  "name": "PoD Operator",
+  "short_name": "PoD",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#558b2f",
+  "description": "PlayOnDemand operator frontend",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
+}

@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="en-US" original="LEAPVR.SHELL.CATEGORIES/RESOURCE.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6810.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="LEAPVR.SHELL.CATEGORIES/RESOURCE.RESX" datatype="resx">
+        <trans-unit id="Category_2D" translate="yes" xml:space="preserve">
+          <source>2D</source>
+          <target state="new">2D</target>
+        </trans-unit>
+        <trans-unit id="Category_3D" translate="yes" xml:space="preserve">
+          <source>3D</source>
+          <target state="new">3D</target>
+        </trans-unit>
+        <trans-unit id="Category_action" translate="yes" xml:space="preserve">
+          <source>Action</source>
+          <target state="new">Action</target>
+        </trans-unit>
+        <trans-unit id="Category_adventure" translate="yes" xml:space="preserve">
+          <source>Adventure</source>
+          <target state="new">Adventure</target>
+        </trans-unit>
+        <trans-unit id="Category_arcade" translate="yes" xml:space="preserve">
+          <source>Arcade</source>
+          <target state="new">Arcade</target>
+        </trans-unit>
+        <trans-unit id="Category_battle" translate="yes" xml:space="preserve">
+          <source>Battle</source>
+          <target state="new">Battle</target>
+        </trans-unit>
+        <trans-unit id="Category_card" translate="yes" xml:space="preserve">
+          <source>Boardgames</source>
+          <target state="new">Boardgames</target>
+        </trans-unit>
+        <trans-unit id="Category_cartoon" translate="yes" xml:space="preserve">
+          <source>Comic</source>
+          <target state="new">Comic</target>
+        </trans-unit>
+        <trans-unit id="Category_casual" translate="yes" xml:space="preserve">
+          <source>Casual</source>
+          <target state="new">Casual</target>
+        </trans-unit>
+        <trans-unit id="Category_classic" translate="yes" xml:space="preserve">
+          <source>Classic</source>
+          <target state="new">Classic</target>
+        </trans-unit>
+        <trans-unit id="Category_co_op" translate="yes" xml:space="preserve">
+          <source>Co-Op</source>
+          <target state="new">Co-Op</target>
+        </trans-unit>
+        <trans-unit id="Category_education" translate="yes" xml:space="preserve">
+          <source>Education</source>
+          <target state="new">Education</target>
+        </trans-unit>
+        <trans-unit id="Category_explore" translate="yes" xml:space="preserve">
+          <source>Explore</source>
+          <target state="new">Explore</target>
+        </trans-unit>
+        <trans-unit id="Category_horror" translate="yes" xml:space="preserve">
+          <source>Horror</source>
+          <target state="new">Horror</target>
+        </trans-unit>
+        <trans-unit id="Category_music" translate="yes" xml:space="preserve">
+          <source>Music</source>
+          <target state="new">Music</target>
+        </trans-unit>
+        <trans-unit id="Category_open_world" translate="yes" xml:space="preserve">
+          <source>Open World</source>
+          <target state="new">Open World</target>
+        </trans-unit>
+        <trans-unit id="Category_party" translate="yes" xml:space="preserve">
+          <source>Party</source>
+          <target state="new">Party</target>
+        </trans-unit>
+        <trans-unit id="Category_pixel" translate="yes" xml:space="preserve">
+          <source>Pixel</source>
+          <target state="new">Pixel</target>
+        </trans-unit>
+        <trans-unit id="Category_race" translate="yes" xml:space="preserve">
+          <source>Racing</source>
+          <target state="new">Racing</target>
+        </trans-unit>
+        <trans-unit id="Category_room_scale" translate="yes" xml:space="preserve">
+          <source>Room Scale</source>
+          <target state="new">Room Scale</target>
+        </trans-unit>
+        <trans-unit id="Category_rpg" translate="yes" xml:space="preserve">
+          <source>RPG</source>
+          <target state="new">RPG</target>
+        </trans-unit>
+        <trans-unit id="Category_scifi" translate="yes" xml:space="preserve">
+          <source>Sci-Fi</source>
+          <target state="new">Sci-Fi</target>
+        </trans-unit>
+        <trans-unit id="Category_shooter" translate="yes" xml:space="preserve">
+          <source>Shooter</source>
+          <target state="new">Shooter</target>
+        </trans-unit>
+        <trans-unit id="Category_sim" translate="yes" xml:space="preserve">
+          <source>Simulation</source>
+          <target state="new">Simulation</target>
+        </trans-unit>
+        <trans-unit id="Category_space" translate="yes" xml:space="preserve">
+          <source>Space</source>
+          <target state="new">Space</target>
+        </trans-unit>
+        <trans-unit id="Category_sport" translate="yes" xml:space="preserve">
+          <source>Sport</source>
+          <target state="new">Sport</target>
+        </trans-unit>
+        <trans-unit id="Category_strategy" translate="yes" xml:space="preserve">
+          <source>Strategy</source>
+          <target state="new">Strategy</target>
+        </trans-unit>
+        <trans-unit id="Category_tower_defense" translate="yes" xml:space="preserve">
+          <source>Tower Defense</source>
+          <target state="new">Tower Defense</target>
+        </trans-unit>
+        <trans-unit id="Category_puzzle" translate="yes" xml:space="preserve">
+          <source>Puzzle</source>
+          <target state="new">Puzzle</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

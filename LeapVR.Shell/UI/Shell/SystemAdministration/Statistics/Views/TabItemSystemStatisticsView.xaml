@@ -1,0 +1,17 @@
+﻿<UserControl
+    x:Class="LeapVR.Shell.UI.Shell.SystemAdministration.Statistics.Views.TabItemSystemStatisticsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:LeapVR.Shell.UI.Shell.SystemAdministration.Statistics.Views" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:usercontrols="clr-namespace:LeapVR.Shell.UI.Usercontrols"
+    d:DesignHeight="720" d:DesignWidth="1280"
+    mc:Ignorable="d">
+    <Grid>
+        <usercontrols:LeapTabControl
+            x:Name="Items"
+            Grid.Row="0"
+            Margin="0,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch"
+            ItemContainerStyle="{DynamicResource TabItemStyleHorizontalLevel2}"
+            ScrollViewer.CanContentScroll="False"
+            Style="{DynamicResource TabControlStyle}"
+            TabStripPlacement="Top" />
+    </Grid>
+</UserControl>

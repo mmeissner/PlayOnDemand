@@ -1,0 +1,56 @@
+﻿syntax = "proto3";
+package Pod.Grpc.Messages.Shared;
+
+
+message GuidAsBytes {
+    bytes Value = 1;
+}
+
+message TimeSpanAsLong {
+    int64 Value = 1;
+    bool HasValue = 2;
+}
+
+message DateTimeUtcAsLong {
+    int64 Value = 1;
+    bool HasValue = 2;
+}
+
+enum ControlMode 
+{
+    ControlMode_Unset = 0;
+    ControlMode_Local = 1;
+    ControlMode_Remote = 2;
+    ControlMode_RemoteWithQrCode = 3;
+}
+
+enum ClientNotificationEvent
+{
+    ClientNotificationEvent_Unset = 0;
+    ClientNotificationEvent_CheckLoginRequest = 1;
+    ClientNotificationEvent_UpdateClientSettings = 2;
+    ClientNotificationEvent_UpdateSessionState = 3;
+    ClientNotificationEvent_UpdateServerSettings = 4;
+    ClientNotificationEvent_SendHeartbeat = 5;
+    ClientNotificationEvent_Untranslated = 1000;
+}
+
+
+enum SessionState
+{
+    SessionState_Unset = 0;
+    SessionState_NoSession= 1;
+    SessionState_LoginRequested = 2;
+    SessionState_AwaitingConfirmation = 3;
+    SessionState_Running = 4;
+}
+
+enum LogoutReason
+{
+    LogoutReason_Unset = 0;        
+    LogoutReason_UserLogout = 1;
+    LogoutReason_Inactivity = 2;
+    LogoutReason_Shutdown = 3;
+    LogoutReason_LimitReached = 4;
+}
+

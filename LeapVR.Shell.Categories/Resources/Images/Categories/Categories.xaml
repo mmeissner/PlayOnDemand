@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--  ReSharper disable InconsistentNaming  -->
+    <BitmapImage x:Key="2D" UriSource="2D.png" />
+    <BitmapImage x:Key="3D" UriSource="3D.png" />
+    <BitmapImage x:Key="action" UriSource="action.png" />
+    <BitmapImage x:Key="adventure" UriSource="adventure.png" />
+    <BitmapImage x:Key="arcade" UriSource="arcade.png" />
+    <BitmapImage x:Key="battle" UriSource="battle.png" />
+    <BitmapImage x:Key="card" UriSource="card.png" />
+    <BitmapImage x:Key="cartoon" UriSource="cartoon.png" />
+    <BitmapImage x:Key="casual" UriSource="casual.png" />
+    <BitmapImage x:Key="classic" UriSource="classic.png" />
+    <BitmapImage x:Key="co_op" UriSource="co_op.png" />
+    <BitmapImage x:Key="education" UriSource="education.png" />
+    <BitmapImage x:Key="explore" UriSource="explore.png" />
+    <BitmapImage x:Key="horror" UriSource="horror.png" />
+    <BitmapImage x:Key="music" UriSource="music.png" />
+    <BitmapImage x:Key="open_world" UriSource="open_world.png" />
+    <BitmapImage x:Key="party" UriSource="party.png" />
+    <BitmapImage x:Key="pixel" UriSource="pixel.png" />
+    <BitmapImage x:Key="puzzle" UriSource="puzzle.png" />
+    <BitmapImage x:Key="race" UriSource="race.png" />
+    <BitmapImage x:Key="room_scale" UriSource="room_scale.png" />
+    <BitmapImage x:Key="rpg" UriSource="rpg.png" />
+    <BitmapImage x:Key="scifi" UriSource="scifi.png" />
+    <BitmapImage x:Key="shooter" UriSource="shooter.png" />
+    <BitmapImage x:Key="sim" UriSource="sim.png" />
+    <BitmapImage x:Key="space" UriSource="space.png" />
+    <BitmapImage x:Key="sport" UriSource="sport.png" />
+    <BitmapImage x:Key="strategy" UriSource="strategy.png" />
+    <BitmapImage x:Key="tower_defense" UriSource="tower_defense.png" />
+</ResourceDictionary>

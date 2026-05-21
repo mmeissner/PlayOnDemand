@@ -1,0 +1,74 @@
+﻿#region Licence
+/****************************************************************
+ *  Filename: IMediaRenderer.cs
+ *  ----------------------------------------------------------
+ *  Author        Martin Meissner
+ *  Date          2026-05-19
+ *  Copyright (c) 2026 Martin Meissner.
+ *                Released under the Apache License 2.0 as part of
+ *                the open-source PlayOnDemand release.
+ *
+ *  SPDX-License-Identifier: Apache-2.0
+ ****************************************************************/
+#endregion
+namespace Unosquare.FFME.Shared
+{
+    using System;
+
+    /// <summary>
+    /// Provides a unified API for media rendering classes
+    /// </summary>
+    public interface IMediaRenderer
+    {
+        /// <summary>
+        /// Gets the parent media engine.
+        /// </summary>
+        MediaEngine MediaCore { get; }
+
+        /// <summary>
+        /// Waits for the renderer to be ready to render.
+        /// This is called only once before all Render calls are made
+        /// </summary>
+        void WaitForReadyState();
+
+        /// <summary>
+        /// Executed when the Play method is called on the parent MediaElement
+        /// </summary>
+        void Play();
+
+        /// <summary>
+        /// Executed when the Pause method is called on the parent MediaElement
+        /// </summary>
+        void Pause();
+
+        /// <summary>
+        /// Executed when the Pause method is called on the parent MediaElement
+        /// </summary>
+        void Stop();
+
+        /// <summary>
+        /// Executed when the Close method is called on the parent MediaElement
+        /// </summary>
+        void Close();
+
+        /// <summary>
+        /// Executed after a Seek operation is performed on the parent MediaElement
+        /// </summary>
+        void Seek();
+
+        /// <summary>
+        /// Called when a media block is due rendering.
+        /// This needs to return immediately so the calling thread is not disturbed.
+        /// </summary>
+        /// <param name="mediaBlock">The media block.</param>
+        /// <param name="clockPosition">The clock position.</param>
+        void Render(MediaBlock mediaBlock, TimeSpan clockPosition);
+
+        /// <summary>
+        /// Called on every block rendering clock cycle just in case some update operation needs to be performed.
+        /// This needs to return immediately so the calling thread is not disturbed.
+        /// </summary>
+        /// <param name="clockPosition">The clock position.</param>
+        void Update(TimeSpan clockPosition);
+    }
+}

@@ -1,0 +1,185 @@
+﻿<UserControl
+    x:Class="LeapVR.Shell.UI.Shell.Dashboard.Views.DashboardView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:behaviors="clr-namespace:LeapVR.Shell.UI.Core.Behaviors" xmlns:cal="http://www.caliburnproject.org" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:fa="http://schemas.fontawesome.io/icons/"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:lex="http://wpflocalizeextension.codeplex.com" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:usercontrols="clr-namespace:LeapVR.Shell.UI.Usercontrols"
+    d:DesignHeight="1080" d:DesignWidth="1920"
+    mc:Ignorable="d">
+    <Grid x:Name="Dashboard" FocusManager.IsFocusScope="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="150" />
+        </Grid.RowDefinitions>
+
+        <ContentControl x:Name="StatusBarViewModel" Grid.Row="0" Panel.ZIndex="10" IsTabStop="False" />
+
+        <Grid x:Name="Center" Grid.Row="1">
+            <TextBlock
+                x:Name="NoApplicationAvailableTips"
+                Focusable="True"
+                FontSize="{StaticResource SessionViewsH1}"
+                Foreground="{StaticResource SessionViewsPrimaryForegroundColor}"
+                Style="{StaticResource TextBlockBaseStyle}"
+                Text="{lex:Loc Applications_NoAppAvailable}"
+                TextAlignment="Center"
+                Visibility="{Binding ShowNoApplicationsMessage, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=true}" />
+
+            <Grid x:Name="ApplicationsContainer" Visibility="{Binding ShowApplications, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid x:Name="NavigationArea" Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="100" />
+                    </Grid.ColumnDefinitions>
+
+                    <RepeatButton
+                        x:Name="PreviousCategory"
+                        Margin="10" VerticalAlignment="Center"
+                        Focusable="False"
+                        Style="{DynamicResource ButtonBaseStyle}">
+                        <fa:FontAwesome FontSize="{DynamicResource H2}" Icon="ChevronCircleLeft" />
+                    </RepeatButton>
+
+                    <RepeatButton
+                        x:Name="NextCategory"
+                        Grid.Column="2"
+                        Margin="10" VerticalAlignment="Center"
+                        Focusable="False"
+                        Style="{DynamicResource ButtonBaseStyle}">
+                        <fa:FontAwesome FontSize="{DynamicResource H2}" Icon="ChevronCircleRight" />
+                    </RepeatButton>
+
+                    <ListBox
+                        x:Name="Categories"
+                        Grid.Column="1"
+                        Background="{DynamicResource SessionViewsPrimaryBackgroundColor}"
+                        BorderThickness="0" IsSynchronizedWithCurrentItem="True"
+                        ItemContainerStyle="{DynamicResource CategoryHeaderContainerStyle}"
+                        KeyboardNavigation.DirectionalNavigation="Cycle" KeyboardNavigation.TabNavigation="None" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                        SelectedItem="{Binding ActivatedCategory, Mode=TwoWay}">
+                        <i:Interaction.Behaviors>
+                            <behaviors:ItemsControlExternalNavigationBehavior ScrollLeftButton="{Binding ElementName=PreviousCategory}" ScrollRightButton="{Binding ElementName=NextCategory}" />
+                        </i:Interaction.Behaviors>
+                        <ListBox.Resources>
+                            <ControlTemplate x:Key="CategoryHeaderContainerWithLineAboveTemplate" TargetType="{x:Type ListBoxItem}">
+                                <Border
+                                    x:Name="Border"
+                                    Margin="{TemplateBinding Margin}"
+                                    Padding="{TemplateBinding Padding}"
+                                    HorizontalAlignment="Stretch"
+                                    Background="{TemplateBinding Background}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    Focusable="False">
+                                    <DockPanel>
+                                        <Rectangle
+                                            x:Name="Line"
+                                            Height="5"
+                                            HorizontalAlignment="Stretch"
+                                            DockPanel.Dock="Top"
+                                            Fill="{DynamicResource SessionViewsPrimaryForegroundColor}"
+                                            Visibility="Hidden" />
+                                        <ContentPresenter x:Name="ContentSite" Focusable="False" />
+                                    </DockPanel>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter TargetName="Line" Property="Visibility" Value="Visible" />
+                                        <Setter Property="TextElement.FontWeight" Value="Bold" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="False">
+                                        <Setter Property="Foreground" Value="{DynamicResource SessionViewsDisabledForegroundColor}" />
+                                        <Setter TargetName="Border" Property="Background" Value="Transparent" />
+                                    </Trigger>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="IsMouseOver" Value="true" />
+                                            <Condition Property="IsSelected" Value="false" />
+                                        </MultiTrigger.Conditions>
+                                        <Setter TargetName="Line" Property="Visibility" Value="Visible" />
+                                        <Setter TargetName="Line" Property="Fill" Value="{DynamicResource SessionViewsDisabledForegroundColor}" />
+                                    </MultiTrigger>
+                                    <EventTrigger RoutedEvent="ListBoxItem.Selected">
+                                        <EventTrigger.Actions>
+                                            <SoundPlayerAction Source="pack://application:,,,/LeapPlay.Shell;component/Resources/ButtonClick.wav" />
+                                        </EventTrigger.Actions>
+                                    </EventTrigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                            <Style x:Key="CategoryHeaderContainerStyle" TargetType="{x:Type ListBoxItem}">
+                                <Setter Property="Foreground" Value="{DynamicResource SessionViewsPrimaryForegroundColor}" />
+                                <Setter Property="Background" Value="{DynamicResource SessionViewsPrimaryBackgroundColor}" />
+                                <Setter Property="FontSize" Value="{DynamicResource SessionViewsTabButtonFontSize}" />
+                                <Setter Property="Width" Value="{DynamicResource SessionViewsTabButtonWidth}" />
+                                <Setter Property="Height" Value="{DynamicResource SessionViewsTabButtonHeight}" />
+                                <Setter Property="BorderThickness" Value="{DynamicResource SessionViewsTabButtonBorderThickness}" />
+                                <Setter Property="Margin" Value="5,0" />
+                                <Setter Property="Padding" Value="0" />
+                                <Setter Property="TextBlock.TextTrimming" Value="CharacterEllipsis" />
+                                <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                                <Setter Property="UseLayoutRounding" Value="False" />
+                                <Setter Property="Template" Value="{DynamicResource CategoryHeaderContainerWithLineAboveTemplate}" />
+                            </Style>
+                        </ListBox.Resources>
+
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid
+                                    Margin="0"
+                                    Background="Transparent" IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="None" KeyboardNavigation.TabIndex="1"
+                                    KeyboardNavigation.TabNavigation="None" Rows="1" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ListBox>
+
+                </Grid>
+
+                <ContentControl x:Name="ActiveItem" Grid.Row="1" Focusable="True" />
+
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="BottomBar" Grid.Row="2" Visibility="{Binding ShowButtomBar, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="264" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid x:Name="ButtomRightView" Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" MaxWidth="400" />
+                </Grid.ColumnDefinitions>
+
+                <ContentControl x:Name="SessionViewModel" Grid.Column="1" Margin="20,0" />
+
+                <usercontrols:LeapButton
+                    x:Name="AttemptToLogout"
+                    Grid.Column="2"
+                    MaxWidth="{DynamicResource SessionViewsButtonWidth}"
+                    MaxHeight="{DynamicResource SessionViewsButtonHeight}"
+                    Margin="20"
+                    Focusable="False"
+                    Style="{DynamicResource SessionViewsButtonStyle}">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:FontAwesome
+                            Margin="15,0" VerticalAlignment="Center"
+                            FontSize="{DynamicResource SessionViewsButtonFontSize}"
+                            Icon="SignOut" Rotation="180" />
+                        <TextBlock Margin="15,0" VerticalAlignment="Center" FontSize="{DynamicResource SessionViewsButtonFontSize}" Text="{lex:Loc Global_Logout}" />
+                    </StackPanel>
+                </usercontrols:LeapButton>
+
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,91 @@
+syntax = "proto3";
+package Pod.Grpc.Messages.ShellApplications;
+
+import "MessagesShared.proto";
+
+//Request from the client to sync applications with the server
+message SyncRequest
+{
+    Pod.Grpc.Messages.Shared.GuidAsBytes ConnectionId = 1; //The ConnectionId provided by the Connect Service identifying a unquiqe Connection
+    bool SendOnlyLastSyncTimestamp = 2; // Indicates if the server should respond with all known applications and states for the client or should just return a timestamp of the last syncronization
+}
+
+//Response from the server for an SyncRequest
+message SyncResponse
+{
+    Pod.Grpc.Messages.Shared.DateTimeUtcAsLong LastSyncTimestamp = 1; //The Timestamp of the last syncronization of apps
+    repeated AppDataState AppStates = 2; //All known applications and states for that client if specified in requested 
+}
+
+//Requests the server to sync the app states from the client with remote
+message SyncAppsRequest
+{
+    Pod.Grpc.Messages.Shared.GuidAsBytes ConnectionId = 1; //The ConnectionId provided by the Connect Service identifying a unquiqe Connection
+    repeated AppInstallInfo Installations = 2; //All application that are installed but were not listed as installed on server side
+    repeated AppUpdateInfo Updates = 3; // All application that are installed on both sides but contain a different instance version
+    repeated AppUninstallInfo Uninstalls = 4; // All application that were listed by the server as installed by are not anymore on the client
+}
+
+//Response to the client request to sync app states
+message SyncAppsResponse
+{
+    Pod.Grpc.Messages.Shared.DateTimeUtcAsLong NewSyncTimestamp = 2; // The Timestamp created on the server for that provided sync request
+}
+
+//Client information for the server about an installed app
+message AppInstalledRequest
+{
+    Pod.Grpc.Messages.Shared.GuidAsBytes ConnectionId = 1; //The ConnectionId provided by the Connect Service identifying a unquiqe Connection
+    AppInstallInfo Installed = 2; //The info about the installed application
+}
+
+//Client information for the server about an updated app
+message AppUpdateRequest
+{
+    Pod.Grpc.Messages.Shared.GuidAsBytes ConnectionId = 1; //The ConnectionId provided by the Connect Service identifying a unquiqe Connection
+    AppUpdateInfo Updated = 2; //The info about the updated application
+}
+
+//Client information for the server about an uninstalled app
+message AppUninstalledRequest
+{
+    Pod.Grpc.Messages.Shared.GuidAsBytes ConnectionId = 1; //The ConnectionId provided by the Connect Service identifying a unquiqe Connection
+    AppUninstallInfo Uninstalled = 2; //The info about the uninstalled application
+}
+
+//An empty response from the server for some client requests
+message UpdateResponse {}
+
+//App state containing application info
+message AppDataState
+{
+    Pod.Grpc.Messages.Shared.GuidAsBytes ApplicationId = 1; //The Application Id 
+    uint32 InstanceVersion = 2; // The instance version of the application
+}
+
+//App info about an Uninstallation
+message AppUninstallInfo
+{
+    Pod.Grpc.Messages.Shared.GuidAsBytes ApplicationId = 1; //The Application Id 
+    Pod.Grpc.Messages.Shared.DateTimeUtcAsLong UninstalledOnUtc = 2; //The DateTime the application was uninstalled
+}
+
+//App Info about an Installation
+message AppInstallInfo
+{
+    Pod.Grpc.Messages.Shared.GuidAsBytes ApplicationId = 1; //The Application Id 
+    Pod.Grpc.Messages.Shared.GuidAsBytes PlatformId = 2; //The Platform Plugin Id that application was installed by
+    uint32 InstanceVersion = 3; // The instance version of the application
+    Pod.Grpc.Messages.Shared.DateTimeUtcAsLong InstalledOnUtc = 4; //The Date time the application was installed on
+    string DisplayName = 5; //The Name of the application
+    bool IsEnabled = 6; //The Enabled state of the application
+}
+
+//App Info about an Update
+message AppUpdateInfo
+{
+    Pod.Grpc.Messages.Shared.GuidAsBytes ApplicationId = 1; //The Application Id 
+    uint32 InstanceVersion = 2; // The instance version of the application
+    string DisplayName = 3;  // The Name of the application
+    bool IsEnabled = 4; // The Enabled state of the application
+}

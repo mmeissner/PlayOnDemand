@@ -1,0 +1,1339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="en-US" original="LEAPVR.SHELL.LANGUAGE/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1795.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="LEAPVR.SHELL.LANGUAGE/RESOURCES.RESX" datatype="resx">
+        <trans-unit id="Global_Category_Other" translate="yes" xml:space="preserve">
+          <source>Other</source>
+          <target state="translated">Other</target>
+        </trans-unit>
+        <trans-unit id="Global_Loading" translate="yes" xml:space="preserve">
+          <source>Loading...</source>
+          <target state="translated">Loading...</target>
+        </trans-unit>
+        <trans-unit id="Global_Login" translate="yes" xml:space="preserve">
+          <source>Login</source>
+          <target state="translated">GO !</target>
+        </trans-unit>
+        <trans-unit id="Global_Logout" translate="yes" xml:space="preserve">
+          <source>Logout</source>
+          <target state="translated">Logout</target>
+        </trans-unit>
+        <trans-unit id="Global_ProductName" translate="yes" xml:space="preserve">
+          <source>VrBox</source>
+          <target state="translated">VrBox</target>
+        </trans-unit>
+        <trans-unit id="Global_SwitchSkin" translate="yes" xml:space="preserve">
+          <source>Switch Skin</source>
+          <target state="translated">Switch Skin</target>
+        </trans-unit>
+        <trans-unit id="Global_SystemAdministration" translate="yes" xml:space="preserve">
+          <source>System</source>
+          <target state="translated">System</target>
+        </trans-unit>
+        <trans-unit id="Shell_InstallationBlocking_Error" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <target state="translated">Error</target>
+        </trans-unit>
+        <trans-unit id="Shell_InstallationBlocking_InstallationFailed" translate="yes" xml:space="preserve">
+          <source>Installation failed, please try again. If it doesn't help, restart the machine.</source>
+          <target state="translated">Installation failed, please try again. If it doesn't help, restart the machine.</target>
+        </trans-unit>
+        <trans-unit id="Shell_InstallationBlocking_Installing" translate="yes" xml:space="preserve">
+          <source>Installing</source>
+          <target state="translated">Installing</target>
+        </trans-unit>
+        <trans-unit id="Shell_InstallationBlocking_UninstallationFailed" translate="yes" xml:space="preserve">
+          <source>Uninstallation completed, please restart the machine.</source>
+          <target state="translated">Uninstallation completed, please restart the machine.</target>
+        </trans-unit>
+        <trans-unit id="Shell_InstallationBlocking_Uninstalling" translate="yes" xml:space="preserve">
+          <source>Uninstalling</source>
+          <target state="translated">Uninstalling</target>
+        </trans-unit>
+        <trans-unit id="System_Exit" translate="yes" xml:space="preserve">
+          <source>Exit Application</source>
+          <target state="translated">Exit Application</target>
+        </trans-unit>
+        <trans-unit id="System_Exit_DoYouReallyWantToExit" translate="yes" xml:space="preserve">
+          <source>Do you really want to Exit?</source>
+          <target state="translated">Do you really want to Exit?</target>
+        </trans-unit>
+        <trans-unit id="System_Exit_ExitNow" translate="yes" xml:space="preserve">
+          <source>Exit Now</source>
+          <target state="translated">Exit Now</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware" translate="yes" xml:space="preserve">
+          <source>Hardware</source>
+          <target state="translated">Hardware</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_Applications" translate="yes" xml:space="preserve">
+          <source>Applications</source>
+          <target state="translated">Applications</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_CPU" translate="yes" xml:space="preserve">
+          <source>CPU</source>
+          <target state="translated">CPU</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_FreeSpace" translate="yes" xml:space="preserve">
+          <source>Free Space</source>
+          <target state="translated">Free Space</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_RAM" translate="yes" xml:space="preserve">
+          <source>RAM</source>
+          <target state="translated">RAM</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_SoftwareVersion" translate="yes" xml:space="preserve">
+          <source>Software Version</source>
+          <target state="translated">Software Version</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_SystemFiles" translate="yes" xml:space="preserve">
+          <source>System Files</source>
+          <target state="translated">System Files</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_Total" translate="yes" xml:space="preserve">
+          <source>Total</source>
+          <target state="translated">Total</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_VBoxID" translate="yes" xml:space="preserve">
+          <source>VBox ID</source>
+          <target state="translated">VBox ID</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_VBoxType" translate="yes" xml:space="preserve">
+          <source>VBox Type</source>
+          <target state="translated">VBox Type</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_VGA" translate="yes" xml:space="preserve">
+          <source>VGA</source>
+          <target state="translated">VGA</target>
+        </trans-unit>
+        <trans-unit id="System_InputPin" translate="yes" xml:space="preserve">
+          <source>Input PIN</source>
+          <target state="translated">Input PIN</target>
+        </trans-unit>
+        <trans-unit id="System_Installation" translate="yes" xml:space="preserve">
+          <source>Install/Uninstall</source>
+          <target state="translated">Install/Uninstall</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_FreeSpaceCalculating" translate="yes" xml:space="preserve">
+          <source>Free Space Calculating...</source>
+          <target state="translated">Free Space Calculating...</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_Install" translate="yes" xml:space="preserve">
+          <source>Install</source>
+          <target state="translated">Install</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_NoApplications" translate="yes" xml:space="preserve">
+          <source>No Applications</source>
+          <target state="translated">No Applications</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_NoFiles" translate="yes" xml:space="preserve">
+          <source>No Files</source>
+          <target state="translated">No Files</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_NoUsbDrive" translate="yes" xml:space="preserve">
+          <source>No USB Drive</source>
+          <target state="translated">No USB Drive</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_SpaceFree" translate="yes" xml:space="preserve">
+          <source>Space Free</source>
+          <target state="translated">Space Free</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_Uninstall" translate="yes" xml:space="preserve">
+          <source>Uninstall</source>
+          <target state="translated">Uninstall</target>
+        </trans-unit>
+        <trans-unit id="System_InvalidPin" translate="yes" xml:space="preserve">
+          <source>Invalid PIN</source>
+          <target state="translated">Invalid PIN</target>
+        </trans-unit>
+        <trans-unit id="System_Poweroff" translate="yes" xml:space="preserve">
+          <source>Power Off</source>
+          <target state="translated">Power Off</target>
+        </trans-unit>
+        <trans-unit id="System_Poweroff_DoYouReallyWantToPoweroff" translate="yes" xml:space="preserve">
+          <source>Do you really want to Power Off?</source>
+          <target state="translated">Do you really want to Power Off?</target>
+        </trans-unit>
+        <trans-unit id="System_Poweroff_PoweroffNow" translate="yes" xml:space="preserve">
+          <source>Power Off Now</source>
+          <target state="translated">Power Off Now</target>
+        </trans-unit>
+        <trans-unit id="System_Settings" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="translated">Settings</target>
+        </trans-unit>
+        <trans-unit id="System_Settings_Security" translate="yes" xml:space="preserve">
+          <source>Security</source>
+          <target state="translated">Change PIN</target>
+        </trans-unit>
+        <trans-unit id="System_Settings_Security_EnterNewPin" translate="yes" xml:space="preserve">
+          <source>Please enter new PIN</source>
+          <target state="translated">Please enter new PIN</target>
+        </trans-unit>
+        <trans-unit id="System_Settings_Security_EnterNewPinAgain" translate="yes" xml:space="preserve">
+          <source>Please enter new PIN again</source>
+          <target state="translated">Please enter new PIN again</target>
+        </trans-unit>
+        <trans-unit id="System_Settings_Security_EnterOldPin" translate="yes" xml:space="preserve">
+          <source>Please enter old PIN</source>
+          <target state="translated">Please enter old PIN</target>
+        </trans-unit>
+        <trans-unit id="System_Settings_Security_FailedToVerifyOldPin" translate="yes" xml:space="preserve">
+          <source>Incorrect PIN, please try again</source>
+          <target state="translated">Incorrect PIN, please try again</target>
+        </trans-unit>
+        <trans-unit id="System_Settings_Security_PinChangeSuccessful" translate="yes" xml:space="preserve">
+          <source>PIN change successful</source>
+          <target state="translated">PIN change successful</target>
+        </trans-unit>
+        <trans-unit id="System_Settings_Security_PinNotEqual" translate="yes" xml:space="preserve">
+          <source>New PIN doesn't match</source>
+          <target state="translated">New PIN doesn't match</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics" translate="yes" xml:space="preserve">
+          <source>Statistics</source>
+          <target state="translated">Statistics</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Applications" translate="yes" xml:space="preserve">
+          <source>Applications</source>
+          <target state="translated">Applications</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Applications_Columns_LastTimePlayed" translate="yes" xml:space="preserve">
+          <source>Last Time Played</source>
+          <target state="translated">Last Time Played</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Applications_Columns_LongestSession" translate="yes" xml:space="preserve">
+          <source>Longest Session</source>
+          <target state="translated">Longest Session</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Applications_Columns_Name" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <target state="translated">Name</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Applications_Columns_Number" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target state="translated">No.</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Applications_Columns_TimesPlayed" translate="yes" xml:space="preserve">
+          <source>Times Played</source>
+          <target state="translated">Times Played</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Applications_Columns_TotalRuntime" translate="yes" xml:space="preserve">
+          <source>Total Runtime</source>
+          <target state="translated">Total Runtime</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Applications_NoData" translate="yes" xml:space="preserve">
+          <source>No Data</source>
+          <target state="translated">No Data</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Applications_ResetApplicationsStatistics" translate="yes" xml:space="preserve">
+          <source>Reset Game Statistics</source>
+          <target state="translated">Reset Game Statistics</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Global" translate="yes" xml:space="preserve">
+          <source>Global</source>
+          <target state="translated">Global</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Global_Hours" translate="yes" xml:space="preserve">
+          <source>Hours</source>
+          <target state="translated">Hours</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Global_LongestGameSession" translate="yes" xml:space="preserve">
+          <source>Longest Game Session</source>
+          <target state="translated">Longest Game Session</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Global_LongestPlayedGame" translate="yes" xml:space="preserve">
+          <source>Longest Played Game</source>
+          <target state="translated">Longest Played Game</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Global_Minutes" translate="yes" xml:space="preserve">
+          <source>Minutes</source>
+          <target state="translated">Minutes</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Global_MostPlayedGame" translate="yes" xml:space="preserve">
+          <source>Most Played Game</source>
+          <target state="translated">Most Played Game</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Global_ResetVrBoxStatistics" translate="yes" xml:space="preserve">
+          <source>Reset VR Box Statistics</source>
+          <target state="translated">Reset VR Box Statistics</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Global_Seconds" translate="yes" xml:space="preserve">
+          <source>Seconds</source>
+          <target state="translated">Seconds</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Global_Times" translate="yes" xml:space="preserve">
+          <source>Times</source>
+          <target state="translated">Times</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Global_TotalRuntime" translate="yes" xml:space="preserve">
+          <source>Total Runtime</source>
+          <target state="translated">Total Runtime</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_NoData" translate="yes" xml:space="preserve">
+          <source>No Data</source>
+          <target state="translated">No Data</target>
+        </trans-unit>
+        <trans-unit id="System_Apps" translate="yes" xml:space="preserve">
+          <source>Apps</source>
+          <target state="translated">Applications</target>
+        </trans-unit>
+        <trans-unit id="System_Apps_Management" translate="yes" xml:space="preserve">
+          <source>Management</source>
+          <target state="translated">Management</target>
+        </trans-unit>
+        <trans-unit id="Global_Back" translate="yes" xml:space="preserve">
+          <source>Back</source>
+          <target state="translated">Back</target>
+        </trans-unit>
+        <trans-unit id="System_Logout_DoYouReallyWantToLogout" translate="yes" xml:space="preserve">
+          <source>Do you really want to Logout?</source>
+          <target state="translated">Do you really want to Logout?</target>
+        </trans-unit>
+        <trans-unit id="System_Logout_LogoutNow" translate="yes" xml:space="preserve">
+          <source>Logout Now</source>
+          <target state="translated">Logout Now</target>
+        </trans-unit>
+        <trans-unit id="Global_Categories" translate="yes" xml:space="preserve">
+          <source>Categories</source>
+          <target state="translated">Categories</target>
+        </trans-unit>
+        <trans-unit id="Shell_Enjoy" translate="yes" xml:space="preserve">
+          <source>Login Succeeded, Enjoy!</source>
+          <target state="translated">Login Succeeded, Enjoy!</target>
+        </trans-unit>
+        <trans-unit id="Shell_PleaseInsertYourMembershipCard" translate="yes" xml:space="preserve">
+          <source>Please Insert Your Membership Card</source>
+          <target state="translated">Please Insert Your Membership Card</target>
+        </trans-unit>
+        <trans-unit id="Global_Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated">Cancel</target>
+        </trans-unit>
+        <trans-unit id="Session_StationCost" translate="yes" xml:space="preserve">
+          <source>Station Cost</source>
+          <target state="translated">Station Cost</target>
+        </trans-unit>
+        <trans-unit id="Session_CurrencyUnit" translate="yes" xml:space="preserve">
+          <source>point(s)</source>
+          <target state="translated">point(s)</target>
+        </trans-unit>
+        <trans-unit id="Session_RateUnit" translate="yes" xml:space="preserve">
+          <source>min</source>
+          <target state="translated">min</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_IntentionExpired" translate="yes" xml:space="preserve">
+          <source>Login request exipred, please try again.</source>
+          <target state="translated">Login request exipred, please try again.</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_NotEnoughBalance" translate="yes" xml:space="preserve">
+          <source>Not enough balance, please top up and try again.</source>
+          <target state="translated">Not enough balance, please top up and try again.</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_SessionRateChanged" translate="yes" xml:space="preserve">
+          <source>Session rate has already changed, please cancel and try again.</source>
+          <target state="translated">Session rate has already changed, please cancel and try again.</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_StationHaveRunningSession" translate="yes" xml:space="preserve">
+          <source>Sorry, there's already a running session in this station.</source>
+          <target state="translated">Sorry, there's already a running session in this station.</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_UserHaveRunningSession" translate="yes" xml:space="preserve">
+          <source>Sorry, you're in session somewhere else.</source>
+          <target state="translated">Sorry, you're in session somewhere else.</target>
+        </trans-unit>
+        <trans-unit id="Global_Unit_Sec" translate="yes" xml:space="preserve">
+          <source>second(s)</source>
+          <target state="translated">second(s)</target>
+        </trans-unit>
+        <trans-unit id="Global_Session_YouPaid" translate="yes" xml:space="preserve">
+          <source>Spent</source>
+          <target state="translated">Spent</target>
+        </trans-unit>
+        <trans-unit id="Global_Session_YouPlayed" translate="yes" xml:space="preserve">
+          <source>Played</source>
+          <target state="translated">Played</target>
+        </trans-unit>
+        <trans-unit id="Global_Session_YourBalance" translate="yes" xml:space="preserve">
+          <source>Balance</source>
+          <target state="translated">Balance</target>
+        </trans-unit>
+        <trans-unit id="Session_TimeRemaining" translate="yes" xml:space="preserve">
+          <source>Remaining</source>
+          <target state="translated">Remaining</target>
+        </trans-unit>
+        <trans-unit id="System_EnterPin" translate="yes" xml:space="preserve">
+          <source>Enter Pin to access system management</source>
+          <target state="translated">Enter Pin to access system management</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_UnknownNetworkProblem" translate="yes" xml:space="preserve">
+          <source>Unknown network problem.</source>
+          <target state="translated">Unknown network problem.</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_LocalNetworkProblem" translate="yes" xml:space="preserve">
+          <source>Not Connected To Server.</source>
+          <target state="translated">Not Connected to Server.</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_RemoteServerProblem" translate="yes" xml:space="preserve">
+          <source>Can not connect remote server.</source>
+          <target state="translated">Can not connect remote server.</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_QrCodeGenerationProblem" translate="yes" xml:space="preserve">
+          <source>Can not generate QR code.</source>
+          <target state="translated">Can not generate QR code.</target>
+        </trans-unit>
+        <trans-unit id="Global_SecondsToPrepare" translate="yes" xml:space="preserve">
+          <source>Auto cancel in</source>
+          <target state="translated">Auto cancel in </target>
+        </trans-unit>
+        <trans-unit id="Global_Unit_Hour" translate="yes" xml:space="preserve">
+          <source>hour(s)</source>
+          <target state="translated">hour(s)</target>
+        </trans-unit>
+        <trans-unit id="Global_Unit_Min" translate="yes" xml:space="preserve">
+          <source>minute(s)</source>
+          <target state="translated">minute(s)</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_UserBlocked" translate="yes" xml:space="preserve">
+          <source>Your Account is blocked.</source>
+          <target state="translated">Your Account is blocked.</target>
+        </trans-unit>
+        <trans-unit id="Global_LoginTips_UserNotActive" translate="yes" xml:space="preserve">
+          <source>Sorry, you are not a member yet. Please finish the Registration</source>
+          <target state="translated">Sorry, you are not a member yet. Please finish the Registration</target>
+        </trans-unit>
+        <trans-unit id="System_Updates" translate="yes" xml:space="preserve">
+          <source>Updates</source>
+          <target state="translated">Updates</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_CheckUpdates" translate="yes" xml:space="preserve">
+          <source>Check Updates</source>
+          <target state="translated">Check Updates</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_CurrentVersion" translate="yes" xml:space="preserve">
+          <source>Current version</source>
+          <target state="translated">Current version</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_DownloadUpdates" translate="yes" xml:space="preserve">
+          <source>Download</source>
+          <target state="translated">Download</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Announcement_Downloading" translate="yes" xml:space="preserve">
+          <source>Downloading, please wait...</source>
+          <target state="translated">Downloading, please wait...</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Announcement_UpToDate" translate="yes" xml:space="preserve">
+          <source>Software is already up to date</source>
+          <target state="translated">Software is already up to date</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Announcement_ReadyToUpdate" translate="yes" xml:space="preserve">
+          <source>Download complete, proceed to update?</source>
+          <target state="translated">Download complete, proceed to update?</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Announcement_BeforeDownloading" translate="yes" xml:space="preserve">
+          <source>New version available, proceed to download?</source>
+          <target state="translated">New version available, proceed to download?</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_PerformUpdate" translate="yes" xml:space="preserve">
+          <source>Update Now</source>
+          <target state="translated">Update Now</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Announcement_UnexpectedError" translate="yes" xml:space="preserve">
+          <source>Unexpected error occurred, please check the logs.</source>
+          <target state="translated">Unexpected error occurred, please check the logs.</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Announcement_Cancelling" translate="yes" xml:space="preserve">
+          <source>Cancelling, please wait...</source>
+          <target state="translated">Cancelling, please wait...</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Announcement_CheckingNewestVersion" translate="yes" xml:space="preserve">
+          <source>Checking updates might take a while to complete.</source>
+          <target state="translated">Checking updates might take a while to complete.</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Announcement_Errored" translate="yes" xml:space="preserve">
+          <source>Updating process did not finish, please try it again.</source>
+          <target state="translated">Updating process did not finish, please try it again.</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Announcement_Updating" translate="yes" xml:space="preserve">
+          <source>Updating might take a while to complete.</source>
+          <target state="translated">Updating might take a while to complete.</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_TryAgain" translate="yes" xml:space="preserve">
+          <source>Try Again</source>
+          <target state="translated">Try Again</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Announcement_Updated" translate="yes" xml:space="preserve">
+          <source>Update complete, please restart the software to apply the new version.</source>
+          <target state="translated">Update complete, please restart the software to apply the new version.</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_Restart" translate="yes" xml:space="preserve">
+          <source>Restart</source>
+          <target state="translated">Restart</target>
+        </trans-unit>
+        <trans-unit id="Global_Session_PlayForFree" translate="yes" xml:space="preserve">
+          <source>Play for free</source>
+          <target state="translated">Play for free</target>
+        </trans-unit>
+        <trans-unit id="Session_Info_StationInactive" translate="yes" xml:space="preserve">
+          <source>Auto logout due to inactiveity.</source>
+          <target state="translated">Auto logout due to inactiveity.</target>
+        </trans-unit>
+        <trans-unit id="Session_Info_UserBlocked" translate="yes" xml:space="preserve">
+          <source>Auto logout due to user is blocked.</source>
+          <target state="translated">Auto logout due to user is blocked.</target>
+        </trans-unit>
+        <trans-unit id="Session_Info_InternetProblems" translate="yes" xml:space="preserve">
+          <source>Auto logout due to internet problems.</source>
+          <target state="translated">Auto logout due to internet problems.</target>
+        </trans-unit>
+        <trans-unit id="System_Hardware_StationName" translate="yes" xml:space="preserve">
+          <source>Station Name</source>
+          <target state="translated">Station Name</target>
+        </trans-unit>
+        <trans-unit id="Global_Unset" translate="yes" xml:space="preserve">
+          <source>Unset</source>
+          <target state="translated">Unset</target>
+        </trans-unit>
+        <trans-unit id="License_LicenseKey" translate="yes" xml:space="preserve">
+          <source>License Key</source>
+          <target state="translated">License Key</target>
+        </trans-unit>
+        <trans-unit id="License_Inactive" translate="yes" xml:space="preserve">
+          <source>Inactive</source>
+          <target state="translated">Inactive</target>
+        </trans-unit>
+        <trans-unit id="Exceptions_VersionOutOfDate" translate="yes" xml:space="preserve">
+          <source>Software is out of date, please update to the latest version.</source>
+          <target state="translated">Software is out of date, please update to the latest version.</target>
+        </trans-unit>
+        <trans-unit id="Exceptions_LicenseNotDeployed" translate="yes" xml:space="preserve">
+          <source>No license deployed to this station. Run the configuration.</source>
+          <target state="translated">No license deployed on this station. Run the configuration.</target>
+        </trans-unit>
+        <trans-unit id="Exceptions_LicenseNotFound" translate="yes" xml:space="preserve">
+          <source>License is not registered in the system.</source>
+          <target state="translated">License is not known in the system.
+Please contact the support to verify your license.</target>
+        </trans-unit>
+        <trans-unit id="Exceptions_LicenseNotLinked" translate="yes" xml:space="preserve">
+          <source>License is not yet linked to an Account.</source>
+          <target state="translated">License is not linked to any Account.</target>
+        </trans-unit>
+        <trans-unit id="Exceptions_LicenseRevoked" translate="yes" xml:space="preserve">
+          <source>License has been revoked. Please contact the support</source>
+          <target state="translated">License has been revoked. Please contact the Support</target>
+        </trans-unit>
+        <trans-unit id="Exceptions_LicenseSuspended" translate="yes" xml:space="preserve">
+          <source>License is suspended. Please contact the support</source>
+          <target state="translated">License is suspended. Please contact the Support</target>
+        </trans-unit>
+        <trans-unit id="Exceptions_StationRevoked" translate="yes" xml:space="preserve">
+          <source>Station is currently revoked.</source>
+          <target state="translated">Station is currently revoked.</target>
+        </trans-unit>
+        <trans-unit id="Exceptions_StationSuspended" translate="yes" xml:space="preserve">
+          <source>Station is currently suspended.</source>
+          <target state="translated">Station is currently suspended.</target>
+        </trans-unit>
+        <trans-unit id="Applications_NoAppAvailable" translate="yes" xml:space="preserve">
+          <source>No Application Available.</source>
+          <target state="translated">No Application Available</target>
+        </trans-unit>
+        <trans-unit id="Info_AutoStartStringFormat" translate="yes" xml:space="preserve">
+          <source>Auto start in </source>
+          <target state="translated">Auto start in</target>
+        </trans-unit>
+        <trans-unit id="StationMode_MixedReality" translate="yes" xml:space="preserve">
+          <source>MR Mode</source>
+          <target state="translated">MR Mode</target>
+        </trans-unit>
+        <trans-unit id="StationMode_Screen" translate="yes" xml:space="preserve">
+          <source>Screen Mode</source>
+          <target state="translated">Screen Mode</target>
+        </trans-unit>
+        <trans-unit id="StationMode_VirtualReality" translate="yes" xml:space="preserve">
+          <source>VR Mode</source>
+          <target state="translated">VR Mode</target>
+        </trans-unit>
+        <trans-unit id="StationMode" translate="yes" xml:space="preserve">
+          <source>Station Mode</source>
+          <target state="translated">Station Mode</target>
+        </trans-unit>
+        <trans-unit id="Global_Confirm" translate="yes" xml:space="preserve">
+          <source>Confirm</source>
+          <target state="translated">Confirm</target>
+        </trans-unit>
+        <trans-unit id="Session_MessageBeforeLogout" translate="yes" xml:space="preserve">
+          <source>Do you really want to logout?</source>
+          <target state="translated">Are you sure to logout?</target>
+        </trans-unit>
+        <trans-unit id="Statistics_ResetConfirmationMessage" translate="yes" xml:space="preserve">
+          <source>Are you sure to reset statistics data?</source>
+          <target state="translated">Are you sure to reset statistics data?</target>
+        </trans-unit>
+        <trans-unit id="Execution_StartVrAppInScreenModeConfirmation" translate="yes" xml:space="preserve">
+          <source>Are you sure to start a VR application in Screen mode?</source>
+          <target state="translated">Are you sure to start a VR application in Screen mode?</target>
+        </trans-unit>
+        <trans-unit id="Execution_StartScreenAppInVrModeConfirmation" translate="yes" xml:space="preserve">
+          <source>Are you sure to start a non-VR application in VR mode?</source>
+          <target state="translated">Are you sure to start a non-VR application in VR mode?</target>
+        </trans-unit>
+        <trans-unit id="Installation_InstallationComplete" translate="yes" xml:space="preserve">
+          <source>Installation Complete</source>
+          <target state="translated">Installation Complete</target>
+        </trans-unit>
+        <trans-unit id="Installation_UninstallationComplete" translate="yes" xml:space="preserve">
+          <source>Uninstalltion Complete</source>
+          <target state="translated">Uninstalltion Complete</target>
+        </trans-unit>
+        <trans-unit id="StationMode_CurrentMode" translate="yes" xml:space="preserve">
+          <source>Current Mode</source>
+          <target state="translated">Current Mode</target>
+        </trans-unit>
+        <trans-unit id="StationName" translate="yes" xml:space="preserve">
+          <source>Station Name</source>
+          <target state="translated">Station Name</target>
+        </trans-unit>
+        <trans-unit id="ScanningPackages" translate="yes" xml:space="preserve">
+          <source>Scanning Packages</source>
+          <target state="translated">Scanning Packages</target>
+        </trans-unit>
+        <trans-unit id="StartTip_Button" translate="yes" xml:space="preserve">
+          <source>Click to Start</source>
+          <target state="translated">Click to Start</target>
+        </trans-unit>
+        <trans-unit id="StartTip_QRCode" translate="yes" xml:space="preserve">
+          <source>Scan the QR Code to Start</source>
+          <target state="translated">Scan the QR Code to Start</target>
+        </trans-unit>
+        <trans-unit id="FailedToStart_AnonymouseSessionNotAllowed" translate="yes" xml:space="preserve">
+          <source>Open mode is not allowed on this station. Please verify your settings.</source>
+          <target state="translated">Open mode is not allowed on this station. Please verify your settings.</target>
+        </trans-unit>
+        <trans-unit id="FailedToStart_StationHaveActiveLoginIntention" translate="yes" xml:space="preserve">
+          <source>Last login intention ended unexpectedly, please wait for the server to handle it.</source>
+          <target state="translated">Last login intention ended unexpectedly, please wait for the server to handle it.</target>
+        </trans-unit>
+        <trans-unit id="FailedToStart_StationHaveRunningSession" translate="yes" xml:space="preserve">
+          <source>There an session already running. Abandoned Sessions will end after a short while.</source>
+          <target state="translated">There an session already running. Abandoned Sessions will end after a short while.</target>
+        </trans-unit>
+        <trans-unit id="FailedToStart_UnknwonError" translate="yes" xml:space="preserve">
+          <source>There is an unknown error, please try again later.</source>
+          <target state="translated">There is an unknown error, please try again later.</target>
+        </trans-unit>
+        <trans-unit id="ConfirmLoginIntention" translate="yes" xml:space="preserve">
+          <source>Confirm</source>
+          <target state="translated">Confirm</target>
+        </trans-unit>
+        <trans-unit id="SelectAppExecutionResult" translate="yes" xml:space="preserve">
+          <source>Select an option to start with</source>
+          <target state="translated">Select an option to start with</target>
+        </trans-unit>
+        <trans-unit id="System_HardwareId" translate="yes" xml:space="preserve">
+          <source>Hardware Id</source>
+          <target state="translated">Hardware Id</target>
+        </trans-unit>
+        <trans-unit id="Global_ConnectingToService" translate="yes" xml:space="preserve">
+          <source>Please wait trying to connect</source>
+          <target state="translated">Please wait trying to connect</target>
+        </trans-unit>
+        <trans-unit id="Config_Select_Certificate_File" translate="yes" xml:space="preserve">
+          <source>Select License Certificate File</source>
+          <target state="translated">Select License Certificate File</target>
+        </trans-unit>
+        <trans-unit id="Config_Select_PrivateKey_File" translate="yes" xml:space="preserve">
+          <source>Select Private-Key File</source>
+          <target state="translated">Select Private-Key File</target>
+        </trans-unit>
+        <trans-unit id="Config_Select_Language" translate="yes" xml:space="preserve">
+          <source>Select Language</source>
+          <target state="translated">Select Language</target>
+        </trans-unit>
+        <trans-unit id="Config_Close" translate="yes" xml:space="preserve">
+          <source>CLOSE</source>
+          <target state="translated">CLOSE</target>
+        </trans-unit>
+        <trans-unit id="Config_Move_Next" translate="yes" xml:space="preserve">
+          <source>NEXT</source>
+          <target state="translated">NEXT</target>
+        </trans-unit>
+        <trans-unit id="Config_Move_Previous" translate="yes" xml:space="preserve">
+          <source>PREVIOUS</source>
+          <target state="translated">PREVIOUS</target>
+        </trans-unit>
+        <trans-unit id="Config_Select_License_Files" translate="yes" xml:space="preserve">
+          <source>Please select your license files to continue.</source>
+          <target state="translated">Please select your license files to continue.</target>
+        </trans-unit>
+        <trans-unit id="Config_CertificateFile_Hint" translate="yes" xml:space="preserve">
+          <source>Certificate File</source>
+          <target state="translated">Certificate File</target>
+        </trans-unit>
+        <trans-unit id="Config_Select" translate="yes" xml:space="preserve">
+          <source>Select</source>
+          <target state="translated">Select</target>
+        </trans-unit>
+        <trans-unit id="Config_Issuer" translate="yes" xml:space="preserve">
+          <source>Issuer :</source>
+          <target state="translated">Issuer :</target>
+        </trans-unit>
+        <trans-unit id="Config_License" translate="yes" xml:space="preserve">
+          <source>License</source>
+          <target state="translated">License</target>
+        </trans-unit>
+        <trans-unit id="Config_LicenseID" translate="yes" xml:space="preserve">
+          <source>License ID :</source>
+          <target state="translated">License ID :</target>
+        </trans-unit>
+        <trans-unit id="Config_LicenseSN" translate="yes" xml:space="preserve">
+          <source>License SN :</source>
+          <target state="translated">License SN :</target>
+        </trans-unit>
+        <trans-unit id="Config_LicenseType" translate="yes" xml:space="preserve">
+          <source>Type :</source>
+          <target state="translated">Type :</target>
+        </trans-unit>
+        <trans-unit id="Config_PrivateKey" translate="yes" xml:space="preserve">
+          <source>Private Key :</source>
+          <target state="translated">Private Key :</target>
+        </trans-unit>
+        <trans-unit id="Config_PrivateKey_File_Hint" translate="yes" xml:space="preserve">
+          <source>PrivateKey File</source>
+          <target state="translated">PrivateKey File</target>
+        </trans-unit>
+        <trans-unit id="Config_GameStoragePath_Hint" translate="yes" xml:space="preserve">
+          <source>Your Games Directory</source>
+          <target state="translated">Your Games Directory</target>
+        </trans-unit>
+        <trans-unit id="Config_Select_GameStorage_Dir" translate="yes" xml:space="preserve">
+          <source>Select Games Storage Directory</source>
+          <target state="translated">Select Games Storage Directory</target>
+        </trans-unit>
+        <trans-unit id="Config_Software_Setup" translate="yes" xml:space="preserve">
+          <source>Software Setup</source>
+          <target state="translated">Software Setup</target>
+        </trans-unit>
+        <trans-unit id="Culture_en_US" translate="yes" xml:space="preserve">
+          <source>English</source>
+          <target state="translated">English</target>
+        </trans-unit>
+        <trans-unit id="Config_Autostart_with_Windows" translate="yes" xml:space="preserve">
+          <source>Autostart with Windows</source>
+          <target state="translated">Autostart with Windows</target>
+        </trans-unit>
+        <trans-unit id="Config_Autostart_with_Windows_ToolTip" translate="yes" xml:space="preserve">
+          <source>Starts the Application automatically when you Login into Windows</source>
+          <target state="translated">Starts the Application automatically when you Login into Windows</target>
+        </trans-unit>
+        <trans-unit id="Config_FreeSpace" translate="yes" xml:space="preserve">
+          <source>Free Disk Space</source>
+          <target state="translated">Free Disk Space</target>
+        </trans-unit>
+        <trans-unit id="Config_Options" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target state="translated">Options</target>
+        </trans-unit>
+        <trans-unit id="Config_TotalSpace" translate="yes" xml:space="preserve">
+          <source>Total Disk Size</source>
+          <target state="translated">Total Disk Size</target>
+        </trans-unit>
+        <trans-unit id="Config_Select_DefaultLanguage" translate="yes" xml:space="preserve">
+          <source>Select Default Language</source>
+          <target state="translated">Select Default Language</target>
+        </trans-unit>
+        <trans-unit id="Config_Change" translate="yes" xml:space="preserve">
+          <source>Change</source>
+          <target state="translated">Change</target>
+        </trans-unit>
+        <trans-unit id="Config_Disable_WER" translate="yes" xml:space="preserve">
+          <source>Disable Window Error Reporting</source>
+          <target state="translated">Disable Window Error Reporting</target>
+        </trans-unit>
+        <trans-unit id="Config_Disable_WER_ToolTip" translate="yes" xml:space="preserve">
+          <source>Disables the Windows Dialog when an Application Crashes.
+This Error Dialog can prevent the software  from detecting when an Application Ended</source>
+          <target state="translated">Disables the Windows Dialog when an Application Crashes.
+This Error Dialog can prevent the software from detecting when an Application Ended</target>
+        </trans-unit>
+        <trans-unit id="Config_Adding_License" translate="yes" xml:space="preserve">
+          <source>Adding License Files</source>
+          <target state="translated">Adding License Files</target>
+        </trans-unit>
+        <trans-unit id="Config_StartupTask_Created" translate="yes" xml:space="preserve">
+          <source>Startup Task Changes Applied</source>
+          <target state="translated">Startup Task Changes Applied</target>
+        </trans-unit>
+        <trans-unit id="Config_Storage_Updated" translate="yes" xml:space="preserve">
+          <source>Game Storage Values Updated</source>
+          <target state="translated">Game Storage Values Updated</target>
+        </trans-unit>
+        <trans-unit id="Config_WER_Updated" translate="yes" xml:space="preserve">
+          <source>Windows Error Reporting Updated</source>
+          <target state="translated">Windows Error Reporting Updated</target>
+        </trans-unit>
+        <trans-unit id="Config_AddStorageToDefenderExclusion" translate="yes" xml:space="preserve">
+          <source>Exclude Storage from Win Defender </source>
+          <target state="translated">Exclude Storage from Win Defender </target>
+        </trans-unit>
+        <trans-unit id="Config_ExcludingStorageFromWD" translate="yes" xml:space="preserve">
+          <source>Change of Windows Defender Excluded Folders</source>
+          <target state="translated">Change of Windows Defender Excluded Folders</target>
+        </trans-unit>
+        <trans-unit id="Config_ExcludingStorageFromWD_Hint" translate="yes" xml:space="preserve">
+          <source>Changes the Windows Defender Exclusion Settings for the Storage Folder.
+This can prevent game corruption in case of false positives from WD,
+but also expose the System to a higer risk of infections.</source>
+          <target state="translated">Changes the Windows Defender Exclusion Settings for the Storage Folder.
+This can prevent game corruption in case of false positives from WD,
+but also expose the System to a higer risk of infections.</target>
+        </trans-unit>
+        <trans-unit id="Config_Select_DefaultLanguage_Hint" translate="yes" xml:space="preserve">
+          <source>The Language that is selected when the Software starts or it reverts after a Logout.</source>
+          <target state="translated">The Language that is selected when the Software starts or it reverts after a Logout.</target>
+        </trans-unit>
+        <trans-unit id="Application_Category" translate="yes" xml:space="preserve">
+          <source>Category</source>
+          <target state="translated">Category</target>
+        </trans-unit>
+        <trans-unit id="Application_Name" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <target state="translated">Name</target>
+        </trans-unit>
+        <trans-unit id="Application_Edit" translate="yes" xml:space="preserve">
+          <source>Edit</source>
+          <target state="translated">Edit</target>
+        </trans-unit>
+        <trans-unit id="Application_Edit_Apply" translate="yes" xml:space="preserve">
+          <source>Apply</source>
+          <target state="translated">Apply</target>
+        </trans-unit>
+        <trans-unit id="Application_Edit_Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated">Cancel</target>
+        </trans-unit>
+        <trans-unit id="System_Statistics_Applications_Count" translate="yes" xml:space="preserve">
+          <source>Applications with Statistics</source>
+          <target state="translated">Applications with Statistics</target>
+        </trans-unit>
+        <trans-unit id="System_Updates_OnlineVersion" translate="yes" xml:space="preserve">
+          <source>Version Online</source>
+          <target state="translated">Version Online</target>
+        </trans-unit>
+        <trans-unit id="Config_Activate_License" translate="yes" xml:space="preserve">
+          <source>Activate your License</source>
+          <target state="translated">Activate your License</target>
+        </trans-unit>
+        <trans-unit id="Config_Register_AddLicenseToAccount" translate="yes" xml:space="preserve">
+          <source>Add License to your Account</source>
+          <target state="translated">Add License to your Account</target>
+        </trans-unit>
+        <trans-unit id="Config_Register_AddLicenseToAccount_Text" translate="yes" xml:space="preserve">
+          <source>Fill out the Form and Enter your License Key for Activation</source>
+          <target state="translated">Fill out the Form and Enter your License Key for Activation</target>
+        </trans-unit>
+        <trans-unit id="Config_Register_Done" translate="yes" xml:space="preserve">
+          <source>All Done! Ready to Play!</source>
+          <target state="translated">All Done! Ready to Play!</target>
+        </trans-unit>
+        <trans-unit id="Config_Register_Done_Text" translate="yes" xml:space="preserve">
+          <source>Learn more about Content Creation and Business Functions on our Website</source>
+          <target state="translated">Learn more about Content Creation and Business Functions on our Website</target>
+        </trans-unit>
+        <trans-unit id="Config_Register_ExistingAccountBtn" translate="yes" xml:space="preserve">
+          <source>Existing Account</source>
+          <target state="translated">Existing Account</target>
+        </trans-unit>
+        <trans-unit id="Config_Register_NewAccountBtn" translate="yes" xml:space="preserve">
+          <source>New Account</source>
+          <target state="translated">New Account</target>
+        </trans-unit>
+        <trans-unit id="Config_Register_VisitActivationSite" translate="yes" xml:space="preserve">
+          <source>Visit the Activation Site</source>
+          <target state="translated">Visit the Activation Site</target>
+        </trans-unit>
+        <trans-unit id="Config_ReservedFreeSpace" translate="yes" xml:space="preserve">
+          <source>Reserved Space</source>
+          <target state="translated">Reserved Space</target>
+        </trans-unit>
+        <trans-unit id="Shell_Menue_ExitToWindows" translate="yes" xml:space="preserve">
+          <source>Windows</source>
+          <target state="translated">Windows</target>
+        </trans-unit>
+        <trans-unit id="Shell_Menue_Games" translate="yes" xml:space="preserve">
+          <source>Games</source>
+          <target state="translated">Games</target>
+        </trans-unit>
+        <trans-unit id="Shell_Menue_PowerOff" translate="yes" xml:space="preserve">
+          <source>Power Off</source>
+          <target state="translated">Power Off</target>
+        </trans-unit>
+        <trans-unit id="Shell_Menue_Settings" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="translated">Settings</target>
+        </trans-unit>
+        <trans-unit id="Business_BackgroundSplashLeft" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>Resources\Business_BackgroundSplashLeft_EN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="translated">Resources\Business_BackgroundSplashLeft_EN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="Business_BackgroundSplashRight" translate="yes" xml:space="preserve" extype="System.Resources.ResXFileRef, System.Windows.Forms">
+          <source>Resources\Business_BackgroundSplashRight_EN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</source>
+          <target state="translated">Resources\Business_BackgroundSplashRight_EN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</target>
+        </trans-unit>
+        <trans-unit id="Exceptions_UnknownError" translate="yes" xml:space="preserve">
+          <source>Unknown error, please try again later.</source>
+          <target state="translated">Unknown error, please try again later.</target>
+        </trans-unit>
+        <trans-unit id="System_Platform_ConfirmDeleteAccount" translate="yes" xml:space="preserve">
+          <source>Are you really sure you want to delete the account?</source>
+          <target state="translated">Are you really sure you want to delete the account?</target>
+        </trans-unit>
+        <trans-unit id="System_Platform_Account" translate="yes" xml:space="preserve">
+          <source>Account</source>
+          <target state="translated">Account</target>
+        </trans-unit>
+        <trans-unit id="System_Platform_Account_Create" translate="yes" xml:space="preserve">
+          <source>Create</source>
+          <target state="translated">Create</target>
+        </trans-unit>
+        <trans-unit id="System_Platform_Account_Delete" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated">Delete</target>
+        </trans-unit>
+        <trans-unit id="System_Platform_Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated">Cancel</target>
+        </trans-unit>
+        <trans-unit id="System_Platform_Password" translate="yes" xml:space="preserve">
+          <source>Password</source>
+          <target state="translated">Password</target>
+        </trans-unit>
+        <trans-unit id="System_Platform_Username" translate="yes" xml:space="preserve">
+          <source>Username</source>
+          <target state="translated">Username</target>
+        </trans-unit>
+        <trans-unit id="System_Platform_NoPlatformAvailible" translate="yes" xml:space="preserve">
+          <source>No Platform availible</source>
+          <target state="translated">No Platform availible</target>
+        </trans-unit>
+        <trans-unit id="System_Platform_SelectPlatform" translate="yes" xml:space="preserve">
+          <source>Select Platform</source>
+          <target state="translated">Select Platform</target>
+        </trans-unit>
+        <trans-unit id="System_Platform_NoPlatformSelected" translate="yes" xml:space="preserve">
+          <source>No Platform Selected</source>
+          <target state="translated">No Platform Selected</target>
+        </trans-unit>
+        <trans-unit id="System_Platform" translate="yes" xml:space="preserve">
+          <source>Platform</source>
+          <target state="translated">Platform</target>
+        </trans-unit>
+        <trans-unit id="System_Accounts" translate="yes" xml:space="preserve">
+          <source>Accounts</source>
+          <target state="translated">Accounts</target>
+        </trans-unit>
+        <trans-unit id="System_Account_AddLicense" translate="yes" xml:space="preserve">
+          <source>Add License</source>
+          <target state="translated">Add License</target>
+        </trans-unit>
+        <trans-unit id="System_Account_RemoveLicense" translate="yes" xml:space="preserve">
+          <source>Remove License</source>
+          <target state="translated">Remove License</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit" translate="yes" xml:space="preserve">
+          <source>Advanced</source>
+          <target state="translated">Advanced</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_ExecutableInfo_SelectExecutable" translate="yes" xml:space="preserve">
+          <source>Select Exe</source>
+          <target state="translated">Select Exe</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_ExecutableInfo_SelectFolder" translate="yes" xml:space="preserve">
+          <source>Select Folder</source>
+          <target state="translated">Select Folder</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Execution_Instruction" translate="yes" xml:space="preserve">
+          <source>Execution Instructions</source>
+          <target state="translated">Execution Instructions</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Add" translate="yes" xml:space="preserve">
+          <source>Add</source>
+          <target state="translated">Add</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Apply" translate="yes" xml:space="preserve">
+          <source>Apply</source>
+          <target state="translated">Apply</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated">Cancel</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Edit" translate="yes" xml:space="preserve">
+          <source>Edit</source>
+          <target state="translated">Edit</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Remove" translate="yes" xml:space="preserve">
+          <source>Remove</source>
+          <target state="translated">Remove</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_ApplicationMainExecutablePath" translate="yes" xml:space="preserve">
+          <source>Application Main Executable Path</source>
+          <target state="translated">Application Main Executable Path</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_ExecutableParameters" translate="yes" xml:space="preserve">
+          <source>Executable Parameters</source>
+          <target state="translated">Executable Parameters</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Executables" translate="yes" xml:space="preserve">
+          <source>Executables</source>
+          <target state="translated">Executables</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Info_ExeName" translate="yes" xml:space="preserve">
+          <source>A display name for one executable instruction that infers what's it about</source>
+          <target state="translated">A display name for one executable instruction that infers what's it about</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Info_ExeParameters" translate="yes" xml:space="preserve">
+          <source>Parameters that will be provided to the main executable when execution of the game is requested.</source>
+          <target state="translated">Parameters that will be provided to the main executable when execution of the game is requested.</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Info_IsMainExe" translate="yes" xml:space="preserve">
+          <source>Indicates whether this executable is one of the executables taken into consideration to check if the application is running. Normally an application requires at least one main executable. Multiple main executables mean any of them running will the application be considered as running.</source>
+          <target state="translated">Indicates whether this executable is one of the executables taken into consideration to check if the application is running. Normally an application requires at least one main executable. Multiple main executables mean any of them running will the application be considered as running.</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Info_KillNotResponding" translate="yes" xml:space="preserve">
+          <source>Indicates whether this process should be killed when the system detects it is not responding</source>
+          <target state="translated">Indicates whether this process should be killed when the system detects it is not responding</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Info_KillOnExit" translate="yes" xml:space="preserve">
+          <source>Indicates whether this process should be killed on application exit</source>
+          <target state="translated">Indicates whether this process should be killed on application exit</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Info_MainExePath" translate="yes" xml:space="preserve">
+          <source>The path to the applixcation main executable file. Usually it is the application executable itself, for some applications requiring an external launcher this should be set the path to the launcher executable file.</source>
+          <target state="translated">The path to the applixcation main executable file. Usually it is the application executable itself, for some applications requiring an external launcher this should be set the path to the launcher executable file.</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Info_RequiredVrModule" translate="yes" xml:space="preserve">
+          <source>Specify the corresponding vr module to match the correct graphic api.</source>
+          <target state="translated">Specify the corresponding vr module to match the correct graphic api.</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Info_WorkingDirectory" translate="yes" xml:space="preserve">
+          <source>Working directory of a specific executable. If not set, working directory will be set to the directory where the executable is</source>
+          <target state="translated">Working directory of a specific executable. If not set, working directory will be set to the directory where the executable is</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_IsMainExe" translate="yes" xml:space="preserve">
+          <source>Is Main Executable</source>
+          <target state="translated">Is Main Executable</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_KillNotResponding" translate="yes" xml:space="preserve">
+          <source>Kill on Not Responding</source>
+          <target state="translated">Kill on Not Responding</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_KillOnExit" translate="yes" xml:space="preserve">
+          <source>Kill On Application Exit</source>
+          <target state="translated">Kill On Application Exit</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Ok" translate="yes" xml:space="preserve">
+          <source>Ok</source>
+          <target state="translated">Ok</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Options" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target state="translated">Options</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_ProcessMonitoring" translate="yes" xml:space="preserve">
+          <source>Process Monitoring</source>
+          <target state="translated">Process Monitoring</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_SetFromExecutable" translate="yes" xml:space="preserve">
+          <source>Set From Exe</source>
+          <target state="translated">Set From Exe</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_WatchDogOptions" translate="yes" xml:space="preserve">
+          <source>Watchdog Options</source>
+          <target state="translated">Watchdog Options</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_ExeName" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <target state="translated">Name</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_RequiredVrModule" translate="yes" xml:space="preserve">
+          <source>Required VR-Module</source>
+          <target state="translated">Required VR-Module</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_WorkingDirectory" translate="yes" xml:space="preserve">
+          <source>Working Directory</source>
+          <target state="translated">Working Directory</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_ExecutableInfo_ExeFiles" translate="yes" xml:space="preserve">
+          <source>Exe Files</source>
+          <target state="translated">Exe Files</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Warning" translate="yes" xml:space="preserve">
+          <source>Warning</source>
+          <target state="translated">Warning</target>
+        </trans-unit>
+        <trans-unit id="System_Application_Advance_Edit_Warning_NoMainExecutable" translate="yes" xml:space="preserve">
+          <source>None of added executables is marked as main executable, are you sure to continue?</source>
+          <target state="translated">None of added executables is marked as main executable, are you sure to continue?</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_SelectVBoxFile" translate="yes" xml:space="preserve">
+          <source>Select VBox File</source>
+          <target state="translated">Select VBox File</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_VBoxFile" translate="yes" xml:space="preserve">
+          <source>VBox Files</source>
+          <target state="translated">VBox Files</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_Install_Failed" translate="yes" xml:space="preserve">
+          <source>Installation failed with Status:</source>
+          <target state="translated">Installation failed with Status:</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_Install_OnlyVBoxFiles" translate="yes" xml:space="preserve">
+          <source>This file is not a VBox File!</source>
+          <target state="translated">This file is not a VBox File!</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_ApplicationRunning" translate="yes" xml:space="preserve">
+          <source>Application Running</source>
+          <target state="translated">Application Running</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_ApplicationUpdateRequired" translate="yes" xml:space="preserve">
+          <source>Application Requires Update!</source>
+          <target state="translated">Application Requires Update!</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_Done" translate="yes" xml:space="preserve">
+          <source>Done</source>
+          <target state="translated">Done</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_LoggingIn" translate="yes" xml:space="preserve">
+          <source>User Login on Client</source>
+          <target state="translated">User Login on Client</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_LoggingOut" translate="yes" xml:space="preserve">
+          <source>User Logout on Client</source>
+          <target state="translated">User Logout on Client</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_StartingApplication" translate="yes" xml:space="preserve">
+          <source>Starting Application</source>
+          <target state="translated">Starting Application</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_StartingApplicationError" translate="yes" xml:space="preserve">
+          <source>Error during Application Start!</source>
+          <target state="translated">Error during Application Start!</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_StartingClient" translate="yes" xml:space="preserve">
+          <source>Starting Client</source>
+          <target state="translated">Starting Client</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_StartingClientError" translate="yes" xml:space="preserve">
+          <source>Error during Client Start!</source>
+          <target state="translated">Error during Client Start!</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_StoppingClient" translate="yes" xml:space="preserve">
+          <source>Exiting Client</source>
+          <target state="translated">Exiting Client</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_Unavailible" translate="yes" xml:space="preserve">
+          <source>Waiting for State</source>
+          <target state="translated">Waiting for State</target>
+        </trans-unit>
+        <trans-unit id="StationMode_ForceRestartVrDriver" translate="yes" xml:space="preserve">
+          <source>Restart Vr Driver after each App</source>
+          <target state="translated">Restart Vr Driver after each App</target>
+        </trans-unit>
+        <trans-unit id="System_Multimedia" translate="yes" xml:space="preserve">
+          <source>Multimedia</source>
+          <target state="translated">Multimedia</target>
+        </trans-unit>
+        <trans-unit id="System_Multimedia_AutoPlay" translate="yes" xml:space="preserve">
+          <source>AutoPlay</source>
+          <target state="translated">AutoPlay</target>
+        </trans-unit>
+        <trans-unit id="System_Multimedia_BackgroundVideo" translate="yes" xml:space="preserve">
+          <source>Background Video</source>
+          <target state="translated">Background Video</target>
+        </trans-unit>
+        <trans-unit id="System_Multimedia_Playlist" translate="yes" xml:space="preserve">
+          <source>Playlist</source>
+          <target state="translated">Playlist</target>
+        </trans-unit>
+        <trans-unit id="System_Multimedia_Playlist_Add" translate="yes" xml:space="preserve">
+          <source>Add</source>
+          <target state="translated">Add</target>
+        </trans-unit>
+        <trans-unit id="System_Multimedia_Playlist_Remove" translate="yes" xml:space="preserve">
+          <source>Remove</source>
+          <target state="translated">Remove</target>
+        </trans-unit>
+        <trans-unit id="System_Multimedia_Repeat" translate="yes" xml:space="preserve">
+          <source>Repeat</source>
+          <target state="translated">Repeat</target>
+        </trans-unit>
+        <trans-unit id="System_Multimedia_SelectMediaFile" translate="yes" xml:space="preserve">
+          <source>Select Media Files</source>
+          <target state="translated">Select Media Files</target>
+        </trans-unit>
+        <trans-unit id="System_Account_NoAccountSelected" translate="yes" xml:space="preserve">
+          <source>No Account Selected</source>
+          <target state="translated">No Account Selected</target>
+        </trans-unit>
+        <trans-unit id="Global_Error" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <target state="translated">Error</target>
+        </trans-unit>
+        <trans-unit id="Global_Retry" translate="yes" xml:space="preserve">
+          <source>Retry</source>
+          <target state="translated">Retry</target>
+        </trans-unit>
+        <trans-unit id="StationMode_VrDriverInteraction" translate="yes" xml:space="preserve">
+          <source>VR Driver Interaction</source>
+          <target state="translated">VR Driver Interaction</target>
+        </trans-unit>
+        <trans-unit id="System_Multimedia_Volume" translate="yes" xml:space="preserve">
+          <source>Volume</source>
+          <target state="translated">Volume</target>
+        </trans-unit>
+        <trans-unit id="System_Multimedia_Track" translate="yes" xml:space="preserve">
+          <source>Track</source>
+          <target state="translated">Track</target>
+        </trans-unit>
+        <trans-unit id="Config_TasksApply_Error" translate="yes" xml:space="preserve">
+          <source>There were some Problems during execution of the Tasks</source>
+          <target state="translated">There were some Problems during execution of the Tasks</target>
+        </trans-unit>
+        <trans-unit id="Config_TasksApply_Success" translate="yes" xml:space="preserve">
+          <source>All Tasks Finished Successfully</source>
+          <target state="translated">All Tasks Finished Successfully</target>
+        </trans-unit>
+        <trans-unit id="Config_TasksApply_Topic" translate="yes" xml:space="preserve">
+          <source>Setting Up your System</source>
+          <target state="translated">Setting Up your System</target>
+        </trans-unit>
+        <trans-unit id="Config_Dialog_Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated">Cancel</target>
+        </trans-unit>
+        <trans-unit id="Config_Dialog_HeaderInfo" translate="yes" xml:space="preserve">
+          <source>Info</source>
+          <target state="translated">Info</target>
+        </trans-unit>
+        <trans-unit id="Config_Dialog_HeaderWarning" translate="yes" xml:space="preserve">
+          <source>Warning</source>
+          <target state="translated">Warning</target>
+        </trans-unit>
+        <trans-unit id="Config_Dialog_StorageChangeNotEmpty" translate="yes" xml:space="preserve">
+          <source>Your storage directory is not empty and you will need to move all your contents manually to the new destination</source>
+          <target state="translated">Your storage directory is not empty and you will need to move all your contents manually to the new destination</target>
+        </trans-unit>
+        <trans-unit id="Config_Dialog_StorageUseEmptyRecommend" translate="yes" xml:space="preserve">
+          <source>Your storage directory is not empty, it's recommended to use a dedicated directory as your game directory</source>
+          <target state="translated">Your storage directory is not empty, it's recommended to use a dedicated directory as your game directory</target>
+        </trans-unit>
+        <trans-unit id="Config_Dialog_Understood" translate="yes" xml:space="preserve">
+          <source>Understood</source>
+          <target state="translated">Understood</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_UpdatingApplication" translate="yes" xml:space="preserve">
+          <source>Updating Application</source>
+          <target state="translated">Updating Application</target>
+        </trans-unit>
+        <trans-unit id="PlatformState_UpdatingClient" translate="yes" xml:space="preserve">
+          <source>Updating Client</source>
+          <target state="translated">Updating Client</target>
+        </trans-unit>
+        <trans-unit id="System_Installation_SelectFile" translate="yes" xml:space="preserve">
+          <source>Select File</source>
+          <target state="translated">Select File</target>
+        </trans-unit>
+        <trans-unit id="Executable_NoSuitableExecution" translate="yes" xml:space="preserve">
+          <source>Sorry there is no Execution Option availible! Please check if you have any configured and that your system meets the requirements.</source>
+          <target state="translated">Sorry there is no Execution Option availible! Please check if you have any configured and that your system meets the requirements.</target>
+        </trans-unit>
+        <trans-unit id="Config_DefaultLanguage_Changed" translate="yes" xml:space="preserve">
+          <source>Default Language changed</source>
+          <target state="translated">Default Language changed</target>
+        </trans-unit>
+        <trans-unit id="Exceptions_InvalidUsernamePassword" translate="yes" xml:space="preserve">
+          <source>The Username Password combination is invalid</source>
+          <target state="translated">The Username Password combination is invalid</target>
+        </trans-unit>
+        <trans-unit id="Connect_AutoLogin" translate="yes" xml:space="preserve">
+          <source>Auto Login</source>
+          <target state="translated">Auto Login</target>
+        </trans-unit>
+        <trans-unit id="Connect_Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated">Cancel</target>
+        </trans-unit>
+        <trans-unit id="Connect_Connect" translate="yes" xml:space="preserve">
+          <source>Connect</source>
+          <target state="translated">Connect</target>
+        </trans-unit>
+        <trans-unit id="Connect_Connect_ServerUnreachable" translate="yes" xml:space="preserve">
+          <source>Can not connect to Server. Please try again later.</source>
+          <target state="translated">Can not connect to Server. Please try again later.</target>
+        </trans-unit>
+        <trans-unit id="Connect_Disconnect" translate="yes" xml:space="preserve">
+          <source>Disconnect</source>
+          <target state="translated">Disconnect</target>
+        </trans-unit>
+        <trans-unit id="Connect_Error_Invalid_Credentials" translate="yes" xml:space="preserve">
+          <source>Login failed !Please check your Credentials</source>
+          <target state="translated">Login failed !Please check your Credentials</target>
+        </trans-unit>
+        <trans-unit id="Connect_Error_Invalid_Password" translate="yes" xml:space="preserve">
+          <source>Invalid Password</source>
+          <target state="translated">Invalid Password</target>
+        </trans-unit>
+        <trans-unit id="Connect_Error_Invalid_StationId" translate="yes" xml:space="preserve">
+          <source>Invalid Station Id</source>
+          <target state="translated">Invalid Station Id</target>
+        </trans-unit>
+        <trans-unit id="Connect_Password" translate="yes" xml:space="preserve">
+          <source>Password</source>
+          <target state="translated">Password</target>
+        </trans-unit>
+        <trans-unit id="Connect_StationId" translate="yes" xml:space="preserve">
+          <source>Station Id</source>
+          <target state="translated">Station Id</target>
+        </trans-unit>
+        <trans-unit id="Connect_LoginTitle" translate="yes" xml:space="preserve">
+          <source>Login</source>
+          <target state="translated">Login</target>
+        </trans-unit>
+        <trans-unit id="Connect_Connected" translate="yes" xml:space="preserve">
+          <source>Connected</source>
+          <target state="translated">Connected</target>
+        </trans-unit>
+        <trans-unit id="Connect_Connecting" translate="yes" xml:space="preserve">
+          <source>Connecting</source>
+          <target state="translated">Connecting</target>
+        </trans-unit>
+        <trans-unit id="Connect_Disconnected" translate="yes" xml:space="preserve">
+          <source>Disconnected</source>
+          <target state="translated">Disconnected</target>
+        </trans-unit>
+        <trans-unit id="Connect_Disconnecting" translate="yes" xml:space="preserve">
+          <source>Disconnecting</source>
+          <target state="translated">Disconnecting</target>
+        </trans-unit>
+        <trans-unit id="Connect_Recconecting" translate="yes" xml:space="preserve">
+          <source>Reconnecing</source>
+          <target state="translated">Reconnecing</target>
+        </trans-unit>
+        <trans-unit id="System_Settings_ConnectionPanel" translate="yes" xml:space="preserve">
+          <source>Connection Panel</source>
+          <target state="translated">Connection Panel</target>
+        </trans-unit>
+        <trans-unit id="Session_Info_SessionLimitReached" translate="yes" xml:space="preserve">
+          <source>The Session has ended.</source>
+          <target state="translated">The Session has ended.</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

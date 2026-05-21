@@ -1,0 +1,492 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:fa="http://schemas.fontawesome.io/icons/" xmlns:local="clr-namespace:LeapVR.Shell.UI.Usercontrols">
+
+    <Style x:Key="RadioButtonBaseStyle" TargetType="RadioButton">
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="BorderBrush" Value="{DynamicResource ThemeMainTextColor}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{DynamicResource ThemeMainTextColor}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border
+                        x:Name="border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="15" SnapsToDevicePixels="True">
+                        <ContentPresenter
+                            x:Name="contentPresenter"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
+                            ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            Focusable="False" RecognizesAccessKey="True"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{DynamicResource ThemeMainTextColor}" />
+                            <Setter Property="TextElement.Foreground" Value="{DynamicResource ThemeMainTextReverseColor}" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{DynamicResource ThemeMainTextColor}" />
+                            <Setter Property="TextElement.Foreground" Value="{DynamicResource ThemeMainTextReverseColor}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{DynamicResource ThemeMainTextColor}" />
+                            <Setter TargetName="border" Property="TextElement.Foreground" Value="{DynamicResource ThemeDisabledTextColor}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="TextElement.Foreground" Value="{DynamicResource ThemeDisabledTextColor}" />
+                            <Setter Property="BorderBrush" Value="{DynamicResource ThemeDisabledTextColor}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ImageRadioButtonBaseStyle" TargetType="RadioButton">
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="BorderBrush" Value="{DynamicResource ThemeMainTextColor}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{DynamicResource ThemeMainTextColor}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border
+                        x:Name="border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        SnapsToDevicePixels="True">
+                        <Grid>
+                            <Border
+                                x:Name="Bd"
+                                Panel.ZIndex="1"
+                                BorderBrush="{DynamicResource ThemeMainTextReverseColor}"
+                                BorderThickness="5" Opacity="0.5"
+                                Visibility="{TemplateBinding IsChecked,
+                                                             Converter={StaticResource BoolToVisibilityConverter}}">
+                                <Border BorderBrush="{DynamicResource ThemeMainTextColor}" BorderThickness="10" Opacity="0.8">
+                                    <!--<Border BorderThickness="5" BorderBrush="Black" Opacity="0.5">
+                                    </Border>-->
+                                </Border>
+                            </Border>
+                            <ContentPresenter
+                                x:Name="contentPresenter"
+                                Margin="15" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                Content="{TemplateBinding Content}"
+                                ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                Focusable="False" RecognizesAccessKey="True"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Bd" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--  style for most used buttons  -->
+    <Style x:Key="ButtonBaseStyle" TargetType="ButtonBase">
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="BorderBrush" Value="{DynamicResource ThemeMainTextColor}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{DynamicResource ThemeMainTextColor}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border
+                        x:Name="border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="15" SnapsToDevicePixels="True">
+                        <ContentPresenter
+                            x:Name="contentPresenter"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
+                            ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            Focusable="False" RecognizesAccessKey="True"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{DynamicResource ThemeMainTextColor}" />
+                            <Setter Property="TextElement.Foreground" Value="{DynamicResource ThemeMainTextReverseColor}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{DynamicResource ThemeMainTextColor}" />
+                            <Setter TargetName="border" Property="TextElement.Foreground" Value="{DynamicResource ThemeDisabledTextColor}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="TextElement.Foreground" Value="{DynamicResource ThemeDisabledTextColor}" />
+                            <Setter Property="BorderBrush" Value="{DynamicResource ThemeDisabledTextColor}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ImageButtonBaseStyle" TargetType="ButtonBase">
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="BorderBrush" Value="{DynamicResource ThemeMainTextColor}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{DynamicResource ThemeMainTextColor}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border
+                        x:Name="border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        SnapsToDevicePixels="True">
+                        <Grid>
+                            <Rectangle
+                                x:Name="overlay"
+                                Panel.ZIndex="1"
+                                Fill="{DynamicResource ThemeMainTextColor}"
+                                Opacity="0.3" Visibility="Collapsed" />
+                            <ContentPresenter
+                                x:Name="contentPresenter"
+                                Margin="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Content="{TemplateBinding Content}"
+                                ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                Focusable="False" RecognizesAccessKey="True"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Padding" Value="2.5" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="overlay" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False" />
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type local:SwitchButton}">
+        <Style.Resources>
+            <DropShadowEffect
+                x:Key="DropShadowEffect"
+                BlurRadius="1" Direction="98" RenderingBias="Quality" ShadowDepth="0.5" />
+        </Style.Resources>
+
+        <Setter Property="Background" Value="#1c232d" />
+        <Setter Property="Foreground" Value="#FF5AC75A" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="SwitchOffText" Value="OFF" />
+        <Setter Property="SwitchOnText" Value="ON" />
+        <Setter Property="IsSwitchOn" Value="False" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:SwitchButton}">
+                    <Viewbox>
+                        <Border x:Name="PART_Root">
+                            <Border.Clip>
+                                <RectangleGeometry RadiusX="30" RadiusY="30" Rect="0,0,180,60" />
+                            </Border.Clip>
+                            <Grid>
+                                <Grid x:Name="PART_SwitchOFF">
+                                    <Border Width="180" Height="60" Background="{TemplateBinding Background}" CornerRadius="25">
+                                        <TextBlock
+                                            HorizontalAlignment="Center" VerticalAlignment="Center"
+                                            FontSize="20" FontWeight="Bold"
+                                            Foreground="{TemplateBinding TextColor}"
+                                            Text="{TemplateBinding SwitchOffText}" />
+                                    </Border>
+                                </Grid>
+                                <Grid x:Name="PART_SwitchON" Margin="-120,0,120,0">
+                                    <Border Width="180" Height="60" Background="{TemplateBinding Foreground}" CornerRadius="25">
+
+                                        <DockPanel HorizontalAlignment="Stretch" LastChildFill="True">
+                                            <Path x:Name="Circle" Width="60" Height="60" DockPanel.Dock="Right">
+                                                <Path.Fill>
+                                                    <RadialGradientBrush>
+                                                        <GradientStop Offset="1" Color="#FFF1F1F1" />
+                                                        <GradientStop Color="White" />
+                                                    </RadialGradientBrush>
+                                                </Path.Fill>
+                                                <Path.Data>
+                                                    <EllipseGeometry Center="30,30" RadiusX="30" RadiusY="30" />
+                                                </Path.Data>
+                                                <Path.Effect>
+                                                    <DropShadowEffect ShadowDepth="1" />
+                                                </Path.Effect>
+                                            </Path>
+
+                                            <TextBlock
+                                                HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                                                DockPanel.Dock="Right" FontSize="20" FontWeight="Bold"
+                                                Foreground="{TemplateBinding TextColor}"
+                                                Text="{TemplateBinding SwitchOnText}"
+                                                TextAlignment="Center" />
+
+                                        </DockPanel>
+                                    </Border>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </Viewbox>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSwitchOn" Value="True">
+                            <Setter TargetName="PART_SwitchON" Property="Margin" Value="0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="GuardViewsButtonStyle" TargetType="{x:Type local:LeapButton}">
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="Foreground" Value="{DynamicResource GuardViewsPrimaryForegroundColor}" />
+        <Setter Property="Background" Value="{DynamicResource GuardViewsPrimaryBackgroundColor}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource GuardViewsPrimaryBorderColor}" />
+        <Setter Property="HoverForeground" Value="{DynamicResource GuardViewsHoverForegroundColor}" />
+        <Setter Property="HoverBackground" Value="{DynamicResource GuardViewsHoverBackgroundColor}" />
+        <Setter Property="HoverBorderBrush" Value="{DynamicResource GuardViewsHoverBorderColor}" />
+        <Setter Property="PressedForeground" Value="{DynamicResource GuardViewsPressedForegroundColor}" />
+        <Setter Property="PressedBackground" Value="{DynamicResource GuardViewsPressedBackgroundColor}" />
+        <Setter Property="PressedBorderBrush" Value="{DynamicResource GuardViewsPressedBorderColor}" />
+        <Setter Property="DisabledForeground" Value="{DynamicResource GuardViewsDisabledForegroundColor}" />
+        <Setter Property="DisabledBackground" Value="{DynamicResource GuardViewsDisabledBackgroundColor}" />
+        <Setter Property="DisabledBorderBrush" Value="{DynamicResource GuardViewsDisabledBorderColor}" />
+
+        <Setter Property="BorderThickness" Value="{DynamicResource GuardViewsButtonBorderThickness}" />
+        <Setter Property="BorderRadius" Value="{DynamicResource GuardViewsButtonBorderRadius}" />
+
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:LeapButton}">
+                    <Border
+                        x:Name="border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding BorderRadius}"
+                        SnapsToDevicePixels="True">
+                        <ContentPresenter
+                            x:Name="contentPresenter"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
+                            ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            Focusable="{TemplateBinding Focusable}"
+                            RecognizesAccessKey="True"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource GuardViewsHoverForegroundColor}" />
+                            <Setter TargetName="border" Property="Background" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HoverBackground}" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HoverBorderBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource GuardViewsPressedForegroundColor}" />
+                            <Setter TargetName="border" Property="Background" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=PressedBackground}" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=PressedBorderBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="{DynamicResource GuardViewsDisabledForegroundColor}" />
+                            <Setter TargetName="border" Property="Background" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DisabledBackground}" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DisabledBorderBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="GuardViewsRadioButtonStyle" TargetType="{x:Type local:LeapRadioButton}">
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="Foreground" Value="{DynamicResource GuardViewsPrimaryForegroundColor}" />
+        <Setter Property="Background" Value="{DynamicResource GuardViewsPrimaryBackgroundColor}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource GuardViewsPrimaryBorderColor}" />
+        <Setter Property="HoverForeground" Value="{DynamicResource GuardViewsHoverForegroundColor}" />
+        <Setter Property="HoverBackground" Value="{DynamicResource GuardViewsHoverBackgroundColor}" />
+        <Setter Property="HoverBorderBrush" Value="{DynamicResource GuardViewsHoverBorderColor}" />
+        <Setter Property="PressedForeground" Value="{DynamicResource GuardViewsPressedForegroundColor}" />
+        <Setter Property="PressedBackground" Value="{DynamicResource GuardViewsPressedBackgroundColor}" />
+        <Setter Property="PressedBorderBrush" Value="{DynamicResource GuardViewsPressedBorderColor}" />
+        <Setter Property="DisabledForeground" Value="{DynamicResource GuardViewsDisbaledForegroundColor}" />
+        <Setter Property="DisabledBackground" Value="{DynamicResource GuardViewsDisbaledBackgroundColor}" />
+        <Setter Property="DisabledBorderBrush" Value="{DynamicResource GuardViewsDisbaledBorderColor}" />
+        <Setter Property="ActiveForeground" Value="{DynamicResource GuardViewsActiveForegroundColor}" />
+        <Setter Property="ActiveBackground" Value="{DynamicResource GuardViewsActiveBackgroundColor}" />
+        <Setter Property="ActiveBorderBrush" Value="{DynamicResource GuardViewsActiveBorderColor}" />
+
+        <Setter Property="BorderThickness" Value="{DynamicResource GuardViewsButtonBorderThickness}" />
+        <Setter Property="BorderRadius" Value="{DynamicResource GuardViewsButtonBorderRadius}" />
+
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:LeapRadioButton}">
+                    <Border
+                        x:Name="border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding BorderRadius}"
+                        SnapsToDevicePixels="True">
+                        <ContentPresenter
+                            x:Name="contentPresenter"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
+                            ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            Focusable="{TemplateBinding Focusable}"
+                            RecognizesAccessKey="True"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource GuardViewsHoverForegroundColor}" />
+                            <Setter TargetName="border" Property="Background" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HoverBackground}" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HoverBorderBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource GuardViewsPressedForegroundColor}" />
+                            <Setter TargetName="border" Property="Background" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=PressedBackground}" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=PressedBorderBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="{DynamicResource GuardViewsDisabledForegroundColor}" />
+                            <Setter TargetName="border" Property="Background" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DisabledBackground}" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DisabledBorderBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource GuardViewsActiveForegroundColor}" />
+                            <Setter TargetName="border" Property="Background" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ActiveBackground}" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ActiveBorderBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SessionViewsButtonStyle" TargetType="{x:Type local:LeapButton}">
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="Foreground" Value="{DynamicResource SessionViewsPrimaryForegroundColor}" />
+        <Setter Property="Background" Value="{DynamicResource SessionViewsPrimaryBackgroundColor}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource SessionViewsPrimaryBorderColor}" />
+        <Setter Property="HoverForeground" Value="{DynamicResource SessionViewsHoverForegroundColor}" />
+        <Setter Property="HoverBackground" Value="{DynamicResource SessionViewsHoverBackgroundColor}" />
+        <Setter Property="HoverBorderBrush" Value="{DynamicResource SessionViewsHoverBorderColor}" />
+        <Setter Property="PressedForeground" Value="{DynamicResource SessionViewsPressedForegroundColor}" />
+        <Setter Property="PressedBackground" Value="{DynamicResource SessionViewsPressedBackgroundColor}" />
+        <Setter Property="PressedBorderBrush" Value="{DynamicResource SessionViewsPressedBorderColor}" />
+        <Setter Property="DisabledForeground" Value="{DynamicResource SessionViewsDisabledForegroundColor}" />
+        <Setter Property="DisabledBackground" Value="{DynamicResource SessionViewsDisabledBackgroundColor}" />
+        <Setter Property="DisabledBorderBrush" Value="{DynamicResource SessionViewsDisabledBorderColor}" />
+
+        <Setter Property="BorderThickness" Value="{DynamicResource SessionViewsButtonBorderThickness}" />
+        <Setter Property="BorderRadius" Value="{DynamicResource SessionViewsButtonBorderRadius}" />
+
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:LeapButton}">
+                    <Border
+                        x:Name="border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding BorderRadius}"
+                        SnapsToDevicePixels="True">
+                        <ContentPresenter
+                            x:Name="contentPresenter"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
+                            ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            Focusable="{TemplateBinding Focusable}"
+                            RecognizesAccessKey="True"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource SessionViewsHoverForegroundColor}" />
+                            <Setter TargetName="border" Property="Background" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HoverBackground}" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HoverBorderBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource SessionViewsPressedForegroundColor}" />
+                            <Setter TargetName="border" Property="Background" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=PressedBackground}" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=PressedBorderBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="{DynamicResource SessionViewsDisabledForegroundColor}" />
+                            <Setter TargetName="border" Property="Background" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DisabledBackground}" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DisabledBorderBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type local:ToggleImage}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:ToggleImage}">
+                    <Viewbox Cursor="Arrow">
+                        <Image x:Name="StateImage" Source="{TemplateBinding OffImage}" />
+                    </Viewbox>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="StateImage" Property="Source" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=OnImage}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

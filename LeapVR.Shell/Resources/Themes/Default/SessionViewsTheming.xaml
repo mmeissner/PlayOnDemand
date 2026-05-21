@@ -1,0 +1,48 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:Double x:Key="SessionViewsH1">72</system:Double>
+    <system:Double x:Key="SessionViewsH2">60</system:Double>
+    <system:Double x:Key="SessionViewsH3">48</system:Double>
+    <system:Double x:Key="SessionViewsH4">36</system:Double>
+    <system:Double x:Key="SessionViewsH5">28</system:Double>
+    <system:Double x:Key="SessionViewsH6">20</system:Double>
+
+    <!--  color for normal state color  -->
+    <SolidColorBrush x:Key="SessionViewsPrimaryForegroundColor" Color="White" />
+    <SolidColorBrush x:Key="SessionViewsPrimaryBackgroundColor" Color="Transparent" />
+    <SolidColorBrush x:Key="SessionViewsPrimaryBorderColor" Color="White" />
+
+    <!--  color for hover state color  -->
+    <SolidColorBrush x:Key="SessionViewsHoverForegroundColor" Color="White" />
+    <SolidColorBrush x:Key="SessionViewsHoverBackgroundColor" Color="#FF1196F5" />
+    <SolidColorBrush x:Key="SessionViewsHoverBorderColor" Color="Transparent" />
+
+    <!--  color for pressed state color  -->
+    <SolidColorBrush x:Key="SessionViewsPressedForegroundColor" Color="#0077CC" />
+    <SolidColorBrush x:Key="SessionViewsPressedBackgroundColor" Color="Gray" />
+    <SolidColorBrush x:Key="SessionViewsPressedBorderColor" Color="#0077CC" />
+
+    <!--  color for disabled state color  -->
+    <SolidColorBrush x:Key="SessionViewsDisabledForegroundColor" Color="#FF999999" />
+    <SolidColorBrush x:Key="SessionViewsDisabledBackgroundColor" Color="Transparent" />
+    <SolidColorBrush x:Key="SessionViewsDisabledBorderColor" Color="#FF999999" />
+
+    <!--  color for active state color  -->
+    <SolidColorBrush x:Key="SessionViewsActiveForegroundColor" Color="White" />
+    <SolidColorBrush x:Key="SessionViewsActiveBackgroundColor" Color="#0077CC" />
+    <SolidColorBrush x:Key="SessionViewsActiveBorderColor" Color="Transparent" />
+
+    <system:Double x:Key="SessionViewsButtonFontSize">48</system:Double>
+    <system:Double x:Key="SessionViewsButtonWidth">300</system:Double>
+    <system:Double x:Key="SessionViewsButtonHeight">100</system:Double>
+    <CornerRadius x:Key="SessionViewsButtonBorderRadius">15</CornerRadius>
+    <Thickness x:Key="SessionViewsButtonBorderThickness">5</Thickness>
+
+    <system:Double x:Key="SessionViewsTabButtonFontSize">36</system:Double>
+    <system:Double x:Key="SessionViewsTabButtonWidth">330</system:Double>
+    <system:Double x:Key="SessionViewsTabButtonHeight">100</system:Double>
+    <CornerRadius x:Key="SessionViewsTabButtonBorderRadius">0</CornerRadius>
+    <Thickness x:Key="SessionViewsTabButtonBorderThickness">0</Thickness>
+
+
+</ResourceDictionary>

@@ -1,0 +1,103 @@
+﻿<UserControl
+    x:Class="LeapVR.Shell.UI.Shell.SystemAdministration.Applications.Management.Views.ApplicationView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cal="http://www.caliburnproject.org" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:fa="http://schemas.fontawesome.io/icons/" xmlns:lex="http://wpflocalizeextension.codeplex.com"
+    xmlns:local="clr-namespace:LeapVR.Shell.UI.Usercontrols" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="200" d:DesignWidth="1200"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style BasedOn="{StaticResource TextBlockBaseStyle}" TargetType="TextBlock" />
+    </UserControl.Resources>
+
+    <Grid x:Name="Root">
+        <Grid x:Name="LoadingPlaceHolder" Visibility="{Binding IsBusy, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <UserControl
+                MaxWidth="290" MaxHeight="100"
+                Margin="20"
+                Template="{DynamicResource AppleSpinner}"
+                Visibility="{Binding IsBusy, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}" />
+            <TextBlock Grid.Column="1" FontSize="{DynamicResource H4}" Style="{DynamicResource TextBlockBaseStyle}" Text="{lex:Loc Global_Loading}" />
+        </Grid>
+
+        <Grid x:Name="RealView" Visibility="{Binding IsBusy, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=true}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <ContentControl
+                x:Name="Thumbnail"
+                Grid.Row="0" Grid.Column="0"
+                MaxWidth="300" MaxHeight="135"
+                Margin="5"
+                cal:View.Context="Normal" />
+
+            <Grid x:Name="Details" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+                <TextBlock
+                    x:Name="Title"
+                    Grid.Row="0"
+                    Margin="5,0" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                    <TextBlock.Inlines>
+                        <Run FontSize="{DynamicResource H4}" Text="{Binding Name, FallbackValue='Application Name', Mode=OneWay}" />
+                        <LineBreak />
+                        <Run FontSize="{DynamicResource H6}" Text="{Binding Category.DisplayName, Mode=OneWay}" />
+                    </TextBlock.Inlines>
+                </TextBlock>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <UniformGrid Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Columns="2">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="{DynamicResource H5}" Margin="5,0" Source="{DynamicResource IconEnable}" Stretch="Uniform" />
+                            <local:SwitchButton Height="{DynamicResource H5}" Margin="5,0" IsSwitchOn="{Binding IsEnabled, Mode=TwoWay, FallbackValue=False}" />
+                        </StackPanel>
+                        <Grid>
+                            <StackPanel Orientation="Horizontal" Visibility="{Binding IsContainerApp, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=false}">
+                                <Image Width="{DynamicResource H5}" Margin="5,0" Source="{DynamicResource IconFirewall}" Stretch="Uniform" />
+                                <local:SwitchButton Height="{DynamicResource H5}" Margin="5,0" IsSwitchOn="{Binding IsTrafficAllowed, Mode=TwoWay, FallbackValue=False, Converter={StaticResource InvertBoolConverter}}" />
+                            </StackPanel>
+                            <Image
+                                Width="{DynamicResource H3}"
+                                Margin="45,0"
+                                Source="{Binding PlatformIcon, Mode=OneWay}"
+                                Stretch="Uniform"
+                                Visibility="{Binding IsContainerApp, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=true}" />
+                        </Grid>
+                    </UniformGrid>
+                    <Button
+                        x:Name="EditApp"
+                        Grid.Column="1"
+                        MinWidth="150"
+                        Margin="15" HorizontalAlignment="Left"
+                        Content="{lex:Loc Application_Edit}"
+                        FontSize="{DynamicResource H6}"
+                        IsEnabled="{Binding CanResetGameStatistics}"
+                        Style="{DynamicResource ButtonBaseStyle}" />
+                    <Button
+                        x:Name="AdvanceEditApp"
+                        Grid.Column="2"
+                        MinWidth="150"
+                        Margin="15" HorizontalAlignment="Left"
+                        Content="{lex:Loc System_Application_Advance_Edit}"
+                        FontSize="{DynamicResource H6}"
+                        IsEnabled="{Binding CanResetGameStatistics}"
+                        Style="{DynamicResource ButtonBaseStyle}" />
+                </Grid>
+            </Grid>
+        </Grid>
+
+    </Grid>
+
+
+</UserControl>

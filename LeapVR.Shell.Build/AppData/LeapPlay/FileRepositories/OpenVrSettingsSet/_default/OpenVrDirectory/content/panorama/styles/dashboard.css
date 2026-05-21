@@ -1,0 +1,1795 @@
+@define overlay_tabs_focus: gradient( linear, 0% 0%, 100% 100%, from( #59b1cc ), to( #3c4e71 ) );
+@define overlay_tabs_focus2: gradient( linear, 0% 0%, 80% 80%, from( #ffffff ), to( #bbbbbb ) );
+@define overlay_tabs_selection: gradient( linear, 0% 0%, 80% 80%, from( #b8d4de ), to( #737680 ) );
+
+VRPanoramaDashboard
+{
+	width: 100%;
+	height: 100%;
+	font-family: platformfont;
+	perspective: 1000;
+	perspective-origin: 50% 50%;
+	position: 0px 0px 0%;
+	background-color: none;
+	flow-children: down;
+}
+
+VRPanoramaDashboard #HeaderRow
+{
+	visibility: collapse;
+	
+	pre-transform-scale2d: 0.85;
+	wash-color: #00000033;
+
+	transition-property: pre-transform-scale2d, transform, wash-color;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.23s;
+}
+
+.XInputControllerPresent VRPanoramaDashboard #HeaderRow:descendantfocus,
+VRPanoramaDashboard #HeaderRow:hover
+{
+	pre-transform-scale2d: 0.9;
+	transform: translate3D( 0px 0px 100px );
+	wash-color: #00000000;
+}
+
+VRPanoramaDashboard #HeaderRow:hover
+{
+	transform: translate3D( 0px 0px 50px );
+}
+
+
+VRPanoramaDashboard #SystemButtonArea:descendantfocus,
+VRPanoramaDashboard #SystemButtonArea:hover,
+{
+	pre-transform-scale2d: 0.9;
+	transform: translate3D( 0px 0px 100px );
+	wash-color: #00000000;
+}
+
+NotificationToast
+{
+	width: 100%;
+	height: 100%;
+	font-family: platformfont;
+	perspective: 1000;
+	perspective-origin: 50% 50%;
+	position: 0px 0px 0%;
+	background-color: #FFFFFFFF;
+}
+
+NotificationHistory
+{
+	width: 100%;
+	height: 100%;
+	font-family: platformfont;
+	perspective: 1000;
+	perspective-origin: 50% 50%;
+	position: 0px 0px 0%;
+	background-color: none;
+}
+
+#SystemBG
+{
+	background-color: none;
+	width: 1920px;
+	height: 220px;
+	position: 0px 0px -50px;
+}
+
+#BackdropWrapper
+{
+	width: 100%;
+	margin-top: 2px;
+	height: 1280px;
+}
+
+#Backdrop
+{
+	horizontal-align: center;
+	vertical-align: center;
+	transform: translateX( 0px ) translateY( 0px ) translateZ( 0px );
+	pre-transform-scale2d: 2.0, 2.0;
+
+	background-image: url( "file://{images}/overlay_background.png" );
+	background-repeat: no-repeat;
+	background-position: center 15px;
+	background-size: 1080px 1080px;
+}
+
+#TopRow
+{
+	margin-top: 0px;
+	padding-bottom: 10px;
+	//padding-right: 70px;
+	//padding-left: 70px;
+	padding-top: 5px;
+	width: 1980px;
+	height: 450px;
+	horizontal-align: center;
+	vertical-align: middle;
+	z-index: 2000;
+	transform: translateZ( -25px );
+
+	transition-property: transform;
+	transition-duration: 0.15s;
+	transition-timing-function: ease-in-out;
+}
+
+#NowPlayingParent
+{	
+	width: 625px;
+	height: 450px;
+	vertical-align: middle;
+	horizontal-align: center;
+	//flow-children: down;
+	flow-children: none;
+	visibility: visible;
+}
+
+#TitleArea,
+.SavePromptArea
+{	
+	width: 575px;
+	height: 420px;
+	margin-top: 0px;
+	vertical-align: middle;
+	horizontal-align: center;
+	flow-children: none;
+
+	pre-transform-scale2d: 0.9;
+	visibility: visible;
+	transition-property: transform, pre-transform-scale2d;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.23s;
+}
+
+#TitleArea:hover,
+.XInputControllerPresent #TitleArea:descendantfocus
+{
+	pre-transform-scale2d: 1.0;	
+}
+
+.NoSceneApp #TitleArea
+{
+	visibility: collapse;
+}
+
+.SavePromptArea
+{
+    visibility: collapse;
+    flow-children: down;
+    height: 260px;
+}
+
+#SaveButtons
+{
+	flow-children: right;
+	horizontal-align: center;
+	height: 80px;
+	width: fit-children;
+}
+
+.DashboardTransitionAppQuitting #TitleArea,
+.DashboardTransitionAppStarting #TitleArea,
+.DashboardTransitionWaitingForRender #TitleArea
+{
+	visibility: visible;
+}
+
+#TitleArea:active
+{
+	pre-transform-scale2d: 1.05;	
+	transform: translateZ( 20px );
+}
+
+#TitleAreaText
+{
+	pre-transform-scale2d: 1.9;
+	
+	flow-children: none;
+	horizontal-align: center;
+	vertical-align: center;
+
+	height: 285px;
+	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	z-index: 2;
+}
+
+.MissingAppImage #TitleAreaText
+{
+	z-index: 100;
+}
+
+#TitleArea .Circle
+{
+	width: 260px;
+	height: 260px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #3d414230;
+	box-shadow: fill #ffffff11 -6px -6px 12px 12px;
+	pre-transform-scale2d: 1.0;
+	horizontal-align: center;
+	pre-transform-scale2d: 0.8;
+	opacity: 0.0;
+
+	transition-property: opacity, pre-transform-scale2d, transform;
+	transition-duration: 0.23s;
+}
+
+.XInputControllerPresent #TitleArea:focus,
+#TitleArea:hover
+{
+
+	//transform: translate3d( 0px, 25px, 40px );
+	opacity: 1.0;
+	pre-transform-scale2d: 1.0;
+}
+
+.XInputControllerPresent #TitleArea:focus:active .Circle
+{
+	background-color: overlay_tabs_focus2;
+	transform: translateZ( 0px );
+	border-color: #fdfefef0;
+	box-shadow: box_shadow_on_color -6px -6px 12px 12px;
+	opacity: 1.0;
+	pre-transform-scale2d: 1.0;
+}
+
+.NoSceneApp #TitleArea .Circle
+{
+	visibility: collapse;
+}
+
+.DashboardTransitionAppQuitting #TitleArea .Circle,
+.DashboardTransitionAppStarting #TitleArea .Circle,
+.DashboardTransitionWaitingForRender #TitleArea .Circle
+{
+	visibility: visible;
+}
+
+.NoSceneApp .DashboardTransitionAppQuitting #TitleArea .Circle,
+.NoSceneApp .DashboardTransitionAppStarting #TitleArea .Circle,
+.NoSceneApp .DashboardTransitionWaitingForRender #TitleArea .Circle
+{
+	visibility: visible;
+}
+
+.DashboardTransitionUserSavePrompt #TitleArea
+{
+    visibility: collapse;
+}	
+
+#ClockArea,
+.DashboardTransitionAppQuitting #ClockArea,
+.DashboardTransitionAppStarting #ClockArea,
+.DashboardTransitionWaitingForRender #ClockArea,
+.DashboardTransitionUserSavePrompt #ClockArea,
+.DashboardTransitionAppStarting.NoSceneApp #ClockArea
+{
+	horizontal-align: center;
+	vertical-align: center;
+	flow-children: right;
+
+	width: fit-children;
+	height: 120px;
+	padding: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-bottom: 280px;
+
+	//margin-top: 250px;
+
+	//visibility: collapse;
+
+	transition-property: margin, font-size;
+	transition-duration: 0.23s;
+}
+
+
+#Time,
+.DashboardTransitionAppQuitting #Time,
+.DashboardTransitionAppStarting #Time,
+.DashboardTransitionWaitingForRender #Time,
+.DashboardTransitionUserSavePrompt #Time,
+.DashboardTransitionAppStarting.NoSceneApp #Time
+{
+	color: applabelsolid;
+	vertical-align: middle;
+	font-weight: bold;
+	font-size: 40px;
+	margin: 4px;
+
+}
+
+#TimeSuffix,
+.DashboardTransitionAppQuitting #TimeSuffix,
+.DashboardTransitionAppStarting #TimeSuffix,
+.DashboardTransitionWaitingForRender #TimeSuffix,
+.DashboardTransitionUserSavePrompt #TimeSuffix,
+.DashboardTransitionAppStarting.NoSceneApp #TimeSuffix
+{
+	color: applabelsolid;
+	vertical-align: middle;
+	font-weight: bold;
+	font-size: 30px;
+	margin: 4px;
+	margin-top: 10px;
+	margin-left: 10px;
+
+}
+
+.NoSceneApp #ClockArea
+{
+	margin: 0px;
+	margin-top: 0px;
+	margin-bottom: 140px;
+	visibility: visible;
+}
+
+.NoSceneApp #Time
+{
+	font-size: 60px;
+	font-weight: normal;
+}
+
+.NoSceneApp #TimeSuffix
+{
+	font-size: 45px;
+	margin-top: 18px;
+	margin-left: 15px;
+	font-weight: normal;
+}
+
+#AppStatus
+{	
+	horizontal-align: center;
+	vertical-align: bottom;
+	margin-bottom: 40px;
+	height: 70px;
+	
+}
+
+.Center
+{
+	horizontal-align: center;
+	text-align: center;
+}
+
+#CameraButton
+{
+    visibility: collapse;
+}
+
+
+.HasHMDCamera #CameraButton
+{
+    visibility: visible;
+}
+
+#GoHome,
+.InHomeApp #GoHome,
+.EnableHomeApp #QuitApp
+{
+	visibility: collapse;
+}
+
+.EnableHomeApp #GoHome
+{
+	visibility: visible;
+}
+
+//Special Go Home button stuff
+
+
+#SystemButtonArea #GoHome
+{
+	padding: 0px;
+	margin: 0px;
+
+	pre-transform-scale2d: .85;
+	width: 400px;
+	height: 140px;
+	vertical-align: bottom;
+	margin-bottom: 90px;
+	border-radius: 120px;
+	border: 3px;
+	flow-children: right;
+	padding: 0px;
+
+	transition-property: pre-transform-scale2d;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.15s;
+}
+
+#SystemButtonArea #GoHome Label
+{
+	padding: 0px;
+	margin: 0px;
+	line-height: 50px;
+	opacity: 1;
+	height: 50px;
+	font-size: 40px;
+	margin-bottom: 5px;
+}
+
+#SystemButtonArea #GoHome Image
+{
+	transform: none;
+	padding: 0px;
+	margin: 0px;
+	vertical-align: center;
+	width: 60px;
+	height: 60px;
+	margin-left: 50px;
+	margin-bottom: 5px;
+}
+
+#SystemButtonArea #GoHome:hover,
+.XInputControllerPresent #SystemButtonArea #GoHome:focus,
+.XInputControllerPresent #SystemButtonArea #GoHome:focus:hover,
+.XInputControllerPresent #SystemButtonArea #GoHome:focus:active
+{
+	pre-transform-scale2d: 1;
+}
+
+
+
+.Quit,
+.NowPlaying,
+.NowQuitting,
+.NowStarting,
+.NowWaiting,
+.PromptButton
+{
+	font-size: 30px;
+	opacity: 0.8;
+	font-weight: bold;
+	margin-top: 15px;
+	height: 35px;
+	width: 500px;
+	color: applabelsolid;
+
+	transition-property: color, opacity;
+	transition-duration: 0.1s;
+
+	horizontal-align: center;
+	text-align: center;
+	visibility: collapse;
+}
+
+#TitleArea:hover .Quit,
+#TitleArea:hover .NowPlaying,
+#TitleArea:hover .NowQuitting,
+#TitleArea:hover .NowStarting,
+#TitleArea:hover .NowWaiting,
+#TitleArea:hover .PromptButton
+{
+	opacity: 1.0;
+}
+
+.BackToApp
+{
+	font-size: 30px;
+	//opacity: 0.8;
+	font-weight: bold;
+	//margin-top: 5px;
+	height: 35px;
+	width: 500px;
+	color: applabelsolid;
+
+	horizontal-align: center;
+	text-align: center;
+
+	transition-property: color, opacity;
+	transition-duration: 0.1s;
+
+}
+
+.PromptQuestion,
+.PromptInfo
+{
+	font-size: 36px;
+	font-weight: bold;
+	margin-top: 0px;
+	height: 108px;
+	text-overflow: ellipsis;
+	width: 800px;
+	color: applabelsolid;
+
+	transition-property: color;
+	transition-duration: 0.1s;
+
+	horizontal-align: center;
+	text-align: center;
+}
+
+.PromptInfo
+{
+	font-weight: normal;
+	opacity: 0.85;
+	font-size: 30px;
+	max-height: 80px;
+}
+
+.PromptButton
+{
+	visibility: visible;
+	opacity: 1.0;
+	pre-transform-scale2d: 0.85;
+	margin-top: 0px;
+	height: 80px;
+	padding-right: 10px;
+	padding-left: 10px;
+	width: fit-children;
+	margin-right: 30px;
+	margin-left: 30px;
+	horizontal-align: center;
+	vertical-align: center;
+	background-position: center 20px;
+	background-size: 120px 50px;
+	border-radius: 4px;
+	transition-property: pre-transform-scale2d;
+	transition-duration: 0.23s;
+	
+	background-image: url( "file://{images}/icons/label_bg.png" );
+	background-repeat: no-repeat;
+	background-position: center 15px;
+	background-size: 200px 45px;	
+}
+
+.PromptButton:hover
+{
+	pre-transform-scale2d: 1.0;
+}
+
+.PromptButton:hover Label
+{
+	color: white;
+}
+
+.XInputControllerPresent .PromptButton:hover:focus:active
+{
+	pre-transform-scale2d: 1.2;
+	transition-duration: 0.1s;
+}
+
+
+.PromptButton Label
+{
+    margin-top: 0px;
+    height: 50px;
+    font-size: 42px;
+    text-transform: uppercase;
+    horizontal-align: center;
+    vertical-align: center;
+    opacity: 0.9;
+    color: applabelsolid;
+    background-size: 300px 45px;	
+    transition-property: color;
+    transition-duration: 0.23s;
+}
+
+.PromptButton:hover Label
+{
+	color: white;
+	opacity: 1.0;
+}
+
+.GamepadMode .PromptButton:descendantfocus
+{
+	background-color: all_games_hover;
+	
+	animation-name: main-button-glow-movement; 
+	animation-duration: 2.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.PromptButton:selected
+{
+	pre-transform-scale2d: 1.04;
+}
+.GamepadMode .PromptButton:selected
+{
+	background-color: applabelsolid;
+	pre-transform-scale2d: 1.04;
+}
+
+
+#AppStatus .NowPlaying
+{
+	visibility: visible;
+}
+
+.DashboardTransitionAppQuitting #AppStatus .NowPlaying,
+.DashboardTransitionAppStarting #AppStatus .NowPlaying,
+.DashboardTransitionWaitingForRender #AppStatus .NowPlaying,
+.DashboardTransitionUserSavePrompt #AppStatus .NowPlaying,
+.NoSceneApp #AppStatus .NowPlaying
+{
+	visibility: collapse;
+}
+
+LoadingThrobber
+{
+	visibility: collapse;
+}
+
+.DashboardTransitionAppQuitting LoadingThrobber,
+.DashboardTransitionAppStarting LoadingThrobber,
+.DashboardTransitionWaitingForRender LoadingThrobber
+{
+	visibility: visible;
+}
+
+/*.SmallThrobber 
+{
+	pre-transform-scale2d: 0.5;
+	transform: translateY( 25px );
+}*/
+
+.SmallThrobber
+{
+	pre-transform-scale2d: 0.75;
+	position: 0px 50px 50px;
+}
+
+LoadingThrobber .Bar
+{
+	background-color: #FFFFFFFF;
+}
+
+.DashboardTransitionAppQuitting #AppStatus .NowQuitting
+{
+	visibility: visible;
+}
+
+.DashboardTransitionAppQuitting #TitleArea:hover #AppStatus .NowQuitting,
+.XInputControllerPresent .DashboardTransitionAppQuitting #TitleArea:focus #AppStatus .NowQuitting,
+.DashboardTransitionUserSavePrompt #TitleArea:hover #AppStatus .NowQuitting,
+.XInputControllerPresent .DashboardTransitionUserSavePrompt #TitleArea:focus #AppStatus .NowQuitting
+{
+	visibility: collapse;
+}
+
+.DashboardTransitionAppQuitting  #TitleArea:hover #AppStatus .Quit,
+.XInputControllerPresent .DashboardTransitionAppQuitting  #TitleArea:focus #AppStatus .Quit
+{
+	visibility: visible;
+	opacity: 1.0;
+}
+
+.DashboardTransitionAppQuitting  #TitleArea:active #AppStatus .Quit
+{
+	pre-transform-scale2d: 1.05;
+	opacity: 1.0;
+}
+
+.DashboardTransitionAppStarting #AppStatus .NowStarting
+{
+	visibility: visible;
+}
+
+.DashboardTransitionWaitingForRender #AppStatus .NowWaiting
+{
+	visibility: visible;
+}
+
+.NoSceneApp .DashboardTransitionAppStarting #TitleArea:hover,
+.NoSceneApp .DashboardTransitionWaitingForRender #TitleArea:hover,
+.XInputControllerPresent .NoSceneApp .DashboardTransitionAppStarting #TitleArea:focus,
+.XInputControllerPresent .NoSceneApp .DashboardTransitionWaitingForRender #TitleArea:focus
+{
+	visibility: visible;
+}
+
+.DashboardTransitionAppStarting #TitleArea:hover #AppStatus .Quit,
+.DashboardTransitionWaitingForRender #TitleArea:hover #AppStatus .Quit,
+.XInputControllerPresent .DashboardTransitionAppStarting #TitleArea:focus #AppStatus .Quit,
+.XInputControllerPresent .DashboardTransitionWaitingForRender #TitleArea:focus #AppStatus .Quit
+{
+	visibility: visible;
+	opacity: 1.0;
+}
+
+#TitleArea:hover .Quit,
+.XInputControllerPresent #TitleArea:focus .Quit
+{
+	visibility: visible;
+	pre-transform-scale2d: 1.05;
+	
+	transition-property: pre-transform-scale2d;
+	
+	transition-duration: 0.1s;
+}
+
+.DashboardTransitionUserSavePrompt #TitleArea:hover .Quit,
+.XInputControllerPresent .DashboardTransitionUserSavePrompt #TitleArea:focus .Quit,
+.NoSceneApp #TitleArea:hover .Quit,
+.XInputControllerPresent .NoSceneApp #TitleArea:focus .Quit
+{
+	visibility: collapse;
+}
+
+#TitleArea:hover .NowPlaying,
+#TitleArea:hover .NowQuitting,
+#TitleArea:hover .NowStarting,
+#TitleArea:hover .NowWaiting,
+.XInputControllerPresent #TitleArea:focus .NowPlaying,
+.XInputControllerPresent #TitleArea:focus .NowQuitting,
+.XInputControllerPresent #TitleArea:focus .NowStarting,
+.XInputControllerPresent #TitleArea:focus .NowWaiting
+{
+	visibility: collapse;
+}
+
+.DashboardTransitionUserSavePrompt .SavePromptArea
+{
+    visibility: visible;
+}
+
+#NextAppName
+{
+	visibility: collapse;
+}
+
+#CurrentAppHeader,
+#StartingAppHeader
+{
+	opacity: 1.0;
+	wash-color: #00000066;
+	transition-property: wash-color;
+	transition-duration: 0.23s;
+	visibility: visible;
+}
+
+#StartingAppHeader
+{
+	visibility: collapse;
+}
+
+.NoSceneApp #CurrentAppHeader
+{
+	visibility: collapse;
+}
+
+.DashboardTransitionAppStarting #CurrentAppHeader,
+.DashboardTransitionWaitingForRender #CurrentAppHeader
+{
+	visibility: collapse;
+}
+
+.DashboardTransitionAppQuitting #CurrentAppHeader,
+.DashboardTransitionAppStarting #StartingAppHeader,
+.DashboardTransitionWaitingForRender #StartingAppHeader
+{
+	visibility: visible;
+}
+
+#TitleArea:hover #CurrentAppHeader
+{
+	wash-color: #00000000;	
+}
+
+#MissingAppHeader
+{
+	visibility: collapse;
+	height: 100%;
+	width: 443px;
+}
+
+.MissingStartingAppImage #MissingAppHeader,
+.MissingAppImage #MissingAppHeader
+ {
+	 visibility: visible;
+ }
+
+.MissingStartingAppImage #StartingAppHeader,
+.MissingAppImage #CurrentAppHeader
+{
+	visibility: collapse;
+}
+
+.MissingAppImage .DashboardTransitionAppQuitting #CurrentAppHeader,
+.MissingStartingAppImage.DashboardTransitionAppStarting #StartingAppHeader,
+.MissingStartingAppImage.DashboardTransitionWaitingForRender #StartingAppHeader
+{
+	visibility: collapse;
+}
+
+#NowPlayingImage
+{	
+	horizontal-align: center;
+	vertical-align: top;
+	height: 215px;
+	width: fit-children;
+	z-index: 3;
+	margin-top: 70px;
+	padding: 4px;
+	visibility: visible;
+	border-radius: 12px;
+}
+
+.MissingAppImage.MissingStartingAppImage #NowPlayingImage
+{
+	visibility: collapse;	
+}
+
+.XInputControllerPresent #TitleArea:descendantfocus #NowPlayingImage,
+#TitleArea:hover #NowPlayingImage
+{
+	animation-name: main-button-glow-movement;
+	animation-duration: 2.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;		
+}
+
+#AppTitle,
+.DashboardTransitionAppStarting #NextAppName,
+.DashboardTransitionWaitingForRender #NextAppName
+{
+	font-size: 42px;
+	height: 150px;
+	font-weight: bold;
+	margin-top: 25px;
+	width: 460px;
+	color: applabelsolid;
+	horizontal-align: center;
+	text-align: center;
+	visibility: collapse;
+
+	pre-transform-scale2d: 0.92;
+	transition-property: transform, pre-transform-scale2d;
+	transition-duration: 0.23s;
+}
+
+.MissingAppImage #AppTitle,
+.MissingAppImage #NextAppName,
+.MissingAppImage .DashboardTransitionAppStarting #NextAppName,
+.MissingAppImage .DashboardTransitionWaitingForRender #NextAppName,
+.MissingAppImage .DashboardTransitionAppStarting #AppTitle,
+.MissingAppImage .DashboardTransitionWaitingForRender #AppTitle
+{
+	visibility: visible;
+	height: fit-children;
+	margin-top: 70px;
+	vertical-align: center;
+}
+
+.NoSceneApp #AppTitle,
+{
+	visibility: collapse;
+}
+
+#TitleArea:hover #AppTitle,
+.XInputControllerPresent #TitleArea:focus #AppTitle
+{
+
+	pre-transform-scale2d: 0.92;
+}
+
+.DashboardTransitionAppStarting #AppTitle,
+.DashboardTransitionWaitingForRender #AppTitle
+{
+	visibility: collapse;
+}
+
+
+.MissingAppImage .DashboardTransitionAppStarting #NextAppName,
+.MissingAppImage .DashboardTransitionWaitingForRender #NextAppName,
+.NoSceneApp .MissingAppImage .DashboardTransitionWaitingForRender #NextAppName,
+.NoSceneApp .MissingAppImage .DashboardTransitionWaitingForRender #NextAppName
+{
+	font-size: 40px;
+	font-weight: bold;
+	margin-top: 5px;
+	width: 800px;
+	color: applabelsolid;
+	horizontal-align: center;
+	text-align: center;	
+	visibility: visible;	
+}
+
+#SystemButtonArea
+{
+	horizontal-align: left;
+	width: fit-children;
+	height: 280px;
+	flow-children: right;
+	vertical-align: center;
+	//margin-bottom: 100px;
+	margin-bottom: 85px;
+	//margin-left: 220px;
+	padding: 15px;
+	padding-right: 45px;
+	pre-transform-scale2d: 0.9;	
+	visibility: visible;
+	//position: 0px -55px -20px;
+
+}
+
+#SystemButtonArea Button
+{
+	//height: 200px;
+	//width: 200px;
+	height: 175px;
+	width: 175px;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 5px;
+	border: 3px solid #ffffff66;
+	box-shadow: fill box_shadow_off_color -6px -6px 12px 12px;
+	pre-transform-scale2d: 0.7;
+	transition-property: transform, box-shadow, color, background-color, pre-transform-scale2d;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.15s;
+	opacity: 1;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #262626ff ), to( #070708ff ) );
+}
+
+.XInputControllerPresent #SystemButtonArea Button:focus
+{
+
+
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 5px;
+	border-color: none;
+
+
+	transition-property: transform, pre-transform-scale2d;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.23s;
+
+	background-color: all_games_hover;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 2.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#SystemButtonArea Button:hover,
+.XInputControllerPresent #SystemButtonArea Button:focus,
+.XInputControllerPresent #SystemButtonArea Button:focus:hover
+{
+	border-color: applabelsolid;
+	transform: translate3d( 0px, 0px, 20px );
+	pre-transform-scale2d: 0.9;
+	border-color: #3d414200;
+	background-color: all_games_hover;
+	box-shadow: fill box_shadow_mid_color -6px -6px 12px 12px;
+	
+	
+	animation-name: main-button-glow-movement; 
+	animation-duration: 2.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.XInputControllerPresent #SystemButtonArea Button:focus,
+.XInputControllerPresent #SystemButtonArea Button:focus:hover
+{
+	pre-transform-scale2d: 0.95;
+}
+
+.XInputControllerPresent #SystemButtonArea Button:focus:active
+
+{
+	pre-transform-scale2d: 1.05;
+	transform: translate3D( 0px 5px 3px );
+}
+
+#SystemButtonArea Button Image
+{
+	//height: 95px;
+	//width: 95px;
+	height: 85px;
+	width: 85px;
+	horizontal-align: center;
+	vertical-align: bottom;
+	//margin-bottom: 5px;
+	wash-color: applabelsolid;
+	transform: translateY( -45px );
+	padding: 10px;
+	background-image: url( "file://{images}/icons/icon_bg.png" );
+	background-repeat: no-repeat;
+	background-position: 5px 5px;
+	background-size: 64px 64px;	
+	
+	transition-property: wash-color, transform;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.15s;
+}
+
+#SystemButtonArea Button:hover Image,
+.XInputControllerPresent #SystemButtonArea Button:focus Image,
+.XInputControllerPresent #SystemButtonArea Button:focus:hover Image
+{
+	wash-color: animated_icon_wash_color;
+	opacity: 1;
+	transform: translateY( -5px );
+	background-image: url( "file://{images}/icons/icon_focus_bg.png" );	
+	
+	
+	animation-name: image-wash-pulse;
+	animation-duration: 2.7s;
+	animation-delay: 0.08s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#SystemButtonArea Button Label
+{
+	font-size: 28px;
+	line-height: 26px;
+	font-weight: bold;
+	color: applabelsolid;
+	opacity: 0.0;
+	padding: 4px;
+	horizontal-align: center;
+	text-align: center;
+	vertical-align: center;
+	margin-top: -4px;
+	margin-bottom: 48px;
+	transition-property: opacity, color;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.23s;
+}
+
+#SystemButtonArea Button:hover Image,
+.XInputControllerPresent #SystemButtonArea Button:focus Image,
+.XInputControllerPresent #SystemButtonArea Button:focus:hover Image
+
+{
+	transform: translateY( 5px );
+}
+
+#SystemButtonArea Button:hover Label,
+.XInputControllerPresent #SystemButtonArea Button:focus Label,
+.XInputControllerPresent #SystemButtonArea Button:focus:hover Label
+{
+	opacity: 1.0;
+	color: applabelsolid;
+}
+
+#SystemButtonArea Button.Activated.Selected Label,
+
+{
+	opacity: 1.0;
+	color: applabelselectedsolid;
+}
+
+#SystemButtonArea Button.Activated.Selected
+{
+	background-color: applabelsolid;	
+}
+
+#SystemButtonArea Button.Activated.Selected Image
+{
+	wash-color: #103666;
+	background-image: none;
+	animation-name: none;
+	transform: translateY( 10px );
+}
+
+.NoSceneApp #QuitButton,
+{ 
+	visibility: collapse;
+}
+
+#QuitButton
+{ 
+	visibility: visible;
+}
+
+
+#HeaderRowContainer
+{
+	width: 100%;
+	flow-children: right;
+	height: 250px;
+
+	z-index: 1;
+	visibility: visible;
+	horizontal-align: center;
+	vertical-align: top;
+}
+
+#MaskedContainer
+{
+	width: 100%;
+	opacity-mask: url( "file://{images}/overlay_header_mask.tga" ) 1.0;
+	horizontal-align: center;
+}
+
+.GamepadMode #MaskedContainer
+{
+	width: 1520px;
+}
+
+#HeaderRow
+{	
+	visibility: visible;
+	horizontal-align: center;
+	position: 0px 0px 0px;
+}
+
+.DashboardTransitionAppQuitting #HeaderRow,
+.DashboardTransitionAppStarting #HeaderRowr,
+.DashboardTransitionWaitingForRender #HeaderRow
+{	
+	visibility: collapse;
+}
+
+#HeaderRow
+{
+	margin: 20px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	z-index: 3;
+	height: 250px;
+	padding: 0px;
+	flow-children: right;
+	vertical-align: top;
+	transform: translate3D( 0px 0px 0px );
+
+	transition-property: transform;
+	transition-duration: 0.15s;
+	transition-timing-function: ease-in-out;
+}
+
+#HeaderRow:hover
+{
+	transform: translateZ( 15px );
+}
+
+.OverlayTab
+{
+	width: 240px;
+	height: 240px;
+	margin-bottom: 20px;
+	margin: 0px;
+	padding: 5px;
+	transform: translateZ( -20px );
+	pre-transform-scale2d: 0.9;
+	transition-property: background-color, color, transform,pre-transform-scale2d;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.15s, 0.23s;
+}
+
+.OverlayTab:active
+{
+	transform: translate3D( 0px 3px 20px );
+	pre-transform-scale2d: 0.95;
+}
+
+.Circle
+{
+	width: 220px;
+	height: 220px;
+	vertical-align: top;
+	margin: 10px;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #3d414230;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #262626ff ), to( #070708ff ) );
+	box-shadow: fill #ffffff11 -6px -6px 12px 12px;
+	pre-transform-scale2d: 0.8;
+	z-index: -5;
+	transition-property: background-color, color, transform,pre-transform-scale2d;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.15s, 0.23s;
+}
+
+.OverlayTab:hover .Circle
+{
+	background-color: all_games_hover;
+	border-color: #3d414200;
+	box-shadow: fill box_shadow_mid_color -6px -6px 12px 12px;
+	transform: translateZ( 0px );
+
+	pre-transform-scale2d: 1.0;
+}
+
+.XInputControllerPresent .OverlayTab:descendantfocus .Circle
+{
+	background-color: all_games_hover;
+	transform: translateZ( 0px );
+	border-color: #fdfefef0;
+	box-shadow: box_shadow_on_color -6px -6px 12px 12px;
+	pre-transform-scale2d: 1.0;
+}
+
+
+.OverlayTab:descendantfocus:hover .Circle
+{
+	pre-transform-scale2d: 1.06;
+}
+
+.OverlayTab.Selected .Circle
+{
+	background-color: all_games_hover;
+	border-color: #3d414200;
+	box-shadow: fill box_shadow_mid_color -6px -6px 12px 12px;
+	transform: translateZ( 0px );
+}
+
+.XInputControllerPresent .OverlayTab.Activated.Selected:focus .Circle,
+.XInputControllerPresent .OverlayTab.Button.Selected:focus .Circle
+{
+	background-color: applabelsolid;
+	
+	animation-name: main-button-glow-movement; 
+	animation-duration: 2.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.OverlayTab.Activated.Selected .Circle,
+.OverlayTab.Button.Selected .Circle
+{
+	background-color: applabelsolid;
+	animation-name: none;	
+}
+
+.OverlayTab.Activated.Selected .Circle,
+.OverlayTab.Button.Selected .Circle
+{
+	background-color: overlay_tabs_selection;
+	transform: translateZ( 0px );
+	border-color: #fdfefef0;
+	box-shadow: box_shadow_off_color -6px -6px 12px 12px;
+	pre-transform-scale2d: 1.0;
+}
+
+.OverlayTab.Button.Activated.Selected Image,
+.OverlayTab.Button.Selected Image
+{
+	opacity: 1.0;
+	wash-color: none;
+}
+
+.OverlayTab Image
+{
+	horizontal-align: center;
+	width: 300px;
+	height: 300px;
+
+	opacity: 0.0;
+	wash-color: none; 
+	
+	opacity-mask: url( "file://{images}/icons/overlay_icon_mask.png" ) 1.0;
+	
+	transition-property: opacity;
+	transition-duration: 0.23s;
+	transition-delay: 0.05s;
+	transition-timing-function: ease-in;
+}
+
+.OverlayTab:hover Image,
+.XInputControllerPresent .OverlayTab:descendantfocus Image
+{
+	opacity: 1.0;	
+	transition-timing-function: ease-out;
+	transition-duration: 0.1s;
+	transition-delay: 0.0s;
+}
+
+.XInputControllerPresent .OverlayTab.Button.Selected:focus Image
+{
+	animation-name: none;
+	animation-duration: 2.7s;
+	animation-delay: 0.08s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.OverlayTab.Button.Selected Image
+{
+	animation-name: none;
+}
+
+.OverlayTab:descendantfocus Image
+{
+	wash-color: none;
+	animation-name: none;
+}
+
+.XInputControllerPresent .OverlayTab:focus Image
+{
+	wash-color: none;
+	animation-name: image-wash-pulse;
+	animation-duration: 2.7s;
+	animation-delay: 0.08s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.OverlayTab Label
+{
+	color: applabel;
+	width: 240px;
+	height: 155px;
+	font-weight: bold;
+	font-size: 36px;
+	horizontal-align: center;
+	vertical-align: center;
+	padding-top: 55px;
+	text-align: center;
+	text-overflow: clip;
+	text-transform: uppercase;
+	pre-transform-scale2d: 0.7;
+	z-index: 4;
+
+	transition-property: color, transform, pre-transform-scale2d;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.23s;
+}
+
+.OverlayTab:hover Label
+{
+	transform: translateY( 90px );
+	pre-transform-scale2d: 0.90;
+	
+	background-image: url( "file://{images}/icons/label_bg.png" );
+	background-repeat: no-repeat;
+	background-position: -5px 15px;
+	background-size: 230px 130px;	
+}
+
+.XInputControllerPresent .OverlayTab:focus Label,
+.OverlayTab.Button.Activated.Selected Label,
+.OverlayTab.Button.Selected  Label
+{
+	transform: translateY( 90px );
+	pre-transform-scale2d: 1.0;
+		
+	background-image: url( "file://{images}/icons/label_bg.png" );
+	background-repeat: no-repeat;
+	background-position: -5px 15px;
+	background-size: 230px 130px;	
+}
+
+.OverlayTab:hover .Button
+{
+	transform: translateZ( 20px );
+}
+
+#FooterWrapper
+{
+	width: 1920px;
+	height: 220px;
+	transform: translateY( 1260px );
+	margin-bottom: -20px;
+	margin-right: 0px;
+	padding: 20px;
+	padding-bottom: 5px;
+	horizontal-align: center;
+	vertical-align: bottom;
+	flow-children: right;
+}
+
+#Tip
+{
+	opacity: 1.0;
+	z-index: 10;
+	width: 400px;
+	padding-left: 8px;
+	height: fit-children;
+	horizontal-align: left;
+	vertical-align: middle;
+	flow-children: right;
+	visibility: collapse;
+}
+
+#TipBackground
+{
+	flow-children: right;
+	width: fit-children;	
+	padding: 14px;
+	box-shadow: fill #00000099  -6px -6px 12px 6px;
+	border-radius: 48px;
+}
+
+#TipSpacer
+{
+	width: 400px;
+	visibility: collapse;
+}
+
+.GamepadMode #TipSpacer
+{
+	visibility: visible;
+}
+
+.GamepadMode #Tip
+{
+	visibility: visible;
+}
+
+.TipIcon
+{
+	background-image: url( "file://{images}/icons/start_button.png" );
+	background-size: 100%;
+	width: 60px;
+	height: 50px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	margin-left: 10px;
+	
+}
+
+#GamepadTip
+{
+	width: fit-children;
+	height: 40px;
+	text-align: left;
+	horizontal-align: left;
+	font-size: 26px;
+	margin: 10px;
+	color: #ffffffff;
+}
+
+#Volume
+{
+	width: fit-children;
+	height: 170px;
+	flow-children: right;
+	vertical-align: bottom;
+	margin-left: 1320px;
+	margin-bottom: 175px;
+	horizontal-align: left;
+
+
+	padding: 10px;
+	background-repeat: no-repeat;
+
+
+}
+
+	
+
+
+.VolumeIcon
+{
+	width: 60px;
+	height: 60px;	
+	//margin-top: 15px;
+	opacity: .8;
+	vertical-align: center;
+	horizontal-align: center;
+}
+
+.VolumeToggleButton
+{
+	border: 2px solid #ffffff66;
+	border-radius: 50%;
+	//width: 120px;
+	//height: 120px;
+	width: 100px;
+	height: 100px;
+	//margin-bottom: 20px;
+	vertical-align: center;
+	margin-right: 30px;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #262626ff ), to( #070708ff ) );
+	transition-property: transform, box-shadow, color, background-color, pre-transform-scale2d;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.15s;
+}
+
+#VolumeMute:hover,
+.XInputControllerPresent #VolumeMute:focus
+{
+	background-color: all_games_hover;
+	pre-transform-scale2d: 1.1;
+}
+
+#VolumeIconMuted
+{
+	visibility: collapse;	
+}
+
+.Mute .VolumeToggleButton
+{
+	//background-color: #ffffff60;	
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #ffffff60 ), to( #ffffff20 ) );
+}
+
+.Mute .VolumeToggleButton #VolumeIconUnmuted
+{
+	visibility: collapse;	
+}
+
+.Mute .VolumeToggleButton #VolumeIconMuted
+{
+	visibility: visible;	
+}
+
+.Mute #VolumeMeter
+{
+	visibility: collapse;
+	//opacity: .7;
+}
+
+.MutedLabel
+{
+	font-size: 45px;
+	color: #ffffffcc;
+	margin-left: 20px;	
+	vertical-align: center;
+	//height: 100px;
+	//background-color: green;
+	visibility: collapse;	
+}
+
+
+.Mute .MutedLabel
+{
+	visibility: visible;
+}
+
+
+#VolumeMeter
+{
+	//width: 300px;
+	//height: 80px;
+	width: 450px;
+	height: 65px;
+	vertical-align: center;
+	//margin-bottom: 10px;
+	//margin-top: 15px;
+	//margin-left: 20px;
+	//margin-right: 10px;
+	padding-right: 10px;
+	transition-property: pre-transform-scale2d;
+}
+
+#VolumeMeter #SliderTrack
+{
+	//height: 18px;
+	height: 65px;
+	border-radius: 5px;
+	background-color: #ffffff66;
+}
+
+#VolumeMeter #SliderTrackProgress
+{
+	background-color: #309ebfff;
+	border-radius: 5px;
+	height: 75px;
+}
+
+#VolumeMeter #SliderThumb
+{
+	vertical-align: center;
+	//margin-top: 5px;
+	width: 10px;
+	height: 75px;
+	border-radius: 0px;
+	//border-radius: 50%;
+	opacity: 1.0;
+	//background-color: 309ebfff;
+	background-color: white;
+	//background-color: #ffffffcf;
+	//border-color: #111111ff;
+	//border-width: 1px;
+	opacity: 1;
+}
+
+.XInputControllerPresent #VolumeMeter:focus #SliderThumb
+{
+	//box-shadow: fill box_shadow_on_color -6px -6px 24px 12px;
+	border: 2px solid blue;
+}
+
+#VolumeMeter:selected #SliderThumb
+{
+	pre-transform-scale2d: 1.08;	
+	//background-color: #ffffffff;
+}
+
+
+#VolumeMeter:selected #SliderTrack
+{
+	background-color: #ffffffff;
+}
+
+
+#CloseIcon
+{
+	width: 64px;
+	height: 64px;
+	position: 0px 255px 50px;
+	horizontal-align: center;
+	wash-color: #bbbbbbff;
+	background-image: url( "file://{images}/icons/icon_close.png" );
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-size: 64px 64px;		
+	
+	transition-property: background;
+	transition-duration: 0.1s;
+
+	visibility: collapse;
+}
+
+#TitleArea:hover #CloseIcon,
+#TitleArea:descendantfocus #CloseIcon
+{
+	wash-color: none;
+	background-image: url( "file://{images}/icons/icon_close_inverse.png" );
+}
+
+
+/*
+#Transition
+{
+	visibility: collapse;	
+
+	width: 100%;
+	height: 75%;
+	vertical-align: center;
+	flow-children: down;
+	z-index: 1000;
+
+}
+
+.DashboardTransitionAppQuitting #Transition,
+.DashboardTransitionAppStarting #Transition,
+.DashboardTransitionWaitingForRender #Transition
+{
+	visibility: visible;
+
+}*/
+
+//
+// Loading throbber
+//
+@keyframes 'loading-throbber-appear'
+{
+	0%
+	{
+		opacity: 0.0;
+	}
+
+	30%
+	{
+		opacity: 1.0;
+	}
+
+	55%
+	{
+		opacity: 1.0;
+	}
+	
+	100%
+	{
+		opacity: 0.0;
+	}
+}
+
+@keyframes 'loading-throbber-bar'
+{
+	0%
+	{
+		pre-transform-scale2d: 1.0, 0.6;
+
+		background-color: #FFFFFF00;
+	}
+	30%
+	{
+		pre-transform-scale2d: 1.0, 1.0;
+		background-color: #FFFFFFFF;
+	}
+	55%
+	{
+		pre-transform-scale2d: 1.0, 0.6;
+		background-color: #FFFFFFFF;
+	}
+	100%
+	{
+		pre-transform-scale2d: 1.0, 0.6;
+		background-color: #FFFFFF00;
+	}
+}
+
+@keyframes 'main-button-glow-movement'
+{
+	0%
+	{
+		box-shadow: fill box_shadow_on_color  -6px -6px 24px 12px;
+	}
+	
+	40%
+	{
+		box-shadow: fill box_shadow_on_color -1.5px -1.5px 6px 3px;
+	}
+
+	60%
+	{
+		box-shadow: fill box_shadow_on_color -1.5px -1.5px 6px 3px;
+	}
+
+	100%
+	{
+		box-shadow: fill box_shadow_on_color  -6px -6px 24px 12px;
+	}
+}
+
+@keyframes 'image-wash-pulse'
+{
+	0%
+	{
+		wash-color: applabelsolid;
+		blur: gaussian( 0.5 );
+	}
+	
+	40%
+	{
+		wash-color: animated_icon_wash_color;
+		blur: none;
+	}
+	
+	60%
+	{
+		wash-color: animated_icon_wash_color;
+		blur: none;
+	}
+	
+	100%
+	{
+		wash-color: applabelsolid;
+		blur: gaussian( 0.5 );
+	}
+}	
+@keyframes 'image-wash-pulse-2'
+{
+	0%
+	{
+		wash-color: #0b224d;
+		blur: gaussian( 0.5 );
+	}
+	
+	40%
+	{
+		wash-color: animated_icon_wash_color;
+		blur: none;
+	}
+	
+	60%
+	{
+		wash-color: animated_icon_wash_color;
+		blur: none;
+	}
+	
+	100%
+	{
+		wash-color: #0b224d;
+		blur: gaussian( 0.5 );
+	}
+}
+
+.ArcadeMode #SettingsButton
+{
+    visibility: collapse;
+}

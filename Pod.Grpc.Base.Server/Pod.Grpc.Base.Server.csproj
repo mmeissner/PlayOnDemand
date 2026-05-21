@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Configurations>Debug;Release</Configurations>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--
+      Grpc.AspNetCore brings the server-side ASP.NET Core gRPC integration:
+      AddGrpc(), MapGrpcService<T>(), Grpc.AspNetCore.Server runtime,
+      Grpc.Core.Api shared types (ServerCallContext, RpcException, …).
+    -->
+    <PackageReference Include="Grpc.AspNetCore" Version="2.66.0" />
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pod.Data.Infrastructure\Pod.Data.Infrastructure.csproj" />
+    <ProjectReference Include="..\Pod.Data\Pod.Data.csproj" />
+    <ProjectReference Include="..\Pod.Enums\Pod.Enums.csproj" />
+    <ProjectReference Include="..\Pod.Grpc.Const\Pod.Grpc.Base.Const.csproj" />
+    <ProjectReference Include="..\Pod.Services\Pod.Services.csproj" />
+  </ItemGroup>
+
+</Project>

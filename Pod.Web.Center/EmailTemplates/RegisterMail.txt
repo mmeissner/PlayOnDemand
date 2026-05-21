@@ -1,0 +1,11 @@
+﻿Hey %Username%,
+you are just one step away before you can use your account. Go ahead and verify your email with the following url:
+%EMailVerificationTokenLink%
+
+In case you like to use our amazing API and verify your e-mail this way, thats the verification token:
+%EMailVerificationToken%
+
+Guides and Tutorials
+You can find cool guides and tutorials at https://www.example.com
+
+Thanks you for joining!

@@ -1,0 +1,20 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ItemsControl.xaml" />
+        <ResourceDictionary Source="ListViewItem.xaml" />
+        <ResourceDictionary Source="MultifunctionalScrollViewer.xaml" />
+        <ResourceDictionary Source="ScrollBar.xaml" />
+        <ResourceDictionary Source="ScrollViewer.xaml" />
+        <ResourceDictionary Source="TabControl.xaml" />
+        <ResourceDictionary Source="TabItem.xaml" />
+        <ResourceDictionary Source="Keypad.xaml" />
+        <ResourceDictionary Source="TextBlock.xaml" />
+        <ResourceDictionary Source="Buttons.xaml" />
+        <ResourceDictionary Source="Widgets.xaml" />
+        <ResourceDictionary Source="Spinners.xaml" />
+        <ResourceDictionary Source="LeapDropDown.xaml" />
+        <ResourceDictionary Source="FocusVisual.xaml" />
+
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Category_2D" xml:space="preserve">
+    <value>二维</value>
+  </data>
+  <data name="Category_3D" xml:space="preserve">
+    <value>三维</value>
+  </data>
+  <data name="Category_action" xml:space="preserve">
+    <value>动作</value>
+  </data>
+  <data name="Category_adventure" xml:space="preserve">
+    <value>冒险</value>
+  </data>
+  <data name="Category_arcade" xml:space="preserve">
+    <value>街机</value>
+  </data>
+  <data name="Category_battle" xml:space="preserve">
+    <value>对战</value>
+  </data>
+  <data name="Category_card" xml:space="preserve">
+    <value>桌游</value>
+  </data>
+  <data name="Category_cartoon" xml:space="preserve">
+    <value>动漫</value>
+  </data>
+  <data name="Category_casual" xml:space="preserve">
+    <value>休闲</value>
+  </data>
+  <data name="Category_classic" xml:space="preserve">
+    <value>经典</value>
+  </data>
+  <data name="Category_co_op" xml:space="preserve">
+    <value>合作</value>
+  </data>
+  <data name="Category_education" xml:space="preserve">
+    <value>教育</value>
+  </data>
+  <data name="Category_explore" xml:space="preserve">
+    <value>探索</value>
+  </data>
+  <data name="Category_horror" xml:space="preserve">
+    <value>惊悚</value>
+  </data>
+  <data name="Category_music" xml:space="preserve">
+    <value>音乐</value>
+  </data>
+  <data name="Category_open_world" xml:space="preserve">
+    <value>开放世界</value>
+  </data>
+  <data name="Category_party" xml:space="preserve">
+    <value>派对</value>
+  </data>
+  <data name="Category_pixel" xml:space="preserve">
+    <value>像素</value>
+  </data>
+  <data name="Category_race" xml:space="preserve">
+    <value>竞速</value>
+  </data>
+  <data name="Category_room_scale" xml:space="preserve">
+    <value>空间范围</value>
+  </data>
+  <data name="Category_rpg" xml:space="preserve">
+    <value>角色扮演</value>
+  </data>
+  <data name="Category_scifi" xml:space="preserve">
+    <value>科幻</value>
+  </data>
+  <data name="Category_shooter" xml:space="preserve">
+    <value>射击</value>
+  </data>
+  <data name="Category_sim" xml:space="preserve">
+    <value>模拟</value>
+  </data>
+  <data name="Category_space" xml:space="preserve">
+    <value>太空</value>
+  </data>
+  <data name="Category_sport" xml:space="preserve">
+    <value>运动</value>
+  </data>
+  <data name="Category_strategy" xml:space="preserve">
+    <value>策略</value>
+  </data>
+  <data name="Category_tower_defense" xml:space="preserve">
+    <value>塔防</value>
+  </data>
+  <data name="Category_puzzle" xml:space="preserve">
+    <value>解谜</value>
+  </data>
+</root>

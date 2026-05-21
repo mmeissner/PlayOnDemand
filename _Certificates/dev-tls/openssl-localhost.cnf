@@ -1,0 +1,17 @@
+[req]
+distinguished_name = req_dn
+prompt = no
+req_extensions = v3_req
+[req_dn]
+CN = localhost
+O = PoD Dev
+[v3_req]
+basicConstraints = CA:FALSE
+keyUsage = digitalSignature, keyEncipherment
+extendedKeyUsage = serverAuth
+subjectAltName = @alt_names
+[alt_names]
+DNS.1 = localhost
+DNS.2 = pod.local
+IP.1 = 127.0.0.1
+IP.2 = ::1

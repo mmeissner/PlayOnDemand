@@ -1,0 +1,16 @@
+<project outputDir="..\_OBFUSCATED_OUT" baseDir="bin\Release" xmlns="http://confuser.codeplex.com">
+  <module path="LeapVR.Content.Creator.exe" />
+  <module path="LeapVR.Content.Creator.Language.dll" />
+  <module path="LeapVR.Content.Creator.Logic.dll" />
+  <module path="LeapVR.Content.Shared.dll" />
+  <module path="LeapVR.Content.Util.dll" />
+  <module path="LeapVR.OpenVR.Wrapper.dll" />
+  <module path="LeapVR.Shared.Lib.Win.dll" />
+  <module path="LeapVR.Shared.Lib.Wpf.dll" />
+  <module path="LeapVR.Shell.Domain.Models.dll" />
+  <module path="LeapVR.Shell.Managers.dll" />
+  <module path="LeapVR.Shell.Modules.Interfaces.dll" />
+  <module path="LeapVR.Shell.Modules.dll" />
+  <module path="LeapVR.Shell.Repository.dll" />
+  <module path="LeapVR.Utilities.Windows.dll" />
+</project>

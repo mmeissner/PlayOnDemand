@@ -1,0 +1,33 @@
+﻿<Application
+    x:Class="LeapVR.Shell.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:LeapVR.Shell">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--  IMPORTANT: If the Order changes, the number here will the public class ImagesConfig Index needs to be adjusted  -->
+                <!--  load resources from current theme  -->
+                <ResourceDictionary x:Name="CurrentTheme" Source="Resources/Themes/Default/Package.xaml" />
+                <!--  load resources from images  -->
+                <ResourceDictionary Source="Resources/Images/Package.xaml" />
+                <!--  load resources from converters  -->
+                <ResourceDictionary Source="pack://application:,,,/LeapVR.Shared.Lib.Wpf;component/Converters/Converters.xaml" />
+                <!--  load resources from usercontrol styles  -->
+                <ResourceDictionary Source="Resources/Styles/Package.xaml" />
+                <!--  load default category icons  -->
+                <ResourceDictionary Source="pack://application:,,,/LeapVR.Shell.Categories;component/Resources/Images/Categories/Categories.xaml" />
+                <ResourceDictionary>
+                    <local:Bootstrapper x:Key="Bootstrapper" />
+                </ResourceDictionary>
+                <!--  Material Design Resources  >
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.LightGreen.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.LightGreen.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" /-->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

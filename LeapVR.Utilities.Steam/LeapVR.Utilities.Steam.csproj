@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB0FF9A9-08A9-4124-AFEB-0A68B553A433}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LeapVR.Utilities.Steam</RootNamespace>
+    <AssemblyName>LeapVR.Utilities.Steam</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_ShellClient|AnyCPU'">
+    <OutputPath>bin\Release_ShellClient\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_ShellClient|x64'">
+    <OutputPath>bin\x64\Release_ShellClient\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.5.11\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steam\AppState.cs" />
+    <Compile Include="Steam\StartState.cs" />
+    <Compile Include="Steam\SteamAppInfo.cs" />
+    <Compile Include="Steam\SteamAppStoreInfo.cs" />
+    <Compile Include="Steam\SteamGame.cs" />
+    <Compile Include="Steam\SteamLib.cs" />
+    <Compile Include="Steam\SteamSelf.cs" />
+    <Compile Include="Steam\VDF\Binary\AppinfoDecoder.cs" />
+    <Compile Include="Steam\VDF\Binary\AppinfoEncoder.cs" />
+    <Compile Include="Steam\VDF\Binary\VDFBinaryUtils.cs" />
+    <Compile Include="Steam\VDF\Binary\VdfTxtEncoder.cs" />
+    <Compile Include="Steam\VDF\Binary\VdfData.cs" />
+    <Compile Include="Steam\VDF\Binary\VdfTxtDecoder.cs" />
+    <Compile Include="Steam\VDF\NestedElement.cs" />
+    <Compile Include="Steam\VDF\NestedElementFile.cs" />
+    <Compile Include="Steam\VDF\SteamAccount.cs" />
+    <Compile Include="Steam\VDF\SteamConfigFile.cs" />
+    <Compile Include="Steam\VDF\VDFElement.cs" />
+    <Compile Include="Steam\VDF\VDFFile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LeapVR.Shared.Lib.Win\LeapVR.Shared.Lib.Win.csproj">
+      <Project>{ab764488-13aa-4d82-8bf8-97e0f5c00820}</Project>
+      <Name>LeapVR.Shared.Lib.Win</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Shell.3rdParty\Steam.Models\Steam.Models.Net452\Steam.Models.Net452.csproj">
+      <Project>{8497e2bf-7b39-4696-9833-d2aa79dca95a}</Project>
+      <Name>Steam.Models.Net452</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Shell.3rdParty\SteamWebAPI2\SteamWebAPI2.Net452\SteamWebAPI2.Net452.csproj">
+      <Project>{d16dfa6f-eb9a-4668-8d24-232e7ada8d98}</Project>
+      <Name>SteamWebAPI2.Net452</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Shell.Domain.Models\LeapVR.Shell.Domain.Models.csproj">
+      <Project>{aee42744-9545-463a-b67e-e21346f364e1}</Project>
+      <Name>LeapVR.Shell.Domain.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Shell.Modules.Interfaces\LeapVR.Shell.Modules.Interfaces.csproj">
+      <Project>{80d1a44d-0cd7-488f-b13f-4320b2723fad}</Project>
+      <Name>LeapVR.Shell.Modules.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapVR.Utilities.Windows\LeapVR.Utilities.Windows.csproj">
+      <Project>{cc3fa7ef-0349-45df-999d-a833406b2414}</Project>
+      <Name>LeapVR.Utilities.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pod.Data.Infrastructure\Pod.Data.Infrastructure.csproj">
+      <Project>{c485e8c0-fab2-4fa4-827d-4c44f5e0b8eb}</Project>
+      <Name>Pod.Data.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

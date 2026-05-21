@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <!--
+    SDK-style migration of the legacy LeapVR.Shared.Lib.Wpf.csproj. Same
+    motivation as the LeapVR.Shell / LeapVR.Content.Creator migrations: the
+    WPF target chain (MarkupCompilePass1, PresentationBuildTasks) doesn't run
+    for legacy csprojs under dotnet's MSBuild 18 + .NET 10 SDK, so Converters.xaml
+    never gets compiled to BAML and pack URIs from consumers
+    (`pack://application:,,,/LeapVR.Shared.Lib.Wpf;component/Converters/Converters.xaml`)
+    fail with `Cannot locate resource`. SDK-style with UseWpf=true wires the
+    target chain cleanly.
+
+    Backup at LeapVR.Shared.Lib.Wpf.csproj.bak.
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net471</TargetFramework>
+    <OutputType>Library</OutputType>
+    <UseWpf>true</UseWpf>
+    <RootNamespace>LeapVR.Shared.Lib.Wpf</RootNamespace>
+    <AssemblyName>LeapVR.Shared.Lib.Wpf</AssemblyName>
+    <ProjectGuid>{2E1EC3B2-E1DE-43FB-8100-41E40A4A987F}</ProjectGuid>
+    <Configurations>Debug;Release;Release_ShellClient</Configurations>
+    <Platforms>AnyCPU;x64</Platforms>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <!-- AssemblyInfo.cs has [AssemblyVersion("2018.4.*")] - wildcards need
+         determinism off. -->
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="LeapVR.Shared.Lib.Wpf.csproj.bak" />
+    <None Remove="LeapVR.Shared.Lib.Wpf.csproj.bak" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LeapVR.Shared.Lib\LeapVR.Shared.Lib.csproj" />
+  </ItemGroup>
+
+</Project>

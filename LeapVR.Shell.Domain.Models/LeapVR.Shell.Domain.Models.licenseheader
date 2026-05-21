@@ -1,0 +1,72 @@
+﻿extensions: designer.cs generated.cs
+extensions: .cs .cpp .h
+#region Licence
+/****************************************************************
+ *  Filename: %FileName%
+ *  ---------- ---------- ---------- ---------- ----------
+ *  Author  %UserName%
+ *  Date    %CurrentYear%-%CurrentMonth%-%CurrentDay%
+ *  Copyright (c) VSpace Tech Dev Ltd. , %CurrentYear%
+ *
+ * This unpublished material is proprietary to VSpace Tech Dev Ltd.
+ * All rights reserved. The methods and
+ * techniques described herein are considered trade secrets
+ * and/or confidential. Reproduction or distribution, in whole
+ * or in part, is forbidden except by express written permission
+ * of VSpace Tech Dev Ltd.
+ ****************************************************************/
+#endregion
+
+extensions: .aspx .ascx
+<%-- 
+/****************************************************************
+ *  Filename: %FileName%
+ *  ---------- ---------- ---------- ---------- ----------
+ *  Author  %UserName%
+ *  Date    %CurrentYear%-%CurrentMonth%-%CurrentDay%
+ *  Copyright (c) VSpace Tech Dev Ltd. , %CurrentYear%
+ *
+ * This unpublished material is proprietary to VSpace Tech Dev Ltd.
+ * All rights reserved. The methods and
+ * techniques described herein are considered trade secrets
+ * and/or confidential. Reproduction or distribution, in whole
+ * or in part, is forbidden except by express written permission
+ * of VSpace Tech Dev Ltd.
+ ****************************************************************/
+--%>
+
+extensions: .vb
+#region Licence
+'****************************************************************
+'*  Filename: %FileName%
+'*  ---------- ---------- ---------- ---------- ----------
+'*  Author  %UserName%
+'*  Date    %CurrentYear%-%CurrentMonth%-%CurrentDay%
+'*  Copyright (c) VSpace Tech Dev Ltd. , %CurrentYear%
+'*
+'* This unpublished material is proprietary to VSpace Tech Dev Ltd.
+'* All rights reserved. The methods and
+'* techniques described herein are considered trade secrets
+'* and/or confidential. Reproduction or distribution, in whole
+'* or in part, is forbidden except by express written permission
+'* of VSpace Tech Dev Ltd.
+'****************************************************************/
+#endregion
+
+extensions:  .xml .config .xsd
+<!--
+ ****************************************************************
+ *  Filename: %FileName%
+ *  ********* ********* ********* ********* ********* *********
+ *  Author  %UserName%
+ *  Date    %CurrentYear%-%CurrentMonth%-%CurrentDay%
+ *  Copyright (c) VSpace Tech Dev Ltd. , %CurrentYear%
+ *
+ * This unpublished material is proprietary to VSpace Tech Dev Ltd.
+ * All rights reserved. The methods and
+ * techniques described herein are considered trade secrets
+ * and/or confidential. Reproduction or distribution, in whole
+ * or in part, is forbidden except by express written permission
+ * of VSpace Tech Dev Ltd.
+ ****************************************************************
+-->

@@ -1,0 +1,9 @@
+syntax = "proto3";
+package Pod.Grpc.ConnectHost;
+
+import "MessagesConnectHost.proto";
+
+service ConnectHostServiceGrpc {
+    rpc GetHost (Pod.Grpc.Messages.ConnectHost.ShellServerRequest) returns (Pod.Grpc.Messages.ConnectHost.ShellServerResponse) {}
+    
+}

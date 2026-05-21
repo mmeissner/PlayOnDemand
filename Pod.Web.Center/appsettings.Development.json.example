@@ -1,0 +1,33 @@
+{
+  /*
+    Local development overrides. Copy this file to appsettings.Development.json
+    (which is gitignored) and fill in your local secrets, or use `dotnet user-secrets`
+    against the Pod.Web.Center UserSecretsId for the same keys.
+  */
+  "ConnectionStrings": {
+    "PodApiContext": "User ID=dev_pod_user;Password=dev_password;Host=localhost;Port=5432;Database=pod_dev;Pooling=true;"
+  },
+
+  "AuthConfig": {
+    /* A 32+ ASCII byte secret for signing dev JWTs. Do not reuse in production. */
+    "SecretKey": "ChangeMeChangeMeChangeMeChangeMe"
+  },
+
+  "ConfigSuperuser": {
+    "Password": "Password-1234",
+    "StationPassword": "Password_1234"
+  },
+
+  "LetsEncryptOptions": {
+    "IsEnabled": false,
+    "EncryptionPassword": "dev-le-password"
+  },
+
+  "Logging": {
+    "LogLevel": {
+      "Default": "Debug",
+      "System": "Information",
+      "Microsoft": "Information"
+    }
+  }
+}

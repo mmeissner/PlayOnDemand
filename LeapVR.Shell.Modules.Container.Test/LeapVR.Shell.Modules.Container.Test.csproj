@@ -1,0 +1,77 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    xUnit tests for EditableAppInstallationContainer + the .vbox round-trip.
+    Targets net471 because LeapVR.Shell.Modules targets .NET Framework 4.7.1.
+
+    References the kiosk-tier projects as compiled DLLs (Release_ShellClient/x64
+    output) rather than as ProjectReferences. The kiosk-side ProjectReference
+    graph drags in vendored ffmediaelement which has its own stylecop ruleset
+    that emits 3000+ "errors" (file-header / class-per-file violations) under
+    the new SDK-format compile. Build the kiosk first via Build_Free.bat or
+    `dotnet build LeapVR.Shell/LeapVR.Shell.csproj` to populate these DLLs,
+    then run `dotnet test` here.
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net471</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <Configurations>Debug;Release;Release_ShellClient</Configurations>
+    <Platforms>AnyCPU;x64</Platforms>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <!-- Exclude sibling console-app sub-projects (SampleVboxBuilder,
+       EndToEndEditVerifier) from this test assembly's auto-glob. Otherwise
+       SDK-style globbing pulls in their Program.cs and their obj/
+       AssemblyAttribute generation, causing CS0579 duplicate-attribute
+       errors. -->
+  <ItemGroup>
+    <Compile Remove="SampleVboxBuilder\**" />
+    <None Remove="SampleVboxBuilder\**" />
+    <Content Remove="SampleVboxBuilder\**" />
+    <EmbeddedResource Remove="SampleVboxBuilder\**" />
+    <Compile Remove="EndToEndEditVerifier\**" />
+    <None Remove="EndToEndEditVerifier\**" />
+    <Content Remove="EndToEndEditVerifier\**" />
+    <EmbeddedResource Remove="EndToEndEditVerifier\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+    <PackageReference Include="DotNetZip" Version="1.10.1" />
+    <PackageReference Include="protobuf-net" Version="2.4.0" />
+    <PackageReference Include="NLog" Version="4.5.11" />
+    <PackageReference Include="System.Reactive" Version="4.1.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Kiosk-tier built outputs (Release_ShellClient/x64). Build the kiosk
+         once via Build_Free.bat or
+         `dotnet build LeapVR.Shell.Modules/LeapVR.Shell.Modules.csproj
+           /p:Configuration=Release_ShellClient /p:Platform=x64`
+         to populate these. -->
+    <Reference Include="LeapVR.Shell.Modules">
+      <HintPath>..\LeapVR.Shell.Modules\bin\x64\Release_ShellClient\LeapVR.Shell.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="LeapVR.Shell.Domain.Models">
+      <HintPath>..\LeapVR.Shell.Domain.Models\bin\x64\Release_ShellClient\LeapVR.Shell.Domain.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="LeapVR.Content.Shared">
+      <HintPath>..\LeapVR.Content.Shared\bin\x64\Release_ShellClient\LeapVR.Content.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="LeapVR.Shared.Lib">
+      <HintPath>..\LeapVR.Shared.Lib\bin\x64\Release_ShellClient\netstandard2.0\LeapVR.Shared.Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="LeapVR.Shared.Lib.Win">
+      <HintPath>..\LeapVR.Shared.Lib.Win\bin\x64\Release_ShellClient\LeapVR.Shared.Lib.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="LeapVR.Content.Creator.Logic">
+      <HintPath>..\LeapVR.Content.Creator.Logic\bin\x64\Release_ShellClient\LeapVR.Content.Creator.Logic.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:Double x:Key="LoginViewsH1">72</system:Double>
+    <system:Double x:Key="LoginViewsH2">60</system:Double>
+    <system:Double x:Key="LoginViewsH3">48</system:Double>
+    <system:Double x:Key="LoginViewsH4">36</system:Double>
+    <system:Double x:Key="LoginViewsH5">28</system:Double>
+    <system:Double x:Key="LoginViewsH6">20</system:Double>
+
+    <!--  color for normal state color  -->
+    <SolidColorBrush x:Key="LoginViewsPrimaryTextForegroundColor" Color="Black" />
+    <SolidColorBrush x:Key="LoginViewsPrimaryTextBackgroundColor" Color="Transparent" />
+</ResourceDictionary>

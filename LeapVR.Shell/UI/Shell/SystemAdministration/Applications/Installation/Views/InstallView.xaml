@@ -1,0 +1,92 @@
+﻿<UserControl
+    x:Class="LeapVR.Shell.UI.Shell.SystemAdministration.Applications.Installation.Views.InstallView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:installation="clr-namespace:LeapVR.Shell.UI.Shell.SystemAdministration.Applications.Installation"
+    xmlns:lex="http://wpflocalizeextension.codeplex.com" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:properties="clr-namespace:LeapVR.Shell.Properties" xmlns:usercontrols="clr-namespace:LeapVR.Shell.UI.Usercontrols"
+    d:DesignHeight="1080" d:DesignWidth="720"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <Style BasedOn="{StaticResource TextBlockBaseStyle}" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="{DynamicResource H3}" />
+            <Setter Property="TextAlignment" Value="Center" />
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+
+        <i:Interaction.Triggers>
+            <ei:DataTrigger Binding="{Binding LoadingState}" Value="Nothing">
+                <ei:ChangePropertyAction PropertyName="Visibility" TargetObject="{Binding ElementName=NoFilesView}" TargetName="NoFilesView" Value="Visible" />
+                <ei:ChangePropertyAction PropertyName="Visibility" TargetObject="{Binding ElementName=LoadingView}" TargetName="LoadingView" Value="Collapsed" />
+            </ei:DataTrigger>
+
+            <ei:DataTrigger Binding="{Binding LoadingState}" Value="Loading">
+                <ei:ChangePropertyAction PropertyName="Visibility" TargetObject="{Binding ElementName=NoFilesView}" TargetName="NoFilesView" Value="Collapsed" />
+                <ei:ChangePropertyAction PropertyName="Visibility" TargetObject="{Binding ElementName=LoadingView}" TargetName="LoadingView" Value="Visible" />
+            </ei:DataTrigger>
+
+            <ei:DataTrigger Binding="{Binding LoadingState}" Value="Loaded">
+                <ei:ChangePropertyAction PropertyName="Visibility" TargetObject="{Binding ElementName=NoFilesView}" TargetName="NoFilesView" Value="Collapsed" />
+                <ei:ChangePropertyAction PropertyName="Visibility" TargetObject="{Binding ElementName=LoadingView}" TargetName="LoadingView" Value="Collapsed" />
+            </ei:DataTrigger>
+        </i:Interaction.Triggers>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+
+        <!--  Top Bar  -->
+        <Grid Grid.Row="0">
+            <ContentControl x:Name="UsbSticksBar" />
+        </Grid>
+
+        <!--  Items View  -->
+        <Grid Grid.Row="1">
+            <TextBlock x:Name="NoFilesView" FontSize="{DynamicResource H1}" Foreground="{DynamicResource ThemeMainTextColor}" Text="{lex:Loc System_Installation_NoFiles}" />
+
+            <UserControl x:Name="LoadingView" Height="180" Panel.ZIndex="10" Template="{DynamicResource AppleSpinner}" />
+
+            <Border BorderBrush="{DynamicResource ThemeBorderColor}" BorderThickness="1" CornerRadius="5">
+                <installation:ListViewWithSelectionChangedOnMouseUp
+                    x:Name="Items"
+                    HorizontalContentAlignment="Stretch"
+                    ItemContainerStyle="{DynamicResource ListViewItemForUniversalItem}"
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto"
+                    Style="{DynamicResource ListViewStyleWithoutColumns}"
+                    VirtualizingPanel.ScrollUnit="Pixel" />
+            </Border>
+        </Grid>
+
+        <TextBlock
+            x:Name="SelectedItemsCount"
+            Grid.Row="2"
+            VerticalAlignment="Center"
+            Foreground="Red" Text="Items Selected go here" TextAlignment="Right" Visibility="Collapsed" />
+
+        <!--  Console View  -->
+        <UniformGrid Grid.Row="3" Columns="2">
+            <Button
+                x:Name="Install"
+                MaxHeight="60"
+                Margin="15"
+                Content="{lex:Loc System_Installation_Install}"
+                FontSize="{DynamicResource H5}"
+                IsEnabled="{Binding CanInstall}"
+                Style="{DynamicResource ButtonBaseStyle}" />
+
+            <Button
+                x:Name="BrowseToInstall"
+                MaxHeight="60"
+                Margin="15"
+                Content="{lex:Loc System_Installation_SelectFile}"
+                FontSize="{DynamicResource H5}"
+                Style="{DynamicResource ButtonBaseStyle}" />
+        </UniformGrid>
+
+    </Grid>
+
+</UserControl>

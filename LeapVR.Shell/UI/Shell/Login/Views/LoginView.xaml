@@ -1,0 +1,77 @@
+﻿<UserControl
+    x:Class="LeapVR.Shell.UI.Shell.Login.Views.LoginView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cal="http://www.caliburnproject.org" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:fa="http://schemas.fontawesome.io/icons/" xmlns:local="clr-namespace:LeapVR.Shell.UI.Shell.Login.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:usercontrols="clr-namespace:LeapVR.Shell.UI.Usercontrols"
+    d:DesignHeight="1080" d:DesignWidth="1920"
+    mc:Ignorable="d">
+    <Grid x:Name="LoginViewRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="{DynamicResource BackgroundSplashscreen}" Stretch="Fill" />
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="307" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="295" />
+        </Grid.RowDefinitions>
+
+        <ContentControl x:Name="VideoPlayer" Grid.Row="0" Grid.RowSpan="3" Panel.ZIndex="-10" />
+        <ContentControl x:Name="ActiveItem" Grid.Row="0" Grid.RowSpan="3" Panel.ZIndex="1" />
+
+        <ContentControl
+            x:Name="StationDetailsViewModel"
+            Grid.Row="1" Grid.RowSpan="2"
+            Margin="{Binding UiConfig.StationNamePosition, Mode=OneWay, FallbackValue='25, 895, 0, 0'}"
+            HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="10"
+            cal:View.Context="StationName"
+            FontSize="{DynamicResource LoginViewsH5}"
+            Foreground="{DynamicResource LoginViewsPrimaryTextForegroundColor}"
+            TextBlock.TextAlignment="Center" />
+
+        <UniformGrid
+            x:Name="PanelBottom"
+            Grid.Row="2"
+            Panel.ZIndex="9"
+            Columns="8" FirstColumn="7" Rows="1"
+            Visibility="{Binding IsPanelBottomVisible, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}">
+            <Grid Margin="0,60,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <usercontrols:LeapButton
+                    x:Name="Settings"
+                    Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"
+                    BorderThickness="0"
+                    FontSize="{DynamicResource SettingLikeButtonFontSize}"
+                    Style="{DynamicResource GuardViewsButtonStyle}"
+                    Visibility="{Binding IsSettingsButtonVisible, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}">
+                    <usercontrols:LeapButton.Background>
+                        <ImageBrush ImageSource="{DynamicResource IconSettingsBottomBarDefault}" Stretch="Uniform" />
+                    </usercontrols:LeapButton.Background>
+                    <usercontrols:LeapButton.HoverBackground>
+                        <ImageBrush ImageSource="{DynamicResource IconSettingsBottomBarHover}" Stretch="Uniform" />
+                    </usercontrols:LeapButton.HoverBackground>
+                    <usercontrols:LeapButton.PressedBackground>
+                        <ImageBrush ImageSource="{DynamicResource IconSettingsBottomBarHover}" Stretch="Uniform" />
+                    </usercontrols:LeapButton.PressedBackground>
+                </usercontrols:LeapButton>
+            </Grid>
+        </UniformGrid>
+        <Image
+            x:Name="ButtomImage"
+            Grid.Row="2"
+            HorizontalAlignment="Center" VerticalAlignment="Bottom" Panel.ZIndex="-1"
+            Source="{DynamicResource BackgroundSplashscreenButtom}"
+            Stretch="Fill" />
+    </Grid>
+</UserControl>

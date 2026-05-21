@@ -1,0 +1,32 @@
+﻿#region Licence
+/****************************************************************
+ *  Filename: AssetClassAppDataModel.cs
+ *  ----------------------------------------------------------
+ *  Author        Martin Meissner
+ *  Date          2026-05-19
+ *  Copyright (c) 2026 Martin Meissner.
+ *                Released under the Apache License 2.0 as part of
+ *                the open-source PlayOnDemand release.
+ *
+ *  SPDX-License-Identifier: Apache-2.0
+ ****************************************************************/
+#endregion
+using System.Collections.Generic;
+
+namespace Steam.Models.SteamEconomy
+{
+    public class AssetClassAppDataModel
+    {
+        public string DefIndex { get; set; }
+
+        public string Quality { get; set; }
+
+        public string Slot { get; set; }
+
+        public IReadOnlyCollection<AssetClassAppDataFilterModel> FilterData { get; set; }
+
+        public IReadOnlyCollection<long> PlayerClassIds { get; set; }
+
+        public string HighlightColor { get; set; }
+    }
+}

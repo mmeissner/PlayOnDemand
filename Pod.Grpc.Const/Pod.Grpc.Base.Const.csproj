@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Configurations>Debug;Release;Release_ShellClient</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--
+      Last Grpc.Core release that supports netstandard2.0; required because the
+      kiosk consumes this project from net471 via Pod.Grpc.Base.Client. The
+      server-side Grpc.AspNetCore stack does not depend on this assembly.
+    -->
+    <PackageReference Include="Grpc.Core" Version="2.46.6" />
+  </ItemGroup>
+
+</Project>

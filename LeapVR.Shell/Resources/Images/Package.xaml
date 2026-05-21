@@ -1,0 +1,186 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Name="ImageResources">
+    <!--  ReSharper disable InconsistentNaming  -->
+
+
+    <BitmapImage x:Key="BackgroundGlobal" UriSource="background_global.png" />
+    <BitmapImage x:Key="BackgroundSplashscreen" UriSource="background_splashscreen.png" />
+    <BitmapImage x:Key="BackgroundSplashscreenButtom" UriSource="background_splashscreen_buttom.png" />
+    <BitmapImage x:Key="BusinessBackgroundSplashscreenTop" UriSource="business_background_splashscreen_top.png" />
+    <BitmapImage x:Key="HomeBackgroundSplashscreenButtom" UriSource="home_background_splashscreen_buttom.png" />
+    <BitmapImage x:Key="IconLeapVrCube" UriSource="icon_leapvr_cube.png" />
+
+    <!--  Session Stopped Images  -->
+    <BitmapImage x:Key="ThumbnailUserNotEnoughBalance" UriSource="thumbnail_user_not_enough_balance.png" />
+    <BitmapImage x:Key="ThumbnailSessionEndedByLimitReached" UriSource="thumbnail_session_logout.png" />
+    <BitmapImage x:Key="ThumbnailStationInactive" UriSource="thumbnail_station_inactive.png" />
+    <BitmapImage x:Key="ThumbnailUserBlocked" UriSource="thumbnail_user_blocked.png" />
+    <BitmapImage x:Key="ThumbnailInternetProblems" UriSource="thumbnail_internet_problems.png" />
+
+    <!--  Icons Open Mode Menue Options  -->
+    <BitmapImage x:Key="IconMenuePlayWhite" UriSource="icon_menue_play_white.png" />
+    <BitmapImage x:Key="IconMenuePlayBlack" UriSource="icon_menue_play_black.png" />
+    <BitmapImage x:Key="IconMenueSettingsWhite" UriSource="icon_menue_settings_white.png" />
+    <BitmapImage x:Key="IconMenueSettingsBlack" UriSource="icon_menue_settings_black.png" />
+    <BitmapImage x:Key="IconMenueShutdownWhite" UriSource="icon_menue_shutdown_white.png" />
+    <BitmapImage x:Key="IconMenueShutdownBlack" UriSource="icon_menue_shutdown_black.png" />
+    <BitmapImage x:Key="IconMenueWindowsWhite" UriSource="icon_menue_windows_white.png" />
+    <BitmapImage x:Key="IconMenueWindowsBlack" UriSource="icon_menue_windows_black.png" />
+
+    <!--  Administration Access Icon  -->
+    <BitmapImage x:Key="IconSettingsBottomBarDefault" UriSource="icon_settings_buttombar_default.png" />
+    <BitmapImage x:Key="IconSettingsBottomBarHover" UriSource="icon_settings_buttombar_hover.png" />
+
+    <!--  Administration View Icons  -->
+    <BitmapImage x:Key="IconScrollUp" UriSource="icon_scroll_up.png" />
+    <BitmapImage x:Key="IconScrollDown" UriSource="icon_scroll_down.png" />
+    <BitmapImage x:Key="IconArrowLeft" UriSource="icon_arrow_left.png" />
+    <BitmapImage x:Key="IconArrowRight" UriSource="icon_arrow_right.png" />
+    <BitmapImage x:Key="IconSystem" UriSource="icon_system.png" />
+    <BitmapImage x:Key="IconExit" UriSource="icon_exit.png" />
+    <BitmapImage x:Key="IconManagement" UriSource="icon_management.png" />
+    <BitmapImage x:Key="IconHardware" UriSource="icon_hardware.png" />
+    <BitmapImage x:Key="IconInstallation" UriSource="icon_installation.png" />
+    <BitmapImage x:Key="IconStatistics" UriSource="icon_statistics.png" />
+    <BitmapImage x:Key="IconStatisticsGlobal" UriSource="icon_statistics_global.png" />
+    <BitmapImage x:Key="IconStatisticsApplications" UriSource="icon_statistics_applications.png" />
+    <BitmapImage x:Key="IconSettings" UriSource="icon_settings.png" />
+    <BitmapImage x:Key="IconKey" UriSource="icon_key.png" />
+    <BitmapImage x:Key="IconPoweroff" UriSource="icon_poweroff.png" />
+    <BitmapImage x:Key="IconAccounts" UriSource="icon_accounts.png" />
+    <BitmapImage x:Key="IconVideo" UriSource="icon_video.png" />
+
+    <!--  Install Navigation Icons  -->
+    <BitmapImage x:Key="IconUsbDriveDisk" UriSource="icon_usb_drive_disk.png" />
+    <BitmapImage x:Key="IconUsbDrivePhysical" UriSource="icon_usb_drive_physical.png" />
+    <BitmapImage x:Key="IconFolder" UriSource="icon_folder.png" />
+    <BitmapImage x:Key="IconParentFolder" UriSource="icon_parent_folder.png" />
+
+    <!--  Install Container Icons  -->
+    <BitmapImage x:Key="IconAppAlreadyInstalled" UriSource="icon_app_already_installed.png" />
+    <BitmapImage x:Key="IconAppNotEnoughSpace" UriSource="icon_app_not_enough_space.png" />
+    <BitmapImage x:Key="IconAppContainerBroken" UriSource="icon_app_container_broken.png" />
+    <BitmapImage x:Key="IconAppReadyToInstall" UriSource="icon_app_ready_to_install.png" />
+    <BitmapImage x:Key="IconAppReadyToUpdate" UriSource="icon_app_ready_to_update.png" />
+
+    <!--  Platform Icons  -->
+    <BitmapImage x:Key="IconPlatforms" UriSource="icon_platforms.png" />
+    <!--  Key is Guid of Platform Module  -->
+    <BitmapImage x:Key="DCF369A1-9969-4472-8485-2A5B566CC9CF" UriSource="icon_steam.png" />
+    <BitmapImage x:Key="Icon_UnknownPlatform" UriSource="icon_leapvr_cube.png" />
+
+    <!--  Platform App State Icons  -->
+    <BitmapImage x:Key="IconPlatformAppOnlineInstallable" UriSource="icon_online_availible.png" />
+    <BitmapImage x:Key="IconPlatformAppInstalling" UriSource="icon_installing.png" />
+    <BitmapImage x:Key="IconPlatformAppLocalInstalled" UriSource="icon_local_installed.png" />
+    <BitmapImage x:Key="IconPlatformAppUnavailable" UriSource="icon_app_unavailable.png" />
+    <BitmapImage x:Key="IconPlatformAppError" UriSource="icon_app_error.png" />
+    <BitmapImage x:Key="IconPlatformAppLicenseAvailable" UriSource="icon_license_available.png" />
+    <BitmapImage x:Key="IconPlatformAppLicenseUnavailable" UriSource="icon_license_unavailable.png" />
+    <BitmapImage x:Key="IconPlatformAppLicenseFree" UriSource="icon_license_free.png" />
+
+    <!--  Language Images  -->
+    <BitmapImage x:Key="IconFlagCHS" UriSource="icon_flag_cn.png" />
+    <BitmapImage x:Key="IconFlagENU" UriSource="icon_flag_us.png" />
+    <BitmapImage x:Key="IconFlagUnknown" UriSource="icon_flag_unknown.png" />
+
+    <!--  Input Controller Icons  -->
+    <BitmapImage x:Key="IconXboxControllerA" UriSource="icon_xbox_controller_a.png" />
+    <BitmapImage x:Key="IconXboxControllerB" UriSource="icon_xbox_controller_b.png" />
+    <BitmapImage x:Key="IconXboxControllerX" UriSource="icon_xbox_controller_x.png" />
+    <BitmapImage x:Key="IconXboxControllerY" UriSource="icon_xbox_controller_Y.png" />
+    <BitmapImage x:Key="IconXboxControllerLeftSticker" UriSource="icon_xbox_controller_left_sticker.png" />
+    <BitmapImage x:Key="IconXboxControllerLeftTrigger" UriSource="icon_xbox_controller_left_trigger.png" />
+    <BitmapImage x:Key="IconXboxControllerLeftBumper" UriSource="icon_xbox_controller_left_bumper.png" />
+    <BitmapImage x:Key="IconXboxControllerRightSticker" UriSource="icon_xbox_controller_right_sticker.png" />
+    <BitmapImage x:Key="IconXboxControllerRightTrigger" UriSource="icon_xbox_controller_right_trigger.png" />
+    <BitmapImage x:Key="IconXboxControllerRightBumper" UriSource="icon_xbox_controller_right_bumper.png" />
+    <BitmapImage x:Key="IconXboxControllerDpad" UriSource="icon_xbox_controller_dpad.png" />
+    <BitmapImage x:Key="IconXboxControllerMenu" UriSource="icon_xbox_controller_menu.png" />
+    <BitmapImage x:Key="IconXboxControllerView" UriSource="icon_xbox_controller_view.png" />
+
+    <!--  Application Execution Icons  -->
+    <BitmapImage x:Key="IconGamepad" UriSource="icon_gamepad.png" />
+    <BitmapImage x:Key="IconHeadset" UriSource="icon_headset.png" />
+
+    <!--  Login Messages  -->
+    <BitmapImage x:Key="ImageSuccess" UriSource="image_success.png" />
+    <BitmapImage x:Key="ImageError" UriSource="image_error.png" />
+    <BitmapImage x:Key="ImageCloudNotAccessible" UriSource="image_cloud_not_accessible.png" />
+    <BitmapImage x:Key="ImageConnecting" UriSource="image_connecting.png" />
+    <BitmapImage x:Key="ImageVersionError" UriSource="image_version_error.png" />
+    <BitmapImage x:Key="ImageLicenseError" UriSource="image_license_error.png" />
+    <BitmapImage x:Key="ImageNeutralFace" UriSource="image_neutral_face.png" />
+    <BitmapImage x:Key="ImageTimeExpired" UriSource="image_expired.png" />
+    <BitmapImage x:Key="ImageUserBlocked" UriSource="image_user_blocked.png" />
+    <BitmapImage x:Key="ImageUserActivation" UriSource="image_user_activation.png" />
+    <BitmapImage x:Key="ImageExchangeRate" UriSource="image_exchange_rate.png" />
+    <BitmapImage x:Key="ImageAddBalance" UriSource="image_add_balance.png" />
+    <BitmapImage x:Key="ImageNotAvailable" UriSource="image_not_available.png" />
+    <BitmapImage x:Key="ImageGoodbye" UriSource="image_goodbye.png" />
+    <BitmapImage x:Key="ImageOffline" UriSource="image_offline.png" />
+
+    <!--  Application Category Default Image  -->
+    <BitmapImage x:Key="IconCategoryDefault" UriSource="icon_category_default.png" />
+
+    <!--  Application Display Overlays  -->
+    <BitmapImage x:Key="ImageScreenOverlay" UriSource="image_screen_overlay.png" />
+    <BitmapImage x:Key="ImageScreenOverlaySmall" UriSource="image_screen_overlay_small.png" />
+    <BitmapImage x:Key="ImageVrOverlay" UriSource="image_vr_overlay.png" />
+    <BitmapImage x:Key="ImageVrOverlaySmall" UriSource="image_vr_overlay_small.png" />
+    <BitmapImage x:Key="IconPlay" UriSource="icon_play.png" />
+
+    <!--  Application No Thumbnail Image  -->
+    <BitmapImage x:Key="ThumbnailAppNoPicture" UriSource="thumbnail_app_no_picture.png" />
+
+    <!--  Controller Guide Image  -->
+    <BitmapImage x:Key="ImageXbuttonsMapping" UriSource="image_xbuttons_mapping.png" />
+
+    <!--  Used for Dialogs / Pop Ups that  -->
+    <BitmapImage x:Key="ImageShellBlockingBackground" UriSource="image_shell_blocking_background.png" />
+
+    <!--  Application Navigation  -->
+    <BitmapImage x:Key="ImageScrollLeft" UriSource="image_scroll_left.png" />
+    <BitmapImage x:Key="ImageScrollLeftHover" UriSource="image_scroll_left_hover.png" />
+    <BitmapImage x:Key="ImageScrollLeftPressed" UriSource="image_scroll_left_pressed.png" />
+    <BitmapImage x:Key="ImageScrollRight" UriSource="image_scroll_right.png" />
+    <BitmapImage x:Key="ImageScrollRightHover" UriSource="image_scroll_right_hover.png" />
+    <BitmapImage x:Key="ImageScrollRightPressed" UriSource="image_scroll_right_pressed.png" />
+
+    <!--  Application Management  -->
+    <BitmapImage x:Key="IconEnable" UriSource="icon_enable.png" />
+    <BitmapImage x:Key="IconFirewall" UriSource="icon_firewall.png" />
+
+    <!--  Top Status Bar  -->
+    <BitmapImage x:Key="BannerLeapvr" UriSource="banner_leapvr.png" />
+    <BitmapImage x:Key="ImageBannerBg" UriSource="image_banner_bg.png" />
+
+    <!--  Connection Indicator Widget  -->
+    <BitmapImage x:Key="StatusConnected" UriSource="status_connected.png" />
+    <BitmapImage x:Key="StatusDisconnectedStep1" UriSource="status_disconnected_step1.png" />
+    <BitmapImage x:Key="StatusDisconnectedStep2" UriSource="status_disconnected_step2.png" />
+    <BitmapImage x:Key="StatusDisconnected" UriSource="status_disconnected.png" />
+
+    <!--  QRCode Center Icon  -->
+    <BitmapImage x:Key="IconLogo" UriSource="icon_logo.png" />
+
+    <!--  Unused  -->
+    <BitmapImage x:Key="ImageNoQr" UriSource="image_no_qr.png" />
+    <BitmapImage x:Key="IconUnchecked" UriSource="icon_unchecked.png" />
+    <BitmapImage x:Key="IconChecked" UriSource="icon_checked.png" />
+    <BitmapImage x:Key="RestrictedModeStartButtonBackground" UriSource="restricted_mode_start_button_background.png" />
+    <BitmapImage x:Key="RestrictedModeStartButtonHoverBackground" UriSource="restricted_mode_start_button_hover_background.png" />
+    <BitmapImage x:Key="RestrictedModeStartButtonPressedBackground" UriSource="restricted_mode_start_button_pressed_background.png" />
+    <BitmapImage x:Key="RestrictedModeStartButtonDisabledBackground" UriSource="restricted_mode_start_button_disabled_background.png" />
+    <BitmapImage x:Key="OpenModeStartButtonBackground" UriSource="open_mode_start_button_background.png" />
+    <BitmapImage x:Key="OpenModeStartButtonHoverBackground" UriSource="open_mode_start_button_hover_background.png" />
+    <BitmapImage x:Key="OpenModeStartButtonPressedBackground" UriSource="open_mode_start_button_pressed_background.png" />
+    <BitmapImage x:Key="OpenModeStartButtonDisabledBackground" UriSource="open_mode_start_button_disabled_background.png" />
+    <BitmapImage x:Key="ImageWarning" UriSource="image_warning.png" />
+    <BitmapImage x:Key="IconUpdates" UriSource="icon_updates.png" />
+    <!--  Commented out in xaml files as its unclear why it was even used, can be later completely removed if no issues occur  -->
+    <!--  This is just a fully transparent image in HD Resolution, maybe it was used to capture clicks and block them ?  -->
+    <BitmapImage x:Key="OverlayBackground" UriSource="overlay_background.png" />
+</ResourceDictionary>

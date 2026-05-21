@@ -1,0 +1,44 @@
+﻿<UserControl
+    x:Class="LeapVR.Shell.UI.Shell.SystemAdministration.Applications.Platform.Views.TabItemPlatformView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:lex="http://wpflocalizeextension.codeplex.com" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="954" d:DesignWidth="1720"
+    mc:Ignorable="d">
+    <Grid Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel
+            Grid.Row="0" Grid.Column="0"
+            Margin="25,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+            Orientation="Horizontal">
+            <TextBlock
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                FontSize="{DynamicResource LoginViewsH5}"
+                Foreground="{DynamicResource ThemeMainTextColor}"
+                TextAlignment="Center">
+                <TextBlock.Style>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="Text" Value="{lex:BLoc System_Platform_NoPlatformAvailible}" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding PlatformSelector.HasPlatforms}" Value="True">
+                                <Setter Property="Text" Value="{lex:BLoc System_Platform_SelectPlatform}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+            <ContentControl x:Name="PlatformSelector" HorizontalAlignment="Left" />
+        </StackPanel>
+        <ContentControl x:Name="PlatformInstaller" Grid.Row="1" Grid.Column="0" Margin="0" />
+        <TextBlock
+            Grid.Row="1" Grid.Column="0"
+            HorizontalAlignment="Center" VerticalAlignment="Center"
+            FontSize="{DynamicResource LoginViewsH5}"
+            Foreground="{DynamicResource ThemeMainTextColor}"
+            Text="{lex:BLoc System_Platform_NoPlatformSelected}"
+            TextAlignment="Center"
+            Visibility="{Binding ShowNoPlatformSelected, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}" />
+    </Grid>
+</UserControl>

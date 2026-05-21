@@ -1,0 +1,802 @@
+@define settingsbg: gradient( linear, 0% 0%, 0% 75%, color-stop( 0.0, #00000022 ), color-stop( 1.0, #00000000 ) );
+@define settings_button: gradient( linear, -10% 0%, 100% 0%, from( #2d6780ff ), to( #142d5240 ) );
+@define settings_button_hover: gradient( linear, -10% 0%, 100% 0%, from( #297596ff ), to( #142d52cc ) );
+
+.SettingsFrame
+{
+	width: 1%;
+	height: 1%;
+	font-family: platformfont;
+	background-color: #111111ee;
+
+	padding-top: 80px;
+}
+
+.SettingsSubFrame,
+#SettingsLanding
+{
+	width: 100%;
+	height: 100%;
+	font-family: platformfont;
+	opacity: 0.0;
+	margin-top: 0px;
+	transform: translatex(500px);
+	transition-property: transform, opacity;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.23s;
+}
+
+#SettingsLanding,
+#SettingsGeneral
+{
+	margin-left: 0px;
+	transform: translatex(-400px);
+}
+
+#SettingsGeneral .SettingsTitle
+{
+	height: 72px;
+	margin-bottom: 40px;
+	margin-left: 150px;
+}
+
+
+.SettingsSubFrame.SettingsVisible,
+#SettingsGeneral.SettingsVisible
+{
+	opacity: 1.0;
+	transform: translatex(0px);
+}
+
+.FlowDown
+{
+	flow-children: down;
+}
+
+.FlowRightWrap
+{
+	flow-children: right-wrap;
+}
+
+.FlowRight
+{
+	flow-children: right;
+}
+
+.Hidden
+{
+	visibility: collapse;
+}
+
+.FieldWrapper
+{
+	flow-children: down;
+}
+
+.SettingsTitle
+{
+	font-size: 60px;
+	font-weight: normal;
+	color: applabelsolid;
+	margin-left: 35px;
+	margin-bottom: 0px;
+}
+
+.Back
+{
+	border-radius: 50%;
+	width: 67px;
+	height: 67px;
+	opacity: 0.8;
+
+	transition-property: opacity, box-shadow, background-color, pre-transform-scale2d, wash-color, transform;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-duration: 0.23s;
+}
+
+
+.BackButton
+{
+	width: fit-children;
+	height: fit-children;
+	box-shadow: none;
+	background-color: none;
+	margin-left: 30px;
+
+	opacity: 0.0;
+	transition-property: transform, opacity;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.1s;
+	transition-delay: 0.23s;
+}
+
+.SettingsVisible .BackButton
+{
+	opacity: 0.8;
+	transition-delay: 0.0s;
+}
+
+.GamepadActive .SettingsVisible .BackButton
+{
+	opacity: 0.0;
+}
+
+
+.BackButton:hover
+{
+	background-color: none;	
+	opacity: 0.9;
+}
+
+.BackButton:focus
+{
+	background-color: none;	
+	animation-name: none;
+	opacity: 1.0;
+}
+
+.SkinButtonContainer
+{
+    flow-children: down;
+    visibility: visible;
+    width: 100%;
+}
+
+.RequireSkinButtons
+{
+    visibility: collapse;
+}
+
+.SkinButtons .RequireSkinButtons
+{
+    visibility: visible;
+}
+
+.ColumnContainer
+{
+	flow-children: right;	
+}
+.ColumnOne
+{
+	margin-left: 150px;
+
+	width: 700px;
+	flow-children: down;
+	
+}
+
+.ColumnTwo
+{
+	margin-left: 70px;
+	margin-top: 25px;
+	width: 900px;
+	flow-children: down;
+}
+
+Label
+{
+	font-size: 28px;
+	font-weight: normal;
+	color: applabelsolid;
+	opacity: 0.8;
+	margin-bottom: 10px;
+}
+
+.HeaderLabel
+{
+	font-size: 32px;
+	font-weight: bold;
+	color: applabelsolid;
+	opacity: 1.0;
+	margin-bottom: 15px;
+	margin-top: 25px;
+}
+
+Button
+{
+	font-size: 28px;
+	font-weight: normal;
+	color: applabelsolid;
+	opacity: 1.0;
+	margin-bottom: 20px;
+	width: 70%;
+	padding-left: 10px;
+	padding-top: 5px;
+	height: 60px;
+	background-color: settings_button;
+	border-radius: 2px;
+	box-shadow: none;
+	
+	transition-property: background-color, box-shadow;
+	transition-timing-function: ease-out;
+	transition-duration: .23s;
+}
+
+Button Label
+{
+	padding-left: 10px;
+	padding-top: 7px;
+	color: applabelsolid;
+	opacity: 1.0;
+}
+
+Button:hover
+{
+	background-color: settings_button_hover;	
+	box-shadow: #239cd0ff 0px 0px 5px 0px;
+}
+
+.GamepadActive Button:focus 
+{
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#f2f2f2), to(#bdbdbd) );
+	border-color: white;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.GamepadActive Button:focus Label
+{
+color: applabelselectedsolid;
+	
+}
+
+Button:active,
+Button:focus:active
+{
+	background-color: all_games_hover;
+}
+
+Button:active Label
+{
+	color: applabelsolid;
+}
+
+.VertContainer
+{
+	flow-children: down;
+	vertical-align: top;
+	horizontal-align: left;
+	
+	overflow: squish scroll;
+	padding-bottom: 6px;
+	padding-top: 6px;
+	
+	width: 100%;
+	height: 320px;
+	
+	border-width: 4px;
+	border-style: solid;
+	border-color: ui_common_control_border;
+	
+	opacity-mask-scroll-up: url( "file://{images}/list_mask_fade_top.png" );
+	opacity-mask-scroll-down: url( "file://{images}/list_mask_fade_bottom.png" );
+	opacity-mask-scroll-up-down: url( "file://{images}/list_mask_fade_both.png" );
+}
+
+#OverlayList ToggleButton
+{
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+
+#OverlayList ToggleButton Label
+{
+	vertical-align: center;
+	margin-top: 10px;
+	padding-bottom: 0px;
+	margin-left: 8px;
+	text-overflow: ellipsis;
+	opacity: 1.0;
+	color: applabelsolid;
+}
+
+#Microphone
+{
+	width: fit-children;
+	margin-bottom: 0px;
+	flow-children: down;
+
+	horizontal-align: left;
+
+	transition-property: pre-transform-scale2d;
+	transition-duration: 0.23s;
+}
+	
+#MicrophoneImage
+{
+	background-image: url( "file://{images}/icons/volume.png" );
+	background-size: 100%;
+	background-position: -6px 0px;
+	width: 206px;
+	height: 64px;
+	
+	margin-top: 4px;
+	padding-bottom: 4px;
+	background-color: ui_common_control;	
+}
+
+#MicrophoneImage:hover	
+{
+	background-color: ui_common_control_hover;
+}
+
+#MicrophoneImage:descendantfocus,
+#MicrophoneImage:descendantfocus:hover
+{
+	background-image: url( "file://{images}/icons/volume_selected.png" );
+	background-size: 100%;
+	background-position: -6px 0px;
+	width: 206px;
+	height: 64px;
+
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#f2f2f2), to(#bdbdbd) );
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#NotificationsToggle Label
+{
+	opacity: 1.0;
+}
+
+.SeatedPosButton
+{
+	margin-top: 30px;
+}
+
+#NightModeToggle,
+#NotificationsToggle
+{
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+
+#NightModeToggle,
+#HomeAppToggle
+{
+	margin-bottom: 10px;
+}
+
+#DoNotDisturbText,
+#NightModeText,
+#HomeAppText
+{
+	margin-left: 20px;
+	font-size: 30px;
+}
+
+#Customization_Disclaimer
+{
+	width: 500px;	
+	margin-bottom: 20px;
+	color: #ffffffee;
+}
+
+#TurnOffControllersWhenSteamVRExitsToggle
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+.BoundsSlider
+{
+	width: 400px;
+	height: 80px;
+	margin-bottom: 20px;
+	margin-right: 40px;
+}
+
+Slider.BoundsSlider #SliderTrack
+{
+	height: 40px;
+}
+
+
+.DomeProjection
+{
+	visibility: collapse;
+}
+
+.UseDome .DomeProjection
+{
+	visibility: visible;	
+}
+
+.BackgroundToggleButton
+{
+	width: 400px;
+	height: 80px;
+	margin-top: 40px;
+	margin-bottom: 0px;
+}
+
+
+#BoundsColor #SliderTrack,
+#BackgroundColor #SliderTrack,
+#CameraColor  #SliderTrack,
+#PlayAreaColor #SliderTrack
+{
+	// must match the stops in GetColorStops() from vrsettingsui.cpp !!
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#ff0000), color-stop(0.17,#ffff00), color-stop(0.3,#00ff00), 
+																color-stop(0.5,#00ffff), color-stop(0.66,#0000ff),color-stop(0.83,#ff00ff), color-stop(0.94,#ff0000), color-stop(0.95,#ffffff) , to(#ffffff) );	
+}
+
+#BoundsOpacity #SliderTrack,
+#BackgroundOpacity #SliderTrack,
+#CameraOpacity #SliderTrack,
+#PlayAreaOpacity #SliderTrack
+{
+	color: black;
+}
+
+#BackgroundOpacity #SliderTrack,
+#PlayAreaOpacity #SliderTrack
+{
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#0c0c0c),  to(#999999) );		
+}
+
+.BoundsSlider #SliderTrackProgress
+{
+	opacity: 0.0;
+}
+
+.BoundsSlider #SliderThumb
+{
+	margin-top: 5px;
+	width: 20px;
+	height: 60px;
+	opacity: 1.0;
+	background-color: #ffffffcf;
+	border-color: #111111ff;
+	border-width: 1px;
+}
+
+.BoundsSlider:focus #SliderThumb
+{
+	border-width: 4px;
+	border-style: solid;
+	border-color: #ccccff5f;
+}
+
+.BoundsSlider:selected #SliderThumb
+{
+	border-width: 4px;
+	border-style: solid;
+	border-color: #ccccffff;
+}
+
+
+Slider:focus #SliderTrack,
+Slider:selected #SliderThumb
+{
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+Slider:selected:focus #SliderTrack
+{
+	animation-name: none;
+}
+
+
+.CollisionBoundsBeginner #BeginnerButton,
+.CollisionBoundsIntermediate #ImmediateButton,
+.CollisionBoundsSquares #SquaresButton,
+.CollisionBoundsAdvanced #AdvancedButton,
+.CollisionBoundsDeveloper #DeveloperButton,
+{
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
+	border-color: white;
+}
+
+#ResetButton
+{
+	margin-top: 20px;
+}
+
+#LeftColumn
+{
+	margin-top: 25px;
+}
+
+#LeftColumn Button:selected
+{
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#52c7ebcc), to(#52c7ebcc) );
+	border-color: white;
+}
+
+.GamepadActive #LeftColumn Button:selected:focus
+{
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#f2f2f2), to(#bdbdbd) );
+}
+
+.ThumbnailPicker
+{
+	width: 850px;
+	overflow: clip scroll;
+	height: 550px;
+	transition-property: height;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.23s;
+
+	opacity-mask-scroll-up: url( "file://{images}/list_mask_fade_top.png" );
+	opacity-mask-scroll-down: url( "file://{images}/list_mask_fade_bottom.png" );
+	opacity-mask-scroll-up-down: url( "file://{images}/list_mask_fade_both.png" );
+}
+
+.UseDome .ThumbnailPicker
+{
+		height: 450px;
+
+}
+
+#Controls
+{
+	width: 100%;
+	height: fit-children;
+	flow-children: right-wrap;
+	margin-top: 20px;
+}
+
+#Controls Button
+{
+	width: 400px;
+	margin-right: 20px;
+}
+
+#ImageCycling
+{
+	width: 380px;
+	height: fit-children;
+	flow-children: down;
+	margin-right: 60px;
+}
+
+
+
+.ThumbnailPicker Image
+{
+	width: 250px;
+	height: 187px;
+	margin: 5px 20px 20px 5px;
+}
+
+.ThumbnailPicker Image:selected
+{
+	animation-name: none;
+	border-color: white;
+	border-width: 5px;
+	border-style: solid;
+}
+
+.ThumbnailPicker Image:hover,
+.ThumbnailPicker Image:focus
+{
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	border-color: white;
+}
+
+.ThumbnailPicker Label
+{
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 40%;
+	margin-bottom: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #00000066;
+	color: #ccccccff;
+	vertical-align: center;
+	text-align: center;
+}
+
+.ThumbnailPicker Button
+{
+	margin-left: 5px;
+	width: 421px;
+}
+
+.ThumbnailPicker Button Label
+{
+	margin-left: 0px;
+}
+
+.StandingConfig .StandingHidden
+{
+	visibility: collapse;
+}
+
+#OpenWorkshopButton
+{
+	visibility: collapse;
+}
+
+.WorkshopAvailable #OpenWorkshopButton
+{
+	visibility: visible;
+}
+
+#CameraSettingsButton:disabled Label
+{
+	color: detailsdatalabel;
+	saturation: 1.0;
+	blur: gaussian( 0.7 );
+	opacity: 0.5;
+}
+
+#CameraInDashboardToggle
+{
+	margin-top: 25px;
+}
+
+VRSettingsCamera ToggleButton
+{
+	margin-bottom: 10px;
+}
+
+VRSettingsCamera ToggleButton Label
+{
+	margin-left: 15px;
+}
+
+
+.NeedsCamera
+{
+	visibility: collapse;
+}
+
+.CameraEnabled .NeedsCamera
+{
+	visibility: visible;
+}
+
+.CameraEnabled .CameraDisabled
+{
+	visibility: collapse;
+}
+
+#BackgroundImageReload
+{
+	width: 410px;
+	height: 55px;
+	margin: 10px;
+	margin-left: 0px;
+
+	background-color: ui_common_control;
+	padding-left: 20px;
+}
+
+#BackgroundImageReloadDropDownMenu
+{
+	width: 410px;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+#BackgroundImageReload:hover
+{
+	background-color: blue;
+}	
+
+#BackgroundImageReload:focus
+{
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#f2f2f2), to(#bdbdbd) );
+}	
+
+#BackgroundImageReload:focus Label
+{
+	color: applabelselectedsolid;
+}
+
+#BackgroundImageSettings
+{
+    visibility: collapse;
+
+}
+
+#BackgroundImageSettingsWrapper
+{
+    visibility: visible;
+    flow-children: right-wrap;
+}
+
+#BackgroundImageSettingsWrapper.Active
+{
+    visibility: visible;
+}
+
+#BackgroundImages
+{
+    flow-children: down;
+}
+
+#BackgroundImages #BackgroundImageSettingsWrapper.Active
+{
+    visibility: collapse;
+}
+
+#1min
+{
+	visibility: collapse;
+}
+
+.RightColumnContent
+{
+	visibility: collapse;
+}
+
+.RightColumnContent.Active
+{
+	visibility: visible;
+}
+
+.MimeTypeDropDown,
+.PowerDropDown
+{
+	width: 600px;
+	margin-left: 0px;
+	background-color: settings_button;
+}
+
+#DesktopTheatreMimeTypeDropDownMenu
+{
+	width: 600px;
+}
+
+.MimeHandlers
+{
+	visibility: collapse;
+}
+
+.MimeTypeLabel,
+#TurnOffScreensLabel
+{
+	margin-top: 15px;
+}
+
+#turnOffScreensTimeout,
+#TurnOffControllersWhenSteamVRExitsToggle
+{
+	margin-bottom: 35px;	
+}
+
+#PowerDescriptionText
+{
+	margin-top: 10px;
+	margin-bottom: 40px;
+	font-size: 27px;
+	color: applabelsolid;
+}
+
+.DropdownLabel
+{
+	font-size: 30px;
+	font-weight: normal;
+	color: #ffffffff;	
+}

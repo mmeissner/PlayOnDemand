@@ -1,0 +1,33 @@
+﻿@page
+@using Pod.Enums
+@using Pod.Web.Center.Pages.Account
+@model ConfirmEmailModel
+@{
+    ViewData["Title"] = "Email Confirmation";
+}
+<div>
+    @if(Model.ConfirmationResult != null && Model.ConfirmationResult.IsSuccess())
+    {
+        <p>
+            Your e-mail is now confirmed.
+        </p>
+    }
+    else
+    {
+        <p>
+            Sorry, something went wrong during the confirmation of your e-mail.
+        </p>
+        @if(Model.ConfirmationResult != null && Model.ConfirmationResult.HasError())
+         {
+             <ul>
+                 @foreach(KeyValuePair<UserError, IReadOnlyList<string>> pair in Model.ConfirmationResult)
+                 {
+                     foreach(string errorText in pair.Value)
+                     {
+                         <li>@errorText</li>
+                     }
+                 }
+             </ul>
+         }
+    }
+</div>

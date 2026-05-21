@@ -1,0 +1,46 @@
+﻿/*.swagger-ui .topbar {
+    border-bottom: 3px solid white;
+}*/
+/*.swagger-ui .link {
+    text-decoration: none;
+    visibility: hidden;
+}*/
+/*body.swagger-section #header {
+    background-color: white;
+    background: url(//swagger-ui//images//leap_play_logo.png) no-repeat;
+    background-position-x: 250px;
+    height: 50px;
+}
+
+body.swagger-section #header .swagger-ui-wrap #logo {
+    display: none;
+}*/
+.swagger-ui .topbar {
+    background-color: #ffffff;
+}
+.swagger-ui .info .title {
+    font-size: 20px; 
+}
+.swagger-ui .scheme-container {
+    padding: 2px 0;
+}
+.swagger-ui .info hgroup.main {
+    margin: 3px 3px 0 0;
+}
+.swagger-ui .info {
+    margin: 3px 3px 0 0;
+}
+
+.swagger-ui .info li, .swagger-ui .info p, .swagger-ui .info table {
+    font-size: 14px;
+    font-family: sans-serif;
+    color: #3b4151;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    text-align: center;
+    text-align: -webkit-center;
+    text-align: -moz-center;
+}
+span.schemes-title {
+    visibility: collapse;
+}

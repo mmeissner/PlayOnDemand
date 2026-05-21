@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>Pod.Services</AssemblyName>
+    <Configurations>Debug;Release</Configurations>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="10.0.4" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.14.0" />
+    <PackageReference Include="System.Reactive" Version="6.0.1" />
+    <PackageReference Include="WebMarkupMin.Core" Version="2.20.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pod.Data.Infrastructure\Pod.Data.Infrastructure.csproj" />
+    <ProjectReference Include="..\Pod.Data.Models\Pod.Data.Models.csproj" />
+    <ProjectReference Include="..\Pod.Data\Pod.Data.csproj" />
+    <ProjectReference Include="..\Pod.Enums\Pod.Enums.csproj" />
+    <ProjectReference Include="..\Pod.Grpc.Messages\Pod.Grpc.Messages.csproj" />
+    <ProjectReference Include="..\Pod.MailEngine\Pod.MailEngine.csproj" />
+    <ProjectReference Include="..\Pod.ViewModels.Expressions\Pod.ViewModels.Expressions.csproj" />
+    <ProjectReference Include="..\Pod.ViewModels\Pod.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>

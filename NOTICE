@@ -1,0 +1,27 @@
+PlayOnDemand
+Copyright (c) 2017-2026 Martin Meissner
+
+This product is released under the Apache License, Version 2.0
+(see the LICENSE file at the repository root for full terms).
+
+The work was substantially rewritten, ported to .NET 10 LTS,
+restructured for self-hosted operation, and re-released as the
+open-source PlayOnDemand project by Martin Meissner. Portions of
+this work were originally authored at VSpace Tech Dev Ltd. as
+part of the closed-source LeapVR / LeapPlay product. The
+following contributors are credited for code that survives in the
+open-source release (full per-file attribution is in the
+individual source-file headers):
+
+  FrostHe         - kiosk shell, WPF UI layer, domain models,
+                    Win32 utility helpers, Windows process utils.
+  RadoslawMedryk  - cross-cutting helper library (LeapVR.Shared.Lib),
+                    container DTOs + serialisers, gRPC service
+                    interfaces, infrastructure / IoC plumbing.
+  LeapVR          - corporate attribution carried on files where
+                    a specific author was not recorded; primarily
+                    the kiosk controllers and platform modules.
+
+Third-party software bundled with this release retains its
+original copyright and license, as listed in
+THIRD_PARTY_NOTICES.md at the repository root.
